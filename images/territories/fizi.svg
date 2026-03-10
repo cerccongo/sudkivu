@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b3e5fc"/>
+      <stop offset="100%" stop-color="#81d4fa"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0277bd"/>
+      <stop offset="100%" stop-color="#01579b"/>
+    </linearGradient>
+    <linearGradient id="rock" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#78909c"/>
+      <stop offset="100%" stop-color="#546e7a"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="640" height="360" fill="url(#sky)"/>
+  <!-- Rocky mountain coast background -->
+  <polygon points="0,180 80,100 180,150 260,90 360,140 460,80 560,130 640,100 640,260 0,260" fill="#4caf50" opacity="0.5"/>
+  <!-- Rocky coastline -->
+  <polygon points="0,250 50,200 120,230 200,190 280,220 360,185 440,215 520,180 600,210 640,195 640,270 0,270" fill="url(#rock)"/>
+  <!-- Lake Tanganyika -->
+  <rect x="0" y="262" width="640" height="98" fill="url(#lake)"/>
+  <!-- Rocky outcrops on shore -->
+  <ellipse cx="80" cy="258" rx="40" ry="15" fill="#607d8b"/>
+  <ellipse cx="200" cy="252" rx="30" ry="12" fill="#546e7a"/>
+  <ellipse cx="380" cy="255" rx="45" ry="16" fill="#607d8b"/>
+  <ellipse cx="560" cy="250" rx="35" ry="13" fill="#546e7a"/>
+  <!-- Mountain peaks -->
+  <polygon points="50,250 120,100 190,250" fill="#558b2f" opacity="0.9"/>
+  <polygon points="100,250 170,110 240,250" fill="#33691e" opacity="0.85"/>
+  <polygon points="200,250 290,80 380,250" fill="#558b2f" opacity="0.9"/>
+  <polygon points="350,250 440,95 520,250" fill="#33691e" opacity="0.85"/>
+  <polygon points="480,250 560,115 640,250" fill="#2e7d32" opacity="0.8"/>
+  <!-- Forest on mountainsides -->
+  <polygon points="70,250 90,190 110,250" fill="#2e7d32"/>
+  <polygon points="110,250 130,195 150,250" fill="#388e3c"/>
+  <polygon points="220,250 245,175 270,250" fill="#2e7d32"/>
+  <polygon points="370,250 395,185 420,250" fill="#388e3c"/>
+  <polygon points="500,250 525,190 550,250" fill="#2e7d32"/>
+  <!-- Fishing village on shore -->
+  <rect x="280" y="238" width="16" height="22" fill="#795548" rx="2"/>
+  <polygon points="280,238 296,238 288,228" fill="#a1887f"/>
+  <rect x="300" y="240" width="14" height="20" fill="#6d4c41" rx="2"/>
+  <polygon points="300,240 314,240 307,232" fill="#8d6e63"/>
+  <!-- Fishing boats -->
+  <ellipse cx="150" cy="274" rx="30" ry="7" fill="#5d4037"/>
+  <rect x="135" y="267" width="30" height="7" fill="#6d4c41" rx="2"/>
+  <line x1="150" y1="267" x2="150" y2="254" stroke="#3e2723" stroke-width="2"/>
+  <polygon points="150,254 165,261 150,261" fill="#f44336" opacity="0.8"/>
+  <ellipse cx="490" cy="275" rx="28" ry="6" fill="#5d4037"/>
+  <!-- Lake shimmer -->
+  <line x1="0" y1="275" x2="640" y2="275" stroke="white" stroke-width="1.5" stroke-opacity="0.2"/>
+  <line x1="0" y1="292" x2="640" y2="292" stroke="white" stroke-width="1" stroke-opacity="0.15"/>
+  <!-- Sun -->
+  <circle cx="570" cy="75" r="28" fill="#FFF176" opacity="0.9"/>
+  <circle cx="570" cy="75" r="20" fill="#FFEE58"/>
+  <!-- Clouds -->
+  <ellipse cx="180" cy="60" rx="55" ry="18" fill="white" opacity="0.7"/>
+  <ellipse cx="155" cy="58" rx="35" ry="14" fill="white" opacity="0.6"/>
+  <!-- Label -->
+  <rect x="20" y="310" width="90" height="36" rx="6" fill="#1a237e" fill-opacity="0.85"/>
+  <text x="65" y="334" font-family="Georgia,serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Fizi</text>
+</svg>

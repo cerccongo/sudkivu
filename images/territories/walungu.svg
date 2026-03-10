@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f1f8e9"/>
+      <stop offset="100%" stop-color="#dcedc8"/>
+    </linearGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#558b2f"/>
+      <stop offset="100%" stop-color="#33691e"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#689f38"/>
+      <stop offset="100%" stop-color="#33691e"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="640" height="360" fill="url(#sky)"/>
+  <!-- Far background mountains -->
+  <polygon points="0,200 80,130 160,175 260,110 360,160 460,105 560,150 640,120 640,240 0,240" fill="#388e3c" opacity="0.5"/>
+  <!-- Terraced hillside (characteristic of Bushi/Walungu) -->
+  <!-- Hill 1 - left -->
+  <polygon points="0,360 0,200 80,150 160,210 200,260 140,360" fill="url(#hill1)"/>
+  <!-- Hill 2 - center-left -->
+  <polygon points="80,360 120,220 200,160 280,210 320,260 250,360" fill="url(#hill2)"/>
+  <!-- Hill 3 - center -->
+  <polygon points="220,360 260,215 360,155 440,205 480,260 400,360" fill="url(#hill1)"/>
+  <!-- Hill 4 - right -->
+  <polygon points="400,360 440,210 540,145 640,200 640,360" fill="url(#hill2)"/>
+  <!-- Terracing lines on hills -->
+  <path d="M 30 280 Q 80 265 120 278 Q 160 292 180 280" stroke="#8bc34a" stroke-width="2.5" fill="none" opacity="0.8"/>
+  <path d="M 20 250 Q 70 235 115 248 Q 155 262 190 250" stroke="#8bc34a" stroke-width="2" fill="none" opacity="0.75"/>
+  <path d="M 10 222 Q 55 208 100 220 Q 145 232 185 222" stroke="#8bc34a" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M 150 310 Q 210 295 260 308 Q 310 322 350 308" stroke="#8bc34a" stroke-width="2.5" fill="none" opacity="0.8"/>
+  <path d="M 145 280 Q 205 265 255 278 Q 305 292 345 280" stroke="#8bc34a" stroke-width="2" fill="none" opacity="0.75"/>
+  <path d="M 140 252 Q 195 237 248 250 Q 300 264 340 252" stroke="#8bc34a" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M 370 310 Q 430 295 490 308 Q 545 320 585 310" stroke="#8bc34a" stroke-width="2.5" fill="none" opacity="0.8"/>
+  <path d="M 370 280 Q 425 264 480 277 Q 535 292 580 280" stroke="#8bc34a" stroke-width="2" fill="none" opacity="0.75"/>
+  <!-- Vegetable gardens (maraîchères) -->
+  <rect x="60" y="300" width="40" height="30" fill="#8bc34a" opacity="0.6" rx="2"/>
+  <rect x="104" y="302" width="38" height="28" fill="#a5d6a7" opacity="0.6" rx="2"/>
+  <rect x="295" y="295" width="45" height="32" fill="#8bc34a" opacity="0.6" rx="2"/>
+  <rect x="344" y="297" width="40" height="30" fill="#a5d6a7" opacity="0.6" rx="2"/>
+  <rect x="430" y="298" width="42" height="32" fill="#8bc34a" opacity="0.6" rx="2"/>
+  <!-- Village huts -->
+  <rect x="260" y="250" width="18" height="22" fill="#795548" rx="2"/>
+  <polygon points="260,250 278,250 269,238" fill="#a1887f"/>
+  <rect x="282" y="252" width="16" height="20" fill="#6d4c41" rx="2"/>
+  <polygon points="282,252 298,252 290,241" fill="#8d6e63"/>
+  <rect x="450" y="245" width="18" height="22" fill="#795548" rx="2"/>
+  <polygon points="450,245 468,245 459,233" fill="#a1887f"/>
+  <!-- People silhouettes on terrace -->
+  <ellipse cx="200" cy="265" rx="6" ry="9" fill="#5d4037"/>
+  <ellipse cx="200" cy="256" rx="4" ry="4" fill="#5d4037"/>
+  <ellipse cx="215" cy="268" rx="6" ry="9" fill="#6d4c41"/>
+  <ellipse cx="215" cy="259" rx="4" ry="4" fill="#6d4c41"/>
+  <!-- Stream in valley -->
+  <path d="M 0 335 Q 80 315 160 330 Q 240 345 320 325 Q 400 305 480 325 Q 560 344 640 330" stroke="#1976d2" stroke-width="5" fill="none" opacity="0.65"/>
+  <!-- Sun with white clouds -->
+  <circle cx="540" cy="65" r="28" fill="#FFF176" opacity="0.9"/>
+  <ellipse cx="430" cy="50" rx="55" ry="18" fill="white" opacity="0.75"/>
+  <ellipse cx="405" cy="48" rx="38" ry="14" fill="white" opacity="0.65"/>
+  <ellipse cx="200" cy="60" rx="50" ry="17" fill="white" opacity="0.7"/>
+  <!-- Label -->
+  <rect x="20" y="310" width="120" height="36" rx="6" fill="#33691e" fill-opacity="0.88"/>
+  <text x="80" y="334" font-family="Georgia,serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Walungu</text>
+</svg>

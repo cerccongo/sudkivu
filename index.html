@@ -484,12 +484,23 @@
     .axe-card {
       background: var(--white);
       border-radius: 16px;
-      padding: 32px 28px;
+      padding: 0;
       border: 1px solid var(--border);
       transition: all 0.3s;
       cursor: pointer;
       position: relative;
       overflow: hidden;
+    }
+    .axe-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 14px 14px 0 0;
+      display: block;
+    }
+    .axe-card-body {
+      padding: 24px 28px 28px;
+      position: relative;
     }
     .axe-card:first-child { grid-column: span 1; }
     .axe-card:nth-child(5) { grid-column: span 2; }
@@ -1141,10 +1152,21 @@
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 22px 18px;
+      padding: 0;
       position: relative;
       overflow: hidden;
       transition: all 0.25s;
+    }
+    .territory-img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      display: block;
+    }
+    .territory-card-body {
+      padding: 14px 18px 18px;
+      position: relative;
     }
     .territory-card:hover {
       box-shadow: 0 8px 28px rgba(0,56,130,0.12);
@@ -1715,76 +1737,112 @@
       </div>
       <div class="territories-grid">
         <div class="territory-card city">
-          <span class="territory-icon">🌆</span>
-          <div class="territory-tag">Ville — Chef-lieu</div>
-          <div class="territory-name">Bukavu</div>
-          <div class="territory-desc">Capitale provinciale, située sur les rives sud du Lac Kivu. Centre administratif, commercial et culturel de la province.</div>
+          <img class="territory-img" src="images/territories/bukavu.svg" alt="Vue panoramique de Bukavu sur le Lac Kivu">
+          <div class="territory-card-body">
+            <span class="territory-icon">🌆</span>
+            <div class="territory-tag">Ville — Chef-lieu</div>
+            <div class="territory-name">Bukavu</div>
+            <div class="territory-desc">Capitale provinciale, située sur les rives sud du Lac Kivu. Centre administratif, commercial et culturel de la province.</div>
+          </div>
         </div>
         <div class="territory-card city">
-          <span class="territory-icon">🌆</span>
-          <div class="territory-tag">Ville</div>
-          <div class="territory-name">Uvira</div>
-          <div class="territory-desc">Deuxième ville de la province, au bord du Lac Tanganyika. Important nœud commercial et porte d'entrée du Burundi.</div>
+          <img class="territory-img" src="images/territories/uvira-ville.svg" alt="Vue d'Uvira au bord du Lac Tanganyika">
+          <div class="territory-card-body">
+            <span class="territory-icon">🌆</span>
+            <div class="territory-tag">Ville</div>
+            <div class="territory-name">Uvira</div>
+            <div class="territory-desc">Deuxième ville de la province, au bord du Lac Tanganyika. Important nœud commercial et porte d'entrée du Burundi.</div>
+          </div>
         </div>
         <div class="territory-card city">
-          <span class="territory-icon">🌆</span>
-          <div class="territory-tag">Ville</div>
-          <div class="territory-name">Baraka</div>
-          <div class="territory-desc">Ville lacustre sur le Tanganyika, dans le territoire de Fizi. Principal port du Sud du lac et centre commercial régional.</div>
+          <img class="territory-img" src="images/territories/baraka.svg" alt="Le port de Baraka sur le Lac Tanganyika">
+          <div class="territory-card-body">
+            <span class="territory-icon">🌆</span>
+            <div class="territory-tag">Ville</div>
+            <div class="territory-name">Baraka</div>
+            <div class="territory-desc">Ville lacustre sur le Tanganyika, dans le territoire de Fizi. Principal port du Sud du lac et centre commercial régional.</div>
+          </div>
         </div>
         <div class="territory-card city">
-          <span class="territory-icon">🌆</span>
-          <div class="territory-tag">Ville</div>
-          <div class="territory-name">Kamituga</div>
-          <div class="territory-desc">Ville minière dans le territoire de Mwenga, connue pour ses gisements d'or. Important centre d'activités artisanales minières.</div>
+          <img class="territory-img" src="images/territories/kamituga.svg" alt="Kamituga, ville minière au cœur des forêts de Mwenga">
+          <div class="territory-card-body">
+            <span class="territory-icon">🌆</span>
+            <div class="territory-tag">Ville</div>
+            <div class="territory-name">Kamituga</div>
+            <div class="territory-desc">Ville minière dans le territoire de Mwenga, connue pour ses gisements d'or. Important centre d'activités artisanales minières.</div>
+          </div>
         </div>
         <div class="territory-card territoire">
-          <span class="territory-icon">🗾</span>
-          <div class="territory-tag">Territoire</div>
-          <div class="territory-name">Fizi</div>
-          <div class="territory-desc">Vaste territoire au sud de la province, bordant le Lac Tanganyika. Ressources minières importantes ; chef-lieu : Baraka.</div>
+          <img class="territory-img" src="images/territories/fizi.svg" alt="Le littoral du territoire de Fizi sur le Lac Tanganyika">
+          <div class="territory-card-body">
+            <span class="territory-icon">🗾</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Fizi</div>
+            <div class="territory-desc">Vaste territoire au sud de la province, bordant le Lac Tanganyika. Ressources minières importantes ; chef-lieu : Baraka.</div>
+          </div>
         </div>
         <div class="territory-card territoire">
-          <span class="territory-icon">🏝️</span>
-          <div class="territory-tag">Territoire (Île)</div>
-          <div class="territory-name">Idjwi</div>
-          <div class="territory-desc">Grande île volcanique du Lac Kivu, l'une des plus peuplées d'Afrique subsaharienne. Agriculture vivrière et pêche lacustre.</div>
+          <img class="territory-img" src="images/territories/idjwi.svg" alt="L'île d'Idjwi sur le Lac Kivu">
+          <div class="territory-card-body">
+            <span class="territory-icon">🏝️</span>
+            <div class="territory-tag">Territoire (Île)</div>
+            <div class="territory-name">Idjwi</div>
+            <div class="territory-desc">Grande île volcanique du Lac Kivu, l'une des plus peuplées d'Afrique subsaharienne. Agriculture vivrière et pêche lacustre.</div>
+          </div>
         </div>
         <div class="territory-card territoire">
-          <span class="territory-icon">🗾</span>
-          <div class="territory-tag">Territoire</div>
-          <div class="territory-name">Kabare</div>
-          <div class="territory-desc">Territoire adjacent à Bukavu, au cœur du pays Bushi. Forêts montagnardes, agriculture caféicole et élevage laitier.</div>
+          <img class="territory-img" src="images/territories/kabare.svg" alt="Les montagnes boisées et caféières du territoire de Kabare">
+          <div class="territory-card-body">
+            <span class="territory-icon">🗾</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Kabare</div>
+            <div class="territory-desc">Territoire adjacent à Bukavu, au cœur du pays Bushi. Forêts montagnardes, agriculture caféicole et élevage laitier.</div>
+          </div>
         </div>
         <div class="territory-card territoire">
-          <span class="territory-icon">🗾</span>
-          <div class="territory-tag">Territoire</div>
-          <div class="territory-name">Kalehe</div>
-          <div class="territory-desc">Territoire situé entre le Lac Kivu et le Parc de Kahuzi-Biega. Riche potentiel agropastoral et touristique.</div>
+          <img class="territory-img" src="images/territories/kalehe.svg" alt="Le territoire de Kalehe entre le Lac Kivu et le Parc de Kahuzi-Biega">
+          <div class="territory-card-body">
+            <span class="territory-icon">🗾</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Kalehe</div>
+            <div class="territory-desc">Territoire situé entre le Lac Kivu et le Parc de Kahuzi-Biega. Riche potentiel agropastoral et touristique.</div>
+          </div>
         </div>
         <div class="territory-card territoire">
-          <span class="territory-icon">🗾</span>
-          <div class="territory-tag">Territoire</div>
-          <div class="territory-name">Mwenga</div>
-          <div class="territory-desc">Territoire forestier à l'ouest, traversé par la rivière Ulindi. Ressources aurifères importantes ; ville principale : Kamituga.</div>
+          <img class="territory-img" src="images/territories/mwenga.svg" alt="La rivière Ulindi traversant les forêts denses de Mwenga">
+          <div class="territory-card-body">
+            <span class="territory-icon">🗾</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Mwenga</div>
+            <div class="territory-desc">Territoire forestier à l'ouest, traversé par la rivière Ulindi. Ressources aurifères importantes ; ville principale : Kamituga.</div>
+          </div>
         </div>
         <div class="territory-card territoire">
-          <span class="territory-icon">🗾</span>
-          <div class="territory-tag">Territoire</div>
-          <div class="territory-name">Shabunda</div>
-          <div class="territory-desc">Le plus grand territoire en superficie. Forêts denses et ressources minières (or, coltan). Enclavé, accessible principalement par voie aérienne.</div>
+          <img class="territory-img" src="images/territories/shabunda.svg" alt="La forêt équatoriale dense du territoire de Shabunda">
+          <div class="territory-card-body">
+            <span class="territory-icon">🗾</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Shabunda</div>
+            <div class="territory-desc">Le plus grand territoire en superficie. Forêts denses et ressources minières (or, coltan). Enclavé, accessible principalement par voie aérienne.</div>
+          </div>
         </div>
         <div class="territory-card territoire">
-          <span class="territory-icon">🗾</span>
-          <div class="territory-tag">Territoire</div>
-          <div class="territory-name">Uvira</div>
-          <div class="territory-desc">Territoire frontalier avec le Burundi et la Tanzanie, sur le Lac Tanganyika. Pêche, agriculture et commerce transfrontalier.</div>
+          <img class="territory-img" src="images/territories/uvira-territoire.svg" alt="Le territoire d'Uvira sur le Lac Tanganyika, frontière avec le Burundi">
+          <div class="territory-card-body">
+            <span class="territory-icon">🗾</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Uvira</div>
+            <div class="territory-desc">Territoire frontalier avec le Burundi et la Tanzanie, sur le Lac Tanganyika. Pêche, agriculture et commerce transfrontalier.</div>
+          </div>
         </div>
         <div class="territory-card territoire">
-          <span class="territory-icon">🗾</span>
-          <div class="territory-tag">Territoire</div>
-          <div class="territory-name">Walungu</div>
-          <div class="territory-desc">Territoire du Bushi, au sud-ouest de Bukavu. Densément peuplé, agriculture vivrière et cultures maraîchères.</div>
+          <img class="territory-img" src="images/territories/walungu.svg" alt="Les collines terrassées et les cultures maraîchères de Walungu">
+          <div class="territory-card-body">
+            <span class="territory-icon">🗾</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Walungu</div>
+            <div class="territory-desc">Territoire du Bushi, au sud-ouest de Bukavu. Densément peuplé, agriculture vivrière et cultures maraîchères.</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1819,65 +1877,80 @@
       </div>
       <div class="axes-grid" id="secteurs">
         <div class="axe-card" style="--axe-color:#003882;" onclick="openModal('axe1')">
-          <span class="axe-num">01</span>
-          <div class="axe-tag">Axe 1 — Gouvernance</div>
-          <div class="axe-title">Instaurer une gouvernance transparente et un leadership efficace</div>
-          <div class="axe-desc">Refonder l'administration publique, assurer la sécurité des personnes et optimiser la mobilisation des ressources provinciales grâce à la numérisation et à l'anti-corruption.</div>
-          <div class="axe-actions">
-            <span class="axe-pill">Leadership</span>
-            <span class="axe-pill">Sécurité</span>
-            <span class="axe-pill">Finances publiques</span>
-            <span class="axe-pill">Administration</span>
-            <span class="axe-pill">Partenariats</span>
+          <img class="axe-img" src="images/axes/gouvernance.svg" alt="Gouvernance — Bâtiment administratif et symboles de transparence">
+          <div class="axe-card-body">
+            <span class="axe-num">01</span>
+            <div class="axe-tag">Axe 1 — Gouvernance</div>
+            <div class="axe-title">Instaurer une gouvernance transparente et un leadership efficace</div>
+            <div class="axe-desc">Refonder l'administration publique, assurer la sécurité des personnes et optimiser la mobilisation des ressources provinciales grâce à la numérisation et à l'anti-corruption.</div>
+            <div class="axe-actions">
+              <span class="axe-pill">Leadership</span>
+              <span class="axe-pill">Sécurité</span>
+              <span class="axe-pill">Finances publiques</span>
+              <span class="axe-pill">Administration</span>
+              <span class="axe-pill">Partenariats</span>
+            </div>
           </div>
         </div>
         <div class="axe-card" style="--axe-color:#1a7a2e;" onclick="openModal('axe2')">
-          <span class="axe-num">02</span>
-          <div class="axe-tag">Axe 2 — Économie</div>
-          <div class="axe-title">Relancer le secteur productif et assurer l'emploi</div>
-          <div class="axe-desc">Redynamiser l'agriculture, rationnaliser les activités minières, développer le tourisme et le commerce transfrontalier, et soutenir les PME pour créer des emplois durables.</div>
-          <div class="axe-actions">
-            <span class="axe-pill">Agriculture</span>
-            <span class="axe-pill">Mines</span>
-            <span class="axe-pill">Tourisme</span>
-            <span class="axe-pill">Commerce</span>
-            <span class="axe-pill">PME / Emploi</span>
+          <img class="axe-img" src="images/axes/economie.svg" alt="Économie — Agriculture, mines et commerce au Sud-Kivu">
+          <div class="axe-card-body">
+            <span class="axe-num">02</span>
+            <div class="axe-tag">Axe 2 — Économie</div>
+            <div class="axe-title">Relancer le secteur productif et assurer l'emploi</div>
+            <div class="axe-desc">Redynamiser l'agriculture, rationnaliser les activités minières, développer le tourisme et le commerce transfrontalier, et soutenir les PME pour créer des emplois durables.</div>
+            <div class="axe-actions">
+              <span class="axe-pill">Agriculture</span>
+              <span class="axe-pill">Mines</span>
+              <span class="axe-pill">Tourisme</span>
+              <span class="axe-pill">Commerce</span>
+              <span class="axe-pill">PME / Emploi</span>
+            </div>
           </div>
         </div>
         <div class="axe-card" style="--axe-color:#b83200;" onclick="openModal('axe3')">
-          <span class="axe-num">03</span>
-          <div class="axe-tag">Axe 3 — Services de base</div>
-          <div class="axe-title">Améliorer l'accès aux services sociaux et renforcer le capital humain</div>
-          <div class="axe-desc">Maintenir la compétitivité éducative, rendre les services de santé accessibles à tous les niveaux et améliorer les voies de communication pour désenclaver les territoires.</div>
-          <div class="axe-actions">
-            <span class="axe-pill">Éducation</span>
-            <span class="axe-pill">Santé</span>
-            <span class="axe-pill">Voies de communication</span>
+          <img class="axe-img" src="images/axes/services-base.svg" alt="Services de base — Éducation et santé pour tous">
+          <div class="axe-card-body">
+            <span class="axe-num">03</span>
+            <div class="axe-tag">Axe 3 — Services de base</div>
+            <div class="axe-title">Améliorer l'accès aux services sociaux et renforcer le capital humain</div>
+            <div class="axe-desc">Maintenir la compétitivité éducative, rendre les services de santé accessibles à tous les niveaux et améliorer les voies de communication pour désenclaver les territoires.</div>
+            <div class="axe-actions">
+              <span class="axe-pill">Éducation</span>
+              <span class="axe-pill">Santé</span>
+              <span class="axe-pill">Voies de communication</span>
+            </div>
           </div>
         </div>
         <div class="axe-card" style="--axe-color:#6a1a8a;" onclick="openModal('axe4')">
-          <span class="axe-num">04</span>
-          <div class="axe-tag">Axe 4 — Infrastructures</div>
-          <div class="axe-title">Revitaliser le réseau provincial d'infrastructures</div>
-          <div class="axe-desc">Désenclavement des territoires par la construction et la réhabilitation des routes, l'aménagement des ports et des aérodromes, et la mise en place de services de transport public.</div>
-          <div class="axe-actions">
-            <span class="axe-pill">Routes nationales</span>
-            <span class="axe-pill">Routes provinciales</span>
-            <span class="axe-pill">Aérodromes</span>
-            <span class="axe-pill">Voies lacustres</span>
+          <img class="axe-img" src="images/axes/infrastructures.svg" alt="Infrastructures — Routes, ponts, aérodromes et voies lacustres">
+          <div class="axe-card-body">
+            <span class="axe-num">04</span>
+            <div class="axe-tag">Axe 4 — Infrastructures</div>
+            <div class="axe-title">Revitaliser le réseau provincial d'infrastructures</div>
+            <div class="axe-desc">Désenclavement des territoires par la construction et la réhabilitation des routes, l'aménagement des ports et des aérodromes, et la mise en place de services de transport public.</div>
+            <div class="axe-actions">
+              <span class="axe-pill">Routes nationales</span>
+              <span class="axe-pill">Routes provinciales</span>
+              <span class="axe-pill">Aérodromes</span>
+              <span class="axe-pill">Voies lacustres</span>
+            </div>
           </div>
         </div>
         <div class="axe-card" style="--axe-color:#CE8A00;" onclick="openModal('axe5')">
-          <span class="axe-num">05</span>
-          <div class="axe-tag">Axe 5 — Cadre de vie</div>
-          <div class="axe-title">Améliorer le cadre de vie des populations du Sud-Kivu</div>
-          <div class="axe-desc">Accroître la desserte en eau potable et en électricité, lutter contre la pollution, moderniser l'habitat et l'urbanisme, développer les villes harmonieusement et promouvoir l'environnement et la culture.</div>
-          <div class="axe-actions">
-            <span class="axe-pill">Eau & Électricité</span>
-            <span class="axe-pill">Assainissement</span>
-            <span class="axe-pill">Habitat & Urbanisme</span>
-            <span class="axe-pill">Environnement</span>
-            <span class="axe-pill">Culture & Sport</span>
+          <img class="axe-img" src="images/axes/cadre-vie.svg" alt="Cadre de vie — Eau, électricité, habitat et environnement">
+          <div class="axe-card-body">
+            <span class="axe-num">05</span>
+            <div class="axe-tag">Axe 5 — Cadre de vie</div>
+            <div class="axe-title">Améliorer le cadre de vie des populations du Sud-Kivu</div>
+            <div class="axe-desc">Accroître la desserte en eau potable et en électricité, lutter contre la pollution, moderniser l'habitat et l'urbanisme, développer les villes harmonieusement et promouvoir l'environnement et la culture.</div>
+            <div class="axe-actions">
+              <span class="axe-pill">Eau & Électricité</span>
+              <span class="axe-pill">Assainissement</span>
+              <span class="axe-pill">Habitat & Urbanisme</span>
+              <span class="axe-pill">Environnement</span>
+              <span class="axe-pill">Culture & Sport</span>
+            </div>
           </div>
         </div>
       </div>

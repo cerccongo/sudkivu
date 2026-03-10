@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e3f2fd"/>
+      <stop offset="100%" stop-color="#90caf9"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0277bd"/>
+      <stop offset="100%" stop-color="#01579b"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="640" height="360" fill="url(#sky)"/>
+  <!-- Mountains background -->
+  <polygon points="0,220 80,130 160,200 240,120 320,170 400,110 480,160 560,100 640,150 640,260 0,260" fill="#558b2f" opacity="0.6"/>
+  <polygon points="0,240 100,160 200,210 300,150 400,200 500,140 600,190 640,165 640,270 0,270" fill="#388e3c" opacity="0.7"/>
+  <!-- Lake Tanganyika -->
+  <rect x="0" y="262" width="640" height="98" fill="url(#lake)"/>
+  <!-- Lake shimmer -->
+  <line x1="0" y1="272" x2="640" y2="272" stroke="white" stroke-width="1.5" stroke-opacity="0.25"/>
+  <line x1="0" y1="290" x2="640" y2="290" stroke="white" stroke-width="1" stroke-opacity="0.15"/>
+  <!-- Port/Dock -->
+  <rect x="280" y="250" width="120" height="12" fill="#5d4037"/>
+  <rect x="290" y="240" width="8" height="22" fill="#4e342e"/>
+  <rect x="380" y="240" width="8" height="22" fill="#4e342e"/>
+  <!-- Boat -->
+  <ellipse cx="200" cy="274" rx="50" ry="10" fill="#795548"/>
+  <rect x="180" y="262" width="40" height="12" fill="#8d6e63" rx="3"/>
+  <line x1="200" y1="260" x2="200" y2="240" stroke="#5d4037" stroke-width="2"/>
+  <polygon points="200,240 220,248 200,248" fill="#ffcc02" opacity="0.8"/>
+  <!-- City buildings -->
+  <rect x="230" y="200" width="18" height="52" fill="#78909c" rx="2"/>
+  <rect x="252" y="190" width="22" height="62" fill="#90a4ae" rx="2"/>
+  <rect x="278" y="195" width="20" height="57" fill="#78909c" rx="2"/>
+  <rect x="302" y="185" width="25" height="67" fill="#607d8b" rx="2"/>
+  <rect x="331" y="195" width="18" height="57" fill="#90a4ae" rx="2"/>
+  <rect x="353" y="205" width="20" height="47" fill="#78909c" rx="2"/>
+  <rect x="376" y="190" width="22" height="62" fill="#607d8b" rx="2"/>
+  <!-- Windows -->
+  <rect x="258" y="198" width="5" height="5" fill="#fff9c4" rx="1"/>
+  <rect x="266" y="198" width="5" height="5" fill="#fff9c4" rx="1"/>
+  <rect x="308" y="193" width="5" height="5" fill="#fff9c4" rx="1"/>
+  <rect x="316" y="193" width="5" height="5" fill="#fff9c4" rx="1"/>
+  <!-- Palm trees on shoreline -->
+  <line x1="420" y1="262" x2="420" y2="225" stroke="#5d4037" stroke-width="4"/>
+  <ellipse cx="420" cy="220" rx="22" ry="12" fill="#388e3c" transform="rotate(-20,420,220)"/>
+  <ellipse cx="420" cy="218" rx="18" ry="10" fill="#43a047" transform="rotate(15,420,218)"/>
+  <line x1="460" y1="262" x2="460" y2="230" stroke="#5d4037" stroke-width="3"/>
+  <ellipse cx="460" cy="224" rx="18" ry="10" fill="#2e7d32" transform="rotate(10,460,224)"/>
+  <!-- Sun with heat haze -->
+  <circle cx="580" cy="70" r="30" fill="#FF8F00" opacity="0.85"/>
+  <!-- Label -->
+  <rect x="20" y="310" width="110" height="36" rx="6" fill="#004d40" fill-opacity="0.85"/>
+  <text x="75" y="334" font-family="Georgia,serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Uvira</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f5e9"/>
+      <stop offset="100%" stop-color="#c8e6c9"/>
+    </linearGradient>
+    <linearGradient id="forest" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b5e20"/>
+      <stop offset="100%" stop-color="#004d40"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky / aerial mist look -->
+  <rect width="640" height="360" fill="url(#sky)"/>
+  <!-- Dense equatorial forest — multiple canopy layers -->
+  <!-- Far canopy layer -->
+  <rect x="0" y="60" width="640" height="300" fill="url(#forest)"/>
+  <!-- Canopy top layer 1 -->
+  <polygon points="0,60 25,30 50,60 75,28 100,60 125,25 150,60 175,32 200,60 225,27 250,60 275,30 300,60 325,26 350,60 375,32 400,60 425,28 450,60 475,30 500,60 525,27 550,60 575,32 600,60 625,28 640,48 640,80 0,80" fill="#2e7d32"/>
+  <!-- Canopy top layer 2 -->
+  <polygon points="0,80 30,52 60,80 90,48 120,80 150,50 180,80 210,46 240,80 270,52 300,80 330,48 360,80 390,50 420,80 450,46 480,80 510,52 540,80 570,48 600,80 630,52 640,70 640,100 0,100" fill="#388e3c" opacity="0.8"/>
+  <!-- Canopy top layer 3 -->
+  <polygon points="0,100 35,75 70,100 105,72 140,100 175,73 210,100 245,70 280,100 315,75 350,100 385,72 420,100 455,73 490,100 525,70 560,100 600,75 640,92 640,120 0,120" fill="#43a047" opacity="0.7"/>
+  <!-- Mid-layer foliage -->
+  <rect x="0" y="135" width="640" height="225" fill="#1b5e20"/>
+  <!-- Tree trunks visible -->
+  <rect x="30" y="160" width="12" height="200" fill="#2d1b00" opacity="0.6"/>
+  <rect x="100" y="150" width="14" height="210" fill="#1a1000" opacity="0.55"/>
+  <rect x="180" y="155" width="12" height="205" fill="#2d1b00" opacity="0.6"/>
+  <rect x="260" y="148" width="16" height="212" fill="#1a1000" opacity="0.55"/>
+  <rect x="360" y="152" width="14" height="208" fill="#2d1b00" opacity="0.6"/>
+  <rect x="450" y="158" width="12" height="202" fill="#1a1000" opacity="0.55"/>
+  <rect x="540" y="150" width="14" height="210" fill="#2d1b00" opacity="0.6"/>
+  <rect x="610" y="162" width="12" height="198" fill="#1a1000" opacity="0.55"/>
+  <!-- Undergrowth plants -->
+  <ellipse cx="70" cy="320" rx="22" ry="15" fill="#33691e"/>
+  <ellipse cx="140" cy="330" rx="18" ry="13" fill="#2e7d32"/>
+  <ellipse cx="220" cy="318" rx="24" ry="15" fill="#33691e"/>
+  <ellipse cx="310" cy="325" rx="20" ry="14" fill="#2e7d32"/>
+  <ellipse cx="400" cy="322" rx="22" ry="15" fill="#33691e"/>
+  <ellipse cx="490" cy="316" rx="20" ry="14" fill="#2e7d32"/>
+  <ellipse cx="580" cy="328" rx="24" ry="15" fill="#33691e"/>
+  <!-- Small stream in dark forest -->
+  <path d="M 150 360 Q 200 310 250 330 Q 300 350 350 315 Q 400 280 450 310 Q 490 335 540 300" stroke="#0d47a1" stroke-width="6" fill="none" opacity="0.7"/>
+  <!-- Shaft of light through canopy -->
+  <polygon points="300,60 340,60 380,360 260,360" fill="white" opacity="0.06"/>
+  <polygon points="450,80 480,80 510,360 420,360" fill="white" opacity="0.04"/>
+  <!-- Sky visible through top -->
+  <!-- Parrot/bird -->
+  <path d="M 430 42 Q 438 35 446 42" stroke="#e53935" stroke-width="2.5" fill="none"/>
+  <path d="M 460 38 Q 468 31 476 38" stroke="#43a047" stroke-width="2.5" fill="none"/>
+  <!-- Sun barely visible -->
+  <circle cx="80" cy="40" r="22" fill="#FFF9C4" opacity="0.7"/>
+  <!-- Label -->
+  <rect x="20" y="310" width="130" height="36" rx="6" fill="#1b5e20" fill-opacity="0.9"/>
+  <text x="85" y="334" font-family="Georgia,serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Shabunda</text>
+</svg>
