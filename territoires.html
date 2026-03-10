@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Les Minist&egrave;res &mdash; Province du Sud-Kivu</title>
-  <meta name="description" content="Les 10 minist&egrave;res provinciaux du Gouvernement Provincial du Sud-Kivu et leurs attributions." />
+  <title>Territoires &mdash; Province du Sud-Kivu</title>
+  <meta name="description" content="Les 8 territoires et 4 villes de la Province du Sud-Kivu : Fizi, Idjwi, Kabare, Kalehe, Mwenga, Shabunda, Uvira, Walungu, Bukavu, Uvira ville, Baraka, Kamituga." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
@@ -79,17 +79,21 @@
     .skip-link:focus{top:0;color:var(--white);}
     .content-section{padding:72px 0;background:var(--white);}
     .content-section.alt{background:var(--off-white);}
-    .ministeres-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px;}
-    .ministere-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px 26px;transition:all 0.25s;border-left:4px solid var(--blue-mid);display:flex;flex-direction:column;}
-    .ministere-card:hover{box-shadow:0 8px 28px rgba(0,56,130,0.12);transform:translateY(-2px);}
-    .ministere-card-num{font-size:12px;font-weight:700;color:var(--gray-mid);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;}
-    .ministere-card-icon{font-size:36px;margin-bottom:14px;}
-    .ministere-card-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);margin-bottom:10px;line-height:1.4;}
-    .ministere-card-desc{font-size:13px;color:var(--text-body);line-height:1.6;margin-bottom:16px;flex:1;}
-    .ministere-card-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue-mid);margin-top:auto;}
-    .ministere-card-link:hover{color:var(--blue-deep);}
-    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.ministeres-grid{grid-template-columns:1fr;}}
-    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}}
+    .territories-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px;}
+    .territory-card{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;}
+    .territory-card:hover{box-shadow:0 8px 28px rgba(0,56,130,0.12);transform:translateY(-3px);}
+    .territory-card.city{border-top:3px solid var(--gold);}
+    .territory-card.territoire{border-top:3px solid var(--blue-mid);}
+    .territory-img{width:100%;height:140px;object-fit:cover;}
+    .territory-card-body{padding:16px;display:flex;flex-direction:column;flex:1;}
+    .territory-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-mid);margin-bottom:6px;}
+    .territory-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--text-dark);margin-bottom:6px;}
+    .territory-desc{font-size:13px;color:var(--text-body);line-height:1.55;margin-bottom:12px;flex:1;}
+    .territory-icon{font-size:22px;float:right;margin-top:-4px;}
+    .territory-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue-mid);margin-top:auto;}
+    .territory-link:hover{color:var(--blue-deep);}
+    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.territories-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}.territories-grid{grid-template-columns:1fr;}}
 
   </style>
 </head>
@@ -120,7 +124,7 @@
           <div class="country">Gouvernement Provincial &bull; RDC</div>
         </div>
       </a>
-      <nav>
+            <nav>
         <a href="index.html#accueil" class="nav-link">Accueil</a>
         <a href="index.html#province" class="nav-link">Province</a>
         <a href="index.html#programme" class="nav-link">Programme</a>
@@ -128,9 +132,9 @@
         <a href="index.html#finances" class="nav-link">Finances</a>
         <a href="index.html#governor" class="nav-link">Gouverneur</a>
         <div class="nav-item">
-          <span class="nav-link" tabindex="0">Territoires &#x25BE;</span>
+          <span class="nav-link active" tabindex="0">Territoires &#x25BE;</span>
           <div class="nav-dropdown">
-            <a href="territoires.html">&#x1F5FA;&#xFE0F; Vue d&apos;ensemble</a>
+            <a href="territoires.html" style="font-weight:700;color:var(--blue-deep);">&#x1F5FA;&#xFE0F; Vue d&apos;ensemble</a>
             <div class="nav-dropdown-divider"></div>
             <a href="territoire-bukavu.html">&#x1F3D9;&#xFE0F; Bukavu</a>
             <a href="territoire-uvira-ville.html">&#x1F3D9;&#xFE0F; Uvira (Ville)</a>
@@ -148,11 +152,11 @@
           </div>
         </div>
         <div class="nav-item">
-          <span class="nav-link active" tabindex="0">Gouvernement &#x25BE;</span>
+          <span class="nav-link" tabindex="0">Gouvernement &#x25BE;</span>
           <div class="nav-dropdown">
             <a href="gouverneur.html">&#x1F464; Le Gouverneur</a>
             <a href="cabinet.html">&#x1F3C5; Cabinet du Gouverneur</a>
-            <a href="ministeres.html" style="font-weight:700;color:var(--blue-deep);">&#x1F3DB;&#xFE0F; Les Minist&egrave;res</a>
+            <a href="ministeres.html">&#x1F3DB;&#xFE0F; Les Minist&egrave;res</a>
             <div class="nav-dropdown-divider"></div>
             <a href="membres-cabinet.html">&#x1F465; Membres du Cabinet</a>
             <a href="secretariat-executif.html">&#x1F4CB; Secr&eacute;tariat Ex&eacute;cutif</a>
@@ -168,18 +172,30 @@
         <span></span><span></span><span></span>
       </button>
     </div>
-    <div class="mobile-nav">
+        <div class="mobile-nav">
       <a href="index.html#accueil" class="nav-link">Accueil</a>
       <a href="index.html#province" class="nav-link">Province</a>
       <a href="index.html#programme" class="nav-link">Programme 2024&ndash;2028</a>
       <a href="index.html#secteurs" class="nav-link">Secteurs</a>
       <a href="index.html#finances" class="nav-link">Finances</a>
       <a href="index.html#governor" class="nav-link">Gouverneur</a>
-      <a href="territoires.html" class="nav-link">Territoires</a>
+      <a href="territoires.html" class="nav-link active">Territoires</a>
+      <a href="territoire-bukavu.html" class="nav-link">&nbsp;&nbsp;Bukavu</a>
+      <a href="territoire-uvira-ville.html" class="nav-link">&nbsp;&nbsp;Uvira (Ville)</a>
+      <a href="territoire-baraka.html" class="nav-link">&nbsp;&nbsp;Baraka</a>
+      <a href="territoire-kamituga.html" class="nav-link">&nbsp;&nbsp;Kamituga</a>
+      <a href="territoire-fizi.html" class="nav-link">&nbsp;&nbsp;Fizi</a>
+      <a href="territoire-idjwi.html" class="nav-link">&nbsp;&nbsp;Idjwi</a>
+      <a href="territoire-kabare.html" class="nav-link">&nbsp;&nbsp;Kabare</a>
+      <a href="territoire-kalehe.html" class="nav-link">&nbsp;&nbsp;Kalehe</a>
+      <a href="territoire-mwenga.html" class="nav-link">&nbsp;&nbsp;Mwenga</a>
+      <a href="territoire-shabunda.html" class="nav-link">&nbsp;&nbsp;Shabunda</a>
+      <a href="territoire-uvira.html" class="nav-link">&nbsp;&nbsp;Uvira (Territoire)</a>
+      <a href="territoire-walungu.html" class="nav-link">&nbsp;&nbsp;Walungu</a>
       <a href="gouvernement.html" class="nav-link">Gouvernement Provincial</a>
       <a href="gouverneur.html" class="nav-link">Le Gouverneur</a>
       <a href="cabinet.html" class="nav-link">Cabinet du Gouverneur</a>
-      <a href="ministeres.html" class="nav-link active">Les Minist&egrave;res</a>
+      <a href="ministeres.html" class="nav-link">Les Minist&egrave;res</a>
       <a href="membres-cabinet.html" class="nav-link">Membres du Cabinet</a>
       <a href="secretariat-executif.html" class="nav-link">Secr&eacute;tariat Ex&eacute;cutif</a>
       <a href="secretariat-administratif.html" class="nav-link">Secr&eacute;tariat Administratif</a>
@@ -195,13 +211,12 @@
   <section class="page-hero">
     <div class="section-inner">
       <div class="page-hero-content">
-        <div class="hero-badge">Gouvernement Provincial</div>
-        <h1>Les <span>Minist&egrave;res</span> Provinciaux</h1>
-        <p class="page-hero-desc">Le Gouvernement Provincial du Sud-Kivu est compos&eacute; de 10 minist&egrave;res, chacun responsable d'un secteur cl&eacute; du d&eacute;veloppement de la province. Ensemble, ils mettent en &oelig;uvre le Programme d'Actions 2024&ndash;2028.</p>
+        <div class="hero-badge">D&eacute;coupage territorial</div>
+        <h1>Territoires &amp; <span>Villes</span></h1>
+        <p class="page-hero-desc">La Province du Sud-Kivu est subdivis&eacute;e en 8 territoires administratifs et 4 villes. Explorez chaque entit&eacute; territoriale avec ses caract&eacute;ristiques g&eacute;ographiques, &eacute;conomiques et d&eacute;mographiques.</p>
         <div class="page-breadcrumb">
           <a href="index.html">Accueil</a> <span>&rsaquo;</span>
-          <a href="gouvernement.html">Gouvernement Provincial</a> <span>&rsaquo;</span>
-          <span>Les Minist&egrave;res</span>
+          <span>Territoires</span>
         </div>
       </div>
     </div>
@@ -209,80 +224,49 @@
 
   <section class="content-section">
     <div class="section-inner">
-      <div class="section-label">10 Minist&egrave;res provinciaux</div>
-      <div class="section-title">L'&Eacute;quipe <span>Gouvernementale</span></div>
-      <div class="section-sub">Les minist&egrave;res provinciaux du Sud-Kivu &oelig;uvrent pour le d&eacute;veloppement int&eacute;gral de la province dans le cadre du Programme d'Actions du Gouvernement 2024&ndash;2028.</div>
-      <div class="ministeres-grid">
-        
-        <div class="ministere-card">
-          <div class="ministere-card-num">Minist&egrave;re n&deg;01</div>
-          <div class="ministere-card-icon">&#x1F6E1;&#xFE0F;</div>
-          <div class="ministere-card-name">Minist&egrave;re de l'Int&eacute;rieur, S&eacute;curit&eacute;, D&eacute;centralisation et Affaires Coutumieres</div>
-          <div class="ministere-card-desc">Responsable de la s&eacute;curit&eacute; int&eacute;rieure, de la d&eacute;centralisation, de l'ordre public et des affaires coutumi&egrave;res.</div>
-          <a href="ministere-interieur.html" class="ministere-card-link">En savoir plus &#x2192;</a>
+      <div class="section-label">4 Villes</div>
+      <div class="section-title">Villes de la <span>Province</span></div>
+      <div class="section-sub">Les quatre villes de la Province du Sud-Kivu constituent les principaux p&ocirc;les urbains, &eacute;conomiques et administratifs.</div>
+      <div class="territories-grid">
+        <div class="territory-card city">
+          <img class="territory-img" src="images/territories/bukavu.svg" alt="Vue panoramique de Bukavu sur le Lac Kivu">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x1F3D9;&#xFE0F;</span>
+            <div class="territory-tag">Ville &mdash; Chef-lieu</div>
+            <div class="territory-name">Bukavu</div>
+            <div class="territory-desc">Capitale provinciale, situ&eacute;e sur les rives sud du Lac Kivu. Centre administratif, commercial et culturel de la province.</div>
+            <a href="territoire-bukavu.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
         </div>
-        <div class="ministere-card">
-          <div class="ministere-card-num">Minist&egrave;re n&deg;02</div>
-          <div class="ministere-card-icon">&#x1F4B0;</div>
-          <div class="ministere-card-name">Minist&egrave;re des Finances, &Eacute;conomie, Entrepreneuriat, Petites et Moyennes Entreprises et Artisanat</div>
-          <div class="ministere-card-desc">Charg&eacute; de la gestion des finances provinciales, du d&eacute;veloppement &eacute;conomique, de l'entrepreneuriat et des PME.</div>
-          <a href="ministere-finances.html" class="ministere-card-link">En savoir plus &#x2192;</a>
+        <div class="territory-card city">
+          <img class="territory-img" src="images/territories/uvira-ville.svg" alt="Vue d'Uvira au bord du Lac Tanganyika">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x1F3D9;&#xFE0F;</span>
+            <div class="territory-tag">Ville</div>
+            <div class="territory-name">Uvira</div>
+            <div class="territory-desc">Deuxi&egrave;me ville de la province, au bord du Lac Tanganyika. Important n&oelig;ud commercial et porte d&apos;entr&eacute;e du Burundi.</div>
+            <a href="territoire-uvira-ville.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
         </div>
-        <div class="ministere-card">
-          <div class="ministere-card-num">Minist&egrave;re n&deg;03</div>
-          <div class="ministere-card-icon">&#x1F4CA;</div>
-          <div class="ministere-card-name">Minist&egrave;re du Plan, Budget et Promotion des Investissements</div>
-          <div class="ministere-card-desc">Responsable de la planification du d&eacute;veloppement, de l'&eacute;laboration du budget et de la promotion des investissements.</div>
-          <a href="ministere-plan.html" class="ministere-card-link">En savoir plus &#x2192;</a>
+        <div class="territory-card city">
+          <img class="territory-img" src="images/territories/baraka.svg" alt="Le port de Baraka sur le Lac Tanganyika">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x1F3D9;&#xFE0F;</span>
+            <div class="territory-tag">Ville</div>
+            <div class="territory-name">Baraka</div>
+            <div class="territory-desc">Ville lacustre sur le Tanganyika, dans le territoire de Fizi. Principal port du Sud du lac et centre commercial r&eacute;gional.</div>
+            <a href="territoire-baraka.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
         </div>
-        <div class="ministere-card">
-          <div class="ministere-card-num">Minist&egrave;re n&deg;04</div>
-          <div class="ministere-card-icon">&#x1F3D7;&#xFE0F;</div>
-          <div class="ministere-card-name">Minist&egrave;res des Infrastructures, Travaux Publics, Urbanisme, Habitat, Affaires Fonci&egrave;res et des Hydrocarbures</div>
-          <div class="ministere-card-desc">Pilote la politique d'infrastructures, des travaux publics, de l'urbanisme, du logement et des affaires fonci&egrave;res.</div>
-          <a href="ministere-infrastructures.html" class="ministere-card-link">En savoir plus &#x2192;</a>
-        </div>
-        <div class="ministere-card">
-          <div class="ministere-card-num">Minist&egrave;re n&deg;05</div>
-          <div class="ministere-card-icon">&#x2696;&#xFE0F;</div>
-          <div class="ministere-card-name">Minist&egrave;re de la Justice, Droits humains et des Personnes vivant avec handicap</div>
-          <div class="ministere-card-desc">Veille &agrave; l'application des lois, promeut les droits humains et d&eacute;fend les personnes vivant avec handicap.</div>
-          <a href="ministere-justice.html" class="ministere-card-link">En savoir plus &#x2192;</a>
-        </div>
-        <div class="ministere-card">
-          <div class="ministere-card-num">Minist&egrave;re n&deg;06</div>
-          <div class="ministere-card-icon">&#x1F33E;</div>
-          <div class="ministere-card-name">Minist&egrave;re de l'Agriculture, Elevage, P&ecirc;che, Environnement et de l'Economie verte, Porte-parole du gouvernement</div>
-          <div class="ministere-card-desc">Pilote la politique agricole, &eacute;levage, p&ecirc;che, protection de l'environnement et &eacute;conomie verte. Porte-parole du gouvernement.</div>
-          <a href="ministere-agriculture.html" class="ministere-card-link">En savoir plus &#x2192;</a>
-        </div>
-        <div class="ministere-card">
-          <div class="ministere-card-num">Minist&egrave;re n&deg;07</div>
-          <div class="ministere-card-icon">&#x1F69A;</div>
-          <div class="ministere-card-name">Minist&egrave;re des Transports, Voies de communication et des Relations avec l'Assembl&eacute;e provinciale</div>
-          <div class="ministere-card-desc">G&egrave;re les politiques de transport, les voies de communication et assure la liaison avec l'Assembl&eacute;e Provinciale.</div>
-          <a href="ministere-transports.html" class="ministere-card-link">En savoir plus &#x2192;</a>
-        </div>
-        <div class="ministere-card">
-          <div class="ministere-card-num">Minist&egrave;re n&deg;08</div>
-          <div class="ministere-card-icon">&#x26CF;&#xFE0F;</div>
-          <div class="ministere-card-name">Minist&egrave;re des Mines, Energie et des Ressources hydrauliques</div>
-          <div class="ministere-card-desc">Supervise l'exploitation mini&egrave;re, d&eacute;veloppe les infrastructures &eacute;nerg&eacute;tiques et valorise les ressources hydrauliques.</div>
-          <a href="ministere-mines.html" class="ministere-card-link">En savoir plus &#x2192;</a>
-        </div>
-        <div class="ministere-card">
-          <div class="ministere-card-num">Minist&egrave;re n&deg;09</div>
-          <div class="ministere-card-icon">&#x1F4DA;</div>
-          <div class="ministere-card-name">Minist&egrave;re de l'Education, Culture, Jeunesse, Genre, Famille, Tourisme, Sport et Loisir</div>
-          <div class="ministere-card-desc">Supervise la politique &eacute;ducative, promeut la culture, la jeunesse, l'&eacute;galit&eacute; du genre, le tourisme et le sport.</div>
-          <a href="ministere-education.html" class="ministere-card-link">En savoir plus &#x2192;</a>
-        </div>
-        <div class="ministere-card">
-          <div class="ministere-card-num">Minist&egrave;re n&deg;10</div>
-          <div class="ministere-card-icon">&#x1F3E5;</div>
-          <div class="ministere-card-name">Minist&egrave;re de la Sant&eacute; publique et Affaires Humanitaires</div>
-          <div class="ministere-card-desc">Coordonne la politique sanitaire provinciale, supervise les h&ocirc;pitaux et g&egrave;re les affaires humanitaires.</div>
-          <a href="ministere-sante.html" class="ministere-card-link">En savoir plus &#x2192;</a>
+        <div class="territory-card city">
+          <img class="territory-img" src="images/territories/kamituga.svg" alt="Kamituga, ville mini&egrave;re au c&oelig;ur des for&ecirc;ts de Mwenga">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x26CF;&#xFE0F;</span>
+            <div class="territory-tag">Ville</div>
+            <div class="territory-name">Kamituga</div>
+            <div class="territory-desc">Ville mini&egrave;re dans le territoire de Mwenga, connue pour ses gisements d&apos;or. Important centre d&apos;activit&eacute;s artisanales mini&egrave;res.</div>
+            <a href="territoire-kamituga.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
         </div>
       </div>
     </div>
@@ -290,27 +274,119 @@
 
   <section class="content-section alt">
     <div class="section-inner">
-      <div class="section-label">Organisation</div>
-      <div class="section-title">Structure du <span>Gouvernement</span></div>
-      <div class="section-sub">Le Gouvernement Provincial du Sud-Kivu est dirig&eacute; par le Gouverneur et organis&eacute; en minist&egrave;res sectoriels.</div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px;">
-        <div style="background:var(--white);border-radius:12px;padding:24px;border:1px solid var(--border);text-align:center;">
-          <div style="font-size:36px;margin-bottom:10px;">&#x1F464;</div>
-          <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">Le Gouverneur</div>
-          <div style="font-size:13px;color:var(--gray-mid);margin-bottom:14px;">Chef de l'Ex&eacute;cutif Provincial</div>
-          <a href="gouverneur.html" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue-mid);">D&eacute;couvrir &#x2192;</a>
+      <div class="section-label">8 Territoires administratifs</div>
+      <div class="section-title">Territoires de la <span>Province</span></div>
+      <div class="section-sub">Les huit territoires administratifs de la Province du Sud-Kivu couvrent une superficie totale de plus de 65 000 km², avec une population de plus de 5,5 millions d&apos;habitants.</div>
+      <div class="territories-grid">
+        <div class="territory-card territoire">
+          <img class="territory-img" src="images/territories/fizi.svg" alt="Le littoral du territoire de Fizi sur le Lac Tanganyika">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x1F30A;</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Fizi</div>
+            <div class="territory-desc">Vaste territoire au sud de la province, bordant le Lac Tanganyika. Ressources mini&egrave;res importantes&#160;; chef-lieu&#160;: Baraka.</div>
+            <a href="territoire-fizi.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
         </div>
-        <div style="background:var(--white);border-radius:12px;padding:24px;border:1px solid var(--border);text-align:center;">
-          <div style="font-size:36px;margin-bottom:10px;">&#x1F3C5;</div>
-          <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">Cabinet du Gouverneur</div>
-          <div style="font-size:13px;color:var(--gray-mid);margin-bottom:14px;">Organe consultatif et strat&eacute;gique</div>
-          <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue-mid);">D&eacute;couvrir &#x2192;</a>
+        <div class="territory-card territoire">
+          <img class="territory-img" src="images/territories/idjwi.svg" alt="L'&icirc;le d'Idjwi sur le Lac Kivu">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x1F3DD;&#xFE0F;</span>
+            <div class="territory-tag">Territoire (Île)</div>
+            <div class="territory-name">Idjwi</div>
+            <div class="territory-desc">Grande &icirc;le volcanique du Lac Kivu, l&apos;une des plus peupl&eacute;es d&apos;Afrique subsaharienne. Agriculture vivri&egrave;re et p&ecirc;che lacustre.</div>
+            <a href="territoire-idjwi.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
         </div>
-        <div style="background:var(--white);border-radius:12px;padding:24px;border:1px solid var(--border);text-align:center;">
-          <div style="font-size:36px;margin-bottom:10px;">&#x1F4DC;</div>
-          <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">Assembl&eacute;e Provinciale</div>
-          <div style="font-size:13px;color:var(--gray-mid);margin-bottom:14px;">Organe l&eacute;gislatif provincial</div>
-          <a href="assemblee.html" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue-mid);">D&eacute;couvrir &#x2192;</a>
+        <div class="territory-card territoire">
+          <img class="territory-img" src="images/territories/kabare.svg" alt="Les montagnes bois&eacute;es et caf&eacute;i&egrave;res du territoire de Kabare">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x26F0;&#xFE0F;</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Kabare</div>
+            <div class="territory-desc">Territoire adjacent &agrave; Bukavu, au c&oelig;ur du pays Bushi. For&ecirc;ts montagnardes, agriculture caf&eacute;icole et &eacute;levage laitier.</div>
+            <a href="territoire-kabare.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
+        </div>
+        <div class="territory-card territoire">
+          <img class="territory-img" src="images/territories/kalehe.svg" alt="Le territoire de Kalehe entre le Lac Kivu et le Parc de Kahuzi-Biega">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x1F333;</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Kalehe</div>
+            <div class="territory-desc">Territoire situ&eacute; entre le Lac Kivu et le Parc de Kahuzi-Biega. Riche potentiel agropastoral et touristique.</div>
+            <a href="territoire-kalehe.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
+        </div>
+        <div class="territory-card territoire">
+          <img class="territory-img" src="images/territories/mwenga.svg" alt="La rivi&egrave;re Ulindi traversant les for&ecirc;ts denses de Mwenga">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x1F332;</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Mwenga</div>
+            <div class="territory-desc">Territoire forestier &agrave; l&apos;ouest, travers&eacute; par la rivi&egrave;re Ulindi. Ressources aur&icirc;f&egrave;res importantes&#160;; ville principale&#160;: Kamituga.</div>
+            <a href="territoire-mwenga.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
+        </div>
+        <div class="territory-card territoire">
+          <img class="territory-img" src="images/territories/shabunda.svg" alt="La for&ecirc;t &eacute;quatoriale dense du territoire de Shabunda">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x1F6B6;</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Shabunda</div>
+            <div class="territory-desc">Le plus grand territoire en superficie. For&ecirc;ts denses et ressources mini&egrave;res (or, coltan). Enclavé, accessible principalement par voie a&eacute;rienne.</div>
+            <a href="territoire-shabunda.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
+        </div>
+        <div class="territory-card territoire">
+          <img class="territory-img" src="images/territories/uvira-territoire.svg" alt="Le territoire d'Uvira sur le Lac Tanganyika, fronti&egrave;re avec le Burundi">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x1F30A;</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Uvira</div>
+            <div class="territory-desc">Territoire frontalier avec le Burundi et la Tanzanie, sur le Lac Tanganyika. P&ecirc;che, agriculture et commerce transfrontalier.</div>
+            <a href="territoire-uvira.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
+        </div>
+        <div class="territory-card territoire">
+          <img class="territory-img" src="images/territories/walungu.svg" alt="Les collines terrassées et les cultures maraîchères de Walungu">
+          <div class="territory-card-body">
+            <span class="territory-icon">&#x1F3D4;&#xFE0F;</span>
+            <div class="territory-tag">Territoire</div>
+            <div class="territory-name">Walungu</div>
+            <div class="territory-desc">Territoire montagneux au c&oelig;ur du pays Bushi. Agriculture maraîchère, cultures vivri&egrave;res et caf&eacute;iculture sur les collines terrassées.</div>
+            <a href="territoire-walungu.html" class="territory-link">D&eacute;couvrir &#x2192;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="section-inner">
+      <div class="section-label">Profil territorial</div>
+      <div class="section-title">La Province du <span>Sud-Kivu</span> en chiffres</div>
+      <div class="section-sub">Aperçu des donn&eacute;es cl&eacute;s du d&eacute;coupage territorial de la province.</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:8px;">
+        <div style="background:var(--off-white);border-radius:12px;padding:24px;text-align:center;">
+          <div style="font-size:40px;font-family:'Playfair Display',serif;font-weight:900;color:var(--blue-deep);">8</div>
+          <div style="font-size:14px;font-weight:700;color:var(--text-dark);margin:4px 0 6px;">Territoires administratifs</div>
+          <div style="font-size:12px;color:var(--gray-mid);">Fizi, Idjwi, Kabare, Kalehe, Mwenga, Shabunda, Uvira, Walungu</div>
+        </div>
+        <div style="background:var(--off-white);border-radius:12px;padding:24px;text-align:center;">
+          <div style="font-size:40px;font-family:'Playfair Display',serif;font-weight:900;color:var(--gold);">4</div>
+          <div style="font-size:14px;font-weight:700;color:var(--text-dark);margin:4px 0 6px;">Villes</div>
+          <div style="font-size:12px;color:var(--gray-mid);">Bukavu (chef-lieu), Uvira, Baraka, Kamituga</div>
+        </div>
+        <div style="background:var(--off-white);border-radius:12px;padding:24px;text-align:center;">
+          <div style="font-size:40px;font-family:'Playfair Display',serif;font-weight:900;color:var(--blue-deep);">65 000</div>
+          <div style="font-size:14px;font-weight:700;color:var(--text-dark);margin:4px 0 6px;">km&sup2; de superficie</div>
+          <div style="font-size:12px;color:var(--gray-mid);">Shabunda est le plus grand territoire (environ 24 000 km&sup2;)</div>
+        </div>
+        <div style="background:var(--off-white);border-radius:12px;padding:24px;text-align:center;">
+          <div style="font-size:40px;font-family:'Playfair Display',serif;font-weight:900;color:var(--gold);">5,5M</div>
+          <div style="font-size:14px;font-weight:700;color:var(--text-dark);margin:4px 0 6px;">Habitants</div>
+          <div style="font-size:12px;color:var(--gray-mid);">Densit&eacute; variable selon les territoires</div>
         </div>
       </div>
     </div>
@@ -318,7 +394,7 @@
 
   </main>
 
-  <footer>
+    <footer>
     <div class="section-inner">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -332,18 +408,17 @@
           <p class="footer-desc">Le Gouvernement Provincial du Sud-Kivu s&apos;engage pour l&apos;&eacute;mergence de la province &agrave; travers un programme ambitieux de d&eacute;veloppement 2024&ndash;2028.</p>
         </div>
         <div class="footer-col">
-          <h4>Minist&egrave;res</h4>
+          <h4>Territoires</h4>
           <ul class="footer-links">
-            <li><a href="ministere-interieur.html">Int&eacute;rieur &amp; S&eacute;curit&eacute;</a></li>
-            <li><a href="ministere-finances.html">Finances &amp; &Eacute;conomie</a></li>
-            <li><a href="ministere-plan.html">Plan &amp; Budget</a></li>
-            <li><a href="ministere-infrastructures.html">Infrastructures</a></li>
-            <li><a href="ministere-justice.html">Justice</a></li>
-            <li><a href="ministere-agriculture.html">Agriculture</a></li>
-            <li><a href="ministere-transports.html">Transports</a></li>
-            <li><a href="ministere-mines.html">Mines &amp; &Eacute;nergie</a></li>
-            <li><a href="ministere-education.html">&Eacute;ducation</a></li>
-            <li><a href="ministere-sante.html">Sant&eacute;</a></li>
+            <li><a href="territoires.html">Vue d&apos;ensemble</a></li>
+            <li><a href="territoire-bukavu.html">Bukavu</a></li>
+            <li><a href="territoire-fizi.html">Fizi</a></li>
+            <li><a href="territoire-idjwi.html">Idjwi</a></li>
+            <li><a href="territoire-kabare.html">Kabare</a></li>
+            <li><a href="territoire-kalehe.html">Kalehe</a></li>
+            <li><a href="territoire-mwenga.html">Mwenga</a></li>
+            <li><a href="territoire-shabunda.html">Shabunda</a></li>
+            <li><a href="territoire-walungu.html">Walungu</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -351,6 +426,7 @@
           <ul class="footer-links">
             <li><a href="gouverneur.html">Le Gouverneur</a></li>
             <li><a href="cabinet.html">Cabinet du Gouverneur</a></li>
+            <li><a href="ministeres.html">Les Minist&egrave;res</a></li>
             <li><a href="membres-cabinet.html">Membres du Cabinet</a></li>
             <li><a href="secretariat-executif.html">Secr&eacute;tariat Ex&eacute;cutif</a></li>
             <li><a href="assemblee.html">Assembl&eacute;e Provinciale</a></li>
@@ -359,10 +435,10 @@
         <div class="footer-col">
           <h4>Province</h4>
           <ul class="footer-links">
-            <li><a href="territoires.html">Territoires</a></li>
             <li><a href="index.html#province">Profil g&eacute;ographique</a></li>
             <li><a href="index.html#programme">Plan Quinquennal 2024&ndash;2028</a></li>
             <li><a href="index.html#secteurs">Axes Strat&eacute;giques</a></li>
+            <li><a href="index.html#finances">Finances Provinciales</a></li>
           </ul>
         </div>
       </div>

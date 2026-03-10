@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Membres du Cabinet du Gouverneur &mdash; Province du Sud-Kivu</title>
-  <meta name="description" content="Les membres du Cabinet du Gouverneur du Sud-Kivu : Directeur de Cabinet, Conseillers, Chargés de Mission et personnel d'appui." />
+  <title>Fizi &mdash; Territoire &mdash; Province du Sud-Kivu</title>
+  <meta name="description" content="Fizi : Territoire de la Province du Sud-Kivu. Vaste territoire au sud de la province, bordant le Lac Tanganyika. Ressources mini&egrave;res importantes&#160;; chef-lieu&#160;: Baraka." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
@@ -83,7 +83,7 @@
     .content-text p{font-size:15px;color:var(--text-body);line-height:1.75;margin-bottom:16px;}
     .info-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:8px;}
     .info-list li{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--text-body);line-height:1.55;}
-    .info-list li::before{content:'✓';color:var(--blue-mid);font-weight:700;flex-shrink:0;margin-top:1px;}
+    .info-list li::before{content:'\2713';color:var(--blue-mid);font-weight:700;flex-shrink:0;margin-top:1px;}
     .info-box{background:linear-gradient(135deg,var(--blue-deep),#001840);border-radius:16px;padding:36px 32px;color:var(--white);}
     .info-box h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:20px;}
     .info-box h3 span{color:var(--gold-light);}
@@ -99,39 +99,52 @@
     .feature-card-icon{font-size:28px;margin-bottom:12px;}
     .feature-card-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);margin-bottom:8px;}
     .feature-card-desc{font-size:13px;color:var(--text-body);line-height:1.6;}
-    .contact-dark{padding:72px 0;background:linear-gradient(135deg,var(--blue-deep) 0%,#001840 100%);color:var(--white);}
-    .contact-dark-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:40px;}
-    .contact-dark h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:12px;}
-    .contact-dark h3 span{color:var(--gold-light);}
-    .contact-dark p{font-size:15px;color:rgba(255,255,255,0.8);line-height:1.7;}
-    .contact-list{list-style:none;display:flex;flex-direction:column;gap:18px;}
-    .contact-item{display:flex;gap:16px;align-items:flex-start;}
-    .contact-item-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
-    .contact-item-text{font-size:14px;line-height:1.65;color:rgba(255,255,255,0.8);}
-    .contact-item-text strong{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;font-weight:700;}
-    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr 1fr;}.contact-dark-grid{grid-template-columns:1fr;}}
-    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}.cards-grid{grid-template-columns:1fr;}}
+    .territories-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px;}
+    .territory-card{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;}
+    .territory-card:hover{box-shadow:0 8px 28px rgba(0,56,130,0.12);transform:translateY(-3px);}
+    .territory-card.city{border-top:3px solid var(--gold);}
+    .territory-card.territoire{border-top:3px solid var(--blue-mid);}
+    .territory-img{width:100%;height:140px;object-fit:cover;}
+    .territory-card-body{padding:16px;}
+    .territory-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-mid);margin-bottom:6px;}
+    .territory-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--text-dark);margin-bottom:6px;}
+    .territory-desc{font-size:13px;color:var(--text-body);line-height:1.55;margin-bottom:12px;}
+    .territory-icon{font-size:22px;float:right;margin-top:-4px;}
+    .territory-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue-mid);margin-top:auto;padding-top:8px;}
+    .territory-link:hover{color:var(--blue-deep);}
+    .ministere-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px 22px;transition:all 0.25s;border-left:4px solid var(--blue-mid);}
+    .ministere-card:hover{box-shadow:0 8px 28px rgba(0,56,130,0.10);transform:translateY(-2px);}
+    .ministere-card-icon{font-size:32px;margin-bottom:12px;}
+    .ministere-card-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);margin-bottom:8px;line-height:1.3;}
+    .ministere-card-desc{font-size:13px;color:var(--text-body);line-height:1.6;margin-bottom:12px;}
+    .ministere-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue-mid);}
+    .ministere-link:hover{color:var(--blue-deep);}
+    .ministeres-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px;}
+    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr 1fr;}.territories-grid{grid-template-columns:repeat(2,1fr);}.ministeres-grid{grid-template-columns:1fr;}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}.cards-grid{grid-template-columns:1fr;}.territories-grid{grid-template-columns:1fr;}}
+
+
   </style>
 </head>
 <body>
 
   <a href="#main" class="skip-link">Aller au contenu principal</a>
-  <div class="topbar">
+    <div class="topbar">
     <div class="topbar-inner">
       <div class="topbar-left">
-        <span>&#x1F1E8;&#x1F1E9; République Démocratique du Congo</span>
+        <span>&#x1F1E8;&#x1F1E9; R&eacute;publique D&eacute;mocratique du Congo</span>
         <span class="topbar-sep">|</span>
-        <span>Province du Sud-Kivu — Gouvernement Provincial</span>
+        <span>Province du Sud-Kivu &mdash; Gouvernement Provincial</span>
       </div>
       <div class="topbar-right">
         <a href="index.html#province">La Province</a>
-        <a href="index.html#programme">Programme 2024–2028</a>
+        <a href="index.html#programme">Programme 2024&ndash;2028</a>
         <a href="index.html#governor">Le Gouverneur</a>
         <a href="index.html#contact">Contacts</a>
       </div>
     </div>
   </div>
-  <header>
+    <header>
     <div class="header-inner">
       <a href="index.html" class="logo-wrap">
         <div class="logo-emblem" style="background:none; padding:0; overflow:hidden;"><img src="data:image/jpeg;base64,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ERAEREAREQBEUo8IOF/1qjblstM+DGB2zQxpLpNu/wAlbKSissyU6cqkuGJpmixnH5ZkWFgnne4++xjSQR57qb8ZXjdVYXM5Xjvt3BUwaNw2jNM0hWx9WOLps5xZ7zvmdlreW0XRkvyS4zNwwQSOLvDk/Z38lCqy490d34Yvaen8VO4k8Pl2Rjs3iMVRxddwksttTQska3mO3XuqNbS9K7gpp5uZ91rPFjY477xg7HusmdFSS7eJqau7YbDc77fmqrNDzdCNURDpt0Pl6d1q1aV1TUVU3znP9vg6H+L2Kgl5m+c8n/T4NepaaxUulruRkrjxopWsZ0G3Xuq+G03ireEnlFIC3Du5g228Zvnt8lnG6Dl8MxjU0QYepaOx/NemaCkbty6oY3boNvL81WdrXkpYqc3ley7f73KT1iwafr655Pl2NBjxdOKQubAxrt/Jq0bijkrWKjYymeTxt2Fw7gKdP8n0e/XUsX4BVa/DfTM1azDm79fICVnKzfYcnxHxWwhtLLI2raza1rOdK2liT5bYOMXuc9xe9xc49ST5rypf4pcHLGDMuQ09ZZepDcmIPBewfzUQuaWuLXAgg7EFbCM1JbHltWlOm8SPiIiuMYREQBERAEREAREQBERAEREAREQBERAF2P7Ik0E3DeOHcOLJ3hw9Oq44UvezNruXTOq24ixJtRyDwOp6Mf5H71iqrMSTazUZ4fU7ddi6bx70THb+oCpOwWMd3qQn+4F9p5GI12kuB3G4O6rjIQHzUfYn+pFo7TuJcOtKH+AKk/S2IP8AukQ/urIPvwAb7q2GarFxb4ke48uZNgnMtfqpid/9ki/BfRpXD/8AKRfgrp+ZrNOxewfNy8szlVw3bLGR8HBPSV9ZQ+q2J8qkP8K+fVfFjtVg/gVc5yoO8sX8QXmznKrKr5TNG1jRuXc3QBPSV9Zp3EqXCaY0pkMjNXrtEUTuU8o6nbouBb05s3JrBG3iPLtvmVNntMcTotSW/q9iZealA/eWQHo9w8lBqz0Y4WSDd1eJqK6BERZiGEREAREQBERAEREAREQBERAEREAREQBeopHxStljcWPad2uB6gryiA3ODijrqGFkUeoLIYwbDqrqvxf4gQfZz0p/7mgrQkVvBHsZfOqfzMkG1xk4g2ITE/NuaCNt2sAK1z646o8d039OXudx3J8UrAoihFdCjqzfNmwT601VO4Olzt5xA2/1p7KjFqvUkTS1mavNB/6pWFRV4V2KeZPuZl+qdRO+1mrp/wDMV7dq7Uzqj6js3dMLxs5plPVYNE4V2HmS7n0kkkk7k9yviIqlgREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAf//Z" alt="Logo Sud-Kivu" style="width:54px; height:54px; object-fit:contain; border-radius:50%;"></div>
@@ -140,6 +153,7 @@
           <div class="country">Gouvernement Provincial &bull; RDC</div>
         </div>
       </a>
+      
       <nav>
         <a href="index.html#accueil" class="nav-link">Accueil</a>
         <a href="index.html#province" class="nav-link">Province</a>
@@ -147,11 +161,10 @@
         <a href="index.html#secteurs" class="nav-link">Secteurs</a>
         <a href="index.html#finances" class="nav-link">Finances</a>
         <a href="index.html#governor" class="nav-link">Gouverneur</a>
-        <a href="index.html#actualites" class="nav-link">Actualités</a>
-                <div class="nav-item">
-          <span class="nav-link" tabindex="0">Territoires &#x25BE;</span>
+        <div class="nav-item">
+          <span class="nav-link active" tabindex="0">Territoires &#x25BE;</span>
           <div class="nav-dropdown">
-            <a href="territoires.html">&#x1F5FA;&#xFE0F; Vue d&apos;ensemble</a>
+            <a href="territoires.html" style="font-weight:700;color:var(--blue-deep);">&#x1F5FA;&#xFE0F; Vue d&apos;ensemble</a>
             <div class="nav-dropdown-divider"></div>
             <a href="territoire-bukavu.html">&#x1F3D9;&#xFE0F; Bukavu</a>
             <a href="territoire-uvira-ville.html">&#x1F3D9;&#xFE0F; Uvira (Ville)</a>
@@ -169,18 +182,18 @@
           </div>
         </div>
         <div class="nav-item">
-          <span class="nav-link active" tabindex="0">Gouvernement ▾</span>
+          <span class="nav-link " tabindex="0">Gouvernement &#x25BE;</span>
           <div class="nav-dropdown">
-            <a href="gouverneur.html" >&#x1F464; Le Gouverneur</a>
-            <a href="cabinet.html" >&#x1F3C5; Cabinet du Gouverneur</a>
-            <a href="ministeres.html" >&#x1F3DB;&#xFE0F; Les Ministres</a>
+            <a href="gouverneur.html">&#x1F464; Le Gouverneur</a>
+            <a href="cabinet.html">&#x1F3C5; Cabinet du Gouverneur</a>
+            <a href="ministeres.html" >&#x1F3DB;&#xFE0F; Les Minist&egrave;res</a>
             <div class="nav-dropdown-divider"></div>
-            <a href="membres-cabinet.html" style="font-weight:700;color:var(--blue-deep);">&#x1F465; Membres du Cabinet</a>
-            <a href="secretariat-executif.html" >&#x1F4CB; Secrétariat Exécutif</a>
-            <a href="secretariat-administratif.html" >&#x1F4C2; Secrétariat Administratif</a>
-            <a href="service-courrier.html" >&#x2709;&#xFE0F; Service Courrier</a>
+            <a href="membres-cabinet.html">&#x1F465; Membres du Cabinet</a>
+            <a href="secretariat-executif.html">&#x1F4CB; Secr&eacute;tariat Ex&eacute;cutif</a>
+            <a href="secretariat-administratif.html">&#x1F4C2; Secr&eacute;tariat Administratif</a>
+            <a href="service-courrier.html">&#x2709;&#xFE0F; Service Courrier</a>
             <div class="nav-dropdown-divider"></div>
-            <a href="assemblee.html" >&#x1F4DC; Assemblée Provinciale</a>
+            <a href="assemblee.html">&#x1F4DC; Assembl&eacute;e Provinciale</a>
           </div>
         </div>
         <a href="index.html#contact" class="nav-cta">Contact</a>
@@ -189,15 +202,15 @@
         <span></span><span></span><span></span>
       </button>
     </div>
+    
     <div class="mobile-nav">
       <a href="index.html#accueil" class="nav-link">Accueil</a>
       <a href="index.html#province" class="nav-link">Province</a>
-      <a href="index.html#programme" class="nav-link">Programme 2024–2028</a>
+      <a href="index.html#programme" class="nav-link">Programme 2024&ndash;2028</a>
       <a href="index.html#secteurs" class="nav-link">Secteurs</a>
       <a href="index.html#finances" class="nav-link">Finances</a>
       <a href="index.html#governor" class="nav-link">Gouverneur</a>
-      <a href="index.html#actualites" class="nav-link">Actualités</a>
-            <a href="territoires.html" class="nav-link">Territoires</a>
+      <a href="territoires.html" class="nav-link">Territoires</a>
       <a href="territoire-bukavu.html" class="nav-link">&nbsp;&nbsp;Bukavu</a>
       <a href="territoire-uvira-ville.html" class="nav-link">&nbsp;&nbsp;Uvira (Ville)</a>
       <a href="territoire-baraka.html" class="nav-link">&nbsp;&nbsp;Baraka</a>
@@ -210,15 +223,15 @@
       <a href="territoire-shabunda.html" class="nav-link">&nbsp;&nbsp;Shabunda</a>
       <a href="territoire-uvira.html" class="nav-link">&nbsp;&nbsp;Uvira (Territoire)</a>
       <a href="territoire-walungu.html" class="nav-link">&nbsp;&nbsp;Walungu</a>
-<a href="gouvernement.html" class="nav-link">Gouvernement Provincial</a>
+      <a href="gouvernement.html" class="nav-link">Gouvernement Provincial</a>
       <a href="gouverneur.html" class="nav-link">Le Gouverneur</a>
       <a href="cabinet.html" class="nav-link">Cabinet du Gouverneur</a>
-      <a href="ministeres.html" class="nav-link">Les Ministres</a>
-      <a href="membres-cabinet.html" class="nav-link active">Membres du Cabinet</a>
-      <a href="secretariat-executif.html" class="nav-link">Secrétariat Exécutif</a>
-      <a href="secretariat-administratif.html" class="nav-link">Secrétariat Administratif</a>
+      <a href="ministeres.html" class="nav-link">Les Minist&egrave;res</a>
+      <a href="membres-cabinet.html" class="nav-link">Membres du Cabinet</a>
+      <a href="secretariat-executif.html" class="nav-link">Secr&eacute;tariat Ex&eacute;cutif</a>
+      <a href="secretariat-administratif.html" class="nav-link">Secr&eacute;tariat Administratif</a>
       <a href="service-courrier.html" class="nav-link">Service Courrier</a>
-      <a href="assemblee.html" class="nav-link">Assemblée Provinciale</a>
+      <a href="assemblee.html" class="nav-link">Assembl&eacute;e Provinciale</a>
       <a href="index.html#contact" class="nav-link">Contact</a>
     </div>
   </header>
@@ -229,26 +242,13 @@
   <section class="page-hero">
     <div class="section-inner">
       <div class="page-hero-content">
-        <div class="hero-badge">Cabinet du Gouverneur</div>
-        <h1>Membres du <span>Cabinet</span> du Gouverneur</h1>
-        <p class="page-hero-desc">Le Cabinet du Gouverneur regroupe l&#39;ensemble des collaborateurs directs du Gouverneur : Directeurs, Conseillers, Charg&eacute;s de Mission et services d&#39;appui.</p>
+        <div class="hero-badge">Territoire</div>
+        <h1><span>Fizi</span></h1>
+        <p class="page-hero-desc">Vaste territoire au sud de la province, bordant le Lac Tanganyika. Ressources mini&egrave;res importantes&#160;; chef-lieu&#160;: Baraka.</p>
         <div class="page-breadcrumb">
           <a href="index.html">Accueil</a> <span>&rsaquo;</span>
-                <a href="territoires.html" class="nav-link">Territoires</a>
-      <a href="territoire-bukavu.html" class="nav-link">&nbsp;&nbsp;Bukavu</a>
-      <a href="territoire-uvira-ville.html" class="nav-link">&nbsp;&nbsp;Uvira (Ville)</a>
-      <a href="territoire-baraka.html" class="nav-link">&nbsp;&nbsp;Baraka</a>
-      <a href="territoire-kamituga.html" class="nav-link">&nbsp;&nbsp;Kamituga</a>
-      <a href="territoire-fizi.html" class="nav-link">&nbsp;&nbsp;Fizi</a>
-      <a href="territoire-idjwi.html" class="nav-link">&nbsp;&nbsp;Idjwi</a>
-      <a href="territoire-kabare.html" class="nav-link">&nbsp;&nbsp;Kabare</a>
-      <a href="territoire-kalehe.html" class="nav-link">&nbsp;&nbsp;Kalehe</a>
-      <a href="territoire-mwenga.html" class="nav-link">&nbsp;&nbsp;Mwenga</a>
-      <a href="territoire-shabunda.html" class="nav-link">&nbsp;&nbsp;Shabunda</a>
-      <a href="territoire-uvira.html" class="nav-link">&nbsp;&nbsp;Uvira (Territoire)</a>
-      <a href="territoire-walungu.html" class="nav-link">&nbsp;&nbsp;Walungu</a>
-<a href="gouvernement.html">Gouvernement Provincial</a> <span>&rsaquo;</span>
-          <span>Membres du Cabinet</span>
+          <a href="territoires.html">Territoires</a> <span>&rsaquo;</span>
+          <span>Fizi</span>
         </div>
       </div>
     </div>
@@ -256,54 +256,67 @@
 
   <section class="content-section">
     <div class="section-inner">
-      <div class="section-label">Composition</div>
-      <div class="section-title">Les membres du <span>Cabinet</span></div>
-      <div class="section-sub">Le Cabinet du Gouverneur est compos&eacute; de collaborateurs directs charg&eacute;s d&#39;assister le Gouverneur dans l&#39;exercice de ses fonctions.</div>
-      <div class="cards-grid">
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F451;</div>
-          <div class="feature-card-title">Directeur de Cabinet</div>
-          <div class="feature-card-desc">Coordonne l&#39;ensemble des activit&eacute;s du Cabinet, g&egrave;re l&#39;agenda du Gouverneur et assure la liaison avec les institutions de la province.</div>
+      <div class="section-label">Territoire &mdash; Province du Sud-Kivu</div>
+      <div class="section-title"><span>Fizi</span></div>
+      <div class="section-sub">Vaste territoire au sud de la province, bordant le Lac Tanganyika. Ressources mini&egrave;res importantes&#160;; chef-lieu&#160;: Baraka.</div>
+      <div class="content-grid">
+        <div class="content-text">
+          <p>Le territoire de Fizi est l'un des plus vastes de la Province du Sud-Kivu. Situ&eacute; dans la partie m&eacute;ridionale de la province, il s'&eacute;tend des rives du Lac Tanganyika jusqu'aux hautes terres bois&eacute;es de l'int&eacute;rieur. Son chef-lieu est Baraka.</p>
+          <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--text-dark);margin:24px 0 16px;">Caract&eacute;ristiques principales</h3>
+          <ul class="info-list">
+            <li>Territoire le plus austral du Sud-Kivu, frontalier avec la Tanzanie</li>
+<li>Lac Tanganyika sur toute sa bordure ouest (p&ecirc;che, transport)</li>
+<li>Ressources mini&egrave;res : or, coltan, cassit&eacute;rite</li>
+<li>Vastes zones foresti&egrave;res avec biodiversit&eacute; exceptionelle</li>
+<li>Agriculture vivrière : manioc, haricots, bananes, riz</li>
+<li>&Eacute;levage bovin et caprin dans les zones plus &eacute;lev&eacute;es</li>
+<li>Pr&eacute;sence du Parc National de l'Itombwe (zone de conservation)</li>
+          </ul>
         </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F91D;</div>
-          <div class="feature-card-title">Directeur de Cabinet Adjoint</div>
-          <div class="feature-card-desc">Seconde le Directeur de Cabinet, supervise les conseillers et g&egrave;re des dossiers sp&eacute;cifiques d&eacute;l&eacute;gu&eacute;s par le Directeur.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F4DD;</div>
-          <div class="feature-card-title">Chef de Cabinet</div>
-          <div class="feature-card-desc">Assure la gestion quotidienne du Cabinet, la coordination des r&eacute;unions et la transmission des instructions du Gouverneur.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F4CA;</div>
-          <div class="feature-card-title">Conseillers Principaux</div>
-          <div class="feature-card-desc">Experts sectoriels (juridique, &eacute;conomique, s&eacute;curitaire, communication) conseillant le Gouverneur sur les dossiers strat&eacute;giques.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F4CB;</div>
-          <div class="feature-card-title">Charg&eacute;s de Mission</div>
-          <div class="feature-card-desc">R&eacute;alisent des missions sp&eacute;cifiques confi&eacute;es par le Gouverneur, assurent le suivi de dossiers ponctuels et r&eacute;digent des rapports.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F91B;</div>
-          <div class="feature-card-title">Attach&eacute;s de Cabinet</div>
-          <div class="feature-card-desc">Fournissent un appui technique et administratif aux Conseillers et Charg&eacute;s de Mission dans la r&eacute;alisation de leurs t&acirc;ches.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F512;</div>
-          <div class="feature-card-title">Service de S&eacute;curit&eacute; et Protocole</div>
-          <div class="feature-card-desc">Assure la s&eacute;curit&eacute; du Gouverneur, organise les c&eacute;r&eacute;monies officielles et g&egrave;re le protocole lors des visites officielles.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F4F0;</div>
-          <div class="feature-card-title">Service de Communication</div>
-          <div class="feature-card-desc">G&egrave;re la communication institutionnelle du Gouverneur, les relations avec les m&eacute;dias et la pr&eacute;sence sur les r&eacute;seaux sociaux officiels.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F4BB;</div>
-          <div class="feature-card-title">Service Informatique</div>
-          <div class="feature-card-desc">Assure le support technique et informatique du Cabinet, la gestion des syst&egrave;mes d&#39;information et la s&eacute;curit&eacute; num&eacute;rique.</div>
+        <div class="info-box">
+          <h3>Profil de <span>Fizi</span></h3>
+          <div class="info-item">
+            <div class="info-item-icon">&#x1F4CD;</div>
+            <div class="info-item-text">
+              <strong>Statut administratif</strong>
+              Territoire &mdash; Province du Sud-Kivu
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon">&#x1F4CF;</div>
+            <div class="info-item-text">
+              <strong>Superficie</strong>
+              Environ 15 000 km&sup2;
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon">&#x1F465;</div>
+            <div class="info-item-text">
+              <strong>Population</strong>
+              Environ 700 000 habitants
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon">&#x1F3DB;&#xFE0F;</div>
+            <div class="info-item-text">
+              <strong>Chef-lieu</strong>
+              Baraka
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon">&#x1F30D;</div>
+            <div class="info-item-text">
+              <strong>Situation</strong>
+              Sud de la province, bordant le Lac Tanganyika
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon">&#x1F4BC;</div>
+            <div class="info-item-text">
+              <strong>Activit&eacute;s &eacute;conomiques</strong>
+              Agriculture, p&ecirc;che, &eacute;levage, exploitation mini&egrave;re
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -311,79 +324,79 @@
 
   <section class="content-section alt">
     <div class="section-inner">
-      <div class="section-label">Contact</div>
-      <div class="section-title">Contacter le <span>Cabinet</span></div>
-      <div class="section-sub">Pour toute demande d&#39;audience ou de renseignement aupr&egrave;s du Cabinet du Gouverneur.</div>
-      <div class="contact-dark" style="margin-top:0;padding:40px;border-radius:16px;">
-        <div class="contact-dark-grid">
+      <div class="section-label">Autres Territoires &amp; Villes</div>
+      <div class="section-title">Explorez la <span>Province</span></div>
+      <div class="section-sub">Découvrez les autres territoires et villes de la Province du Sud-Kivu.</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px;">
+        
+        <a href="territoire-bukavu.html" style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--white);border-radius:10px;border:1px solid var(--border);transition:all 0.2s;" onmouseover="this.style.borderColor='var(--blue-mid)'" onmouseout="this.style.borderColor='var(--border)'">
+          <span style="font-size:24px;">&#x1F3D9;&#xFE0F;</span>
           <div>
-            <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--white);margin-bottom:12px;">Cabinet du <span style="color:var(--gold-light);">Gouverneur</span></h3>
-            <p style="font-size:15px;color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:20px;">Pour les demandes d&#39;audience, veuillez contacter le secr&eacute;tariat du Cabinet par t&eacute;l&eacute;phone ou courrier &eacute;lectronique.</p>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-mid);">Ville &mdash; Chef-lieu</div>
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);">Bukavu</div>
           </div>
-          <ul class="contact-list">
-            <li class="contact-item">
-              <span class="contact-item-icon">&#x1F4CD;</span>
-              <div class="contact-item-text">
-                <strong>Adresse</strong>
-                Avenue du Gouvernorat, Bukavu<br>Province du Sud-Kivu &mdash; RDC
-              </div>
-            </li>
-            <li class="contact-item">
-              <span class="contact-item-icon">&#x260E;&#xFE0F;</span>
-              <div class="contact-item-text">
-                <strong>T&eacute;l&eacute;phone</strong>
-                +243 (0) 99 000 0001
-              </div>
-            </li>
-            <li class="contact-item">
-              <span class="contact-item-icon">&#x1F4E7;</span>
-              <div class="contact-item-text">
-                <strong>Courriel</strong>
-                cabinet.gouverneur@sudkivu.gouv.cd
-              </div>
-            </li>
-            <li class="contact-item">
-              <span class="contact-item-icon">&#x1F551;</span>
-              <div class="contact-item-text">
-                <strong>Heures d&#39;ouverture</strong>
-                Lundi &mdash; Vendredi : 07h30 &ndash; 15h30
-              </div>
-            </li>
-          </ul>
-        </div>
+          <span style="margin-left:auto;color:var(--blue-mid);">&#x2192;</span>
+        </a>
+        <a href="territoire-uvira-ville.html" style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--white);border-radius:10px;border:1px solid var(--border);transition:all 0.2s;" onmouseover="this.style.borderColor='var(--blue-mid)'" onmouseout="this.style.borderColor='var(--border)'">
+          <span style="font-size:24px;">&#x1F3D9;&#xFE0F;</span>
+          <div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-mid);">Ville</div>
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);">Uvira (Ville)</div>
+          </div>
+          <span style="margin-left:auto;color:var(--blue-mid);">&#x2192;</span>
+        </a>
+        <a href="territoire-baraka.html" style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--white);border-radius:10px;border:1px solid var(--border);transition:all 0.2s;" onmouseover="this.style.borderColor='var(--blue-mid)'" onmouseout="this.style.borderColor='var(--border)'">
+          <span style="font-size:24px;">&#x1F3D9;&#xFE0F;</span>
+          <div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-mid);">Ville</div>
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);">Baraka</div>
+          </div>
+          <span style="margin-left:auto;color:var(--blue-mid);">&#x2192;</span>
+        </a>
+        <a href="territoire-kamituga.html" style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--white);border-radius:10px;border:1px solid var(--border);transition:all 0.2s;" onmouseover="this.style.borderColor='var(--blue-mid)'" onmouseout="this.style.borderColor='var(--border)'">
+          <span style="font-size:24px;">&#x26CF;&#xFE0F;</span>
+          <div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-mid);">Ville</div>
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);">Kamituga</div>
+          </div>
+          <span style="margin-left:auto;color:var(--blue-mid);">&#x2192;</span>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:28px;">
+        <a href="territoires.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--blue-deep);color:var(--white);padding:12px 28px;border-radius:8px;font-weight:700;font-size:14px;">
+          &#x1F5FA;&#xFE0F; Voir tous les territoires
+        </a>
       </div>
     </div>
   </section>
 
   </main>
 
-  <footer>
+    <footer>
     <div class="section-inner">
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo-wrap">
-            <div class="logo-emblem" style="background:none;padding:0;overflow:hidden;"><img src="data:image/jpeg;base64,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ERAEREAREQBEUo8IOF/1qjblstM+DGB2zQxpLpNu/wAlbKSissyU6cqkuGJpmixnH5ZkWFgnne4++xjSQR57qb8ZXjdVYXM5Xjvt3BUwaNw2jNM0hWx9WOLps5xZ7zvmdlreW0XRkvyS4zNwwQSOLvDk/Z38lCqy490d34Yvaen8VO4k8Pl2Rjs3iMVRxddwksttTQska3mO3XuqNbS9K7gpp5uZ91rPFjY477xg7HusmdFSS7eJqau7YbDc77fmqrNDzdCNURDpt0Pl6d1q1aV1TUVU3znP9vg6H+L2Kgl5m+c8n/T4NepaaxUulruRkrjxopWsZ0G3Xuq+G03ireEnlFIC3Du5g228Zvnt8lnG6Dl8MxjU0QYepaOx/NemaCkbty6oY3boNvL81WdrXkpYqc3ley7f73KT1iwafr655Pl2NBjxdOKQubAxrt/Jq0bijkrWKjYymeTxt2Fw7gKdP8n0e/XUsX4BVa/DfTM1azDm79fICVnKzfYcnxHxWwhtLLI2raza1rOdK2liT5bYOMXuc9xe9xc49ST5rypf4pcHLGDMuQ09ZZepDcmIPBewfzUQuaWuLXAgg7EFbCM1JbHltWlOm8SPiIiuMYREQBERAEREAREQBERAEREAREQBERAF2P7Ik0E3DeOHcOLJ3hw9Oq44UvezNruXTOq24ixJtRyDwOp6Mf5H71iqrMSTazUZ4fU7ddi6bx70THb+oCpOwWMd3qQn+4F9p5GI12kuB3G4O6rjIQHzUfYn+pFo7TuJcOtKH+AKk/S2IP8AukQ/urIPvwAb7q2GarFxb4ke48uZNgnMtfqpid/9ki/BfRpXD/8AKRfgrp+ZrNOxewfNy8szlVw3bLGR8HBPSV9ZQ+q2J8qkP8K+fVfFjtVg/gVc5yoO8sX8QXmznKrKr5TNG1jRuXc3QBPSV9Zp3EqXCaY0pkMjNXrtEUTuU8o6nbouBb05s3JrBG3iPLtvmVNntMcTotSW/q9iZealA/eWQHo9w8lBqz0Y4WSDd1eJqK6BERZiGEREAREQBERAEREAREQBERAEREAREQBeopHxStljcWPad2uB6gryiA3ODijrqGFkUeoLIYwbDqrqvxf4gQfZz0p/7mgrQkVvBHsZfOqfzMkG1xk4g2ITE/NuaCNt2sAK1z646o8d039OXudx3J8UrAoihFdCjqzfNmwT601VO4Olzt5xA2/1p7KjFqvUkTS1mavNB/6pWFRV4V2KeZPuZl+qdRO+1mrp/wDMV7dq7Uzqj6js3dMLxs5plPVYNE4V2HmS7n0kkkk7k9yviIqlgREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAf//Z" alt="Logo Sud-Kivu" style="width:54px; height:54px; object-fit:contain; border-radius:50%;"></div>
+            <div class="logo-emblem" style="background:none; padding:0; overflow:hidden;"><img src="data:image/jpeg;base64,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ERAEREAREQBEUo8IOF/1qjblstM+DGB2zQxpLpNu/wAlbKSissyU6cqkuGJpmixnH5ZkWFgnne4++xjSQR57qb8ZXjdVYXM5Xjvt3BUwaNw2jNM0hWx9WOLps5xZ7zvmdlreW0XRkvyS4zNwwQSOLvDk/Z38lCqy490d34Yvaen8VO4k8Pl2Rjs3iMVRxddwksttTQska3mO3XuqNbS9K7gpp5uZ91rPFjY477xg7HusmdFSS7eJqau7YbDc77fmqrNDzdCNURDpt0Pl6d1q1aV1TUVU3znP9vg6H+L2Kgl5m+c8n/T4NepaaxUulruRkrjxopWsZ0G3Xuq+G03ireEnlFIC3Du5g228Zvnt8lnG6Dl8MxjU0QYepaOx/NemaCkbty6oY3boNvL81WdrXkpYqc3ley7f73KT1iwafr655Pl2NBjxdOKQubAxrt/Jq0bijkrWKjYymeTxt2Fw7gKdP8n0e/XUsX4BVa/DfTM1azDm79fICVnKzfYcnxHxWwhtLLI2raza1rOdK2liT5bYOMXuc9xe9xc49ST5rypf4pcHLGDMuQ09ZZepDcmIPBewfzUQuaWuLXAgg7EFbCM1JbHltWlOm8SPiIiuMYREQBERAEREAREQBERAEREAREQBERAF2P7Ik0E3DeOHcOLJ3hw9Oq44UvezNruXTOq24ixJtRyDwOp6Mf5H71iqrMSTazUZ4fU7ddi6bx70THb+oCpOwWMd3qQn+4F9p5GI12kuB3G4O6rjIQHzUfYn+pFo7TuJcOtKH+AKk/S2IP8AukQ/urIPvwAb7q2GarFxb4ke48uZNgnMtfqpid/9ki/BfRpXD/8AKRfgrp+ZrNOxewfNy8szlVw3bLGR8HBPSV9ZQ+q2J8qkP8K+fVfFjtVg/gVc5yoO8sX8QXmznKrKr5TNG1jRuXc3QBPSV9Zp3EqXCaY0pkMjNXrtEUTuU8o6nbouBb05s3JrBG3iPLtvmVNntMcTotSW/q9iZealA/eWQHo9w8lBqz0Y4WSDd1eJqK6BERZiGEREAREQBERAEREAREQBERAEREAREQBeopHxStljcWPad2uB6gryiA3ODijrqGFkUeoLIYwbDqrqvxf4gQfZz0p/7mgrQkVvBHsZfOqfzMkG1xk4g2ITE/NuaCNt2sAK1z646o8d039OXudx3J8UrAoihFdCjqzfNmwT601VO4Olzt5xA2/1p7KjFqvUkTS1mavNB/6pWFRV4V2KeZPuZl+qdRO+1mrp/wDMV7dq7Uzqj6js3dMLxs5plPVYNE4V2HmS7n0kkkk7k9yviIqlgREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAf//Z" alt="Logo Sud-Kivu" style="width:54px; height:54px; object-fit:contain; border-radius:50%;"></div>
             <div class="logo-text">
               <div class="province">Province du Sud-Kivu</div>
               <div class="country">Gouvernement Provincial &bull; RDC</div>
             </div>
           </div>
-          <p class="footer-desc">Le Gouvernement Provincial du Sud-Kivu s&#39;engage pour l&#39;&eacute;mergence de la province &agrave; travers un programme ambitieux de d&eacute;veloppement 2024&ndash;2028.</p>
+          <p class="footer-desc">Le Gouvernement Provincial du Sud-Kivu s&apos;engage pour l&apos;&eacute;mergence de la province &agrave; travers un programme ambitieux de d&eacute;veloppement 2024&ndash;2028.</p>
         </div>
         <div class="footer-col">
-          <h4>Programme</h4>
+          <h4>Territoires</h4>
           <ul class="footer-links">
-            <li><a href="index.html#programme">Plan Quinquennal 2024&ndash;2028</a></li>
-            <li><a href="index.html#secteurs">Axes Strat&eacute;giques</a></li>
-            <li><a href="index.html#finances">Finances Provinciales</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Province</h4>
-          <ul class="footer-links">
-            <li><a href="index.html#province">Profil g&eacute;ographique</a></li>
-            <li><a href="index.html#territoires">8 Territoires</a></li>
-            <li><a href="index.html#carte">Carte Interactive</a></li>
+            <li><a href="territoires.html">Vue d&apos;ensemble</a></li>
+            <li><a href="territoire-bukavu.html">Bukavu</a></li>
+            <li><a href="territoire-fizi.html">Fizi</a></li>
+            <li><a href="territoire-idjwi.html">Idjwi</a></li>
+            <li><a href="territoire-kabare.html">Kabare</a></li>
+            <li><a href="territoire-kalehe.html">Kalehe</a></li>
+            <li><a href="territoire-mwenga.html">Mwenga</a></li>
+            <li><a href="territoire-shabunda.html">Shabunda</a></li>
+            <li><a href="territoire-walungu.html">Walungu</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -391,12 +404,21 @@
           <ul class="footer-links">
             <li><a href="gouverneur.html">Le Gouverneur</a></li>
             <li><a href="cabinet.html">Cabinet du Gouverneur</a></li>
-            <li><a href="ministeres.html">Les Ministres</a></li>
+            <li><a href="ministeres.html">Les Minist&egrave;res</a></li>
             <li><a href="membres-cabinet.html">Membres du Cabinet</a></li>
             <li><a href="secretariat-executif.html">Secr&eacute;tariat Ex&eacute;cutif</a></li>
             <li><a href="secretariat-administratif.html">Secr&eacute;tariat Administratif</a></li>
             <li><a href="service-courrier.html">Service Courrier</a></li>
             <li><a href="assemblee.html">Assembl&eacute;e Provinciale</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Province</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#province">Profil g&eacute;ographique</a></li>
+            <li><a href="index.html#programme">Plan Quinquennal 2024&ndash;2028</a></li>
+            <li><a href="index.html#secteurs">Axes Strat&eacute;giques</a></li>
+            <li><a href="index.html#finances">Finances Provinciales</a></li>
           </ul>
         </div>
       </div>
