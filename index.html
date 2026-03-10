@@ -711,6 +711,8 @@
       overflow: hidden;
       border: 1px solid var(--border);
       transition: all 0.25s;
+      display: block;
+      color: inherit;
     }
     .news-card:hover { box-shadow: 0 12px 36px rgba(0,56,130,0.1); transform: translateY(-3px); }
     .news-card-img {
@@ -758,6 +760,14 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+    .news-read-more {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue-mid);
+    }
+    .news-card:hover .news-read-more { color: var(--blue-deep); }
 
     /* ===== PRIORITIES (100 jours) ===== */
     .priorities-section {
@@ -2047,10 +2057,10 @@
           <div class="section-label">Actualités & Communiqués</div>
           <div class="section-title">Dernières <span>nouvelles</span></div>
         </div>
-        <a href="#" class="view-all">Toutes les actualités</a>
+        <a href="actualites.html" class="view-all">Toutes les actualités</a>
       </div>
       <div class="news-grid">
-        <div class="news-card">
+        <a href="actualite-investiture.html" class="news-card">
           <div class="news-card-img">
             <span>🏛️</span>
             <span class="news-cat">Gouvernance</span>
@@ -2059,9 +2069,10 @@
             <div class="news-date">02 mai 2024</div>
             <div class="news-card-title">Investiture du Gouvernement Provincial du Sud-Kivu</div>
             <div class="news-card-excerpt">Le Professeur Jean-Jacques Purusi Sadiki prend officiellement les rênes de la Province du Sud-Kivu suite aux élections du 20 décembre 2023. Le programme quinquennal 2024–2028 est présenté à l'Assemblée provinciale.</div>
+            <span class="news-read-more">Lire la suite →</span>
           </div>
-        </div>
-        <div class="news-card">
+        </a>
+        <a href="actualite-agriculture.html" class="news-card">
           <div class="news-card-img green">
             <span>🌾</span>
             <span class="news-cat">Agriculture</span>
@@ -2070,9 +2081,10 @@
             <div class="news-date">Juin 2024</div>
             <div class="news-card-title">Relance du secteur agricole : réhabilitation de l'INERA et du CRSN Lwiro</div>
             <div class="news-card-excerpt">Le gouvernement provincial engage un partenariat avec des centres scientifiques spécialisés (IITA) pour renforcer les capacités de recherche et soutenir les 3 984 agents techniques agricoles.</div>
+            <span class="news-read-more">Lire la suite →</span>
           </div>
-        </div>
-        <div class="news-card">
+        </a>
+        <a href="actualite-mines.html" class="news-card">
           <div class="news-card-img orange">
             <span>⛏️</span>
             <span class="news-cat">Mines</span>
@@ -2081,9 +2093,10 @@
             <div class="news-date">Juillet 2024</div>
             <div class="news-card-title">Création d'une société minière provinciale pour protéger les ressources du Sud-Kivu</div>
             <div class="news-card-excerpt">Le gouvernement lance la rationalisation du secteur minier artisanal, la mise en place de brigades anti-fraude et l'audit du secteur afin de garantir que les ressources bénéficient aux communautés locales.</div>
+            <span class="news-read-more">Lire la suite →</span>
           </div>
-        </div>
-        <div class="news-card">
+        </a>
+        <a href="actualite-reboisement.html" class="news-card">
           <div class="news-card-img" style="background: linear-gradient(135deg, #2a4a7a, #1a5c8a);">
             <span>🌿</span>
             <span class="news-cat">Environnement</span>
@@ -2092,8 +2105,9 @@
             <div class="news-date">Août 2024</div>
             <div class="news-card-title">Campagne nationale de reboisement : un million d'arbres pour le Sud-Kivu</div>
             <div class="news-card-excerpt">Le gouvernement provincial lance la campagne de reboisement « Un million d'arbres » pour lutter contre la déforestation et les effets du réchauffement climatique. Le Parc National de Kahuzi-Biega sera renforcé dans ses capacités de protection.</div>
+            <span class="news-read-more">Lire la suite →</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
