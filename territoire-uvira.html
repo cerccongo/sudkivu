@@ -557,8 +557,21 @@
     </div>
   </footer>
   <script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-      document.querySelector('.mobile-nav').classList.toggle('open');
+    // Mobile nav accordion
+    document.querySelectorAll('.mnav-group-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.mnav-group-btn').forEach(function(b) {
+          b.setAttribute('aria-expanded', 'false');
+          var items = b.parentElement.querySelector('.mnav-group-items');
+          if (items) items.classList.remove('open');
+        });
+        if (!expanded) {
+          this.setAttribute('aria-expanded', 'true');
+          var items = this.parentElement.querySelector('.mnav-group-items');
+          if (items) items.classList.add('open');
+        }
+      });
     });
   </script>
 
