@@ -34,7 +34,10 @@
     .nav-cta{background:var(--gold);color:var(--white);padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-transform:uppercase;margin-left:8px;transition:background 0.2s;}
     .nav-cta:hover{background:var(--gold-light);color:var(--text-dark);}
     .menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px;}
-    .menu-toggle span{display:block;width:24px;height:2px;background:var(--blue-deep);border-radius:2px;transition:0.3s;}
+    .menu-toggle span{display:block;width:24px;height:2px;background:var(--blue-deep);border-radius:2px;transition:transform 0.3s,opacity 0.3s;}
+    .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .menu-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+    .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
     .flag-strip{height:5px;background:linear-gradient(90deg,var(--blue-mid) 33%,var(--red-drc) 33%,var(--red-drc) 66%,var(--gold) 66%);}
     .section-inner{max-width:1240px;margin:0 auto;padding:0 24px;}
     .section-label{font-size:12px;font-weight:700;color:var(--blue-mid);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;}
@@ -72,9 +75,26 @@
     .footer-bottom-links{display:flex;gap:20px;}
     .footer-bottom-links a{color:rgba(255,255,255,0.35);}
     .footer-bottom-links a:hover{color:var(--gold-light);}
-    .mobile-nav{display:none;position:fixed;top:80px;left:0;right:0;background:var(--white);box-shadow:0 8px 32px rgba(0,0,0,0.15);padding:20px 24px;z-index:99;flex-direction:column;gap:4px;max-height:calc(100vh - 80px);overflow-y:auto;}
+    .mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--white);z-index:999;flex-direction:column;overflow:hidden;}
     .mobile-nav.open{display:flex;}
-    .mobile-nav .nav-link{padding:12px 16px;border-radius:8px;display:block;width:100%;}
+    .mobile-nav-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--blue-deep);color:var(--white);flex-shrink:0;}
+    .mobile-nav-title{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;}
+    .mobile-nav-close{background:none;border:none;color:var(--white);font-size:22px;cursor:pointer;padding:4px 8px;line-height:1;border-radius:4px;transition:background 0.2s;}
+    .mobile-nav-close:hover{background:rgba(255,255,255,0.15);}
+    .mobile-nav-body{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+    .mnav-link{display:block;padding:14px 20px;font-size:13.5px;font-weight:700;color:var(--text-dark);text-transform:uppercase;letter-spacing:0.04em;border-bottom:1px solid var(--border);transition:background 0.15s,color 0.15s;}
+    .mnav-link:hover,.mnav-link.active{background:var(--blue-deep);color:var(--white);}
+    .mnav-cta{display:block;margin:16px 20px 8px;padding:12px 20px;background:var(--gold);color:var(--white);border-radius:6px;font-size:13.5px;font-weight:700;text-transform:uppercase;text-align:center;transition:background 0.2s;}
+    .mnav-cta:hover{background:var(--gold-light);color:var(--text-dark);}
+    .mnav-group{border-bottom:1px solid var(--border);}
+    .mnav-group-btn{display:flex;width:100%;align-items:center;justify-content:space-between;padding:14px 20px;background:none;border:none;font-size:13.5px;font-weight:700;color:var(--text-dark);text-transform:uppercase;letter-spacing:0.04em;cursor:pointer;transition:background 0.15s,color 0.15s;font-family:inherit;}
+    .mnav-group-btn:hover,.mnav-group-btn[aria-expanded="true"]{background:var(--off-white);color:var(--blue-deep);}
+    .mnav-arrow{transition:transform 0.25s;font-style:normal;}
+    .mnav-group-btn[aria-expanded="true"] .mnav-arrow{transform:rotate(180deg);}
+    .mnav-group-items{overflow:hidden;max-height:0;transition:max-height 0.35s ease;background:var(--off-white);}
+    .mnav-group-items.open{max-height:700px;}
+    .mnav-item{display:block;padding:11px 20px 11px 36px;font-size:13.5px;font-weight:500;color:var(--text-dark);border-top:1px solid var(--border);transition:background 0.15s,color 0.15s;}
+    .mnav-item:hover{background:var(--blue-deep);color:var(--white);}
     .skip-link{position:absolute;top:-60px;left:20px;background:var(--blue-deep);color:var(--white);padding:10px 20px;border-radius:0 0 8px 8px;font-weight:700;font-size:14px;z-index:9999;transition:top 0.2s;}
     .skip-link:focus{top:0;color:var(--white);}
     .content-section{padding:72px 0;background:var(--white);}
@@ -227,52 +247,82 @@
         </div>
         <a href="index.html#contact" class="nav-cta">Contact</a>
       </nav>
-      <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('open')" aria-label="Menu">
+      <button class="menu-toggle" id="menu-toggle" onclick="var nav=document.getElementById('mobile-nav');nav.classList.toggle('open');this.classList.toggle('open');this.setAttribute('aria-expanded',nav.classList.contains('open'));" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
     
-    <div class="mobile-nav">
-      <a href="index.html#accueil" class="nav-link">Accueil</a>
-      <a href="province.html" class="nav-link">Province</a>
-      <a href="index.html#programme" class="nav-link">Programme 2024&ndash;2028</a>
-      <a href="institutions.html" class="nav-link">Institutions</a>
-      <a href="gouvernement.html" class="nav-link">&nbsp;&nbsp;Gouvernement Provincial</a>
-      <a href="assemblee.html" class="nav-link">&nbsp;&nbsp;Assembl&eacute;e Provinciale</a>
-      <a href="villes.html" class="nav-link">Villes</a>
-      <a href="territoire-bukavu.html" class="nav-link">&nbsp;&nbsp;Bukavu</a>
-      <a href="territoire-uvira-ville.html" class="nav-link">&nbsp;&nbsp;Uvira</a>
-      <a href="territoire-baraka.html" class="nav-link">&nbsp;&nbsp;Baraka</a>
-      <a href="territoire-kamituga.html" class="nav-link">&nbsp;&nbsp;Kamituga</a>
-      <a href="territoires.html" class="nav-link">Territoires</a>
-      <a href="territoire-fizi.html" class="nav-link">&nbsp;&nbsp;Fizi</a>
-      <a href="territoire-idjwi.html" class="nav-link">&nbsp;&nbsp;Idjwi</a>
-      <a href="territoire-kabare.html" class="nav-link">&nbsp;&nbsp;Kabare</a>
-      <a href="territoire-kalehe.html" class="nav-link">&nbsp;&nbsp;Kalehe</a>
-      <a href="territoire-mwenga.html" class="nav-link">&nbsp;&nbsp;Mwenga</a>
-      <a href="territoire-shabunda.html" class="nav-link">&nbsp;&nbsp;Shabunda</a>
-      <a href="territoire-uvira.html" class="nav-link">&nbsp;&nbsp;Uvira</a>
-      <a href="territoire-walungu.html" class="nav-link">&nbsp;&nbsp;Walungu</a>
-      <a href="gouvernement.html" class="nav-link">Cabinet</a>
-      <a href="gouverneur.html" class="nav-link">Le Gouverneur</a>
-      <a href="cabinet.html" class="nav-link">Cabinet du Gouverneur</a>
-      <a href="ministeres.html" class="nav-link">Les Minist&egrave;res</a>
-      <a href="ministere-interieur.html" class="nav-link">&nbsp;&nbsp;Int&#xe9;rieur &amp; S&#xe9;curit&#xe9;</a>
-      <a href="ministere-finances.html" class="nav-link">&nbsp;&nbsp;Finances &amp; &#xC9;conomie</a>
-      <a href="ministere-plan.html" class="nav-link">&nbsp;&nbsp;Plan &amp; Budget</a>
-      <a href="ministere-infrastructures.html" class="nav-link">&nbsp;&nbsp;Infrastructures</a>
-      <a href="ministere-justice.html" class="nav-link">&nbsp;&nbsp;Justice</a>
-      <a href="ministere-agriculture.html" class="nav-link">&nbsp;&nbsp;Agriculture</a>
-      <a href="ministere-transports.html" class="nav-link">&nbsp;&nbsp;Transports</a>
-      <a href="ministere-mines.html" class="nav-link">&nbsp;&nbsp;Mines &amp; &#xC9;nergie</a>
-      <a href="ministere-education.html" class="nav-link">&nbsp;&nbsp;&#xC9;ducation</a>
-      <a href="ministere-sante.html" class="nav-link">&nbsp;&nbsp;Sant&#xe9;</a>
-      <a href="membres-cabinet.html" class="nav-link">Membres du Cabinet</a>
-      <a href="secretariat-executif.html" class="nav-link">Secr&eacute;tariat Ex&eacute;cutif</a>
-      <a href="secretariat-administratif.html" class="nav-link">Secr&eacute;tariat Administratif</a>
-      <a href="service-courrier.html" class="nav-link">Service Courrier</a>
-      <a href="assemblee.html" class="nav-link">Assembl&eacute;e Provinciale</a>
-      <a href="index.html#contact" class="nav-link">Contact</a>
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Navigation mobile">
+      <div class="mobile-nav-header">
+        <span class="mobile-nav-title">Menu</span>
+        <button class="mobile-nav-close" onclick="var nav=document.getElementById('mobile-nav');nav.classList.remove('open');var t=document.getElementById('menu-toggle');t.classList.remove('open');t.setAttribute('aria-expanded','false');" aria-label="Fermer le menu">&#x2715;</button>
+      </div>
+      <div class="mobile-nav-body">
+        <a href="index.html#accueil" class="mnav-link">Accueil</a>
+        <a href="province.html" class="mnav-link">Province</a>
+        <a href="programme-2024-2028.html" class="mnav-link">Programme 2024&ndash;2028</a>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Institutions <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="institutions.html" class="mnav-item">&#x1F3DB;&#xFE0F; Institutions</a>
+            <a href="gouvernement.html" class="mnav-item">&#x1F3DB;&#xFE0F; Gouvernement Provincial</a>
+            <a href="assemblee.html" class="mnav-item">&#x1F4DC; Assembl&eacute;e Provinciale</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Villes <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="villes.html" class="mnav-item">&#x1F3D9;&#xFE0F; Vue d&apos;ensemble</a>
+            <a href="territoire-bukavu.html" class="mnav-item">&#x1F3D9;&#xFE0F; Bukavu</a>
+            <a href="territoire-uvira-ville.html" class="mnav-item">&#x1F3D9;&#xFE0F; Uvira</a>
+            <a href="territoire-baraka.html" class="mnav-item">&#x1F3D9;&#xFE0F; Baraka</a>
+            <a href="territoire-kamituga.html" class="mnav-item">&#x26CF;&#xFE0F; Kamituga</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Territoires <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="territoires.html" class="mnav-item">&#x1F5FA;&#xFE0F; Vue d&apos;ensemble</a>
+            <a href="territoire-fizi.html" class="mnav-item">&#x1F30A; Fizi</a>
+            <a href="territoire-idjwi.html" class="mnav-item">&#x1F3DD;&#xFE0F; Idjwi</a>
+            <a href="territoire-kabare.html" class="mnav-item">&#x26F0;&#xFE0F; Kabare</a>
+            <a href="territoire-kalehe.html" class="mnav-item">&#x1F333; Kalehe</a>
+            <a href="territoire-mwenga.html" class="mnav-item">&#x1F332; Mwenga</a>
+            <a href="territoire-shabunda.html" class="mnav-item">&#x1F6B6; Shabunda</a>
+            <a href="territoire-uvira.html" class="mnav-item">&#x1F30A; Uvira</a>
+            <a href="territoire-walungu.html" class="mnav-item">&#x1F3D4;&#xFE0F; Walungu</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Minist&egrave;res <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="ministeres.html" class="mnav-item">&#x1F3DB;&#xFE0F; Tous les Minist&egrave;res</a>
+            <a href="ministere-interieur.html" class="mnav-item">&#x1F6E1;&#xFE0F; Int&eacute;rieur &amp; S&eacute;curit&eacute;</a>
+            <a href="ministere-finances.html" class="mnav-item">&#x1F4B0; Finances &amp; &Eacute;conomie</a>
+            <a href="ministere-plan.html" class="mnav-item">&#x1F4CA; Plan &amp; Budget</a>
+            <a href="ministere-infrastructures.html" class="mnav-item">&#x1F3D7;&#xFE0F; Infrastructures</a>
+            <a href="ministere-justice.html" class="mnav-item">&#x2696;&#xFE0F; Justice</a>
+            <a href="ministere-agriculture.html" class="mnav-item">&#x1F33E; Agriculture</a>
+            <a href="ministere-transports.html" class="mnav-item">&#x1F69A; Transports</a>
+            <a href="ministere-mines.html" class="mnav-item">&#x26CF;&#xFE0F; Mines &amp; &Eacute;nergie</a>
+            <a href="ministere-education.html" class="mnav-item">&#x1F4DA; &Eacute;ducation</a>
+            <a href="ministere-sante.html" class="mnav-item">&#x1F3E5; Sant&eacute;</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Cabinet <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="gouverneur.html" class="mnav-item">&#x1F464; Le Gouverneur</a>
+            <a href="cabinet.html" class="mnav-item">&#x1F3C5; Cabinet du Gouverneur</a>
+            <a href="membres-cabinet.html" class="mnav-item">&#x1F465; Membres du Cabinet</a>
+            <a href="secretariat-executif.html" class="mnav-item">&#x1F4CB; Secr&eacute;tariat Ex&eacute;cutif</a>
+            <a href="secretariat-administratif.html" class="mnav-item">&#x1F4C2; Secr&eacute;tariat Administratif</a>
+            <a href="service-courrier.html" class="mnav-item">&#x2709;&#xFE0F; Service Courrier</a>
+            <a href="assemblee.html" class="mnav-item">&#x1F4DC; Assembl&eacute;e Provinciale</a>
+          </div>
+        </div>
+        <a href="index.html#contact" class="mnav-cta">Contact</a>
+      </div>
     </div>
   </header>
   <div class="flag-strip"></div>
@@ -486,8 +536,21 @@
   </footer>
 
   <script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-      document.querySelector('.mobile-nav').classList.toggle('open');
+    // Mobile nav accordion
+    document.querySelectorAll('.mnav-group-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.mnav-group-btn').forEach(function(b) {
+          b.setAttribute('aria-expanded', 'false');
+          var items = b.parentElement.querySelector('.mnav-group-items');
+          if (items) items.classList.remove('open');
+        });
+        if (!expanded) {
+          this.setAttribute('aria-expanded', 'true');
+          var items = this.parentElement.querySelector('.mnav-group-items');
+          if (items) items.classList.add('open');
+        }
+      });
     });
   </script>
 
