@@ -1519,6 +1519,11 @@
     .cabinet-card-role { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue-mid); margin-bottom: 6px; }
     .cabinet-card-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
     .cabinet-card-desc { font-size: 13px; color: var(--text-body); line-height: 1.6; }
+    a.cabinet-card { display: block; text-decoration: none; color: inherit; }
+    a.cabinet-card:hover { text-decoration: none; }
+    .cabinet-card-link { display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 700; color: var(--blue-mid); }
+    .cabinet-card-link::after { content: ' →'; }
+    .cabinet-card:hover .cabinet-card-link { color: var(--gold); }
 
     /* Departments */
     .departments-section { padding: 80px 0; background: var(--white); }
@@ -1740,105 +1745,190 @@
     </div>
   </section>
 
+  <!-- Section A: Personnel politique -->
   <section class="cabinet-section">
     <div class="section-inner">
-      <div class="section-label">Organisation du Cabinet</div>
-      <div class="section-title">Structure du <span>Cabinet</span></div>
-      <div class="section-sub">Le Cabinet du Gouverneur est organisé autour de plusieurs pôles de compétences pour assurer la coordination efficace de l&#39;action gouvernementale.</div>
+      <div class="section-label">Structure du Cabinet</div>
+      <div class="section-title">Personnel <span>Politique</span></div>
+      <div class="section-sub">Les responsables politiques du Cabinet du Gouverneur de Province.</div>
       <div class="cabinet-grid">
-        <div class="cabinet-card">
+        <a href="cabinet-directeur.html" class="cabinet-card">
           <div class="cabinet-card-icon">🏛️</div>
           <div class="cabinet-card-role">Direction</div>
-          <div class="cabinet-card-title">Cabinet du Gouverneur</div>
-          <div class="cabinet-card-desc">Direction générale du cabinet, coordination de l&#39;agenda du Gouverneur, gestion des relations institutionnelles et suivi des décisions exécutives.</div>
-        </div>
-        <div class="cabinet-card">
+          <div class="cabinet-card-title">Directeur de Cabinet</div>
+          <div class="cabinet-card-desc">Premier collaborateur du Gouverneur, coordonne l&#39;ensemble des activités du Cabinet et assure la liaison entre le Gouverneur et les institutions.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
+        <a href="cabinet-directeur-adjoint.html" class="cabinet-card">
           <div class="cabinet-card-icon">🤝</div>
-          <div class="cabinet-card-role">Vice-Gouvernement</div>
-          <div class="cabinet-card-title">Cabinet du Vice-Gouverneur</div>
-          <div class="cabinet-card-desc">Assistance au Gouverneur, supervision déléguée de certains dossiers, intérim en cas d&#39;absence du Gouverneur et coordination de secteurs spécifiques.</div>
-        </div>
-        <div class="cabinet-card">
-          <div class="cabinet-card-icon">📋</div>
-          <div class="cabinet-card-role">Administration</div>
-          <div class="cabinet-card-title">Secrétariat Général du Gouvernement</div>
-          <div class="cabinet-card-desc">Coordination administrative des ministères, préparation des conseils de gouvernement, suivi des arrêtés et décrets provinciaux, gestion de la correspondance officielle.</div>
-        </div>
-        <div class="cabinet-card">
-          <div class="cabinet-card-icon">📊</div>
-          <div class="cabinet-card-role">Conseil &amp; Expertise</div>
-          <div class="cabinet-card-title">Conseillers Spéciaux</div>
-          <div class="cabinet-card-desc">Experts sectoriels (économie, sécurité, juridique, communication) conseillant le Gouverneur sur les dossiers stratégiques et la prise de décision.</div>
-        </div>
-        <div class="cabinet-card">
-          <div class="cabinet-card-icon">🔒</div>
-          <div class="cabinet-card-role">Protocole &amp; Sécurité</div>
-          <div class="cabinet-card-title">Service du Protocole d&#39;État</div>
-          <div class="cabinet-card-desc">Organisation des cérémonies officielles, gestion du protocole lors des visites officielles, coordination avec les forces de sécurité pour la protection du Gouverneur.</div>
-        </div>
-        <div class="cabinet-card">
-          <div class="cabinet-card-icon">📡</div>
-          <div class="cabinet-card-role">Communication</div>
-          <div class="cabinet-card-title">Direction de la Communication</div>
-          <div class="cabinet-card-desc">Communication institutionnelle, gestion des médias, relations presse, gestion des réseaux sociaux officiels et diffusion des informations gouvernementales.</div>
-        </div>
+          <div class="cabinet-card-role">Direction Adjointe</div>
+          <div class="cabinet-card-title">Directeur de Cabinet Adjoint</div>
+          <div class="cabinet-card-desc">Assiste le Directeur de Cabinet et assure l&#39;intérim en cas d&#39;absence. Contribue à la coordination des activités et au suivi des dossiers stratégiques.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
       </div>
     </div>
   </section>
 
+  <!-- Section B: Les Conseillers du Gouverneur -->
+  <section class="cabinet-section" style="background:var(--white);">
+    <div class="section-inner">
+      <div class="section-label">Conseil &amp; Expertise</div>
+      <div class="section-title">Les Conseillers du <span>Gouverneur</span></div>
+      <div class="section-sub">Les Conseillers du Gouverneur de Province, spécialisés dans les différents domaines de compétence provinciale.</div>
+      <div class="cabinet-grid">
+        <a href="cabinet-conseiller-politique.html" class="cabinet-card">
+          <div class="cabinet-card-icon">🏛️</div>
+          <div class="cabinet-card-role">Politique &amp; Décentralisation</div>
+          <div class="cabinet-card-title">Conseiller Politique et chargé de la Décentralisation et des Affaires Coutumières</div>
+          <div class="cabinet-card-desc">Suivi des dossiers politiques et de la décentralisation, liaison avec les entités décentralisées et les structures coutumières.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
+        <a href="cabinet-conseiller-juridique.html" class="cabinet-card">
+          <div class="cabinet-card-icon">⚖️</div>
+          <div class="cabinet-card-role">Juridique &amp; Administratif</div>
+          <div class="cabinet-card-title">Conseiller Juridique et Administratif</div>
+          <div class="cabinet-card-desc">Analyse juridique des actes provinciaux, suivi du contentieux administratif et conseil sur les questions de droit public.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
+        <a href="cabinet-conseiller-financier.html" class="cabinet-card">
+          <div class="cabinet-card-icon">💰</div>
+          <div class="cabinet-card-role">Finances &amp; Économie</div>
+          <div class="cabinet-card-title">Conseiller Financier et Économique</div>
+          <div class="cabinet-card-desc">Conseil sur la mobilisation des recettes, suivi du budget provincial et analyse des projets d&#39;investissement.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
+        <a href="cabinet-conseillere-securite.html" class="cabinet-card">
+          <div class="cabinet-card-icon">🔒</div>
+          <div class="cabinet-card-role">Sécurité &amp; P-DDRC-S</div>
+          <div class="cabinet-card-title">Conseillère chargée des questions sécuritaires et du suivi du P-DDRC-S</div>
+          <div class="cabinet-card-desc">Suivi de la situation sécuritaire et coordination du Programme de Démobilisation, Désarmement, Relèvement Communautaire et Stabilisation.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
+        <a href="cabinet-conseillere-relations.html" class="cabinet-card">
+          <div class="cabinet-card-icon">🤝</div>
+          <div class="cabinet-card-role">Relations &amp; Grands Lacs</div>
+          <div class="cabinet-card-title">Conseillère chargée des Relations avec l&#39;Assemblée Provinciale, Questions Grands Lacs et Intégration régionale</div>
+          <div class="cabinet-card-desc">Liaison entre l&#39;Exécutif et l&#39;Assemblée Provinciale, suivi de l&#39;intégration régionale dans l&#39;espace des Grands Lacs.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
+        <a href="cabinet-conseiller-sante.html" class="cabinet-card">
+          <div class="cabinet-card-icon">🏥</div>
+          <div class="cabinet-card-role">Santé &amp; Humanitaire</div>
+          <div class="cabinet-card-title">Conseiller chargé des questions de Santé, des Affaires Socio-culturelles et Humanitaires</div>
+          <div class="cabinet-card-desc">Suivi de la politique de santé et coordination des interventions humanitaires dans la province.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
+        <a href="cabinet-conseiller-agriculture.html" class="cabinet-card">
+          <div class="cabinet-card-icon">🌿</div>
+          <div class="cabinet-card-role">Agriculture &amp; Environnement</div>
+          <div class="cabinet-card-title">Conseiller chargé de l&#39;Agriculture, Environnement et Développement Durable</div>
+          <div class="cabinet-card-desc">Suivi des politiques agricoles, conseil sur la protection de l&#39;environnement et promotion du développement durable.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
+        <a href="cabinet-conseillere-education.html" class="cabinet-card">
+          <div class="cabinet-card-icon">📚</div>
+          <div class="cabinet-card-role">Éducation &amp; Jeunesse</div>
+          <div class="cabinet-card-title">Conseillère chargée de l&#39;Éducation, jeunesse, culture, sport et Loisir</div>
+          <div class="cabinet-card-desc">Suivi de la politique éducative, promotion de la culture, du sport et des programmes jeunesse.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
+        <a href="cabinet-conseiller-infrastructures.html" class="cabinet-card">
+          <div class="cabinet-card-icon">🏗️</div>
+          <div class="cabinet-card-role">Infrastructures &amp; TP</div>
+          <div class="cabinet-card-title">Conseiller chargé des Infrastructures et Travaux Publics</div>
+          <div class="cabinet-card-desc">Suivi des projets d&#39;infrastructures provinciales et conseil sur les travaux de réhabilitation et construction.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
+        <a href="cabinet-conseiller-mines.html" class="cabinet-card">
+          <div class="cabinet-card-icon">⛏️</div>
+          <div class="cabinet-card-role">Mines &amp; Énergie</div>
+          <div class="cabinet-card-title">Conseiller chargé des Mines, Énergie et Hydrocarbures</div>
+          <div class="cabinet-card-desc">Suivi de l&#39;exploitation minière, conseil sur la politique énergétique et lutte contre la fraude minière.</div>
+          <span class="cabinet-card-link">En savoir plus</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section C: Services rattachés -->
   <section class="departments-section">
     <div class="section-inner">
       <div class="section-label">Services Rattachés</div>
-      <div class="section-title">Directions &amp; Services du <span>Cabinet</span></div>
+      <div class="section-title">Services &amp; Organes du <span>Cabinet</span></div>
       <div class="section-sub">Ces services spécialisés appuient directement le Gouverneur dans l&#39;exercice de ses attributions.</div>
       <div class="departments-list">
         <div class="department-item">
           <div class="department-num">1</div>
           <div class="department-body">
-            <div class="department-name">Direction des Affaires Politiques &amp; Juridiques</div>
-            <div class="department-mandate">Suivi des dossiers juridiques, contentieux administratifs, relations avec l&#39;Assemblée Provinciale et les autres institutions.</div>
+            <div class="department-name">Le Bureau d&#39;Études</div>
+            <div class="department-mandate">Centre de réflexion et d&#39;analyse stratégique du Cabinet. Production d&#39;études, notes de synthèse et appui à la prise de décision du Gouverneur.</div>
           </div>
-          <div class="department-contact"><a href="index.html#contact">Contacter →</a></div>
+          <div class="department-contact"><a href="cabinet-bureau-etudes.html">En savoir plus →</a></div>
         </div>
         <div class="department-item">
           <div class="department-num">2</div>
           <div class="department-body">
-            <div class="department-name">Direction Économique &amp; de la Planification</div>
-            <div class="department-mandate">Suivi du Programme Quinquennal, coordination des projets de développement, monitoring-évaluation et rapportage au Gouverneur.</div>
+            <div class="department-name">Direction Provinciale de Mobilisation et Encadrement des Recettes (DPMER)</div>
+            <div class="department-mandate">Coordination et suivi de la mobilisation des recettes provinciales. Encadrement des régies financières et lutte contre les détournements.</div>
           </div>
-          <div class="department-contact"><a href="index.html#contact">Contacter →</a></div>
+          <div class="department-contact"><a href="cabinet-dpmer.html">En savoir plus →</a></div>
         </div>
         <div class="department-item">
           <div class="department-num">3</div>
           <div class="department-body">
-            <div class="department-name">Direction des Relations Extérieures &amp; Coopération</div>
-            <div class="department-mandate">Gestion des partenariats avec les organisations internationales, coordination des projets de coopération décentralisée, liaisons diplomatiques.</div>
+            <div class="department-name">La Cellule d&#39;investigation du Gouverneur de Province</div>
+            <div class="department-mandate">Conduite d&#39;investigations administratives sur les manquements et cas de mauvaise gouvernance, avec rapportage confidentiel au Gouverneur.</div>
           </div>
-          <div class="department-contact"><a href="index.html#contact">Contacter →</a></div>
+          <div class="department-contact"><a href="cabinet-cellule-investigation.html">En savoir plus →</a></div>
         </div>
         <div class="department-item">
           <div class="department-num">4</div>
           <div class="department-body">
-            <div class="department-name">Direction des Ressources Humaines du Cabinet</div>
-            <div class="department-mandate">Gestion du personnel du cabinet, recrutement des collaborateurs, formation et évaluation des agents rattachés au cabinet.</div>
+            <div class="department-name">La Cellule Provinciale de lutte contre la fraude, la corruption et les tracasseries</div>
+            <div class="department-mandate">Prévention et répression de la corruption, lutte contre la fraude administrative et les tracasseries aux usagers des services publics.</div>
           </div>
-          <div class="department-contact"><a href="index.html#contact">Contacter →</a></div>
+          <div class="department-contact"><a href="cabinet-cellule-fraude.html">En savoir plus →</a></div>
         </div>
         <div class="department-item">
           <div class="department-num">5</div>
           <div class="department-body">
-            <div class="department-name">Service des Archives &amp; Documentation</div>
-            <div class="department-mandate">Conservation et gestion des archives gouvernementales, documentation des actes officiels, gestion de la bibliothèque institutionnelle.</div>
+            <div class="department-name">La Cellule de Communication du Gouverneur</div>
+            <div class="department-mandate">Communication institutionnelle, relations avec les médias, production des communiqués officiels et gestion de la présence numérique du Gouverneur.</div>
           </div>
-          <div class="department-contact"><a href="index.html#contact">Contacter →</a></div>
+          <div class="department-contact"><a href="cabinet-cellule-communication.html">En savoir plus →</a></div>
         </div>
         <div class="department-item">
           <div class="department-num">6</div>
           <div class="department-body">
-            <div class="department-name">Cellule de Communication &amp; Relations avec la Presse</div>
-            <div class="department-mandate">Communication institutionnelle, communiqués de presse, conférences de presse, gestion des réseaux sociaux officiels du Gouverneur.</div>
+            <div class="department-name">Le Service Provincial du Protocole d&#39;État</div>
+            <div class="department-mandate">Organisation des cérémonies officielles, gestion du protocole lors des visites d&#39;État et coordination des déplacements officiels du Gouverneur.</div>
           </div>
-          <div class="department-contact"><a href="index.html#contact">Contacter →</a></div>
+          <div class="department-contact"><a href="cabinet-protocole.html">En savoir plus →</a></div>
+        </div>
+        <div class="department-item">
+          <div class="department-num">7</div>
+          <div class="department-body">
+            <div class="department-name">Le Service Provincial d&#39;Infrastructures</div>
+            <div class="department-mandate">Suivi technique des chantiers provinciaux, supervision des travaux d&#39;infrastructure et contrôle qualité des ouvrages.</div>
+          </div>
+          <div class="department-contact"><a href="cabinet-service-infrastructures.html">En savoir plus →</a></div>
+        </div>
+        <div class="department-item">
+          <div class="department-num">8</div>
+          <div class="department-body">
+            <div class="department-name">La Société Provinciale des Minerais (SPM)</div>
+            <div class="department-mandate">Gestion et valorisation des ressources minières du Sud-Kivu. Contribution aux recettes provinciales et promotion des investissements miniers responsables.</div>
+          </div>
+          <div class="department-contact"><a href="cabinet-spm.html">En savoir plus →</a></div>
+        </div>
+        <div class="department-item">
+          <div class="department-num">9</div>
+          <div class="department-body">
+            <div class="department-name">La Société Provinciale d&#39;Hygiène et Assainissement (SPHA)</div>
+            <div class="department-mandate">Gestion des services d&#39;hygiène et d&#39;assainissement, coordination de la propreté urbaine et gestion des déchets dans la province.</div>
+          </div>
+          <div class="department-contact"><a href="cabinet-spha.html">En savoir plus →</a></div>
         </div>
       </div>
     </div>
