@@ -719,11 +719,13 @@
       gap: 24px;
     }
     .news-card {
+      display: block;
       background: var(--white);
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--border);
       transition: all 0.25s;
+      color: inherit;
     }
     .news-card:hover { box-shadow: 0 12px 36px rgba(0,56,130,0.1); transform: translateY(-3px); }
     .news-card-img {
@@ -1935,53 +1937,53 @@
           <div class="section-label">Actualités & Communiqués</div>
           <div class="section-title">Dernières <span>nouvelles</span></div>
         </div>
-        <a href="#" class="view-all">Toutes les actualités</a>
+        <a href="toutes-les-actualites.html" class="view-all">Toutes les actualités</a>
       </div>
       <div class="news-grid">
-        <div class="news-card">
-          <div class="news-card-img">
+        <a href="actualite-kolwezi-paix.html" class="news-card">
+          <div class="news-card-img" style="background: linear-gradient(135deg, #003882, #0052B4);">
+            <span>🕊️</span>
+            <span class="news-cat">Paix &amp; Diplomatie</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-date">19 juin 2025</div>
+            <div class="news-card-title">Accueil du Président de la République à Kolwezi : le Gouverneur Purusi appuie les initiatives de paix</div>
+            <div class="news-card-excerpt">Le Gouverneur Jean-Jacques Purusi Sadiki soutient fermement les initiatives de paix du Chef de l'État lors de l'accueil du Président de la République à Kolwezi.</div>
+          </div>
+        </a>
+        <a href="actualite-gouverneur-president-republique.html" class="news-card">
+          <div class="news-card-img" style="background: linear-gradient(135deg, #1a3a6a, #2a5a9a);">
             <span>🏛️</span>
             <span class="news-cat">Gouvernance</span>
           </div>
           <div class="news-card-body">
-            <div class="news-date">02 mai 2024</div>
-            <div class="news-card-title">Investiture du Gouvernement Provincial du Sud-Kivu</div>
-            <div class="news-card-excerpt">Le Professeur Jean-Jacques Purusi Sadiki prend officiellement les rênes de la Province du Sud-Kivu suite aux élections du 20 décembre 2023. Le programme quinquennal 2024–2028 est présenté à l'Assemblée provinciale.</div>
+            <div class="news-date">20 juin 2025</div>
+            <div class="news-card-title">Kinshasa : le Gouverneur Purusi Sadiki reçu par le Président de la République</div>
+            <div class="news-card-excerpt">Reçu par le Président de la République à Kinshasa, le Gouverneur Jean-Jacques Purusi Sadiki porte la voix des forces de sécurité et de la population du Sud-Kivu.</div>
           </div>
-        </div>
-        <div class="news-card">
+        </a>
+        <a href="actualite-gouverneur-commerce-exterieur.html" class="news-card">
+          <div class="news-card-img" style="background: linear-gradient(135deg, #7a3800, #a85200);">
+            <span>🤝</span>
+            <span class="news-cat">Commerce &amp; Économie</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-date">21 juin 2025</div>
+            <div class="news-card-title">Kinshasa : rencontre enrichissante avec le Ministre du Commerce Extérieur</div>
+            <div class="news-card-excerpt">Le Gouverneur Jean-Jacques Purusi a tenu une rencontre enrichissante avec le Ministre du Commerce Extérieur pour discuter du développement économique du Sud-Kivu.</div>
+          </div>
+        </a>
+        <a href="actualite-assemblee-uvira.html" class="news-card">
           <div class="news-card-img green">
-            <span>🌾</span>
-            <span class="news-cat">Agriculture</span>
+            <span>📜</span>
+            <span class="news-cat">Assemblée Provinciale</span>
           </div>
           <div class="news-card-body">
-            <div class="news-date">Juin 2024</div>
-            <div class="news-card-title">Relance du secteur agricole : réhabilitation de l'INERA et du CRSN Lwiro</div>
-            <div class="news-card-excerpt">Le gouvernement provincial engage un partenariat avec des centres scientifiques spécialisés (IITA) pour renforcer les capacités de recherche et soutenir les 3 984 agents techniques agricoles.</div>
+            <div class="news-date">30 juin 2025</div>
+            <div class="news-card-title">Assemblée Provinciale : clôture de la session ordinaire de mars à Uvira</div>
+            <div class="news-card-excerpt">Le Gouverneur Jean-Jacques Purusi et Bruno Lemarquis ont pris part à la cérémonie de clôture de la session ordinaire de mars de l'Assemblée Provinciale à Uvira.</div>
           </div>
-        </div>
-        <div class="news-card">
-          <div class="news-card-img orange">
-            <span>⛏️</span>
-            <span class="news-cat">Mines</span>
-          </div>
-          <div class="news-card-body">
-            <div class="news-date">Juillet 2024</div>
-            <div class="news-card-title">Création d'une société minière provinciale pour protéger les ressources du Sud-Kivu</div>
-            <div class="news-card-excerpt">Le gouvernement lance la rationalisation du secteur minier artisanal, la mise en place de brigades anti-fraude et l'audit du secteur afin de garantir que les ressources bénéficient aux communautés locales.</div>
-          </div>
-        </div>
-        <div class="news-card">
-          <div class="news-card-img" style="background: linear-gradient(135deg, #2a4a7a, #1a5c8a);">
-            <span>🌿</span>
-            <span class="news-cat">Environnement</span>
-          </div>
-          <div class="news-card-body">
-            <div class="news-date">Août 2024</div>
-            <div class="news-card-title">Campagne nationale de reboisement : un million d'arbres pour le Sud-Kivu</div>
-            <div class="news-card-excerpt">Le gouvernement provincial lance la campagne de reboisement « Un million d'arbres » pour lutter contre la déforestation et les effets du réchauffement climatique. Le Parc National de Kahuzi-Biega sera renforcé dans ses capacités de protection.</div>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
