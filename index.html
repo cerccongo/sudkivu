@@ -340,12 +340,42 @@
       font-weight: 500;
     }
     .ann-ticker {
-      display: flex;
-      gap: 32px;
       overflow: hidden;
       flex: 1;
+      position: relative;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+      mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
     }
-    .ann-ticker-item { white-space: nowrap; }
+    .ann-ticker-inner {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      animation: ticker-scroll 50s linear infinite;
+    }
+    .ann-ticker:hover .ann-ticker-inner {
+      animation-play-state: paused;
+    }
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ann-ticker-item {
+      white-space: nowrap;
+      font-size: 13.5px;
+      color: var(--text-body);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .ann-ticker-item:hover {
+      color: var(--blue-deep);
+      text-decoration: underline;
+    }
+    .ann-sep {
+      color: var(--gray-mid);
+      padding: 0 28px;
+      flex-shrink: 0;
+      user-select: none;
+    }
 
     /* ===== QUICK ACCESS ===== */
     .quick-access {
@@ -1764,11 +1794,30 @@
   <!-- ANNOUNCEMENTS BAR -->
   <div class="announcement-bar">
     <div class="announcement-inner">
-      <span class="ann-label">🔴 Urgent</span>
+      <span class="ann-label">📰 Actualités</span>
       <div class="ann-ticker">
-        <span class="ann-ticker-item">📢 Programme d'Actions du Gouvernement Provincial 2024–2028 adopté par l'Assemblée Provinciale — Budget de 112 milliards de FC pour le quinquennat</span>
-        <span class="ann-ticker-item ann-sep" style="color:var(--gray-mid)"> &nbsp;|&nbsp; </span>
-        <span class="ann-ticker-item">🏛️ Investiture du Gouverneur Jean-Jacques Purusi Sadiki le 02 mai 2024</span>
+        <div class="ann-ticker-inner">
+          <a href="actualite-gouverneur-purusi-retour-kinshasa.html" class="ann-ticker-item">🕊️ Retour du Gouverneur Purusi Sadiki de Kinshasa : &laquo;&nbsp;Cette guerre d&apos;agression est &agrave; sa fin&nbsp;&raquo;</a>
+          <span class="ann-sep">&nbsp;|&nbsp;</span>
+          <a href="actualite-assemblee-uvira.html" class="ann-ticker-item">🏛️ Assembl&eacute;e Provinciale : cl&ocirc;ture de la session ordinaire de mars &agrave; Uvira</a>
+          <span class="ann-sep">&nbsp;|&nbsp;</span>
+          <a href="actualite-gouverneur-commerce-exterieur.html" class="ann-ticker-item">💼 Kinshasa : rencontre enrichissante avec le Ministre du Commerce Ext&eacute;rieur</a>
+          <span class="ann-sep">&nbsp;|&nbsp;</span>
+          <a href="actualite-gouverneur-president-republique.html" class="ann-ticker-item">🤝 Kinshasa : le Gouverneur Purusi Sadiki re&ccedil;u par le Pr&eacute;sident de la R&eacute;publique</a>
+          <span class="ann-sep">&nbsp;|&nbsp;</span>
+          <a href="actualite-kolwezi-paix.html" class="ann-ticker-item">☮️ Kolwezi : le Gouverneur Purusi appuie les initiatives de paix du Pr&eacute;sident de la R&eacute;publique</a>
+          <!-- Duplicate set for seamless loop -->
+          <span class="ann-sep">&nbsp;|&nbsp;</span>
+          <a href="actualite-gouverneur-purusi-retour-kinshasa.html" class="ann-ticker-item">🕊️ Retour du Gouverneur Purusi Sadiki de Kinshasa : &laquo;&nbsp;Cette guerre d&apos;agression est &agrave; sa fin&nbsp;&raquo;</a>
+          <span class="ann-sep">&nbsp;|&nbsp;</span>
+          <a href="actualite-assemblee-uvira.html" class="ann-ticker-item">🏛️ Assembl&eacute;e Provinciale : cl&ocirc;ture de la session ordinaire de mars &agrave; Uvira</a>
+          <span class="ann-sep">&nbsp;|&nbsp;</span>
+          <a href="actualite-gouverneur-commerce-exterieur.html" class="ann-ticker-item">💼 Kinshasa : rencontre enrichissante avec le Ministre du Commerce Ext&eacute;rieur</a>
+          <span class="ann-sep">&nbsp;|&nbsp;</span>
+          <a href="actualite-gouverneur-president-republique.html" class="ann-ticker-item">🤝 Kinshasa : le Gouverneur Purusi Sadiki re&ccedil;u par le Pr&eacute;sident de la R&eacute;publique</a>
+          <span class="ann-sep">&nbsp;|&nbsp;</span>
+          <a href="actualite-kolwezi-paix.html" class="ann-ticker-item">☮️ Kolwezi : le Gouverneur Purusi appuie les initiatives de paix du Pr&eacute;sident de la R&eacute;publique</a>
+        </div>
       </div>
     </div>
   </div>
