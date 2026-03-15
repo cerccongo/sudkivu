@@ -2849,10 +2849,9 @@
       var fallbackEl = document.getElementById('map-fallback');
       if (fallbackEl) fallbackEl.remove();
       var map = L.map('province-map', {
-        center: [-2.85, 28.30],
-        zoom: 8,
         scrollWheelZoom: false,
-        attributionControl: true
+        attributionControl: true,
+        zoomControl: true
       });
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -2980,18 +2979,26 @@
         className: '', iconSize: [12, 12], iconAnchor: [6, 6], popupAnchor: [0, -10]
       });
 
+      var allPolygons = [];
       territoryData.forEach(function(t) {
         var poly = L.polygon(t.coords, polyStyle);
         poly.on('mouseover', function() { this.setStyle(polyHover); });
         poly.on('mouseout',  function() { this.setStyle(polyStyle); });
         poly.bindPopup(buildPopup(t.name, 'territory', t.desc, t.page), {maxWidth: 250});
         poly.addTo(map);
+        allPolygons.push(poly);
 
         // Centre marker for label/click fallback
         L.marker([t.markerLat, t.markerLng], {icon: territoryIcon})
           .bindPopup(buildPopup(t.name, 'territory', t.desc, t.page), {maxWidth: 250})
           .addTo(map);
       });
+
+      // Fit map to show all territories
+      if (allPolygons.length) {
+        var group = L.featureGroup(allPolygons);
+        map.fitBounds(group.getBounds(), {padding: [20, 20]});
+      }
 
       // ── City markers ──
       var cityIcon = L.divIcon({
