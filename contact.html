@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &mdash; Gouvernement Provincial du Sud-Kivu</title>
+  <meta name="description" content="Contactez le Gouvernement Provincial du Sud-Kivu, ses ministères et institutions. Formulaire de contact, adresses et informations de contact officielles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+
+    :root { --blue-deep:#003882;--blue-mid:#0052B4;--blue-light:#1A6FD4;--gold:#CE8A00;--gold-light:#F5B800;--red-drc:#C8102E;--white:#FFFFFF;--off-white:#F4F6FA;--gray-light:#E8ECF3;--gray-mid:#8D9BB5;--gray-dark:#3A4561;--text-dark:#1C2340;--text-body:#3A4561;--border:rgba(0,56,130,0.12); }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Source Sans 3',sans-serif;color:var(--text-body);background:var(--white);line-height:1.65;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    img{max-width:100%;display:block;}
+    .topbar{background:var(--blue-deep);color:rgba(255,255,255,0.75);font-size:12px;font-weight:600;letter-spacing:0.04em;padding:7px 0;text-transform:uppercase;}
+    .topbar-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+    .topbar-left{display:flex;align-items:center;gap:16px;}
+    .topbar-sep{opacity:0.3;}
+    .topbar-right{display:flex;gap:20px;}
+    .topbar-right a:hover{color:var(--gold-light);}
+    header{background:var(--white);box-shadow:0 2px 16px rgba(0,56,130,0.10);position:sticky;top:0;z-index:100;}
+    .header-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;}
+    .logo-wrap{display:flex;align-items:center;gap:14px;}
+    .logo-emblem{width:54px;height:54px;background:var(--blue-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--gold-light);flex-shrink:0;}
+    .logo-text{line-height:1.2;}
+    .logo-text .province{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--blue-deep);letter-spacing:-0.01em;}
+    .logo-text .country{font-size:11px;color:var(--gray-mid);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;}
+    nav{display:flex;align-items:center;gap:4px;}
+    .nav-link{font-size:13.5px;font-weight:600;color:var(--text-dark);padding:8px 14px;border-radius:6px;transition:background 0.2s,color 0.2s;text-transform:uppercase;letter-spacing:0.01em;cursor:pointer;}
+    .nav-link:hover,.nav-link.active{background:var(--blue-deep);color:var(--white);}
+    .nav-item{position:relative;}
+    .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{opacity:1;pointer-events:auto;transform:translateY(0);}
+    .nav-dropdown{position:absolute;top:calc(100% + 6px);left:0;background:var(--white);border:1px solid var(--border);border-radius:10px;box-shadow:0 12px 40px rgba(0,56,130,0.15);padding:8px;min-width:220px;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity 0.2s,transform 0.2s;z-index:200;}
+    .nav-dropdown a{display:block;padding:9px 14px;border-radius:6px;font-size:13.5px;font-weight:600;color:var(--text-dark);transition:background 0.15s,color 0.15s;white-space:nowrap;}
+    .nav-dropdown a:hover{background:var(--off-white);color:var(--blue-deep);}
+    .nav-dropdown-divider{height:1px;background:var(--border);margin:6px 0;}
+    .nav-cta{background:var(--gold);color:var(--white);padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-transform:uppercase;margin-left:8px;transition:background 0.2s;}
+    .nav-cta:hover,.nav-cta.active{background:var(--blue-deep);color:var(--white);}
+    .menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px;}
+    .menu-toggle span{display:block;width:24px;height:2px;background:var(--blue-deep);border-radius:2px;transition:transform 0.3s,opacity 0.3s;}
+    .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .menu-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+    .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .mobile-nav{display:none;position:fixed;inset:0;background:var(--white);z-index:300;overflow-y:auto;transform:translateX(100%);transition:transform 0.3s;}
+    .mobile-nav.open{transform:translateX(0);}
+    .mobile-nav-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--border);}
+    .mobile-nav-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--text-dark);}
+    .mobile-nav-close{background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-dark);padding:4px;}
+    .mobile-nav-body{padding:16px 24px 40px;}
+    .mnav-link{display:block;padding:14px 0;font-size:15px;font-weight:600;color:var(--text-dark);border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:0.01em;}
+    .mnav-group{border-bottom:1px solid var(--border);}
+    .mnav-group-btn{width:100%;background:none;border:none;padding:14px 0;font-size:15px;font-weight:600;color:var(--text-dark);text-align:left;cursor:pointer;display:flex;align-items:center;justify-content:space-between;text-transform:uppercase;letter-spacing:0.01em;}
+    .mnav-arrow{font-size:11px;transition:transform 0.2s;}
+    .mnav-group-btn[aria-expanded="true"] .mnav-arrow{transform:rotate(180deg);}
+    .mnav-group-items{display:none;padding-bottom:8px;}
+    .mnav-group-items.open{display:block;}
+    .mnav-item{display:block;padding:10px 16px;font-size:14px;font-weight:600;color:var(--text-dark);border-radius:6px;}
+    .mnav-item:hover{background:var(--off-white);}
+    .mnav-cta{display:block;margin-top:20px;background:var(--gold);color:var(--white);padding:14px 20px;border-radius:8px;font-size:15px;font-weight:700;text-align:center;text-transform:uppercase;}
+    .flag-strip{height:5px;background:linear-gradient(90deg,var(--blue-mid) 33%,var(--red-drc) 33%,var(--red-drc) 66%,var(--gold) 66%);}
+    .skip-link{position:absolute;top:-40px;left:24px;background:var(--blue-deep);color:var(--white);padding:8px 16px;border-radius:0 0 6px 6px;font-size:13px;font-weight:600;z-index:500;transition:top 0.2s;}
+    .skip-link:focus{top:0;}
+    .section-inner{max-width:1240px;margin:0 auto;padding:0 24px;}
+    .section-label{font-size:12px;font-weight:700;color:var(--blue-mid);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);font-weight:700;color:var(--text-dark);line-height:1.2;margin-bottom:8px;}
+    .section-title span{color:var(--blue-mid);}
+    .section-sub{font-size:16px;color:var(--gray-mid);margin-bottom:40px;}
+
+    /* Page Hero */
+    .page-hero{background:linear-gradient(135deg,#002255 0%,#001840 55%,#001030 100%);color:var(--white);padding:72px 0 64px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(245,184,0,0.12) 0%,transparent 60%);}
+    .page-hero-content{position:relative;z-index:1;max-width:700px;}
+    .page-hero .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,184,0,0.18);border:1px solid rgba(245,184,0,0.4);color:var(--gold-light);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px;}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:900;line-height:1.15;margin-bottom:16px;}
+    .page-hero h1 span{color:var(--gold-light);}
+    .page-hero-desc{font-size:17px;color:rgba(255,255,255,0.85);line-height:1.7;margin-bottom:28px;max-width:600px;}
+    .page-breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.6);}
+    .page-breadcrumb a{color:rgba(255,255,255,0.7);}
+    .page-breadcrumb a:hover{color:var(--gold-light);}
+    .page-breadcrumb span{color:rgba(255,255,255,0.4);}
+
+    /* Contact Layout */
+    .contact-main-section{padding:64px 0 72px;background:var(--white);}
+    .contact-main-grid{display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:start;}
+
+    /* Contact Form */
+    .contact-form-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:40px;box-shadow:0 4px 24px rgba(0,56,130,0.07);}
+    .contact-form-card h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--text-dark);margin-bottom:8px;}
+    .contact-form-card .form-subtitle{font-size:15px;color:var(--gray-mid);margin-bottom:28px;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .form-group{margin-bottom:20px;}
+    .form-group label{display:block;font-size:13px;font-weight:700;color:var(--text-dark);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:15px;font-family:'Source Sans 3',sans-serif;color:var(--text-dark);background:var(--white);transition:border-color 0.2s,box-shadow 0.2s;outline:none;}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(0,82,180,0.1);}
+    .form-group textarea{resize:vertical;min-height:120px;}
+    .form-group select{cursor:pointer;}
+    .form-submit{display:inline-flex;align-items:center;gap:10px;background:var(--blue-deep);color:var(--white);padding:14px 32px;border-radius:8px;font-size:15px;font-weight:700;border:none;cursor:pointer;transition:background 0.2s;width:100%;justify-content:center;}
+    .form-submit:hover{background:var(--blue-mid);}
+    .form-note{margin-top:12px;font-size:12px;color:var(--gray-mid);text-align:center;}
+    .form-success{display:none;padding:16px 20px;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:8px;color:#2e7d32;font-size:14px;font-weight:600;margin-top:16px;}
+
+    /* Contact Sidebar */
+    .contact-sidebar{display:flex;flex-direction:column;gap:20px;}
+    .contact-card{background:var(--off-white);border:1px solid var(--border);border-radius:14px;padding:24px;}
+    .contact-card h3{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+    .contact-detail{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;}
+    .contact-detail:last-child{margin-bottom:0;}
+    .contact-detail-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
+    .contact-detail-text{font-size:14px;line-height:1.6;color:var(--text-body);}
+    .contact-detail-text strong{display:block;font-size:12px;font-weight:700;color:var(--gray-dark);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;}
+    .contact-detail-text a{color:var(--blue-mid);}
+    .contact-detail-text a:hover{color:var(--blue-deep);text-decoration:underline;}
+
+    /* Ministry Contacts Grid */
+    .ministries-section{padding:64px 0 72px;background:var(--off-white);}
+    .ministry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;}
+    .ministry-contact-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px 22px;transition:box-shadow 0.2s,border-color 0.2s;}
+    .ministry-contact-card:hover{box-shadow:0 4px 20px rgba(0,56,130,0.10);border-color:var(--blue-mid);}
+    .ministry-contact-card-icon{font-size:28px;margin-bottom:10px;}
+    .ministry-contact-card-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:6px;line-height:1.3;}
+    .ministry-contact-card-email{font-size:13px;color:var(--blue-mid);font-weight:600;}
+    .ministry-contact-card-email a{color:inherit;}
+    .ministry-contact-card-email a:hover{text-decoration:underline;}
+    .ministry-contact-card-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--gray-mid);margin-top:10px;text-transform:uppercase;letter-spacing:0.05em;transition:color 0.2s;}
+    .ministry-contact-card:hover .ministry-contact-card-link{color:var(--blue-mid);}
+
+    /* Map Section */
+    .map-section{padding:64px 0 72px;background:var(--white);}
+    .map-embed{width:100%;height:400px;border:0;border-radius:14px;box-shadow:0 4px 24px rgba(0,56,130,0.10);}
+
+    /* Footer */
+    footer{background:var(--text-dark);color:rgba(255,255,255,0.75);padding:56px 0 32px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
+    .footer-brand .logo-wrap{margin-bottom:20px;}
+    .footer-brand .logo-emblem{background:rgba(255,255,255,0.1);}
+    .footer-brand .logo-text .province{color:var(--white);}
+    .footer-brand .logo-text .country{color:rgba(255,255,255,0.5);}
+    .footer-desc{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;}
+    .footer-col h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold-light);margin-bottom:16px;}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-links a{font-size:14px;color:rgba(255,255,255,0.65);transition:color 0.2s;}
+    .footer-links a:hover{color:var(--white);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+    .footer-bottom span{font-size:13px;color:rgba(255,255,255,0.4);}
+    .footer-bottom-links{display:flex;gap:20px;}
+    .footer-bottom-links a{font-size:13px;color:rgba(255,255,255,0.45);}
+    .footer-bottom-links a:hover{color:var(--white);}
+
+    @media(max-width:1040px){
+      nav{display:none;}
+      .menu-toggle{display:flex;}
+      .mobile-nav{display:block;}
+      .footer-grid{grid-template-columns:1fr 1fr;}
+      .contact-main-grid{grid-template-columns:1fr;}
+      .ministry-grid{grid-template-columns:repeat(2,1fr);}
+    }
+    @media(max-width:640px){
+      .footer-grid{grid-template-columns:1fr;}
+      .topbar-right{display:none;}
+      .form-row{grid-template-columns:1fr;}
+      .ministry-grid{grid-template-columns:1fr;}
+    }
+
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <span>&#x1F1E8;&#x1F1E9; R&eacute;publique D&eacute;mocratique du Congo</span>
+        <span class="topbar-sep">|</span>
+        <span>Province du Sud-Kivu &mdash; Gouvernement Provincial</span>
+      </div>
+      <div class="topbar-right">
+        <a href="province.html">La Province</a>
+        <a href="programme-2024-2028.html">Programme 2024&ndash;2028</a>
+        <a href="index.html#governor">Le Gouverneur</a>
+        <a href="contact.html">Contacts</a>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-emblem" style="background:none; padding:0; overflow:hidden;"><img src="https://github.com/user-attachments/assets/47a9213d-48b5-46e7-a4b8-d572d2c6e33c" alt="Logo Sud-Kivu" style="width:54px; height:54px; object-fit:contain; border-radius:50%;"></div>
+        <div class="logo-text">
+          <div class="province">Province du Sud-Kivu</div>
+          <div class="country">Gouvernement Provincial</div>
+        </div>
+      </a>
+      <nav>
+        <a href="index.html#accueil" class="nav-link">Accueil</a>
+        <a href="province.html" class="nav-link">Province</a>
+        <a href="programme-2024-2028.html" class="nav-link">Programme</a>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Institutions &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="institutions.html">&#x1F3DB;&#xFE0F; Institutions</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="gouvernement.html">&#x1F3DB;&#xFE0F; Gouvernement Provincial</a>
+            <a href="assemblee.html">&#x1F4DC; Assembl&eacute;e Provinciale</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Villes &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="villes.html">&#x1F3D9;&#xFE0F; Vue d&apos;ensemble</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="territoire-bukavu.html">&#x1F3D9;&#xFE0F; Bukavu</a>
+            <a href="territoire-uvira-ville.html">&#x1F3D9;&#xFE0F; Uvira</a>
+            <a href="territoire-baraka.html">&#x1F3D9;&#xFE0F; Baraka</a>
+            <a href="territoire-kamituga.html">&#x26CF;&#xFE0F; Kamituga</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Territoires &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="territoires.html">&#x1F5FA;&#xFE0F; Vue d&apos;ensemble</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="territoire-fizi.html">&#x1F30A; Fizi</a>
+            <a href="territoire-idjwi.html">&#x1F3DD;&#xFE0F; Idjwi</a>
+            <a href="territoire-kabare.html">&#x26F0;&#xFE0F; Kabare</a>
+            <a href="territoire-kalehe.html">&#x1F333; Kalehe</a>
+            <a href="territoire-mwenga.html">&#x1F332; Mwenga</a>
+            <a href="territoire-shabunda.html">&#x1F6B6; Shabunda</a>
+            <a href="territoire-uvira.html">&#x1F30A; Uvira</a>
+            <a href="territoire-walungu.html">&#x1F3D4;&#xFE0F; Walungu</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Minist&#xe8;res &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="ministeres.html">&#x1F3DB;&#xFE0F; Tous les Minist&#xe8;res</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="ministere-interieur.html">&#x1F6E1;&#xFE0F; Int&#xe9;rieur &amp; S&#xe9;curit&#xe9;</a>
+            <a href="ministere-finances.html">&#x1F4B0; Finances &amp; &#xC9;conomie</a>
+            <a href="ministere-plan.html">&#x1F4CA; Plan &amp; Budget</a>
+            <a href="ministere-infrastructures.html">&#x1F3D7;&#xFE0F; Infrastructures</a>
+            <a href="ministere-justice.html">&#x2696;&#xFE0F; Justice</a>
+            <a href="ministere-agriculture.html">&#x1F33E; Agriculture</a>
+            <a href="ministere-transports.html">&#x1F69A; Transports</a>
+            <a href="ministere-mines.html">&#x26CF;&#xFE0F; Mines &amp; &#xC9;nergie</a>
+            <a href="ministere-education.html">&#x1F4DA; &#xC9;ducation</a>
+            <a href="ministere-sante.html">&#x1F3E5; Sant&#xe9;</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Cabinet &#x25be;</span>
+          <div class="nav-dropdown">
+            <a href="gouverneur.html">&#x1F464; Le Gouverneur</a>
+            <a href="cabinet.html">&#x1F3C5; Cabinet du Gouverneur</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="membres-cabinet.html">&#x1F465; Membres du Cabinet</a>
+            <a href="secretariat-executif.html">&#x1F4CB; Secr&eacute;tariat Ex&eacute;cutif</a>
+            <a href="secretariat-administratif.html">&#x1F4C2; Secr&eacute;tariat Administratif</a>
+            <a href="service-courrier.html">&#x2709;&#xFE0F; Service Courrier</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="assemblee.html">&#x1F4DC; Assembl&eacute;e Provinciale</a>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-cta active">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" onclick="var nav=document.getElementById('mobile-nav');nav.classList.toggle('open');this.classList.toggle('open');this.setAttribute('aria-expanded',nav.classList.contains('open'));" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Navigation mobile">
+      <div class="mobile-nav-header">
+        <span class="mobile-nav-title">Menu</span>
+        <button class="mobile-nav-close" onclick="var nav=document.getElementById('mobile-nav');nav.classList.remove('open');var t=document.getElementById('menu-toggle');t.classList.remove('open');t.setAttribute('aria-expanded','false');" aria-label="Fermer le menu">&#x2715;</button>
+      </div>
+      <div class="mobile-nav-body">
+        <a href="index.html#accueil" class="mnav-link">Accueil</a>
+        <a href="province.html" class="mnav-link">Province</a>
+        <a href="programme-2024-2028.html" class="mnav-link">Programme 2024&ndash;2028</a>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Institutions <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="institutions.html" class="mnav-item">&#x1F3DB;&#xFE0F; Institutions</a>
+            <a href="gouvernement.html" class="mnav-item">&#x1F3DB;&#xFE0F; Gouvernement Provincial</a>
+            <a href="assemblee.html" class="mnav-item">&#x1F4DC; Assembl&eacute;e Provinciale</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Villes <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="villes.html" class="mnav-item">&#x1F3D9;&#xFE0F; Vue d&apos;ensemble</a>
+            <a href="territoire-bukavu.html" class="mnav-item">&#x1F3D9;&#xFE0F; Bukavu</a>
+            <a href="territoire-uvira-ville.html" class="mnav-item">&#x1F3D9;&#xFE0F; Uvira</a>
+            <a href="territoire-baraka.html" class="mnav-item">&#x1F3D9;&#xFE0F; Baraka</a>
+            <a href="territoire-kamituga.html" class="mnav-item">&#x26CF;&#xFE0F; Kamituga</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Territoires <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="territoires.html" class="mnav-item">&#x1F5FA;&#xFE0F; Vue d&apos;ensemble</a>
+            <a href="territoire-fizi.html" class="mnav-item">&#x1F30A; Fizi</a>
+            <a href="territoire-idjwi.html" class="mnav-item">&#x1F3DD;&#xFE0F; Idjwi</a>
+            <a href="territoire-kabare.html" class="mnav-item">&#x26F0;&#xFE0F; Kabare</a>
+            <a href="territoire-kalehe.html" class="mnav-item">&#x1F333; Kalehe</a>
+            <a href="territoire-mwenga.html" class="mnav-item">&#x1F332; Mwenga</a>
+            <a href="territoire-shabunda.html" class="mnav-item">&#x1F6B6; Shabunda</a>
+            <a href="territoire-uvira.html" class="mnav-item">&#x1F30A; Uvira</a>
+            <a href="territoire-walungu.html" class="mnav-item">&#x1F3D4;&#xFE0F; Walungu</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Minist&egrave;res <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="ministeres.html" class="mnav-item">&#x1F3DB;&#xFE0F; Tous les Minist&egrave;res</a>
+            <a href="ministere-interieur.html" class="mnav-item">&#x1F6E1;&#xFE0F; Int&eacute;rieur &amp; S&eacute;curit&eacute;</a>
+            <a href="ministere-finances.html" class="mnav-item">&#x1F4B0; Finances &amp; &Eacute;conomie</a>
+            <a href="ministere-plan.html" class="mnav-item">&#x1F4CA; Plan &amp; Budget</a>
+            <a href="ministere-infrastructures.html" class="mnav-item">&#x1F3D7;&#xFE0F; Infrastructures</a>
+            <a href="ministere-justice.html" class="mnav-item">&#x2696;&#xFE0F; Justice</a>
+            <a href="ministere-agriculture.html" class="mnav-item">&#x1F33E; Agriculture</a>
+            <a href="ministere-transports.html" class="mnav-item">&#x1F69A; Transports</a>
+            <a href="ministere-mines.html" class="mnav-item">&#x26CF;&#xFE0F; Mines &amp; &Eacute;nergie</a>
+            <a href="ministere-education.html" class="mnav-item">&#x1F4DA; &Eacute;ducation</a>
+            <a href="ministere-sante.html" class="mnav-item">&#x1F3E5; Sant&eacute;</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Cabinet <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="gouverneur.html" class="mnav-item">&#x1F464; Le Gouverneur</a>
+            <a href="cabinet.html" class="mnav-item">&#x1F3C5; Cabinet du Gouverneur</a>
+            <a href="membres-cabinet.html" class="mnav-item">&#x1F465; Membres du Cabinet</a>
+            <a href="secretariat-executif.html" class="mnav-item">&#x1F4CB; Secr&eacute;tariat Ex&eacute;cutif</a>
+            <a href="secretariat-administratif.html" class="mnav-item">&#x1F4C2; Secr&eacute;tariat Administratif</a>
+            <a href="service-courrier.html" class="mnav-item">&#x2709;&#xFE0F; Service Courrier</a>
+            <a href="assemblee.html" class="mnav-item">&#x1F4DC; Assembl&eacute;e Provinciale</a>
+          </div>
+        </div>
+        <a href="contact.html" class="mnav-cta">Contact</a>
+      </div>
+    </div>
+  </header>
+  <div class="flag-strip"></div>
+
+  <main id="main">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="section-inner">
+      <div class="page-hero-content">
+        <div class="hero-badge">Gouvernement Provincial du Sud-Kivu</div>
+        <h1>&#x2709;&#xFE0F; Nous <span>Contacter</span></h1>
+        <p class="page-hero-desc">Contactez le Gouvernement Provincial du Sud-Kivu, ses minist&egrave;res et institutions. Nous sommes &agrave; votre service pour toute demande d&apos;information, de rendez-vous ou de document officiel.</p>
+        <div class="page-breadcrumb">
+          <a href="index.html">Accueil</a> <span>&rsaquo;</span>
+          <span>Contact</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTACT SECTION -->
+  <section class="contact-main-section">
+    <div class="section-inner">
+      <div class="contact-main-grid">
+
+        <!-- Contact Form -->
+        <div>
+          <div class="section-label">Formulaire de contact</div>
+          <div class="section-title" style="margin-bottom:8px;">Envoyer un <span>message</span></div>
+          <p style="font-size:15px;color:var(--gray-mid);margin-bottom:32px;">Remplissez ce formulaire pour contacter les services du Gouvernement Provincial. Votre message sera transmis au service comp&eacute;tent.</p>
+          <div class="contact-form-card">
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="prenom">Pr&eacute;nom *</label>
+                  <input type="text" id="prenom" name="prenom" placeholder="Votre pr&eacute;nom" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label for="nom">Nom *</label>
+                  <input type="text" id="nom" name="nom" placeholder="Votre nom de famille" required autocomplete="family-name" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Adresse e-mail *</label>
+                  <input type="email" id="email" name="email" placeholder="votre@email.com" required autocomplete="email" />
+                </div>
+                <div class="form-group">
+                  <label for="telephone">T&eacute;l&eacute;phone</label>
+                  <input type="tel" id="telephone" name="telephone" placeholder="+243 (0) 8X XXX XXXX" autocomplete="tel" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="service">Service concern&eacute; *</label>
+                <select id="service" name="service" required>
+                  <option value="">-- S&eacute;lectionnez un service --</option>
+                  <optgroup label="Cabinet &amp; Gouvernorat">
+                    <option value="cabinet">Cabinet du Gouverneur</option>
+                    <option value="gouvernorat">Gouvernorat (Secr&eacute;tariat G&eacute;n&eacute;ral)</option>
+                    <option value="assemblee">Assembl&eacute;e Provinciale</option>
+                  </optgroup>
+                  <optgroup label="Minist&egrave;res Provinciaux">
+                    <option value="interieur">Minist&egrave;re de l&apos;Int&eacute;rieur &amp; S&eacute;curit&eacute;</option>
+                    <option value="finances">Minist&egrave;re des Finances &amp; &Eacute;conomie</option>
+                    <option value="plan">Minist&egrave;re du Plan &amp; Budget</option>
+                    <option value="infrastructures">Minist&egrave;re des Infrastructures &amp; Travaux Publics</option>
+                    <option value="justice">Minist&egrave;re de la Justice &amp; Droits Humains</option>
+                    <option value="agriculture">Minist&egrave;re de l&apos;Agriculture &amp; D&eacute;veloppement Rural</option>
+                    <option value="transports">Minist&egrave;re des Transports &amp; Voies de Communication</option>
+                    <option value="mines">Minist&egrave;re des Mines &amp; &Eacute;nergie</option>
+                    <option value="education">Minist&egrave;re de l&apos;&Eacute;ducation</option>
+                    <option value="sante">Minist&egrave;re de la Sant&eacute;</option>
+                  </optgroup>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="objet">Objet *</label>
+                <input type="text" id="objet" name="objet" placeholder="Objet de votre message" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" placeholder="D&eacute;crivez votre demande en d&eacute;tail..." required rows="5"></textarea>
+              </div>
+              <button type="submit" class="form-submit">
+                <span>&#x2709;&#xFE0F;</span> Envoyer le message
+              </button>
+              <p class="form-note">Les champs marqu&eacute;s d&apos;un * sont obligatoires. Vos donn&eacute;es sont trait&eacute;es conform&eacute;ment aux r&egrave;gles de protection de la vie priv&eacute;e.</p>
+              <div class="form-success" id="form-success" role="alert">
+                ✅ Votre message a &eacute;t&eacute; envoy&eacute; avec succ&egrave;s. Nous vous r&eacute;pondrons dans les meilleurs d&eacute;lais.
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Sidebar -->
+        <div class="contact-sidebar">
+
+          <!-- Siège Principal -->
+          <div class="contact-card">
+            <h3>&#x1F3DB;&#xFE0F; Si&egrave;ge du Gouvernement</h3>
+            <div class="contact-detail">
+              <span class="contact-detail-icon">&#x1F4CD;</span>
+              <div class="contact-detail-text">
+                <strong>Adresse</strong>
+                B&acirc;timent du Gouvernorat<br>
+                Avenue Pr&eacute;sident Mobutu<br>
+                Bukavu, Province du Sud-Kivu<br>
+                R&eacute;publique D&eacute;mocratique du Congo
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-icon">&#x260E;&#xFE0F;</span>
+              <div class="contact-detail-text">
+                <strong>T&eacute;l&eacute;phone</strong>
+                +243 (0) 99 000 0001 &mdash; Cabinet du Gouverneur<br>
+                +243 (0) 81 000 0002 &mdash; Secr&eacute;tariat G&eacute;n&eacute;ral
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-icon">&#x2709;&#xFE0F;</span>
+              <div class="contact-detail-text">
+                <strong>E-mail</strong>
+                <a href="mailto:gouvernorat@sudkivu.gouv.cd">gouvernorat@sudkivu.gouv.cd</a><br>
+                <a href="mailto:communication@sudkivu.gouv.cd">communication@sudkivu.gouv.cd</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-icon">&#x1F550;</span>
+              <div class="contact-detail-text">
+                <strong>Heures d&apos;ouverture</strong>
+                Lundi &mdash; Vendredi : 07h30 &ndash; 15h30<br>
+                Ferm&eacute; les jours f&eacute;ri&eacute;s nationaux
+              </div>
+            </div>
+          </div>
+
+          <!-- Cabinet du Gouverneur -->
+          <div class="contact-card">
+            <h3>&#x1F3C5; Cabinet du Gouverneur</h3>
+            <div class="contact-detail">
+              <span class="contact-detail-icon">&#x1F4CD;</span>
+              <div class="contact-detail-text">
+                <strong>Adresse</strong>
+                Avenue du Gouvernorat, Bukavu<br>
+                Province du Sud-Kivu &mdash; RDC
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-icon">&#x2709;&#xFE0F;</span>
+              <div class="contact-detail-text">
+                <strong>E-mail</strong>
+                <a href="mailto:cabinet@sudkivu.gouv.cd">cabinet@sudkivu.gouv.cd</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-icon">&#x260E;&#xFE0F;</span>
+              <div class="contact-detail-text">
+                <strong>T&eacute;l&eacute;phone</strong>
+                +243 (0) 99 000 0001
+              </div>
+            </div>
+            <div style="margin-top:12px;">
+              <a href="cabinet.html" style="font-size:13px;font-weight:700;color:var(--blue-mid);">Voir la page du Cabinet &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Assemblée Provinciale -->
+          <div class="contact-card">
+            <h3>&#x1F4DC; Assembl&eacute;e Provinciale</h3>
+            <div class="contact-detail">
+              <span class="contact-detail-icon">&#x2709;&#xFE0F;</span>
+              <div class="contact-detail-text">
+                <strong>E-mail</strong>
+                <a href="mailto:assemblee@sudkivu.gouv.cd">assemblee@sudkivu.gouv.cd</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-icon">&#x260E;&#xFE0F;</span>
+              <div class="contact-detail-text">
+                <strong>T&eacute;l&eacute;phone</strong>
+                +243 (0) 99 000 0002
+              </div>
+            </div>
+            <div style="margin-top:12px;">
+              <a href="assemblee.html" style="font-size:13px;font-weight:700;color:var(--blue-mid);">Voir la page de l&apos;Assembl&eacute;e &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINISTRY CONTACTS -->
+  <section class="ministries-section">
+    <div class="section-inner">
+      <div class="section-label">Contacts officiels</div>
+      <div class="section-title">Minist&egrave;res <span>Provinciaux</span></div>
+      <p class="section-sub">Adresses e-mail officielles des minist&egrave;res provinciaux du Sud-Kivu. Pour toute demande sp&eacute;cifique, contactez directement le secr&eacute;tariat du minist&egrave;re concern&eacute;.</p>
+      <div class="ministry-grid">
+
+        <div class="ministry-contact-card">
+          <div class="ministry-contact-card-icon">&#x1F6E1;&#xFE0F;</div>
+          <div class="ministry-contact-card-name">Int&eacute;rieur, S&eacute;curit&eacute;, Affaires Coutumi&egrave;res &amp; D&eacute;centralisation</div>
+          <div class="ministry-contact-card-email"><a href="mailto:interieur@sudkivu.gouv.cd">interieur@sudkivu.gouv.cd</a></div>
+          <a href="ministere-interieur.html" class="ministry-contact-card-link">Voir le minist&egrave;re &#x2192;</a>
+        </div>
+
+        <div class="ministry-contact-card">
+          <div class="ministry-contact-card-icon">&#x1F4B0;</div>
+          <div class="ministry-contact-card-name">Finances, &Eacute;conomie, Entrepreneuriat, PME &amp; Artisanat</div>
+          <div class="ministry-contact-card-email"><a href="mailto:finances@sudkivu.gouv.cd">finances@sudkivu.gouv.cd</a></div>
+          <a href="ministere-finances.html" class="ministry-contact-card-link">Voir le minist&egrave;re &#x2192;</a>
+        </div>
+
+        <div class="ministry-contact-card">
+          <div class="ministry-contact-card-icon">&#x1F4CA;</div>
+          <div class="ministry-contact-card-name">Plan, Suivi des Projets de D&eacute;veloppement &amp; Budget Provincial</div>
+          <div class="ministry-contact-card-email"><a href="mailto:plan@sudkivu.gouv.cd">plan@sudkivu.gouv.cd</a></div>
+          <a href="ministere-plan.html" class="ministry-contact-card-link">Voir le minist&egrave;re &#x2192;</a>
+        </div>
+
+        <div class="ministry-contact-card">
+          <div class="ministry-contact-card-icon">&#x1F3D7;&#xFE0F;</div>
+          <div class="ministry-contact-card-name">Infrastructures, Travaux Publics, Reconstruction &amp; Am&eacute;nagement du Territoire</div>
+          <div class="ministry-contact-card-email"><a href="mailto:infrastructures@sudkivu.gouv.cd">infrastructures@sudkivu.gouv.cd</a></div>
+          <a href="ministere-infrastructures.html" class="ministry-contact-card-link">Voir le minist&egrave;re &#x2192;</a>
+        </div>
+
+        <div class="ministry-contact-card">
+          <div class="ministry-contact-card-icon">&#x2696;&#xFE0F;</div>
+          <div class="ministry-contact-card-name">Justice, Garde des Sceaux, Droits Humains &amp; Affaires P&eacute;nitentiaires</div>
+          <div class="ministry-contact-card-email"><a href="mailto:justice@sudkivu.gouv.cd">justice@sudkivu.gouv.cd</a></div>
+          <a href="ministere-justice.html" class="ministry-contact-card-link">Voir le minist&egrave;re &#x2192;</a>
+        </div>
+
+        <div class="ministry-contact-card">
+          <div class="ministry-contact-card-icon">&#x1F33E;</div>
+          <div class="ministry-contact-card-name">Agriculture, P&ecirc;che, &Eacute;levage &amp; D&eacute;veloppement Rural</div>
+          <div class="ministry-contact-card-email"><a href="mailto:agriculture@sudkivu.gouv.cd">agriculture@sudkivu.gouv.cd</a></div>
+          <a href="ministere-agriculture.html" class="ministry-contact-card-link">Voir le minist&egrave;re &#x2192;</a>
+        </div>
+
+        <div class="ministry-contact-card">
+          <div class="ministry-contact-card-icon">&#x1F69A;</div>
+          <div class="ministry-contact-card-name">Transports, Voies de Communication, D&eacute;senclavement &amp; T&eacute;l&eacute;communications</div>
+          <div class="ministry-contact-card-email"><a href="mailto:transports@sudkivu.gouv.cd">transports@sudkivu.gouv.cd</a></div>
+          <a href="ministere-transports.html" class="ministry-contact-card-link">Voir le minist&egrave;re &#x2192;</a>
+        </div>
+
+        <div class="ministry-contact-card">
+          <div class="ministry-contact-card-icon">&#x26CF;&#xFE0F;</div>
+          <div class="ministry-contact-card-name">Mines, &Eacute;nergie, Hydrocarbures &amp; Ressources Hydrauliques</div>
+          <div class="ministry-contact-card-email"><a href="mailto:mines@sudkivu.gouv.cd">mines@sudkivu.gouv.cd</a></div>
+          <a href="ministere-mines.html" class="ministry-contact-card-link">Voir le minist&egrave;re &#x2192;</a>
+        </div>
+
+        <div class="ministry-contact-card">
+          <div class="ministry-contact-card-icon">&#x1F4DA;</div>
+          <div class="ministry-contact-card-name">&Eacute;ducation, Enseignement Primaire, Secondaire &amp; Formation Professionnelle</div>
+          <div class="ministry-contact-card-email"><a href="mailto:education@sudkivu.gouv.cd">education@sudkivu.gouv.cd</a></div>
+          <a href="ministere-education.html" class="ministry-contact-card-link">Voir le minist&egrave;re &#x2192;</a>
+        </div>
+
+        <div class="ministry-contact-card">
+          <div class="ministry-contact-card-icon">&#x1F3E5;</div>
+          <div class="ministry-contact-card-name">Sant&eacute;, Affaires Sociales, Humanitaires &amp; Personnes Vuln&eacute;rables</div>
+          <div class="ministry-contact-card-email"><a href="mailto:sante@sudkivu.gouv.cd">sante@sudkivu.gouv.cd</a></div>
+          <a href="ministere-sante.html" class="ministry-contact-card-link">Voir le minist&egrave;re &#x2192;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALISATION / MAP -->
+  <section class="map-section">
+    <div class="section-inner">
+      <div class="section-label">Localisation</div>
+      <div class="section-title" style="margin-bottom:8px;">O&ugrave; nous <span>trouver</span></div>
+      <p style="font-size:15px;color:var(--gray-mid);margin-bottom:32px;">Le si&egrave;ge du Gouvernement Provincial du Sud-Kivu est situ&eacute; &agrave; Bukavu, chef-lieu de la province.</p>
+      <iframe
+        class="map-embed"
+        title="Localisation du Gouvernement Provincial du Sud-Kivu &agrave; Bukavu"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=28.8200%2C-2.5300%2C28.8800%2C-2.4700&layer=mapnik&marker=-2.5000%2C28.8500"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+      <p style="font-size:13px;color:var(--gray-mid);margin-top:12px;text-align:center;">
+        <a href="https://www.openstreetmap.org/?mlat=-2.5000&mlon=28.8500#map=14/-2.5000/28.8500" target="_blank" rel="noopener" style="color:var(--blue-mid);">Agrandir la carte sur OpenStreetMap</a>
+      </p>
+    </div>
+  </section>
+
+  </main>
+
+  <footer>
+    <div class="section-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <div class="logo-emblem" style="background:none; padding:0; overflow:hidden;"><img src="https://github.com/user-attachments/assets/47a9213d-48b5-46e7-a4b8-d572d2c6e33c" alt="Logo Sud-Kivu" style="width:54px; height:54px; object-fit:contain; border-radius:50%;"></div>
+            <div class="logo-text">
+              <div class="province">Province du Sud-Kivu</div>
+              <div class="country">Gouvernement Provincial</div>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Le Gouvernement Provincial du Sud-Kivu s&apos;engage pour l&apos;&eacute;mergence de la province &agrave; travers un programme ambitieux de d&eacute;veloppement &eacute;conomique, social et infrastructurel pour la p&eacute;riode 2024&ndash;2028.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Programme</h4>
+          <ul class="footer-links">
+            <li><a href="programme-2024-2028.html">Plan Quinquennal 2024&ndash;2028</a></li>
+            <li><a href="programme-2024-2028.html#secteurs">Axes Strat&eacute;giques</a></li>
+            <li><a href="index.html#finances">Finances Provinciales</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Gouvernement</h4>
+          <ul class="footer-links">
+            <li><a href="gouverneur.html">Le Gouverneur</a></li>
+            <li><a href="cabinet.html">Cabinet du Gouverneur</a></li>
+            <li><a href="membres-cabinet.html">Membres du Cabinet</a></li>
+            <li><a href="secretariat-executif.html">Secr&eacute;tariat Ex&eacute;cutif</a></li>
+            <li><a href="assemblee.html">Assembl&eacute;e Provinciale</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Province</h4>
+          <ul class="footer-links">
+            <li><a href="territoires.html">Territoires</a></li>
+            <li><a href="province.html">Profil g&eacute;ographique</a></li>
+            <li><a href="programme-2024-2028.html">Plan Quinquennal 2024&ndash;2028</a></li>
+            <li><a href="ministeres.html">Minist&egrave;res provinciaux</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Gouvernement Provincial du Sud-Kivu &mdash; R&eacute;publique D&eacute;mocratique du Congo</span>
+        <div class="footer-bottom-links">
+          <a href="#">Mentions l&eacute;gales</a>
+          <a href="#">Accessibilit&eacute;</a>
+          <a href="#">Plan du site</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav accordion
+    document.querySelectorAll('.mnav-group-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.mnav-group-btn').forEach(function(b) {
+          b.setAttribute('aria-expanded', 'false');
+          var items = b.parentElement.querySelector('.mnav-group-items');
+          if (items) items.classList.remove('open');
+        });
+        if (!expanded) {
+          this.setAttribute('aria-expanded', 'true');
+          var items = this.parentElement.querySelector('.mnav-group-items');
+          if (items) items.classList.add('open');
+        }
+      });
+    });
+
+    // Contact form handling
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var required = form.querySelectorAll('[required]');
+      var valid = true;
+      required.forEach(function(field) {
+        if (!field.value.trim()) {
+          field.style.borderColor = 'var(--red-drc)';
+          valid = false;
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+      if (valid) {
+        var successMsg = document.getElementById('form-success');
+        successMsg.style.display = 'block';
+        form.reset();
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  </script>
+
+</body>
+</html>
