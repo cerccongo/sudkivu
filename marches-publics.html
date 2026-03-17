@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marchés Publics &mdash; Province du Sud-Kivu</title>
+  <meta name="description" content="Consultez les appels d'offres et les marchés publics de la Province du Sud-Kivu. Participez aux procédures de passation des marchés publics provinciaux." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+
+    :root { --blue-deep:#003882;--blue-mid:#0052B4;--blue-light:#1A6FD4;--gold:#CE8A00;--gold-light:#F5B800;--red-drc:#C8102E;--white:#FFFFFF;--off-white:#F4F6FA;--gray-light:#E8ECF3;--gray-mid:#8D9BB5;--gray-dark:#3A4561;--text-dark:#1C2340;--text-body:#3A4561;--border:rgba(0,56,130,0.12); }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Source Sans 3',sans-serif;color:var(--text-body);background:var(--white);line-height:1.65;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    img{max-width:100%;display:block;}
+    p{font-family:'Open Sans',sans-serif;}li{font-family:'Open Sans',sans-serif;}h2,h3,h4,h5,h6{font-family:'Open Sans',sans-serif;}
+    .topbar{background:var(--blue-deep);color:rgba(255,255,255,0.75);font-size:12px;font-weight:600;letter-spacing:0.04em;padding:7px 0;text-transform:uppercase;}
+    .topbar-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+    .topbar-left{display:flex;align-items:center;gap:16px;}
+    .topbar-sep{opacity:0.3;}
+    .topbar-right{display:flex;gap:20px;}
+    .topbar-right a:hover{color:var(--gold-light);}
+    header{background:var(--white);box-shadow:0 2px 16px rgba(0,56,130,0.10);position:sticky;top:0;z-index:100;}
+    .header-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;}
+    .logo-wrap{display:flex;align-items:center;gap:14px;}
+    .logo-emblem{width:54px;height:54px;background:var(--blue-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--gold-light);flex-shrink:0;}
+    .logo-text{line-height:1.2;}
+    .logo-text .province{font-family:'Oswald',sans-serif;font-size:17px;font-weight:500;color:var(--blue-deep);letter-spacing:-0.01em;text-transform:uppercase;}
+    .logo-text .country{font-size:11px;color:var(--gray-mid);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;}
+    nav{display:flex;align-items:center;gap:4px;}
+    .nav-link{font-family:'Oswald',sans-serif;font-size:13.5px;font-weight:500;color:var(--text-dark);padding:8px 14px;border-radius:6px;transition:background 0.2s,color 0.2s;text-transform:uppercase;letter-spacing:0.01em;}
+    .nav-link:hover,.nav-link.active{background:var(--blue-deep);color:var(--white);}
+    .nav-cta{background:var(--gold);color:var(--white);padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-transform:uppercase;margin-left:8px;transition:background 0.2s;}
+    .nav-cta:hover{background:var(--gold-light);color:var(--text-dark);}
+    .menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px;}
+    .menu-toggle span{display:block;width:24px;height:2px;background:var(--blue-deep);border-radius:2px;transition:transform 0.3s,opacity 0.3s;}
+    .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .menu-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+    .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .flag-strip{height:5px;background:linear-gradient(90deg,var(--blue-mid) 33%,var(--red-drc) 33%,var(--red-drc) 66%,var(--gold) 66%);}
+    .section-inner{max-width:1240px;margin:0 auto;padding:0 24px;}
+    .section-label{font-size:12px;font-weight:700;color:var(--blue-mid);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);font-weight:700;color:var(--text-dark);line-height:1.2;margin-bottom:8px;}
+    .section-title span{color:var(--blue-mid);}
+    .section-sub{font-size:16px;color:var(--gray-mid);margin-bottom:40px;}
+    .page-hero{background:linear-gradient(135deg,#002255 0%,#001840 55%,#001030 100%);color:var(--white);padding:72px 0 64px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(245,184,0,0.12) 0%,transparent 60%);}
+    .page-hero-content{position:relative;z-index:1;max-width:700px;}
+    .page-hero .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,184,0,0.18);border:1px solid rgba(245,184,0,0.4);color:var(--gold-light);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px;}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:900;line-height:1.1;margin-bottom:18px;letter-spacing:-0.02em;}
+    .page-hero h1 span{color:var(--gold-light);}
+    .page-hero-desc{font-size:16px;line-height:1.7;color:rgba(255,255,255,0.82);margin-bottom:24px;}
+    .page-breadcrumb{font-size:13px;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:8px;}
+    .page-breadcrumb a{color:rgba(255,255,255,0.65);}
+    .page-breadcrumb a:hover{color:var(--gold-light);}
+    .nav-item{position:relative;}
+    .nav-item>.nav-link{cursor:pointer;user-select:none;}
+    .nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 32px rgba(0,56,130,0.14);min-width:230px;padding:8px 0;z-index:200;}
+    .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{display:block;}
+    .nav-dropdown a{display:block;padding:10px 18px;font-size:13.5px;font-family:'Oswald',sans-serif;font-weight:500;color:var(--text-dark);transition:background 0.15s,color 0.15s;}
+    .nav-dropdown a:hover{background:var(--off-white);color:var(--blue-deep);}
+    .nav-dropdown-divider{height:1px;background:var(--border);margin:6px 0;}
+    footer{background:#050E1F;color:rgba(255,255,255,0.7);padding:64px 0 0;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+    .footer-brand .logo-emblem{background:rgba(255,255,255,0.08);color:var(--gold-light);margin-bottom:16px;}
+    .footer-brand .logo-text .province{color:var(--white);}
+    .footer-brand .logo-text .country{color:rgba(255,255,255,0.45);}
+    .footer-desc{font-size:14px;line-height:1.7;margin-top:16px;color:rgba(255,255,255,0.55);}
+    .footer-col h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--white);margin-bottom:18px;}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-links li a{font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;}
+    .footer-links li a:hover{color:var(--gold-light);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding:20px 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,0.35);}
+    .footer-bottom-links{display:flex;gap:20px;}
+    .footer-bottom-links a{color:rgba(255,255,255,0.35);}
+    .footer-bottom-links a:hover{color:var(--gold-light);}
+    .mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--white);z-index:999;flex-direction:column;overflow:hidden;}
+    .mobile-nav.open{display:flex;}
+    .mobile-nav-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--blue-deep);color:var(--white);flex-shrink:0;}
+    .mobile-nav-title{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;}
+    .mobile-nav-close{background:none;border:none;color:var(--white);font-size:22px;cursor:pointer;padding:4px 8px;line-height:1;border-radius:4px;transition:background 0.2s;}
+    .mobile-nav-close:hover{background:rgba(255,255,255,0.15);}
+    .mobile-nav-body{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+    .mnav-link{display:block;padding:14px 20px;font-size:13.5px;font-weight:700;color:var(--text-dark);text-transform:uppercase;letter-spacing:0.04em;border-bottom:1px solid var(--border);transition:background 0.15s,color 0.15s;}
+    .mnav-link:hover,.mnav-link.active{background:var(--blue-deep);color:var(--white);}
+    .mnav-cta{display:block;margin:16px 20px 8px;padding:12px 20px;background:var(--gold);color:var(--white);border-radius:6px;font-size:13.5px;font-weight:700;text-transform:uppercase;text-align:center;transition:background 0.2s;}
+    .mnav-cta:hover{background:var(--gold-light);color:var(--text-dark);}
+    .mnav-group{border-bottom:1px solid var(--border);}
+    .mnav-group-btn{display:flex;width:100%;align-items:center;justify-content:space-between;padding:14px 20px;background:none;border:none;font-size:13.5px;font-weight:700;color:var(--text-dark);text-transform:uppercase;letter-spacing:0.04em;cursor:pointer;transition:background 0.15s,color 0.15s;font-family:inherit;}
+    .mnav-group-btn:hover,.mnav-group-btn[aria-expanded="true"]{background:var(--off-white);color:var(--blue-deep);}
+    .mnav-arrow{transition:transform 0.25s;font-style:normal;}
+    .mnav-group-btn[aria-expanded="true"] .mnav-arrow{transform:rotate(180deg);}
+    .mnav-group-items{overflow:hidden;max-height:0;transition:max-height 0.35s ease;background:var(--off-white);}
+    .mnav-group-items.open{max-height:700px;}
+    .mnav-item{display:block;padding:11px 20px 11px 36px;font-size:13.5px;font-weight:500;color:var(--text-dark);border-top:1px solid var(--border);transition:background 0.15s,color 0.15s;}
+    .mnav-item:hover{background:var(--blue-deep);color:var(--white);}
+    .skip-link{position:absolute;top:-60px;left:20px;background:var(--blue-deep);color:var(--white);padding:10px 20px;border-radius:0 0 8px 8px;font-weight:700;font-size:14px;z-index:9999;transition:top 0.2s;}
+    .skip-link:focus{top:0;color:var(--white);}
+    .content-section{padding:72px 0;background:var(--white);}
+    .content-section.alt{background:var(--off-white);}
+    .content-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px;}
+    .content-text p{font-size:15px;color:var(--text-body);line-height:1.75;margin-bottom:16px;}
+    .info-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:8px;}
+    .info-list li{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--text-body);line-height:1.55;}
+    .info-list li::before{content:'✓';color:var(--blue-mid);font-weight:700;flex-shrink:0;margin-top:1px;}
+    .info-box{background:linear-gradient(135deg,var(--blue-deep),#001840);border-radius:16px;padding:36px 32px;color:var(--white);}
+    .info-box h3{font-family:'Open Sans',sans-serif;font-size:20px;font-weight:700;margin-bottom:20px;}
+    .info-box h3 span{color:var(--gold-light);}
+    .info-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+    .info-item:last-child{border-bottom:none;}
+    .info-item-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+    .info-item-text{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.5;font-family:'Open Sans',sans-serif;}
+    .info-item-text strong{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;}
+    .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
+    .feature-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px 22px;transition:all 0.25s;}
+    .feature-card.alt{background:var(--off-white);}
+    .feature-card:hover{box-shadow:0 8px 28px rgba(0,56,130,0.10);transform:translateY(-2px);}
+    .feature-card-icon{font-size:28px;margin-bottom:12px;}
+    .feature-card-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);margin-bottom:8px;}
+    .feature-card-desc{font-size:13px;color:var(--text-body);line-height:1.6;}
+    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}.cards-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <span>&#x1F1E8;&#x1F1E9; République Démocratique du Congo</span>
+        <span class="topbar-sep">|</span>
+        <span>Province du Sud-Kivu — Gouvernement Provincial</span>
+      </div>
+      <div class="topbar-right">
+        <a href="province.html">La Province</a>
+        <a href="programme-2024-2028.html">Programme 2024–2028</a>
+        <a href="index.html#governor">Le Gouverneur</a>
+        <a href="contact.html">Contacts</a>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-emblem" style="background:none; padding:0; overflow:hidden;"><img src="https://github.com/user-attachments/assets/47a9213d-48b5-46e7-a4b8-d572d2c6e33c" alt="Logo Sud-Kivu" style="width:54px; height:54px; object-fit:contain; border-radius:50%;"></div>
+        <div class="logo-text">
+          <div class="province">Province du Sud-Kivu</div>
+          <div class="country">Gouvernement Provincial</div>
+        </div>
+      </a>
+      <nav>
+        <a href="index.html#accueil" class="nav-link">Accueil</a>
+        <a href="https://sudkivu.cd/toutes-les-actualites.html" class="nav-link">Actu</a>
+        <a href="province.html" class="nav-link">Province</a>
+        <a href="programme-2024-2028.html" class="nav-link">Programme</a>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Institutions &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="institutions.html">&#x1F3DB;&#xFE0F; Institutions</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="gouvernement.html">&#x1F3DB;&#xFE0F; Gouvernement Provincial</a>
+            <a href="assemblee.html">&#x1F4DC; Assembl&eacute;e Provinciale</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Villes &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="villes.html">&#x1F3D9;&#xFE0F; Vue d&apos;ensemble</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="territoire-bukavu.html">&#x1F3D9;&#xFE0F; Bukavu</a>
+            <a href="territoire-uvira-ville.html">&#x1F3D9;&#xFE0F; Uvira</a>
+            <a href="territoire-baraka.html">&#x1F3D9;&#xFE0F; Baraka</a>
+            <a href="territoire-kamituga.html">&#x26CF;&#xFE0F; Kamituga</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Territoires &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="territoires.html">&#x1F5FA;&#xFE0F; Vue d&apos;ensemble</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="territoire-fizi.html">&#x1F30A; Fizi</a>
+            <a href="territoire-idjwi.html">&#x1F3DD;&#xFE0F; Idjwi</a>
+            <a href="territoire-kabare.html">&#x26F0;&#xFE0F; Kabare</a>
+            <a href="territoire-kalehe.html">&#x1F333; Kalehe</a>
+            <a href="territoire-mwenga.html">&#x1F332; Mwenga</a>
+            <a href="territoire-shabunda.html">&#x1F6B6; Shabunda</a>
+            <a href="territoire-uvira.html">&#x1F30A; Uvira</a>
+            <a href="territoire-walungu.html">&#x1F3D4;&#xFE0F; Walungu</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Minist&#xe8;res &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="ministeres.html">&#x1F3DB;&#xFE0F; Tous les Minist&#xe8;res</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="ministere-interieur.html">&#x1F6E1;&#xFE0F; Int&#xe9;rieur &amp; S&#xe9;curit&#xe9;</a>
+            <a href="ministere-finances.html">&#x1F4B0; Finances &amp; &#xC9;conomie</a>
+            <a href="ministere-plan.html">&#x1F4CA; Plan &amp; Budget</a>
+            <a href="ministere-infrastructures.html">&#x1F3D7;&#xFE0F; Infrastructures</a>
+            <a href="ministere-justice.html">&#x2696;&#xFE0F; Justice</a>
+            <a href="ministere-agriculture.html">&#x1F33E; Agriculture</a>
+            <a href="ministere-transports.html">&#x1F69A; Transports</a>
+            <a href="ministere-mines.html">&#x26CF;&#xFE0F; Mines &amp; &#xC9;nergie</a>
+            <a href="ministere-education.html">&#x1F4DA; &#xC9;ducation</a>
+            <a href="ministere-sante.html">&#x1F3E5; Sant&#xe9;</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Cabinet &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="gouverneur.html">&#x1F464; Le Gouverneur</a>
+            <a href="vice-gouverneur.html">&#x1F464; Le Vice-Gouverneur</a>
+            <a href="cabinet.html">&#x1F3C5; Cabinet du Gouverneur</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="membres-cabinet.html">&#x1F465; Membres du Cabinet</a>
+            <a href="secretariat-executif.html">&#x1F4CB; Secr&eacute;tariat Ex&eacute;cutif</a>
+            <a href="secretariat-administratif.html">&#x1F4C2; Secr&eacute;tariat Administratif</a>
+            <a href="service-courrier.html">&#x2709;&#xFE0F; Service Courrier</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="assemblee.html">&#x1F4DC; Assembl&eacute;e Provinciale</a>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" onclick="var nav=document.getElementById('mobile-nav');nav.classList.toggle('open');this.classList.toggle('open');this.setAttribute('aria-expanded',nav.classList.contains('open'));" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Navigation mobile">
+      <div class="mobile-nav-header">
+        <span class="mobile-nav-title">Menu</span>
+        <button class="mobile-nav-close" onclick="var nav=document.getElementById('mobile-nav');nav.classList.remove('open');var t=document.getElementById('menu-toggle');t.classList.remove('open');t.setAttribute('aria-expanded','false');" aria-label="Fermer le menu">&#x2715;</button>
+      </div>
+      <div class="mobile-nav-body">
+        <a href="index.html#accueil" class="mnav-link">Accueil</a>
+        <a href="https://sudkivu.cd/toutes-les-actualites.html" class="mnav-link">Actu</a>
+        <a href="province.html" class="mnav-link">Province</a>
+        <a href="programme-2024-2028.html" class="mnav-link">Programme 2024&ndash;2028</a>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Institutions <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="institutions.html" class="mnav-item">&#x1F3DB;&#xFE0F; Institutions</a>
+            <a href="gouvernement.html" class="mnav-item">&#x1F3DB;&#xFE0F; Gouvernement Provincial</a>
+            <a href="assemblee.html" class="mnav-item">&#x1F4DC; Assembl&eacute;e Provinciale</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Villes <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="villes.html" class="mnav-item">&#x1F3D9;&#xFE0F; Vue d&apos;ensemble</a>
+            <a href="territoire-bukavu.html" class="mnav-item">&#x1F3D9;&#xFE0F; Bukavu</a>
+            <a href="territoire-uvira-ville.html" class="mnav-item">&#x1F3D9;&#xFE0F; Uvira</a>
+            <a href="territoire-baraka.html" class="mnav-item">&#x1F3D9;&#xFE0F; Baraka</a>
+            <a href="territoire-kamituga.html" class="mnav-item">&#x26CF;&#xFE0F; Kamituga</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Territoires <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="territoires.html" class="mnav-item">&#x1F5FA;&#xFE0F; Vue d&apos;ensemble</a>
+            <a href="territoire-fizi.html" class="mnav-item">&#x1F30A; Fizi</a>
+            <a href="territoire-idjwi.html" class="mnav-item">&#x1F3DD;&#xFE0F; Idjwi</a>
+            <a href="territoire-kabare.html" class="mnav-item">&#x26F0;&#xFE0F; Kabare</a>
+            <a href="territoire-kalehe.html" class="mnav-item">&#x1F333; Kalehe</a>
+            <a href="territoire-mwenga.html" class="mnav-item">&#x1F332; Mwenga</a>
+            <a href="territoire-shabunda.html" class="mnav-item">&#x1F6B6; Shabunda</a>
+            <a href="territoire-uvira.html" class="mnav-item">&#x1F30A; Uvira</a>
+            <a href="territoire-walungu.html" class="mnav-item">&#x1F3D4;&#xFE0F; Walungu</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Minist&egrave;res <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="ministeres.html" class="mnav-item">&#x1F3DB;&#xFE0F; Tous les Minist&egrave;res</a>
+            <a href="ministere-interieur.html" class="mnav-item">&#x1F6E1;&#xFE0F; Int&eacute;rieur &amp; S&eacute;curit&eacute;</a>
+            <a href="ministere-finances.html" class="mnav-item">&#x1F4B0; Finances &amp; &Eacute;conomie</a>
+            <a href="ministere-plan.html" class="mnav-item">&#x1F4CA; Plan &amp; Budget</a>
+            <a href="ministere-infrastructures.html" class="mnav-item">&#x1F3D7;&#xFE0F; Infrastructures</a>
+            <a href="ministere-justice.html" class="mnav-item">&#x2696;&#xFE0F; Justice</a>
+            <a href="ministere-agriculture.html" class="mnav-item">&#x1F33E; Agriculture</a>
+            <a href="ministere-transports.html" class="mnav-item">&#x1F69A; Transports</a>
+            <a href="ministere-mines.html" class="mnav-item">&#x26CF;&#xFE0F; Mines &amp; &Eacute;nergie</a>
+            <a href="ministere-education.html" class="mnav-item">&#x1F4DA; &Eacute;ducation</a>
+            <a href="ministere-sante.html" class="mnav-item">&#x1F3E5; Sant&eacute;</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Cabinet <span class="mnav-arrow">&#x25BE;</span></button>
+          <div class="mnav-group-items">
+            <a href="gouverneur.html" class="mnav-item">&#x1F464; Le Gouverneur</a>
+            <a href="vice-gouverneur.html" class="mnav-item">&#x1F464; Le Vice-Gouverneur</a>
+            <a href="cabinet.html" class="mnav-item">&#x1F3C5; Cabinet du Gouverneur</a>
+            <a href="membres-cabinet.html" class="mnav-item">&#x1F465; Membres du Cabinet</a>
+            <a href="secretariat-executif.html" class="mnav-item">&#x1F4CB; Secr&eacute;tariat Ex&eacute;cutif</a>
+            <a href="secretariat-administratif.html" class="mnav-item">&#x1F4C2; Secr&eacute;tariat Administratif</a>
+            <a href="service-courrier.html" class="mnav-item">&#x2709;&#xFE0F; Service Courrier</a>
+            <a href="assemblee.html" class="mnav-item">&#x1F4DC; Assembl&eacute;e Provinciale</a>
+          </div>
+        </div>
+        <a href="contact.html" class="mnav-cta">Contact</a>
+      </div>
+    </div>
+  </header>
+  <div class="flag-strip"></div>
+
+  <main id="main">
+
+  <section class="page-hero">
+    <div class="section-inner">
+      <div class="page-hero-content">
+        <div class="hero-badge">&#x1F3DB;&#xFE0F; Services en Ligne</div>
+        <h1>March&eacute;s <span>Publics</span></h1>
+        <p class="page-hero-desc">Consultez les appels d&apos;offres et participez aux proc&eacute;dures de passation des march&eacute;s publics de la Province du Sud-Kivu. La transparence et l&apos;&eacute;quit&eacute; au c&oelig;ur de la commande publique provinciale.</p>
+        <div class="page-breadcrumb">
+          <a href="index.html">Accueil</a> <span>&rsaquo;</span>
+          <a href="index.html#services">Services en Ligne</a> <span>&rsaquo;</span>
+          <span>March&eacute;s Publics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="section-inner">
+      <div class="section-label">Commande Publique</div>
+      <div class="section-title">March&eacute;s <span>Publics Provinciaux</span></div>
+      <div class="section-sub">Le Gouvernement Provincial du Sud-Kivu assure la transparence et la concurrence loyale dans l&apos;attribution des march&eacute;s publics conform&eacute;ment &agrave; la l&eacute;gislation en vigueur.</div>
+      <div class="content-grid">
+        <div class="content-text">
+          <p>La Province du Sud-Kivu met en &oelig;uvre une politique rigoureuse de passation des march&eacute;s publics, garantissant une concurrence loyale et la meilleure utilisation des deniers publics. Toute personne physique ou morale r&eacute;pondant aux crit&egrave;res requis peut soumettre une offre.</p>
+          <p>Les march&eacute;s publics provinciaux couvrent les travaux de construction et de r&eacute;habilitation d&apos;infrastructures, les fournitures de biens et mat&eacute;riels, ainsi que les prestations de services intellectuels et courants n&eacute;cessaires au fonctionnement des services provinciaux.</p>
+          <h3 style="font-family:'Open Sans',sans-serif;font-size:20px;font-weight:700;color:var(--text-dark);margin:24px 0 16px;">Types de march&eacute;s</h3>
+          <ul class="info-list">
+            <li>March&eacute;s de travaux (construction, r&eacute;habilitation, entretien d&apos;infrastructures)</li>
+            <li>March&eacute;s de fournitures (biens, mat&eacute;riels, &eacute;quipements)</li>
+            <li>March&eacute;s de services courants (nettoyage, gardiennage, maintenance)</li>
+            <li>March&eacute;s de services intellectuels (consultance, audit, &eacute;tudes)</li>
+            <li>March&eacute;s pass&eacute;s par appel d&apos;offres ouvert ou restreint</li>
+            <li>Proc&eacute;dures de gr&eacute; &agrave; gr&eacute; dans les cas pr&eacute;vus par la loi</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h3>March&eacute;s <span>Publics</span></h3>
+          <div class="info-item">
+            <div class="info-item-icon">&#x1F4CB;</div>
+            <div class="info-item-text">
+              <strong>Autorit&eacute; contractante</strong>
+              Gouvernement Provincial du Sud-Kivu<br>Minist&egrave;re des Finances &amp; du Plan
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon">&#x1F4F0;</div>
+            <div class="info-item-text">
+              <strong>Publication des appels d&apos;offres</strong>
+              Journal Officiel de la Province<br>et site officiel sudkivu.cd
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon">&#x1F4B0;</div>
+            <div class="info-item-text">
+              <strong>Seuil de passation</strong>
+              Conform&eacute;ment &agrave; la loi n&deg; 10/010<br>du 27 avril 2010 relative aux march&eacute;s publics
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon">&#x1F4CD;</div>
+            <div class="info-item-text">
+              <strong>Adresse</strong>
+              DGCMP &mdash; Avenue du Gouvernorat, Bukavu<br>Province du Sud-Kivu &mdash; RDC
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon">&#x260E;&#xFE0F;</div>
+            <div class="info-item-text">
+              <strong>Contact</strong>
+              +243 (0) 99 000 0010<br>marches@sudkivu.gouv.cd
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon">&#x1F551;</div>
+            <div class="info-item-text">
+              <strong>Heures de d&eacute;p&ocirc;t des offres</strong>
+              Lundi &mdash; Vendredi : 08h00 &ndash; 15h00
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section alt">
+    <div class="section-inner">
+      <div class="section-label">Proc&eacute;dures</div>
+      <div class="section-title">Comment <span>participer</span></div>
+      <div class="section-sub">Suivez ces &eacute;tapes pour soumettre votre offre et participer aux march&eacute;s publics provinciaux du Sud-Kivu.</div>
+      <div class="cards-grid">
+        <div class="feature-card alt">
+          <div class="feature-card-icon">1&#xFE0F;&#x20E3;</div>
+          <div class="feature-card-title">Consultation des avis</div>
+          <div class="feature-card-desc">Consultez les avis d&apos;appels d&apos;offres publi&eacute;s sur le site officiel et dans le Journal Officiel de la Province. Identifiez les march&eacute;s correspondant &agrave; votre domaine d&apos;activit&eacute;.</div>
+        </div>
+        <div class="feature-card alt">
+          <div class="feature-card-icon">2&#xFE0F;&#x20E3;</div>
+          <div class="feature-card-title">Retrait du dossier</div>
+          <div class="feature-card-desc">Retirez le Dossier d&apos;Appel d&apos;Offres (DAO) aupr&egrave;s de l&apos;autorit&eacute; contractante concern&eacute;e, apr&egrave;s paiement des frais de dossier le cas &eacute;ch&eacute;ant.</div>
+        </div>
+        <div class="feature-card alt">
+          <div class="feature-card-icon">3&#xFE0F;&#x20E3;</div>
+          <div class="feature-card-title">D&eacute;p&ocirc;t de l&apos;offre</div>
+          <div class="feature-card-desc">Pr&eacute;parez et d&eacute;posez votre offre technique et financi&egrave;re sous pli ferm&eacute; avant la date et l&apos;heure limites fix&eacute;es dans l&apos;avis d&apos;appel d&apos;offres.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer>
+    <div class="section-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <div class="logo-emblem" style="background:none;padding:0;overflow:hidden;"><img src="https://github.com/user-attachments/assets/47a9213d-48b5-46e7-a4b8-d572d2c6e33c" alt="Logo Sud-Kivu" style="width:54px; height:54px; object-fit:contain; border-radius:50%;"></div>
+            <div class="logo-text">
+              <div class="province">Province du Sud-Kivu</div>
+              <div class="country">Gouvernement Provincial</div>
+            </div>
+          </div>
+          <p class="footer-desc">Le Gouvernement Provincial du Sud-Kivu s&#39;engage pour l&#39;&eacute;mergence de la province &agrave; travers un programme ambitieux de d&eacute;veloppement 2024&ndash;2028.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Programme</h4>
+          <ul class="footer-links">
+            <li><a href="programme-2024-2028.html">Plan Quinquennal 2024&ndash;2028</a></li>
+            <li><a href="programme-2024-2028.html#secteurs">Axes Strat&eacute;giques</a></li>
+            <li><a href="index.html#finances">Finances Provinciales</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services en Ligne</h4>
+          <ul class="footer-links">
+            <li><a href="marches-publics.html" style="color:var(--gold-light);">March&eacute;s Publics</a></li>
+            <li><a href="investissement.html">Opportunit&eacute;s d&apos;investissement</a></li>
+            <li><a href="paiement-taxes.html">Paiement des Taxes</a></li>
+            <li><a href="denoncer-fraude.html">D&eacute;noncer la Fraude</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Gouvernement</h4>
+          <ul class="footer-links">
+            <li><a href="gouverneur.html">Le Gouverneur</a></li>
+            <li><a href="vice-gouverneur.html">Le Vice-Gouverneur</a></li>
+            <li><a href="cabinet.html">Cabinet du Gouverneur</a></li>
+            <li><a href="ministeres.html">Les Ministres</a></li>
+            <li><a href="assemblee.html">Assembl&eacute;e Provinciale</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Gouvernement Provincial du Sud-Kivu &mdash; R&eacute;publique D&eacute;mocratique du Congo</span>
+        <div class="footer-bottom-links">
+          <a href="#">Mentions l&eacute;gales</a>
+          <a href="#">Accessibilit&eacute;</a>
+          <a href="#">Plan du site</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.querySelectorAll('.mnav-group-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.mnav-group-btn').forEach(function(b) {
+          b.setAttribute('aria-expanded', 'false');
+          var items = b.parentElement.querySelector('.mnav-group-items');
+          if (items) items.classList.remove('open');
+        });
+        if (!expanded) {
+          this.setAttribute('aria-expanded', 'true');
+          var items = this.parentElement.querySelector('.mnav-group-items');
+          if (items) items.classList.add('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
