@@ -1,0 +1,69 @@
+# Downloads Wikimedia images used in investissement.html into the repository
+# so that the page no longer depends on external CDN URLs.
+name: Download Wikimedia images for investissement.html
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "investissement.html"
+
+permissions:
+  contents: write
+
+jobs:
+  download-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Wikimedia images
+        run: |
+          mkdir -p images/investissement
+          declare -A IMAGES=(
+            ["kavumu-airport.jpg"]="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Puma_helicopter_of_Pakistan_Aviation_Unit_being_towed_out_of_maintenance_hangar_at_Kavumu_Airport.jpg/640px-Puma_helicopter_of_Pakistan_Aviation_Unit_being_towed_out_of_maintenance_hangar_at_Kavumu_Airport.jpg"
+            ["sugar-cane.jpg"]="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sugar_Cane.jpg/640px-Sugar_Cane.jpg"
+            ["ruzizi-plain.jpg"]="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ruzizi_Plain%2C_South_Kivu_Province%2C_DR_Congo.jpg/640px-Ruzizi_Plain%2C_South_Kivu_Province%2C_DR_Congo.jpg"
+            ["ruzizi-river.jpg"]="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ruzizi_River%2C_DR_Congo.jpg/640px-Ruzizi_River%2C_DR_Congo.jpg"
+            ["fishing-boats-tanganyika.jpg"]="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Fishing_Boats_Lake_Tanganyika_Kigoma_Tanzania_2008-08-17.jpg/640px-Fishing_Boats_Lake_Tanganyika_Kigoma_Tanzania_2008-08-17.jpg"
+            ["sgr-train.jpg"]="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Express_passenger_train_on_the_Mombasa_-_Nairobi_Standard_Gauge_Railway_(SGR).jpg/640px-Express_passenger_train_on_the_Mombasa_-_Nairobi_Standard_Gauge_Railway_(SGR).jpg"
+            ["ruzizi1-dam.jpg"]="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Ruzizi1_staumauer.JPG/640px-Ruzizi1_staumauer.JPG"
+            ["solar-panels.jpg"]="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Solar_Panels.jpg/640px-Solar_Panels.jpg"
+            ["butembo-market.jpg"]="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Women_selling_vegetables_at_a_market_in_Butembo%2C_Congo.jpg/640px-Women_selling_vegetables_at_a_market_in_Butembo%2C_Congo.jpg"
+            ["kigoma-harbor.jpg"]="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Kigoma-harbor.jpg/640px-Kigoma-harbor.jpg"
+            ["kalemie.jpg"]="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Kalemie.jpg/640px-Kalemie.jpg"
+          )
+          for FILENAME in "${!IMAGES[@]}"; do
+            TARGET="images/investissement/$FILENAME"
+            if [ ! -f "$TARGET" ]; then
+              echo "Downloading $FILENAME..."
+              if curl -fsSL -A "Mozilla/5.0" "${IMAGES[$FILENAME]}" -o "$TARGET"; then
+                SIZE=$(wc -c < "$TARGET")
+                if [ "$SIZE" -lt 1000 ]; then
+                  echo "  ERROR: $FILENAME is suspiciously small ($SIZE bytes), removing."
+                  rm -f "$TARGET"
+                else
+                  echo "  -> saved $SIZE bytes"
+                fi
+              else
+                echo "  ERROR: failed to download $FILENAME, skipping."
+                rm -f "$TARGET"
+              fi
+            else
+              echo "Skipping $FILENAME (already exists)"
+            fi
+          done
+
+      - name: Commit images if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add images/investissement/
+          if git diff --cached --quiet; then
+            echo "No new images to commit."
+          else
+            git commit -m "chore: add Wikimedia images for investissement.html to repository"
+            git push
+          fi
