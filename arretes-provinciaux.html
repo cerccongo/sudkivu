@@ -115,8 +115,19 @@
     .info-item-text strong{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;}
     .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--blue-mid);font-weight:700;font-size:14px;margin-top:32px;padding:10px 20px;border:2px solid var(--blue-mid);border-radius:8px;transition:all 0.2s;}
     .back-link:hover{background:var(--blue-mid);color:var(--white);}
+    .doc-section{padding:56px 0;background:var(--off-white);}
+    .doc-list{display:flex;flex-direction:column;gap:16px;margin-top:32px;}
+    .doc-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;transition:box-shadow 0.2s,border-color 0.2s;}
+    .doc-card:hover{box-shadow:0 4px 20px rgba(0,56,130,0.10);border-color:var(--blue-mid);}
+    .doc-card-info{display:flex;align-items:flex-start;gap:16px;flex:1;min-width:0;}
+    .doc-card-icon{width:44px;height:44px;background:var(--off-white);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+    .doc-card-meta{flex:1;min-width:0;}
+    .doc-card-title{font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:4px;line-height:1.3;}
+    .doc-card-desc{font-size:13px;color:var(--gray-mid);}
+    .doc-card-download{display:inline-flex;align-items:center;gap:6px;background:var(--blue-deep);color:var(--white);padding:9px 18px;border-radius:7px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;flex-shrink:0;transition:background 0.2s;}
+    .doc-card-download:hover{background:var(--blue-mid);}
     @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}}
-    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}.doc-card{flex-direction:column;align-items:flex-start;}.doc-card-download{width:100%;justify-content:center;}}
   </style>
 </head>
 <body>
@@ -377,6 +388,25 @@
             </div>
           </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc-section">
+    <div class="section-inner">
+      <div class="section-label">Documents officiels</div>
+      <div class="section-title">Arr&ecirc;t&eacute;s <span>disponibles</span></div>
+      <div class="doc-list">
+        <div class="doc-card">
+          <div class="doc-card-info">
+            <div class="doc-card-icon">&#x1F4C4;</div>
+            <div class="doc-card-meta">
+              <div class="doc-card-title">Arr&ecirc;t&eacute; provincial portant nomination des Ministres provinciaux et Secr&eacute;taires Ex&eacute;cutifs du Gouvernement Provincial</div>
+              <div class="doc-card-desc">Gouvernement Provincial du Sud-Kivu &mdash; Province du Sud-Kivu, RDC</div>
+            </div>
+          </div>
+          <a href="arrete_sud_kivu_cropped.pdf" class="doc-card-download" download aria-label="T&eacute;l&eacute;charger l&apos;arr&ecirc;t&eacute; provincial portant nomination des Ministres provinciaux et Secr&eacute;taires Ex&eacute;cutifs">&#x2193; T&eacute;l&eacute;charger</a>
         </div>
       </div>
     </div>
