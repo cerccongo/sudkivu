@@ -103,6 +103,7 @@
     .form-submit:hover{background:var(--blue-mid);}
     .form-note{margin-top:12px;font-size:12px;color:var(--gray-mid);text-align:center;}
     .form-success{display:none;padding:16px 20px;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:8px;color:#2e7d32;font-size:14px;font-weight:600;margin-top:16px;}
+    .form-error{display:none;padding:16px 20px;background:#fdecea;border:1px solid #f5c6c2;border-radius:8px;color:#c62828;font-size:14px;font-weight:600;margin-top:16px;}
 
     /* Contact Sidebar */
     .contact-sidebar{display:flex;flex-direction:column;gap:20px;}
@@ -438,6 +439,9 @@
               <div class="form-success" id="form-success" role="alert">
                 ✅ Votre message a &eacute;t&eacute; envoy&eacute; avec succ&egrave;s. Nous vous r&eacute;pondrons dans les meilleurs d&eacute;lais.
               </div>
+              <div class="form-error" id="form-error" role="alert">
+                ❌ Une erreur est survenue lors de l&apos;envoi de votre message. Veuillez r&eacute;essayer ult&eacute;rieurement.
+              </div>
             </form>
           </div>
         </div>
@@ -732,10 +736,20 @@
         }
       });
       if (valid) {
-        var successMsg = document.getElementById('form-success');
-        successMsg.style.display = 'block';
-        form.reset();
-        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        fetch('https://formspree.io/infogouvernorat@sudkivu.cd', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function() {
+          var successMsg = document.getElementById('form-success');
+          successMsg.style.display = 'block';
+          form.reset();
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }).catch(function() {
+          var errorMsg = document.getElementById('form-error');
+          errorMsg.style.display = 'block';
+          errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
       }
     });
   </script>
