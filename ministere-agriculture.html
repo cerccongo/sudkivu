@@ -114,8 +114,17 @@
     .info-item-icon{font-size:11px;flex-shrink:0;margin-top:2px;}
     .info-item-text{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.5;font-family:'Open Sans',sans-serif;}
     .info-item-text strong{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;}
-    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}}
-    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}}
+    .media-card{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;display:flex;flex-direction:column;}
+    .media-card:hover{box-shadow:0 8px 32px rgba(0,56,130,0.12);transform:translateY(-3px);}
+    .media-card-img{width:100%;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,#003882,#0052B4);display:flex;align-items:center;justify-content:center;font-size:40px;color:rgba(255,255,255,0.3);}
+    .media-card-img img{width:100%;height:100%;object-fit:cover;display:block;}
+    .media-card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+    .media-card-cat{display:inline-flex;align-items:center;gap:6px;background:rgba(0,82,180,0.1);color:var(--blue-mid);padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;}
+    .media-card-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--text-dark);line-height:1.4;margin-bottom:10px;flex:1;}
+    .media-card-meta{font-size:12px;color:var(--gray-mid);display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+    .media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;}
+    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.media-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}.media-grid{grid-template-columns:1fr;}}
 
   </style>
 </head>
@@ -437,7 +446,50 @@
     </div>
   </section>
 
-  <section class="content-section alt">
+  <section class="content-section alt" id="media">
+    <div class="section-inner">
+      <div class="section-label">Minist&egrave;re de l&apos;Agriculture, Environnement &amp; &Eacute;conomie verte</div>
+      <div class="section-title">M&eacute;dia <span>&amp; Actualit&eacute;s</span></div>
+      <div class="section-sub">Les derni&egrave;res publications et activit&eacute;s du minist&egrave;re.</div>
+      <div class="media-grid">
+        <a href="actualite-foresterie-communautaire-uvira.html" class="media-card">
+          <div class="media-card-img">
+            <img src="https://github.com/user-attachments/assets/c7c8d67f-70e1-4510-b868-98ffbbf8209d" alt="Atelier de sensibilisation sur la Foresterie Communautaire à Uvira" />
+          </div>
+          <div class="media-card-body">
+            <div class="media-card-cat">&#x1F333; Environnement &amp; &Eacute;conomie verte</div>
+            <div class="media-card-title">SUD-KIVU : LE MINIST&Egrave;RE PROVINCIAL DE L&apos;ENVIRONNEMENT ET ECONOMIE VERTE LANCE L&apos;ATELIER DE SENSIBILISATION ET D&apos;INFORMATION SUR LA FORESTERIE COMMUNAUTAIRE &Agrave; UVIRA</div>
+            <div class="media-card-meta">
+              <span>&#x1F4C5; 26 mars 2026</span>
+              <span>&#x1F4CD; Uvira</span>
+            </div>
+          </div>
+        </a>
+        <a href="actualite-ministre-agriculture-campagne-agricole-saison-b-2026.html" class="media-card">
+          <div class="media-card-img">
+            <img src="https://github.com/user-attachments/assets/2f6c0831-acd1-4cf1-9277-f51b4a16080f" alt="Lancement de la Campagne agricole Saison B-2026 à Kagando, Uvira" />
+          </div>
+          <div class="media-card-body">
+            <div class="media-card-cat">&#x1F33E; Agriculture</div>
+            <div class="media-card-title">Lancement officiel de la Campagne agricole, Saison B-2026 et distribution de 17 tonnes de semences par le Ministre de l&apos;Agriculture, M. Didier Kabi</div>
+            <div class="media-card-meta">
+              <span>&#x1F4C5; 18 mars 2026</span>
+              <span>&#x1F4CD; Kagando, Uvira</span>
+            </div>
+          </div>
+        </a>
+        <div style="display:flex;align-items:center;justify-content:center;background:var(--white);border:2px dashed var(--border);border-radius:12px;padding:32px;text-align:center;">
+          <div>
+            <div style="font-size:40px;margin-bottom:12px;">&#x1F4F0;</div>
+            <div style="font-size:14px;color:var(--gray-mid);font-weight:600;">Plus d&apos;actualit&eacute;s</div>
+            <a href="toutes-les-actualites.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--blue-mid);font-size:13px;font-weight:700;">Voir toutes les actualit&eacute;s &#x2192;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
     <div class="section-inner">
       <div class="section-label">Autres Minist&egrave;res</div>
       <div class="section-title">Gouvernement <span>Provincial</span></div>
