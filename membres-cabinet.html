@@ -131,9 +131,9 @@
     .contact-item-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
     .contact-item-text{font-size:14px;line-height:1.65;color:rgba(255,255,255,0.8);}
     .contact-item-text strong{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;font-weight:700;}
-    .ministers-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:40px;}
-    .minister-card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;}
-    .minister-card:hover{box-shadow:0 12px 36px rgba(0,56,130,0.13);transform:translateY(-3px);}
+    .ministers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+    .minister-card{background:var(--blue-deep);border:1px solid rgba(255,255,255,0.15);border-radius:14px;overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;}
+    .minister-card:hover{box-shadow:0 12px 36px rgba(0,56,130,0.35);transform:translateY(-3px);}
     .minister-photo{width:100%;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(135deg,var(--blue-deep) 0%,#001840 100%);position:relative;flex-shrink:0;}
     .minister-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
     .minister-photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;}
@@ -142,10 +142,10 @@
     .minister-photo-badge{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,20,60,0.85) 0%,transparent 100%);padding:14px 12px 10px;color:var(--white);}
     .minister-photo-badge .badge-role{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold-light);margin-bottom:2px;}
     .minister-card-body{padding:16px 16px 20px;display:flex;flex-direction:column;flex:1;}
-    .minister-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:8px;line-height:1.3;}
-    .minister-ministry{font-size:12px;color:var(--text-body);line-height:1.55;flex:1;}
-    .minister-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12px;font-weight:700;color:var(--blue-mid);text-transform:uppercase;letter-spacing:0.05em;transition:color 0.2s;}
-    .minister-link:hover{color:var(--gold);}
+    .minister-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--gold-light);margin-bottom:8px;line-height:1.3;}
+    .minister-ministry{font-size:12px;color:var(--white);line-height:1.55;flex:1;}
+    .minister-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12px;font-weight:700;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:0.05em;transition:color 0.2s;}
+    .minister-link:hover{color:var(--gold-light);}
     @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr 1fr;}.contact-dark-grid{grid-template-columns:1fr;}.ministers-grid{grid-template-columns:repeat(3,1fr);}}
     @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}.cards-grid{grid-template-columns:1fr;}.ministers-grid{grid-template-columns:repeat(2,1fr);}}
   </style>
@@ -432,10 +432,7 @@
         <!-- 4. Infrastructures -->
         <div class="minister-card">
           <div class="minister-photo">
-            <div class="minister-photo-placeholder">
-              <div class="ph-icon">&#x1F3DB;&#xFE0F;</div>
-              <div class="initials">KG</div>
-            </div>
+            <img src="https://github.com/user-attachments/assets/84a46763-1909-4c89-a759-fde9d9d4b55a" alt="Kibonge Babingwa Georges — Ministre des Travaux Publics" />
             <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
           </div>
           <div class="minister-card-body">
@@ -461,10 +458,7 @@
         <!-- 6. Agriculture -->
         <div class="minister-card">
           <div class="minister-photo">
-            <div class="minister-photo-placeholder">
-              <div class="ph-icon">&#x1F33E;</div>
-              <div class="initials">LD</div>
-            </div>
+            <img src="https://github.com/user-attachments/assets/ca76ee7a-f0b4-4dc0-b927-bec8ea806841" alt="Luganywa Bashizi Kabi Didier — Ministre de l'Agriculture" />
             <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
           </div>
           <div class="minister-card-body">
