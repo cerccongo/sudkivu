@@ -1649,14 +1649,31 @@
     .contact-info-item-text { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.8); font-family: 'Open Sans', sans-serif; }
     .contact-info-item-text strong { display: block; color: var(--gold-light); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; font-weight: 700; }
 
+    /* Deputies section */
+    .deputes-section { padding: 80px 0; background: var(--white); }
+    .deputes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
+    .depute-card { display: grid; grid-template-columns: 140px 1fr; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--white); transition: box-shadow 0.2s; }
+    .depute-card:hover { box-shadow: 0 6px 24px rgba(0,56,130,0.10); }
+    .depute-card-header { background: linear-gradient(135deg, var(--blue-deep), #001840); color: var(--white); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px 16px; text-align: center; }
+    .depute-card-num { font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 900; color: var(--gold-light); line-height: 1.1; margin-bottom: 8px; }
+    .depute-card-circ { font-size: 12px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.3; }
+    .depute-card-body { padding: 24px 24px; }
+    .depute-card-title { font-size: 11px; font-weight: 700; color: var(--blue-mid); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; }
+    .depute-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .depute-list li { font-size: 13.5px; color: var(--text-dark); font-weight: 600; padding: 7px 10px; border-radius: 6px; background: var(--off-white); display: flex; align-items: center; gap: 8px; }
+    .depute-list li::before { content: '🏛️'; font-size: 11px; flex-shrink: 0; }
+
     @media (max-width: 1040px) {
       .assemblee-intro-grid { grid-template-columns: 1fr; }
       .functions-grid { grid-template-columns: 1fr 1fr; }
       .contact-assemblee-grid { grid-template-columns: 1fr; }
+      .deputes-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .functions-grid { grid-template-columns: 1fr; }
       .commissions-grid { grid-template-columns: 1fr; }
+      .depute-card { grid-template-columns: 1fr; }
+      .depute-card-header { flex-direction: row; justify-content: flex-start; gap: 16px; padding: 16px 20px; }
     }
   </style>
 </head>
@@ -2072,6 +2089,181 @@
             <div class="commission-desc">Coopération décentralisée, relations avec les partenaires, échanges interprovenciaux et internationaux.</div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LISTE DES DÉPUTÉS PROVINCIAUX -->
+  <section class="deputes-section" id="deputes">
+    <div class="section-inner">
+      <div class="section-label">Mandature 2024&ndash;2028</div>
+      <div class="section-title">Liste des <span>Député·e·s Provinciaux</span></div>
+      <div class="section-sub">Les député·e·s provinciaux du Sud-Kivu élus lors des élections de 2023, classés par circonscription électorale.</div>
+
+      <div class="deputes-grid">
+
+        <!-- Circonscription Ville de Bukavu -->
+        <div class="depute-card">
+          <div class="depute-card-header">
+            <div class="depute-card-num">&#x1F3D9;&#xFE0F;</div>
+            <div class="depute-card-circ">Ville de Bukavu</div>
+          </div>
+          <div class="depute-card-body">
+            <div class="depute-card-title">&#x1F4CD; Circonscription &eacute;lectorale de la Ville de Bukavu</div>
+            <ul class="depute-list">
+              <li>KAHASHA MURHULA Albert</li>
+              <li>BOJI SANGARA BAMANYIRWE Aim&eacute;</li>
+              <li>LUNANGA ANANIE Ananie</li>
+              <li>AMANI KATEMBERA Didier</li>
+              <li>NANGA BATENDE David</li>
+              <li>KINJA MWENDANGA B&eacute;atrice</li>
+              <li>BASEME LUVUGA John Peter</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Circonscription Fizi -->
+        <div class="depute-card">
+          <div class="depute-card-header">
+            <div class="depute-card-num">&#x1F30A;</div>
+            <div class="depute-card-circ">Fizi</div>
+          </div>
+          <div class="depute-card-body">
+            <div class="depute-card-title">&#x1F4CD; Circonscription &eacute;lectorale de FIZI</div>
+            <ul class="depute-list">
+              <li>ALIMASI MALUMBI Matthieu</li>
+              <li>KABUNGULU MATESO</li>
+              <li>LABANI MSAMBYA Albert</li>
+              <li>MLONDANI MWIMIWA John</li>
+              <li>BUMBU MALITE Job</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Circonscription Idjwi -->
+        <div class="depute-card">
+          <div class="depute-card-header">
+            <div class="depute-card-num">&#x1F3DD;&#xFE0F;</div>
+            <div class="depute-card-circ">Idjwi</div>
+          </div>
+          <div class="depute-card-body">
+            <div class="depute-card-title">&#x1F4CD; Circonscription &eacute;lectorale d&rsquo;IDJWI</div>
+            <ul class="depute-list">
+              <li>NTAMBUKA BALEKAGE Roger</li>
+              <li>RUTERA MUHINDAGIGA Antoine</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Circonscription Kabare -->
+        <div class="depute-card">
+          <div class="depute-card-header">
+            <div class="depute-card-num">&#x26F0;&#xFE0F;</div>
+            <div class="depute-card-circ">Kabare</div>
+          </div>
+          <div class="depute-card-body">
+            <div class="depute-card-title">&#x1F4CD; Circonscription &eacute;lectorale de KABARE</div>
+            <ul class="depute-list">
+              <li>KABARE RUGEMANINZI II D&eacute;sir&eacute;</li>
+              <li>SAFI NZILA Th&eacute;r&egrave;se</li>
+              <li>RUSAMAKI NGARUSI David</li>
+              <li>KAYUMPA MUSORO Ren&eacute;</li>
+              <li>ZIRHUMANA BASIMANE JEREMIE</li>
+              <li>MOKE BIHINDA J&eacute;rome</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Circonscription Kalehe -->
+        <div class="depute-card">
+          <div class="depute-card-header">
+            <div class="depute-card-num">&#x1F333;</div>
+            <div class="depute-card-circ">Kalehe</div>
+          </div>
+          <div class="depute-card-body">
+            <div class="depute-card-title">&#x1F4CD; Circonscription &eacute;lectorale de KALEHE</div>
+            <ul class="depute-list">
+              <li>BALUNGWE FUNGULO Le bon</li>
+              <li>KOKO CHIRIMWAMI Akeem</li>
+              <li>SHOMBERE MIBANGA Joseph</li>
+              <li>MWINGI BIRENGERENGE Paulin</li>
+              <li>BALYANA MASTAKI Nestor</li>
+              <li>MUSHEKURU KAYANI &Eacute;tienne</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Circonscription Mwenga -->
+        <div class="depute-card">
+          <div class="depute-card-header">
+            <div class="depute-card-num">&#x1F332;</div>
+            <div class="depute-card-circ">Mwenga</div>
+          </div>
+          <div class="depute-card-body">
+            <div class="depute-card-title">&#x1F4CD; Circonscription &eacute;lectorale de MWENGA</div>
+            <ul class="depute-list">
+              <li>WILONDJA NEPANGI Jos&eacute;</li>
+              <li>KARUME BAHIGE Jean</li>
+              <li>ZIHINDULA B KABEZA Fiston</li>
+              <li>MUSAADA BUHENDWA LUHIRIRI</li>
+              <li>ALAIN MUYOMBA</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Circonscription Shabunda -->
+        <div class="depute-card">
+          <div class="depute-card-header">
+            <div class="depute-card-num">&#x1F6B6;</div>
+            <div class="depute-card-circ">Shabunda</div>
+          </div>
+          <div class="depute-card-body">
+            <div class="depute-card-title">&#x1F4CD; Circonscription &eacute;lectorale de SHABUNDA</div>
+            <ul class="depute-list">
+              <li>SUMAILI MISEKA Emile</li>
+              <li>WENDA MUKANGWA Placide</li>
+              <li>MAYANI SHINDANO Faustin</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Circonscription Uvira -->
+        <div class="depute-card">
+          <div class="depute-card-header">
+            <div class="depute-card-num">&#x1F30A;</div>
+            <div class="depute-card-circ">Uvira</div>
+          </div>
+          <div class="depute-card-body">
+            <div class="depute-card-title">&#x1F4CD; Circonscription &eacute;lectorale d&rsquo;Uvira</div>
+            <ul class="depute-list">
+              <li>MUFARIJI DUDU Delphin</li>
+              <li>BISIMWA SINDERI Th&eacute;ophile</li>
+              <li>NDIGAYA NGEZI Emmanuel Lafantaisie</li>
+              <li>BUBASHA TANGANI&rsquo;A David</li>
+              <li>MUKOMBE TCHISHIBANDJI Marcellin</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Circonscription Walungu -->
+        <div class="depute-card">
+          <div class="depute-card-header">
+            <div class="depute-card-num">&#x1F3D4;&#xFE0F;</div>
+            <div class="depute-card-circ">Walungu</div>
+          </div>
+          <div class="depute-card-body">
+            <div class="depute-card-title">&#x1F4CD; Circonscription &eacute;lectorale de WALUNGU</div>
+            <ul class="depute-list">
+              <li>MUDEKEREZA NAMEGABE Olive</li>
+              <li>NTWALI MUKOME Tonny</li>
+              <li>NANVANO NYAKARHEMA B&eacute;atrice</li>
+              <li>MUGISHO BIRHENJIRA Espoir</li>
+              <li>MUNGUAKONKWA MUSHAGALUSA S&eacute;bastien</li>
+              <li>LUGANYWA BASHIZI DIDIER KABI</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
