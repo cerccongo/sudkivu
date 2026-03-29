@@ -133,6 +133,27 @@
     .contact-item-text strong{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;font-weight:700;}
     @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr 1fr;}.contact-dark-grid{grid-template-columns:1fr;}}
     @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}.cards-grid{grid-template-columns:1fr;}}
+    /* ===== NEWS SECTION ===== */
+    .news-section{padding:80px 0;background:var(--off-white);}
+    .news-section-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:16px;}
+    .news-view-all{font-size:14px;font-weight:700;color:var(--blue-mid);display:flex;align-items:center;gap:6px;}
+    .news-view-all::after{content:'→';}
+    .news-view-all:hover{color:var(--blue-deep);}
+    .news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;}
+    .news-card{display:block;background:var(--white);border-radius:12px;overflow:hidden;border:1px solid var(--border);transition:all 0.25s;color:inherit;}
+    .news-card:hover{box-shadow:0 12px 36px rgba(0,56,130,0.12);transform:translateY(-4px);}
+    .news-card-img{aspect-ratio:16/9;background:linear-gradient(135deg,var(--blue-deep),var(--blue-light));display:flex;align-items:center;justify-content:center;font-size:42px;color:rgba(255,255,255,0.25);position:relative;overflow:hidden;}
+    .news-card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+    .news-cat{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--white);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:3px 10px;border-radius:4px;}
+    .news-card-body{padding:22px 20px;}
+    .news-date{font-size:12px;color:var(--gray-mid);margin-bottom:8px;}
+    .news-card-title{font-family:'Oswald',sans-serif;font-size:17px;font-weight:500;color:var(--text-dark);margin-bottom:10px;line-height:1.35;}
+    .news-card-excerpt{font-family:'Open Sans',sans-serif;font-size:14px;color:var(--text-body);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+    .news-card-more{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:var(--blue-mid);margin-top:14px;}
+    .news-card-more::after{content:'→';}
+    .news-card:hover .news-card-more{color:var(--blue-deep);}
+    @media(max-width:1040px){.news-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:640px){.news-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -485,6 +506,137 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="news-section">
+    <div class="section-inner">
+      <div class="news-section-header">
+        <div>
+          <div class="section-label">Actualités</div>
+          <div class="section-title">Activités du <span>Gouverneur</span></div>
+        </div>
+        <a href="toutes-les-actualites.html" class="news-view-all">Toutes les actualités</a>
+      </div>
+      <div class="news-grid">
+
+        <a href="actualite-purusi-porte-parole-gouverneurs-bandundu.html" class="news-card">
+          <div class="news-card-img">
+            <img src="https://github.com/user-attachments/assets/83cf5639-8c1c-4b9e-9482-5d1fe77306b8" alt="Le Gouverneur Jean-Jacques Purusi Sadiki serrant la main du Pr&eacute;sident F&eacute;lix Tshisekedi lors de la 13e Conf&eacute;rence des Gouverneurs &agrave; Bandundu" />
+            <span class="news-cat">&#x1F3DB;&#xFE0F; Gouvernance &amp; Relations Institutionnelles</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-date">24 mars 2026</div>
+            <div class="news-card-title">Le Gouverneur de Province, Professeur Jean-Jacques Purusi Sadiki désigné porte-parole des Gouverneurs de Province à la 13e conférence de Bandundu</div>
+            <div class="news-card-excerpt">Lancement de la 13e session de la conf&eacute;rence des gouverneurs par le Pr&eacute;sident Tshisekedi &agrave; Bandundu. Le Gouverneur Purusi Sadiki d&eacute;sign&eacute; Porte-Parole des 26 Gouverneurs de la RDC.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
+          </div>
+        </a>
+
+        <a href="actualite-13e-conference-gouverneurs-bandundu.html" class="news-card">
+          <div class="news-card-img">
+            <img src="https://github.com/user-attachments/assets/e14c62c4-938c-4ae9-b487-da03d1f376f4" alt="Le Gouverneur Jean-Jacques Purusi Sadiki passant en revue la garde d&apos;honneur de la Police nationale congolaise &agrave; Bandundu" />
+            <span class="news-cat">&#x1F3DB;&#xFE0F; Gouvernance &amp; Relations Institutionnelles</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-date">22 mars 2026</div>
+            <div class="news-card-title">13e Conf&eacute;rence des Gouverneurs : le Gouverneur de Province, Professeur Jean-Jacques PURUSI SADIKI est arriv&eacute; &agrave; Bandundu pour porter haut la voix de la Province du Sud-Kivu</div>
+            <div class="news-card-excerpt">En marge de la 13e Conf&eacute;rence des Gouverneurs pr&eacute;vue du 24 au 28 mars 2026 &agrave; Bandundu-Ville, le Gouverneur Jean-Jacques Purusi Sadiki est arriv&eacute; &agrave; Bandundu ce dimanche 22 mars 2026 pour prendre part &agrave; ces assises de haute port&eacute;e nationale.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
+          </div>
+        </a>
+
+        <a href="actualite-gouverneur-purusi-sanginga-banyamulenge.html" class="news-card">
+          <div class="news-card-img">
+            <img src="https://github.com/user-attachments/assets/26f06022-4f4d-4314-9465-7f218edc22a3" alt="Le Gouverneur Jean-Jacques Purusi Sadiki avec le Conseiller spécial Emmanuel Sanginga à Uvira" />
+            <span class="news-cat">&#x2618;&#xFE0F; Paix &amp; Diplomatie</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-date">17 mars 2026</div>
+            <div class="news-card-title">Le Gouverneur Purusi re&ccedil;oit le Conseiller sp&eacute;cial Sanginga et la d&eacute;l&eacute;gation Banyamulenge Global Advocacy &agrave; Uvira</div>
+            <div class="news-card-excerpt">Mardi 17 mars 2026, le Gouverneur du Sud-Kivu re&ccedil;oit le Professeur Emmanuel Sanginga, Conseiller sp&eacute;cial du Chef de l&apos;&Eacute;tat, avant d&apos;accueillir la d&eacute;l&eacute;gation de l&apos;association Banyamulenge Global Advocacy &agrave; Uvira.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
+          </div>
+        </a>
+
+        <a href="actualite-gouverneur-rn30-uvira.html" class="news-card">
+          <div class="news-card-img">
+            <img src="https://github.com/user-attachments/assets/0bcb08c0-b6f6-4bc4-ab79-2608cd47f63d" alt="Le Gouverneur Jean-Jacques Purusi Sadiki lors de la cérémonie de relance des travaux de la RN30 à Uvira" />
+            <span class="news-cat">&#x1F3D7;&#xFE0F; Infrastructures &amp; D&eacute;veloppement</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-date">17 mars 2026</div>
+            <div class="news-card-title">Le Gouverneur Purusi relance les travaux de la RN30 arr&ecirc;t&eacute;s suite &agrave; l&apos;occupation d&apos;Uvira par l&apos;AFC/M23</div>
+            <div class="news-card-excerpt">Apr&egrave;s plusieurs semaines d&apos;interruption, les travaux de r&eacute;habilitation de la route nationale RN30, reliant la fronti&egrave;re de Kavimvira &agrave; la RN5 (7 km), reprennent officiellement sous la pr&eacute;sidence du Gouverneur Jean-Jacques Purusi Sadiki.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
+          </div>
+        </a>
+
+        <a href="actualite-gouverneur-purusi-retour-kinshasa.html" class="news-card">
+          <div class="news-card-img">
+            <img src="https://github.com/user-attachments/assets/baae5a33-62a8-4c5f-bfde-4a4b181c0656" alt="Retour triomphal du Gouverneur Jean-Jacques Purusi Sadiki à Uvira après sa mission officielle à Kinshasa" />
+            <span class="news-cat">&#x1F3DB;&#xFE0F; Gouvernance</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-date">14 mars 2026</div>
+            <div class="news-card-title">Retour triomphal du Gouverneur Purusi Sadiki &agrave; Uvira apr&egrave;s sa mission officielle &agrave; Kinshasa</div>
+            <div class="news-card-excerpt">Le Gouverneur Jean-Jacques Purusi Sadiki est accueilli triomphalement &agrave; Uvira apr&egrave;s sa mission officielle &agrave; Kinshasa, renfor&ccedil;ant les liens entre la province du Sud-Kivu et le gouvernement central.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
+          </div>
+        </a>
+
+        <a href="actualite-assemblee-uvira.html" class="news-card">
+          <div class="news-card-img">
+            <img src="https://github.com/user-attachments/assets/552e0a54-66ff-4a41-bcad-99afecb4a1d2" alt="Le Gouverneur Jean-Jacques Purusi Sadiki et Bruno Lemarquis à la clôture de la session ordinaire de mars de l'Assemblée Provinciale à Uvira" />
+            <span class="news-cat">&#x1F3DB;&#xFE0F; Assembl&eacute;e Provinciale</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-date">30 juin 2025</div>
+            <div class="news-card-title">Assembl&eacute;e Provinciale : cl&ocirc;ture de la session ordinaire de mars &agrave; Uvira</div>
+            <div class="news-card-excerpt">Le Gouverneur Jean-Jacques Purusi et Bruno Lemarquis ont pris part &agrave; la c&eacute;r&eacute;monie de cl&ocirc;ture de la session ordinaire de mars de l&apos;Assembl&eacute;e Provinciale &agrave; Uvira.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
+          </div>
+        </a>
+
+        <a href="actualite-gouverneur-commerce-exterieur.html" class="news-card">
+          <div class="news-card-img">
+            <img src="https://github.com/user-attachments/assets/06b7b158-4691-422d-a186-069dbd069134" alt="Rencontre entre le Gouverneur Jean-Jacques Purusi Sadiki et le Ministre du Commerce Extérieur" />
+            <span class="news-cat">&#x1F4BC; Commerce &amp; &Eacute;conomie</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-date">21 juin 2025</div>
+            <div class="news-card-title">Kinshasa : rencontre enrichissante avec le Ministre du Commerce Ext&eacute;rieur</div>
+            <div class="news-card-excerpt">Le Gouverneur Jean-Jacques Purusi a tenu une rencontre enrichissante avec le Ministre du Commerce Ext&eacute;rieur pour discuter du d&eacute;veloppement &eacute;conomique du Sud-Kivu.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
+          </div>
+        </a>
+
+        <a href="actualite-gouverneur-president-republique.html" class="news-card">
+          <div class="news-card-img">
+            <span class="news-cat">&#x1F3DB;&#xFE0F; Gouvernance</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-date">20 juin 2025</div>
+            <div class="news-card-title">Kinshasa : le Gouverneur Purusi Sadiki re&ccedil;u par le Pr&eacute;sident de la R&eacute;publique</div>
+            <div class="news-card-excerpt">Re&ccedil;u par le Pr&eacute;sident de la R&eacute;publique &agrave; Kinshasa, le Gouverneur Jean-Jacques Purusi Sadiki porte la voix des forces de s&eacute;curit&eacute; et de la population du Sud-Kivu.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
+          </div>
+        </a>
+
+        <a href="actualite-kolwezi-paix.html" class="news-card">
+          <div class="news-card-img">
+            <img src="https://github.com/user-attachments/assets/57a42cb8-ee6f-4204-a361-970c8cabec63" alt="Accueil du Président de la République à Kolwezi — le Gouverneur Purusi appuie les initiatives de paix" />
+            <span class="news-cat">&#x2618;&#xFE0F; Paix &amp; Diplomatie</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-date">19 juin 2025</div>
+            <div class="news-card-title">Accueil du Pr&eacute;sident de la R&eacute;publique &agrave; Kolwezi : le Gouverneur Purusi appuie les initiatives de paix</div>
+            <div class="news-card-excerpt">Le Gouverneur Jean-Jacques Purusi Sadiki soutient les initiatives de paix du Chef de l&apos;&Eacute;tat lors de l&apos;accueil du Pr&eacute;sident de la R&eacute;publique &agrave; Kolwezi.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
