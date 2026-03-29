@@ -1613,6 +1613,21 @@
     .cabinet-card:hover .cabinet-card-link { color: var(--gold); }
     .cabinet-section--white { background: var(--white); }
 
+    /* Director cards (minister style) */
+    .director-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
+    .director-grid .minister-card{background:var(--blue-deep);border:1px solid rgba(255,255,255,0.15);border-radius:14px;overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;}
+    .director-grid .minister-card:hover{box-shadow:0 12px 36px rgba(0,56,130,0.35);transform:translateY(-3px);}
+    .director-grid .minister-photo{width:100%;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(135deg,var(--blue-deep) 0%,#001840 100%);position:relative;flex-shrink:0;}
+    .director-grid .minister-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+    .director-grid .minister-photo-badge{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,20,60,0.85) 0%,transparent 100%);padding:14px 12px 10px;color:var(--white);}
+    .director-grid .minister-photo-badge .badge-role{font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold-light);margin-bottom:2px;}
+    .director-grid .minister-card-body{padding:16px 16px 20px;display:flex;flex-direction:column;flex:1;}
+    .director-grid .minister-name{font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;color:var(--gold-light);margin-bottom:8px;line-height:1.3;}
+    .director-grid .minister-ministry{font-size:15px;color:var(--white);line-height:1.55;flex:1;}
+    .director-grid a.minister-card{text-decoration:none;}
+    .director-grid .minister-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12px;font-weight:700;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:0.05em;transition:color 0.2s;}
+    .director-grid .minister-link:hover{color:var(--gold-light);}
+
     /* Departments */
     .departments-section { padding: 80px 0; background: var(--white); }
     .departments-list { display: flex; flex-direction: column; gap: 0; margin-top: 40px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
@@ -1652,6 +1667,7 @@
     }
     @media (max-width: 640px) {
       .cabinet-grid { grid-template-columns: 1fr; }
+      .director-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1941,20 +1957,28 @@
       <div class="section-label">Structure du Cabinet</div>
       <div class="section-title">Personnel <span>Politique</span></div>
       <div class="section-sub">Les responsables politiques du Cabinet du Gouverneur de Province.</div>
-      <div class="cabinet-grid">
-        <a href="cabinet-directeur.html" class="cabinet-card">
-          <img src="https://github.com/user-attachments/assets/a4ff9a86-c24c-4254-9e79-85da679e02c5" alt="Directeur de Cabinet" class="cabinet-card-photo">
-          <div class="cabinet-card-role">Direction</div>
-          <div class="cabinet-card-title">Directeur de Cabinet</div>
-          <div class="cabinet-card-desc">Premier collaborateur du Gouverneur, coordonne l&#39;ensemble des activités du Cabinet et assure la liaison entre le Gouverneur et les institutions.</div>
-          <span class="cabinet-card-link">En savoir plus</span>
+      <div class="director-grid">
+        <a href="cabinet-directeur.html" class="minister-card">
+          <div class="minister-photo">
+            <img src="https://github.com/user-attachments/assets/5b985870-889b-491e-b1e4-db765e3e90bc" alt="Directeur de Cabinet" />
+            <div class="minister-photo-badge"><div class="badge-role">Directeur de Cabinet</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Directeur de Cabinet</div>
+            <div class="minister-ministry">Directeur de Cabinet du Gouverneur &mdash; Province du Sud-Kivu</div>
+            <span class="minister-link">En savoir plus &#x2192;</span>
+          </div>
         </a>
-        <a href="cabinet-directeur-adjoint.html" class="cabinet-card">
-          <img src="https://github.com/user-attachments/assets/5b985870-889b-491e-b1e4-db765e3e90bc" alt="Me Albert LABANI MSAMBYA — Directeur de Cabinet Adjoint" class="cabinet-card-photo">
-          <div class="cabinet-card-role">Direction Adjointe</div>
-          <div class="cabinet-card-title">Directeur de Cabinet Adjoint</div>
-          <div class="cabinet-card-desc">Assiste le Directeur de Cabinet et assure l&#39;intérim en cas d&#39;absence. Contribue à la coordination des activités et au suivi des dossiers stratégiques.</div>
-          <span class="cabinet-card-link">En savoir plus</span>
+        <a href="cabinet-directeur-adjoint.html" class="minister-card">
+          <div class="minister-photo">
+            <img src="https://github.com/user-attachments/assets/a4ff9a86-c24c-4254-9e79-85da679e02c5" alt="Me Albert LABANI MSAMBYA — Directeur de Cabinet Adjoint" />
+            <div class="minister-photo-badge"><div class="badge-role">Directeur de Cabinet Adjoint</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Me Albert LABANI MSAMBYA</div>
+            <div class="minister-ministry">Directeur de Cabinet Adjoint du Gouverneur &mdash; Province du Sud-Kivu</div>
+            <span class="minister-link">En savoir plus &#x2192;</span>
+          </div>
         </a>
       </div>
     </div>
