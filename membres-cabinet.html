@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Membres du Cabinet du Gouverneur &mdash; Province du Sud-Kivu</title>
+  <title>Les Ministres Provinciaux &mdash; Province du Sud-Kivu</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <meta name="description" content="Les membres du Cabinet du Gouverneur du Sud-Kivu : Directeur de Cabinet, Conseillers, Chargés de Mission et personnel d'appui." />
+  <meta name="description" content="Les Ministres Provinciaux du Gouvernement du Sud-Kivu : découvrez les 10 ministres provinciaux, leurs noms et les ministères qu'ils dirigent." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
@@ -131,8 +131,23 @@
     .contact-item-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
     .contact-item-text{font-size:14px;line-height:1.65;color:rgba(255,255,255,0.8);}
     .contact-item-text strong{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;font-weight:700;}
-    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr 1fr;}.contact-dark-grid{grid-template-columns:1fr;}}
-    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}.cards-grid{grid-template-columns:1fr;}}
+    .ministers-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:40px;}
+    .minister-card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;}
+    .minister-card:hover{box-shadow:0 12px 36px rgba(0,56,130,0.13);transform:translateY(-3px);}
+    .minister-photo{width:100%;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(135deg,var(--blue-deep) 0%,#001840 100%);position:relative;flex-shrink:0;}
+    .minister-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+    .minister-photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;}
+    .minister-photo-placeholder .initials{font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:rgba(255,255,255,0.55);line-height:1;}
+    .minister-photo-placeholder .ph-icon{font-size:28px;color:rgba(245,184,0,0.5);}
+    .minister-photo-badge{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,20,60,0.85) 0%,transparent 100%);padding:14px 12px 10px;color:var(--white);}
+    .minister-photo-badge .badge-role{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold-light);margin-bottom:2px;}
+    .minister-card-body{padding:16px 16px 20px;display:flex;flex-direction:column;flex:1;}
+    .minister-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:8px;line-height:1.3;}
+    .minister-ministry{font-size:12px;color:var(--text-body);line-height:1.55;flex:1;}
+    .minister-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12px;font-weight:700;color:var(--blue-mid);text-transform:uppercase;letter-spacing:0.05em;transition:color 0.2s;}
+    .minister-link:hover{color:var(--gold);}
+    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr 1fr;}.contact-dark-grid{grid-template-columns:1fr;}.ministers-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}.cards-grid{grid-template-columns:1fr;}.ministers-grid{grid-template-columns:repeat(2,1fr);}}
   </style>
 </head>
 <body>
@@ -244,7 +259,7 @@
             <a href="vice-gouverneur.html">&#x1F464; Le Vice-Gouverneur</a>
             <a href="cabinet.html" >&#x1F3C5; Cabinet du Gouverneur</a>
             <div class="nav-dropdown-divider"></div>
-            <a href="membres-cabinet.html" style="font-weight:700;color:var(--blue-deep);">&#x1F465; Membres du Cabinet</a>
+            <a href="membres-cabinet.html" style="font-weight:700;color:var(--blue-deep);">&#x1F465; Les Ministres Provinciaux</a>
             <a href="secretariat-executif.html" >&#x1F4CB; Secrétariat Exécutif</a>
             <a href="secretariat-administratif.html" >&#x1F4C2; Secrétariat Administratif</a>
             <a href="service-courrier.html" >&#x2709;&#xFE0F; Service Courrier</a>
@@ -338,7 +353,7 @@
             <a href="gouverneur.html" class="mnav-item">&#x1F464; Le Gouverneur</a>
             <a href="vice-gouverneur.html" class="mnav-item">&#x1F464; Le Vice-Gouverneur</a>
             <a href="cabinet.html" class="mnav-item">&#x1F3C5; Cabinet du Gouverneur</a>
-            <a href="membres-cabinet.html" class="mnav-item">&#x1F465; Membres du Cabinet</a>
+            <a href="membres-cabinet.html" class="mnav-item">&#x1F465; Les Ministres Provinciaux</a>
             <a href="secretariat-executif.html" class="mnav-item">&#x1F4CB; Secr&eacute;tariat Ex&eacute;cutif</a>
             <a href="secretariat-administratif.html" class="mnav-item">&#x1F4C2; Secr&eacute;tariat Administratif</a>
             <a href="service-courrier.html" class="mnav-item">&#x2709;&#xFE0F; Service Courrier</a>
@@ -356,13 +371,13 @@
   <section class="page-hero">
     <div class="section-inner">
       <div class="page-hero-content">
-        <div class="hero-badge">Cabinet du Gouverneur</div>
-        <h1>Membres du <span>Cabinet</span> du Gouverneur</h1>
-        <p class="page-hero-desc">Le Cabinet du Gouverneur regroupe l&#39;ensemble des collaborateurs directs du Gouverneur : Directeurs, Conseillers, Charg&eacute;s de Mission et services d&#39;appui.</p>
+        <div class="hero-badge">Gouvernement Provincial</div>
+        <h1>Les <span>Ministres</span> Provinciaux</h1>
+        <p class="page-hero-desc">Le Gouvernement Provincial du Sud-Kivu est compos&eacute; de dix (10) ministres provinciaux, chacun responsable d&#39;un secteur strat&eacute;gique de la province.</p>
         <div class="page-breadcrumb">
           <a href="index.html">Accueil</a> <span>&rsaquo;</span>
           <a href="gouvernement.html">Gouvernement Provincial</a> <span>&rsaquo;</span>
-          <span>Membres du Cabinet</span>
+          <span>Les Ministres Provinciaux</span>
         </div>
       </div>
     </div>
@@ -370,55 +385,159 @@
 
   <section class="content-section">
     <div class="section-inner">
-      <div class="section-label">Composition</div>
-      <div class="section-title">Les membres du <span>Cabinet</span></div>
-      <div class="section-sub">Le Cabinet du Gouverneur est compos&eacute; de collaborateurs directs charg&eacute;s d&#39;assister le Gouverneur dans l&#39;exercice de ses fonctions.</div>
-      <div class="cards-grid">
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F451;</div>
-          <div class="feature-card-title">Directeur de Cabinet</div>
-          <div class="feature-card-desc">Coordonne l&#39;ensemble des activit&eacute;s du Cabinet, g&egrave;re l&#39;agenda du Gouverneur et assure la liaison avec les institutions de la province.</div>
+      <div class="section-label">Composition du Gouvernement</div>
+      <div class="section-title">Les <span>Ministres</span> Provinciaux</div>
+      <div class="section-sub">Dix ministres provinciaux constituent le Gouvernement du Sud-Kivu, chacun &agrave; la t&ecirc;te d&apos;un minist&egrave;re charg&eacute; de piloter un secteur cl&eacute; de la province.</div>
+      <div class="ministers-grid">
+
+        <!-- 1. Intérieur -->
+        <div class="minister-card">
+          <div class="minister-photo">
+            <img src="https://github.com/user-attachments/assets/0d356f8e-e684-4481-8e28-6e43d87b2f59" alt="Cibavunya Karusha Christian &mdash; Ministre de l&apos;Int&eacute;rieur" />
+            <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Cibavunya Karusha Christian</div>
+            <div class="minister-ministry">Minist&egrave;re de l&apos;Int&eacute;rieur, S&eacute;curit&eacute;, D&eacute;centralisation et Affaires Coutumi&egrave;res</div>
+            <a href="ministere-interieur.html" class="minister-link">Voir le Minist&egrave;re &#x2192;</a>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F91D;</div>
-          <div class="feature-card-title">Directeur de Cabinet Adjoint</div>
-          <div class="feature-card-desc">Seconde le Directeur de Cabinet, supervise les conseillers et g&egrave;re des dossiers sp&eacute;cifiques d&eacute;l&eacute;gu&eacute;s par le Directeur.</div>
+
+        <!-- 2. Finances -->
+        <div class="minister-card">
+          <div class="minister-photo">
+            <img src="https://github.com/user-attachments/assets/38f54c25-be72-43f6-b422-cb634a6751c0" alt="Madame Cinyerecinja Bategami Cesarine &mdash; Ministre des Finances" />
+            <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Cinyerecinja Bategami C&eacute;sarine</div>
+            <div class="minister-ministry">Minist&egrave;re des Finances, de l&apos;&Eacute;conomie et de l&apos;Entrepreneuriat</div>
+            <a href="ministere-finances.html" class="minister-link">Voir le Minist&egrave;re &#x2192;</a>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F4DD;</div>
-          <div class="feature-card-title">Chef de Cabinet</div>
-          <div class="feature-card-desc">Assure la gestion quotidienne du Cabinet, la coordination des r&eacute;unions et la transmission des instructions du Gouverneur.</div>
+
+        <!-- 3. Plan -->
+        <div class="minister-card">
+          <div class="minister-photo">
+            <img src="https://github.com/user-attachments/assets/f8d662be-ad62-4891-ba0c-8bd7beb7280d" alt="Kasaza Malianko Museven &mdash; Ministre du Plan" />
+            <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Kasaza Malianko Museven</div>
+            <div class="minister-ministry">Minist&egrave;re du Plan, du Budget et de la Promotion des Investissements</div>
+            <a href="ministere-plan.html" class="minister-link">Voir le Minist&egrave;re &#x2192;</a>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F4CA;</div>
-          <div class="feature-card-title">Conseillers Principaux</div>
-          <div class="feature-card-desc">Experts sectoriels (juridique, &eacute;conomique, s&eacute;curitaire, communication) conseillant le Gouverneur sur les dossiers strat&eacute;giques.</div>
+
+        <!-- 4. Infrastructures -->
+        <div class="minister-card">
+          <div class="minister-photo">
+            <div class="minister-photo-placeholder">
+              <div class="ph-icon">&#x1F3DB;&#xFE0F;</div>
+              <div class="initials">KG</div>
+            </div>
+            <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Kibonge Babingwa Georges</div>
+            <div class="minister-ministry">Minist&egrave;re des Travaux Publics, de l&apos;Habitat, des Affaires Fonci&egrave;res et Hydrocarbures</div>
+            <a href="ministere-infrastructures.html" class="minister-link">Voir le Minist&egrave;re &#x2192;</a>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F4CB;</div>
-          <div class="feature-card-title">Charg&eacute;s de Mission</div>
-          <div class="feature-card-desc">R&eacute;alisent des missions sp&eacute;cifiques confi&eacute;es par le Gouverneur, assurent le suivi de dossiers ponctuels et r&eacute;digent des rapports.</div>
+
+        <!-- 5. Justice -->
+        <div class="minister-card">
+          <div class="minister-photo">
+            <div class="minister-photo-placeholder">
+              <div class="ph-icon">&#x2696;&#xFE0F;</div>
+              <div class="initials">MF</div>
+            </div>
+            <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Mayani Shindano Faustin</div>
+            <div class="minister-ministry">Minist&egrave;re de la Justice, Droits Humains, de la Femme, de la Jeunesse et des Personnes Vivant avec Handicap</div>
+            <a href="ministere-justice.html" class="minister-link">Voir le Minist&egrave;re &#x2192;</a>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F91B;</div>
-          <div class="feature-card-title">Attach&eacute;s de Cabinet</div>
-          <div class="feature-card-desc">Fournissent un appui technique et administratif aux Conseillers et Charg&eacute;s de Mission dans la r&eacute;alisation de leurs t&acirc;ches.</div>
+
+        <!-- 6. Agriculture -->
+        <div class="minister-card">
+          <div class="minister-photo">
+            <div class="minister-photo-placeholder">
+              <div class="ph-icon">&#x1F33E;</div>
+              <div class="initials">LD</div>
+            </div>
+            <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Luganywa Bashizi Kabi Didier</div>
+            <div class="minister-ministry">Minist&egrave;re de l&apos;Agriculture, Elevage, P&ecirc;che, Environnement et de l&apos;Economie verte &mdash; Porte-parole du Gouvernement</div>
+            <a href="ministere-agriculture.html" class="minister-link">Voir le Minist&egrave;re &#x2192;</a>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F512;</div>
-          <div class="feature-card-title">Service de S&eacute;curit&eacute; et Protocole</div>
-          <div class="feature-card-desc">Assure la s&eacute;curit&eacute; du Gouverneur, organise les c&eacute;r&eacute;monies officielles et g&egrave;re le protocole lors des visites officielles.</div>
+
+        <!-- 7. Transports -->
+        <div class="minister-card">
+          <div class="minister-photo">
+            <div class="minister-photo-placeholder">
+              <div class="ph-icon">&#x1F69A;</div>
+              <div class="initials">BP</div>
+            </div>
+            <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Birengerenge Mwinyi Paulin</div>
+            <div class="minister-ministry">Minist&egrave;re des Transports, Voies de Communication et des Relations avec l&apos;Assembl&eacute;e Provinciale</div>
+            <a href="ministere-transports.html" class="minister-link">Voir le Minist&egrave;re &#x2192;</a>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F4F0;</div>
-          <div class="feature-card-title">Service de Communication</div>
-          <div class="feature-card-desc">G&egrave;re la communication institutionnelle du Gouverneur, les relations avec les m&eacute;dias et la pr&eacute;sence sur les r&eacute;seaux sociaux officiels.</div>
+
+        <!-- 8. Mines -->
+        <div class="minister-card">
+          <div class="minister-photo">
+            <div class="minister-photo-placeholder">
+              <div class="ph-icon">&#x26CF;&#xFE0F;</div>
+              <div class="initials">BM</div>
+            </div>
+            <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Bitijula Marimba Martin</div>
+            <div class="minister-ministry">Minist&egrave;re des Mines, de l&apos;&Eacute;nergie et Ressources Hydrauliques</div>
+            <a href="ministere-mines.html" class="minister-link">Voir le Minist&egrave;re &#x2192;</a>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-card-icon">&#x1F4BB;</div>
-          <div class="feature-card-title">Service Informatique</div>
-          <div class="feature-card-desc">Assure le support technique et informatique du Cabinet, la gestion des syst&egrave;mes d&#39;information et la s&eacute;curit&eacute; num&eacute;rique.</div>
+
+        <!-- 9. Éducation -->
+        <div class="minister-card">
+          <div class="minister-photo">
+            <div class="minister-photo-placeholder">
+              <div class="ph-icon">&#x1F4DA;</div>
+              <div class="initials">CC</div>
+            </div>
+            <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Cijanga Balemba Catherine</div>
+            <div class="minister-ministry">Minist&egrave;re de l&apos;&Eacute;ducation, de la Culture, du Genre, Famille, Sports et Loisirs</div>
+            <a href="ministere-education.html" class="minister-link">Voir le Minist&egrave;re &#x2192;</a>
+          </div>
         </div>
+
+        <!-- 10. Santé -->
+        <div class="minister-card">
+          <div class="minister-photo">
+            <img src="https://github.com/user-attachments/assets/1dce81af-f7a9-45a5-ba1a-55ecf031bca1" alt="Walulika Muzaliwa Th&eacute;ophile &mdash; Ministre de la Sant&eacute;" />
+            <div class="minister-photo-badge"><div class="badge-role">Ministre Provincial</div></div>
+          </div>
+          <div class="minister-card-body">
+            <div class="minister-name">Walulika Muzaliwa Th&eacute;ophile</div>
+            <div class="minister-ministry">Minist&egrave;re de la Sant&eacute; et du Bien-&Ecirc;tre Public</div>
+            <a href="ministere-sante.html" class="minister-link">Voir le Minist&egrave;re &#x2192;</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -426,8 +545,8 @@
   <section class="content-section alt">
     <div class="section-inner">
       <div class="section-label">Contact</div>
-      <div class="section-title">Contacter le <span>Cabinet</span></div>
-      <div class="section-sub">Pour toute demande d&#39;audience ou de renseignement aupr&egrave;s du Cabinet du Gouverneur.</div>
+      <div class="section-title">Contacter le <span>Gouvernement Provincial</span></div>
+      <div class="section-sub">Pour toute demande d&#39;information aupr&egrave;s du Gouvernement Provincial du Sud-Kivu.</div>
       <div class="contact-dark" style="margin-top:0;padding:40px;border-radius:16px;">
         <div class="contact-dark-grid">
           <div>
@@ -507,7 +626,7 @@
             <li><a href="vice-gouverneur.html">Le Vice-Gouverneur</a></li>
             <li><a href="cabinet.html">Cabinet du Gouverneur</a></li>
             <li><a href="ministeres.html">Les Ministres</a></li>
-            <li><a href="membres-cabinet.html">Membres du Cabinet</a></li>
+            <li><a href="membres-cabinet.html">Les Ministres Provinciaux</a></li>
             <li><a href="secretariat-executif.html">Secr&eacute;tariat Ex&eacute;cutif</a></li>
             <li><a href="secretariat-administratif.html">Secr&eacute;tariat Administratif</a></li>
             <li><a href="service-courrier.html">Service Courrier</a></li>
