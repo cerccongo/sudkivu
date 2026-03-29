@@ -131,7 +131,28 @@
     .contact-item-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
     .contact-item-text{font-size:14px;line-height:1.65;color:rgba(255,255,255,0.8);}
     .contact-item-text strong{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;font-weight:700;}
-    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr 1fr;}.contact-dark-grid{grid-template-columns:1fr;}}
+    .governor-section{padding:80px 0;background:var(--blue-deep);}
+    .governor-section .section-label{color:var(--gold-light);}
+    .governor-section .gov-quote{color:var(--white);border-left-color:var(--gold-light);}
+    .governor-section .gov-sig-name{color:var(--white);}
+    .governor-section .gov-sig-title{color:rgba(255,255,255,0.7);}
+    .governor-section .gov-sig-line{background:var(--gold-light);}
+    .gov-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+    .gov-photo-wrap{position:relative;}
+    .gov-photo-bg{position:absolute;inset:-12px;background:linear-gradient(135deg,var(--blue-deep),var(--blue-light));border-radius:20px;z-index:0;}
+    .gov-photo-inner{width:100%;height:360px;background:linear-gradient(160deg,var(--blue-mid) 0%,var(--blue-deep) 100%);border-radius:16px;position:relative;overflow:hidden;}
+    .gov-photo-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:1;display:block;}
+    .gov-photo-inner::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,30,80,0.5),transparent);z-index:2;}
+    .gov-name-tag{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,20,60,0.95),transparent);padding:24px 20px 20px;z-index:3;border-radius:0 0 16px 16px;}
+    .gov-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--white);}
+    .gov-role{font-size:12px;color:var(--gold-light);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-top:2px;}
+    .gov-quote-highlight{color:var(--gold-light);}
+    .gov-quote{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:var(--text-dark);line-height:1.5;border-left:4px solid var(--gold);padding-left:24px;margin:28px 0;}
+    .gov-signature{margin-top:28px;display:flex;align-items:center;gap:14px;}
+    .gov-sig-line{width:40px;height:2px;background:var(--gold);}
+    .gov-sig-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);}
+    .gov-sig-title{font-size:12px;color:var(--gray-mid);text-transform:uppercase;letter-spacing:0.08em;margin-top:3px;}
+    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr 1fr;}.contact-dark-grid{grid-template-columns:1fr;}.gov-inner{grid-template-columns:1fr;gap:40px;}}
     @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}.cards-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -470,19 +491,29 @@
     </div>
   </section>
 
-  <section class="content-section alt">
+  <section class="governor-section" id="mot-vice-gouverneur">
     <div class="section-inner">
-      <div class="section-label">Vision</div>
-      <div class="section-title">Message du <span>Vice-Gouverneur</span></div>
-      <div class="section-sub">L&#39;engagement du Vice-Gouverneur pour la paix, la s&eacute;curit&eacute; et le d&eacute;veloppement int&eacute;gral du Sud-Kivu.</div>
-      <div style="max-width:800px;margin:0 auto;">
-        <div style="background:var(--white);border-radius:16px;padding:40px;border-left:4px solid var(--gold);box-shadow:0 4px 20px rgba(0,56,130,0.07);">
-          <p style="font-family:'Playfair Display',serif;font-size:20px;font-style:italic;color:var(--text-dark);line-height:1.6;margin-bottom:20px;">&laquo;&nbsp;Ensemble, nous œuvrons pour un Sud-Kivu stable, uni et prosp&egrave;re, o&ugrave; la paix et la s&eacute;curit&eacute; permettent &agrave; chaque habitant de s&#39;&eacute;panouir et de contribuer &agrave; l&#39;&eacute;mergence de notre belle province.&nbsp;&raquo;</p>
-          <div style="display:flex;align-items:center;gap:14px;">
-            <div style="width:40px;height:2px;background:var(--gold);"></div>
+      <div class="gov-inner">
+        <div class="gov-photo-wrap">
+          <div class="gov-photo-bg"></div>
+          <div class="gov-photo-inner">
+            <img src="https://github.com/user-attachments/assets/8ed8b707-9799-4568-8270-3443367059bd" alt="Vice-Gouverneur Jean-Jacques Elakano Myewa">
+            <div class="gov-name-tag">
+              <div class="gov-name">Jean-Jacques Elakano Myewa</div>
+              <div class="gov-role">Vice-Gouverneur de Province &mdash; Sud-Kivu</div>
+            </div>
+          </div>
+        </div>
+        <div class="gov-content">
+          <div class="section-label">Mot du Vice-Gouverneur</div>
+          <div class="gov-quote">
+            &laquo;&nbsp;Ensemble, nous &oelig;uvrons pour un Sud-Kivu stable, uni et prosp&egrave;re, o&ugrave; la paix et la s&eacute;curit&eacute; permettent &agrave; chaque habitant de s&#39;&eacute;panouir et de contribuer &agrave; l&#39;&eacute;mergence de notre belle province.&nbsp;&raquo;
+          </div>
+          <div class="gov-signature">
+            <div class="gov-sig-line"></div>
             <div>
-              <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-dark);">Jean-Jacques Elakano Myewa</div>
-              <div style="font-size:12px;color:var(--gray-mid);text-transform:uppercase;letter-spacing:0.08em;">Vice-Gouverneur de la Province du Sud-Kivu</div>
+              <div class="gov-sig-name">Jean-Jacques Elakano Myewa</div>
+              <div class="gov-sig-title">Vice-Gouverneur de la Province du Sud-Kivu</div>
             </div>
           </div>
         </div>
