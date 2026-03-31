@@ -1,0 +1,168 @@
+# Downloads GitHub user-attachment images used in article pages into the repository
+# so that og:image and twitter:image meta tags use stable, directly-accessible URLs
+# that WhatsApp and other social media crawlers can reliably fetch.
+name: Download article images for social media thumbnails
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "actualite-*.html"
+      - ".github/workflows/download-article-images.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  download-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download GitHub user-attachment images
+        run: |
+          set -e
+          mkdir -p images/actualites
+
+          # Minimum acceptable file size in bytes; anything smaller is likely an error page
+          MIN_IMAGE_SIZE=1000
+
+          # Extract all unique GitHub user-attachment asset IDs from HTML files in the root
+          ASSET_IDS=$(grep -ho 'user-attachments/assets/[a-f0-9-]*' *.html | sed 's|user-attachments/assets/||' | sort -u)
+
+          for ASSET_ID in $ASSET_IDS; do
+            # Skip if already downloaded (any extension)
+            if ls "images/actualites/${ASSET_ID}."* 2>/dev/null | grep -q .; then
+              echo "Skipping ${ASSET_ID} (already exists)"
+              continue
+            fi
+
+            URL="https://github.com/user-attachments/assets/${ASSET_ID}"
+            echo "Downloading ${ASSET_ID}..."
+            TMPFILE=$(mktemp)
+
+            if curl -fsSL -A "Mozilla/5.0 (compatible; SudKivuBot/1.0)" \
+                --max-time 60 --retry 3 "$URL" -o "$TMPFILE"; then
+              SIZE=$(wc -c < "$TMPFILE")
+              if [ "$SIZE" -lt "$MIN_IMAGE_SIZE" ]; then
+                echo "  ERROR: suspiciously small (${SIZE} bytes), skipping"
+                rm -f "$TMPFILE"
+                continue
+              fi
+
+              # Detect actual file type from content
+              MIME=$(file --mime-type -b "$TMPFILE")
+              case "$MIME" in
+                image/jpeg) EXT=jpg  ;;
+                image/png)  EXT=png  ;;
+                image/webp) EXT=webp ;;
+                image/gif)  EXT=gif  ;;
+                *)
+                  echo "  WARNING: unrecognised MIME type '${MIME}', defaulting to .jpg — verify manually"
+                  EXT=jpg  ;;
+              esac
+
+              mv "$TMPFILE" "images/actualites/${ASSET_ID}.${EXT}"
+              echo "  -> saved ${SIZE} bytes as ${ASSET_ID}.${EXT}"
+            else
+              echo "  ERROR: download failed for ${ASSET_ID}, skipping"
+              rm -f "$TMPFILE"
+            fi
+          done
+
+      - name: Update HTML files to use local image paths and add og:image dimensions
+        run: |
+          python3 -m pip install --quiet Pillow
+          python3 << 'PYEOF'
+          import os
+          import re
+          import glob
+          from PIL import Image
+
+          IMAGES_DIR = "images/actualites"
+          BASE_URL = "https://sudkivu.cd"
+          GITHUB_ASSET_RE = re.compile(
+              r'https://github\.com/user-attachments/assets/([a-f0-9-]+)'
+          )
+
+          def find_local_url(asset_id):
+              """Return the absolute site URL for a downloaded asset, or None."""
+              for ext in ('jpg', 'png', 'webp', 'gif'):
+                  path = f"{IMAGES_DIR}/{asset_id}.{ext}"
+                  if os.path.exists(path):
+                      return f"{BASE_URL}/{path}"
+              return None
+
+          def get_image_dimensions(local_url):
+              """Return (width, height) for the local image at the given URL, or None."""
+              m = re.search(r'images/actualites/([a-f0-9-]+\.(jpg|png|webp|gif))', local_url)
+              if not m:
+                  return None
+              local_path = m.group(0)
+              if not os.path.exists(local_path):
+                  return None
+              try:
+                  with Image.open(local_path) as img:
+                      return img.size  # (width, height)
+              except (IOError, OSError, Image.UnidentifiedImageError):
+                  return None
+
+          def replace_github_url(match):
+              asset_id = match.group(1)
+              local_url = find_local_url(asset_id)
+              return local_url if local_url else match.group(0)
+
+          updated = []
+          # All HTML files in the repository root (no subdirectories contain HTML pages)
+          for html_file in sorted(glob.glob("*.html")):
+              with open(html_file, 'r', encoding='utf-8') as f:
+                  original = f.read()
+
+              # Replace all GitHub user-attachment URLs with local paths
+              content = GITHUB_ASSET_RE.sub(replace_github_url, original)
+
+              # Add og:image:width and og:image:height if missing (article pages only)
+              if html_file.startswith('actualite-'):
+                  og_image_m = re.search(
+                      r'<meta property="og:image" content="([^"]+)"', content
+                  )
+                  if og_image_m and 'og:image:width' not in content:
+                      dims = get_image_dimensions(og_image_m.group(1))
+                      if dims:
+                          width, height = dims
+                          # Insert width/height tags after the og:image:alt tag,
+                          # or after og:image if og:image:alt is absent
+                          insert_after = re.search(
+                              r'<meta property="og:image:alt"[^/]*/>', content
+                          )
+                          if not insert_after:
+                              insert_after = og_image_m
+                          insert_pos = insert_after.end()
+                          dims_tags = (
+                              f'\n  <meta property="og:image:width" content="{width}" />'
+                              f'\n  <meta property="og:image:height" content="{height}" />'
+                          )
+                          content = content[:insert_pos] + dims_tags + content[insert_pos:]
+
+              if content != original:
+                  with open(html_file, 'w', encoding='utf-8') as f:
+                      f.write(content)
+                  updated.append(html_file)
+                  print(f"Updated: {html_file}")
+
+          print(f"\nTotal files updated: {len(updated)}")
+          PYEOF
+
+      - name: Commit images and HTML updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add images/actualites/ *.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "fix: use local image copies for stable social-media og:image URLs"
+            git push
+          fi
