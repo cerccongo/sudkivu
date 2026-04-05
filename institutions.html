@@ -25,12 +25,6 @@
     p { font-family: 'Open Sans', sans-serif; }
     li { font-family: 'Open Sans', sans-serif; }
     h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
-    .topbar { background: var(--blue-deep); color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; padding: 7px 0; text-transform: uppercase; }
-    .topbar-inner { max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-    .topbar-left { display: flex; align-items: center; gap: 16px; }
-    .topbar-sep { opacity: 0.3; }
-    .topbar-right { display: flex; gap: 20px; }
-    .topbar-right a:hover { color: var(--gold-light); }
     header { background: var(--white); box-shadow: 0 2px 16px rgba(0,56,130,0.10); position: sticky; top: 0; z-index: 100; }
     .header-inner { max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 80px; }
     .logo-wrap { display: flex; align-items: center; gap: 14px; }
@@ -108,7 +102,7 @@
     .skip-link { position: absolute; top: -60px; left: 20px; background: var(--blue-deep); color: var(--white); padding: 10px 20px; border-radius: 0 0 8px 8px; font-weight: 700; font-size: 14px; z-index: 9999; transition: top 0.2s; }
     .skip-link:focus { top: 0; color: var(--white); }
     @media (max-width: 1040px) { nav { display: none; } .menu-toggle { display: flex; } .footer-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; } .topbar-right { display: none; } }
+    @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; }  }
 
     /* ===== PAGE-SPECIFIC STYLES ===== */
     .subpages-section { padding: 72px 0; background: var(--off-white); }
@@ -201,23 +195,6 @@
 <body>
 
   <a href="#main" class="skip-link">Aller au contenu principal</a>
-
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">
-        <span>&#x1F1E8;&#x1F1E9; République Démocratique du Congo</span>
-        <span class="topbar-sep">|</span>
-        <span>Province du Sud-Kivu — Gouvernement Provincial</span>
-      </div>
-      <div class="topbar-right">
-        <a href="province.html">La Province</a>
-        <a href="programme-2024-2028.html">Programme 2024–2028</a>
-        <a href="index.html#governor">Le Gouverneur</a>
-        <a href="contact.html">Contacts</a>
-      </div>
-    </div>
-  </div>
-
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo-wrap">

@@ -16,14 +16,7 @@
     body{font-family:'Source Sans 3',sans-serif;color:var(--text-body);background:var(--white);line-height:1.65;overflow-x:hidden;}
     a{text-decoration:none;color:inherit;}
     img{max-width:100%;display:block;}
-    p{font-family:'Open Sans',sans-serif;}li{font-family:'Open Sans',sans-serif;}h2,h3,h4,h5,h6{font-family:'Open Sans',sans-serif;}
-    .topbar{background:var(--blue-deep);color:rgba(255,255,255,0.75);font-size:12px;font-weight:600;letter-spacing:0.04em;padding:7px 0;text-transform:uppercase;}
-    .topbar-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;}
-    .topbar-left{display:flex;align-items:center;gap:16px;}
-    .topbar-sep{opacity:0.3;}
-    .topbar-right{display:flex;gap:20px;}
-    .topbar-right a:hover{color:var(--gold-light);}
-    header{background:var(--white);box-shadow:0 2px 16px rgba(0,56,130,0.10);position:sticky;top:0;z-index:100;}
+    p{font-family:'Open Sans',sans-serif;}li{font-family:'Open Sans',sans-serif;}h2,h3,h4,h5,h6{font-family:'Open Sans',sans-serif;}    header{background:var(--white);box-shadow:0 2px 16px rgba(0,56,130,0.10);position:sticky;top:0;z-index:100;}
     .header-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;}
     .logo-wrap{display:flex;align-items:center;gap:14px;}
     .logo-emblem{width:54px;height:54px;background:var(--blue-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--gold-light);flex-shrink:0;}
@@ -115,8 +108,7 @@
     .info-item-text{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.5;font-family:'Open Sans',sans-serif;}
     .info-item-text strong{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;}
     @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}}
-    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}}
-
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}
     /* Governor cards */
     .gov-timeline{display:flex;flex-direction:column;gap:0;margin-top:40px;}
     .gov-card{display:grid;grid-template-columns:140px 1fr;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--white);transition:box-shadow 0.2s;}
@@ -138,20 +130,6 @@
 <body>
 
   <a href="#main" class="skip-link">Aller au contenu principal</a>
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">
-        <span>&#x1F1E8;&#x1F1E9; R&eacute;publique D&eacute;mocratique du Congo</span>
-        <span class="topbar-sep">|</span>
-        <span>Gouvernement Provincial du Sud-Kivu</span>
-      </div>
-      <div class="topbar-right">
-        <a href="contact.html">Contact</a>
-        <a href="investissement.html">Investir</a>
-      </div>
-    </div>
-  </div>
-
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo-wrap">

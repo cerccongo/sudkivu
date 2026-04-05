@@ -44,30 +44,6 @@
     li { font-family: 'Open Sans', sans-serif; }
     h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
 
-    /* ===== TOP BAR ===== */
-    .topbar {
-      background: var(--blue-deep);
-      color: rgba(255,255,255,0.75);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      padding: 7px 0;
-      text-transform: uppercase;
-    }
-    .topbar-inner {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-    .topbar-left { display: flex; align-items: center; gap: 16px; }
-    .topbar-sep { opacity: 0.3; }
-    .topbar-right { display: flex; gap: 20px; }
-    .topbar-right a:hover { color: var(--gold-light); }
-
     /* ===== HEADER ===== */
     header {
       background: var(--white);
@@ -1154,7 +1130,7 @@
       .news-grid { grid-template-columns: 1fr; }
       .inst-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-      .topbar-right { display: none; }
+      
     }
 
     /* ===== SKIP LINK (accessibility) ===== */
@@ -1677,23 +1653,6 @@
 <body>
 
   <a href="#main" class="skip-link">Aller au contenu principal</a>
-
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">
-        <span>🇨🇩 République Démocratique du Congo</span>
-        <span class="topbar-sep">|</span>
-        <span>Province du Sud-Kivu — Gouvernement Provincial</span>
-      </div>
-      <div class="topbar-right">
-        <a href="province.html">La Province</a>
-        <a href="programme-2024-2028.html">Programme 2024–2028</a>
-        <a href="index.html#governor">Le Gouverneur</a>
-        <a href="contact.html">Contacts</a>
-      </div>
-    </div>
-  </div>
-
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo-wrap">
