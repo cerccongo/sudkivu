@@ -116,20 +116,21 @@
     .profile-photo{width:100%;max-width:220px;border-radius:10px;border:3px solid rgba(245,184,0,0.6);display:block;margin:0 auto 20px;}
     @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}}
     @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}}
-    .quote-card{display:grid;grid-template-columns:260px 1fr;gap:48px;background:linear-gradient(135deg,var(--blue-deep) 0%,#001840 100%);border-radius:16px;padding:40px;color:var(--white);position:relative;overflow:hidden;margin-top:32px;}
-    .quote-card::before{content:'';position:absolute;top:-30px;right:-30px;width:200px;height:200px;background:radial-gradient(circle,rgba(245,184,0,0.15),transparent 70%);border-radius:50%;pointer-events:none;}
-    .quote-photo-side{display:flex;flex-direction:column;align-items:center;gap:16px;position:relative;z-index:1;}
-    .quote-photo{width:190px;height:230px;object-fit:cover;object-position:top center;border-radius:10px;border:3px solid rgba(245,184,0,0.6);display:block;box-shadow:0 8px 32px rgba(0,0,0,0.4);}
-    .quote-attribution{text-align:center;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.5;}
-    .quote-attribution strong{display:block;color:var(--gold-light);font-size:14px;font-weight:700;margin-bottom:4px;font-family:'Open Sans',sans-serif;}
-    .quote-content-side{display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1;}
-    .quote-mark{font-family:'Playfair Display',serif;font-size:100px;line-height:0.75;color:rgba(245,184,0,0.35);margin-bottom:8px;user-select:none;}
-    .quote-title{font-size:12px;font-weight:700;color:var(--gold-light);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:16px;}
-    .quote-text{font-style:italic;line-height:1.75;color:rgba(255,255,255,0.95);margin-bottom:24px;}
-    .quote-text p{margin-bottom:14px;font-family:'Playfair Display',serif;font-size:clamp(16px,1.8vw,20px);}
-    .quote-text p:last-child{margin-bottom:0;}
-    .quote-occasion{display:inline-flex;align-items:center;gap:8px;background:rgba(245,184,0,0.18);border:1px solid rgba(245,184,0,0.4);color:var(--gold-light);padding:6px 16px;border-radius:20px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;}
-    @media(max-width:700px){.quote-card{grid-template-columns:1fr;gap:28px;padding:28px 20px;}.quote-photo{width:140px;height:170px;}}  </style>
+    .article-quote-block{background:var(--blue-deep);border-radius:16px;padding:32px;margin:36px 0;display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:center;}
+    .aqb-photo-wrap{position:relative;}
+    .aqb-photo-bg{position:absolute;inset:-8px;background:linear-gradient(135deg,var(--blue-deep),var(--blue-light));border-radius:16px;z-index:0;}
+    .aqb-photo-inner{width:100%;height:240px;background:linear-gradient(160deg,var(--blue-mid) 0%,var(--blue-deep) 100%);border-radius:12px;position:relative;overflow:hidden;}
+    .aqb-photo-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;z-index:1;display:block;}
+    .aqb-photo-inner::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,30,80,0.5),transparent);z-index:2;}
+    .aqb-name-tag{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,20,60,0.95),transparent);padding:20px 14px 14px;z-index:3;border-radius:0 0 12px 12px;}
+    .aqb-name{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--white);}
+    .aqb-role{font-size:10px;color:var(--gold-light);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-top:2px;}
+    .aqb-quote{font-family:'Playfair Display',serif;font-size:20px;font-style:italic;color:var(--white);line-height:1.6;border-left:4px solid var(--gold-light);padding-left:20px;margin-bottom:20px;}
+    .aqb-signature{display:flex;align-items:center;gap:12px;}
+    .aqb-sig-line{width:36px;height:2px;background:var(--gold-light);flex-shrink:0;}
+    .aqb-sig-name{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--white);}
+    .aqb-sig-title{font-size:11px;color:rgba(255,255,255,0.65);}
+    @media(max-width:640px){.article-quote-block{grid-template-columns:1fr;gap:24px;padding:24px;}.aqb-photo-inner{height:200px;}}  </style>
 </head>
 <body>
 
@@ -448,23 +449,28 @@
       <div class="section-label">&#x1F338; Message de F&ecirc;te</div>
       <div class="section-title">Message de <span>P&acirc;ques</span></div>
       <div class="section-sub">Souhait de la f&ecirc;te de P&acirc;ques &agrave; la Population du Territoire de Fizi et de la Ville de Baraka</div>
-      <div class="quote-card">
-        <div class="quote-photo-side">
-          <img src="https://sudkivu.cd/images/actualites/da2501f7-faa6-4b44-8bf3-a4428a09c141.png" alt="Me Albert LABANI MSAMBYA &mdash; Directeur de Cabinet Adjoint" class="quote-photo">
-          <div class="quote-attribution">
-            <strong>Me Albert LABANI MSAMBYA</strong>
-            Directeur de Cabinet Adjoint<br>Province du Sud-Kivu
+      <div class="article-quote-block">
+        <div class="aqb-photo-wrap">
+          <div class="aqb-photo-bg"></div>
+          <div class="aqb-photo-inner">
+            <img src="https://sudkivu.cd/images/actualites/da2501f7-faa6-4b44-8bf3-a4428a09c141.png" alt="Me Albert LABANI MSAMBYA &mdash; Directeur de Cabinet Adjoint" />
+            <div class="aqb-name-tag">
+              <div class="aqb-name">Me Albert LABANI MSAMBYA</div>
+              <div class="aqb-role">Directeur de Cabinet Adjoint &mdash; Province du Sud-Kivu</div>
+            </div>
           </div>
         </div>
-        <div class="quote-content-side">
-          <div class="quote-title">&#x1F338; Appel &agrave; la r&eacute;silience et au patriotisme</div>
-          <div class="quote-mark">&ldquo;</div>
-          <div class="quote-text">
-            <p>Joyeuses f&ecirc;tes de P&acirc;ques &agrave; toute la Population du Territoire de Fizi et de la Ville de Baraka&nbsp;!</p>
-            <p>En ce moment solennel de r&eacute;surrection et d&rsquo;espoir, j&rsquo;adresse un appel vibrant &agrave; la r&eacute;silience et au patriotisme de chacun et de chacune d&rsquo;entre vous.</p>
-            <p>Avec l&rsquo;engagement de Son Excellence Monsieur le Pr&eacute;sident de la R&eacute;publique, F&eacute;lix-Antoine Tshisekedi Tshilombo, la paix sera restaur&eacute;e sur toute la partie Est de la RDC et les initiatives de d&eacute;veloppement vont reprendre.</p>
+        <div class="aqb-content">
+          <div class="aqb-quote">
+            Joyeuses f&ecirc;tes de P&acirc;ques &agrave; toute la Population du Territoire de Fizi et de la Ville de Baraka&nbsp;! En ce moment solennel de r&eacute;surrection et d&rsquo;espoir, j&rsquo;adresse un appel vibrant &agrave; la r&eacute;silience et au patriotisme de chacun et de chacune d&rsquo;entre vous. Avec l&rsquo;engagement de Son Excellence Monsieur le Pr&eacute;sident de la R&eacute;publique, F&eacute;lix-Antoine Tshisekedi Tshilombo, la paix sera restaur&eacute;e sur toute la partie Est de la RDC et les initiatives de d&eacute;veloppement vont reprendre.
           </div>
-          <div class="quote-occasion">&#x1F338;&nbsp; F&ecirc;te de P&acirc;ques &mdash; Avril 2025</div>
+          <div class="aqb-signature">
+            <div class="aqb-sig-line"></div>
+            <div>
+              <div class="aqb-sig-name">Me Albert LABANI MSAMBYA</div>
+              <div class="aqb-sig-title">Directeur de Cabinet Adjoint &mdash; F&ecirc;te de P&acirc;ques, Avril 2025</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
