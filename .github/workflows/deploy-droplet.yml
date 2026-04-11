@@ -20,3 +20,25 @@ jobs:
           REMOTE_USER: root
           TARGET: /var/www/sudkivu/
           EXCLUDE: ".git/, .github/"
+          SCRIPT_AFTER: |
+            cat > /usr/local/bin/update-sudkivu << 'EOF'
+            #!/usr/bin/env bash
+            set -euo pipefail
+            REPO="https://github.com/cerccongo/sudkivu.git"
+            WEBROOT="/var/www/sudkivu"
+            TMPDIR="$(mktemp -d)"
+            trap 'rm -rf "$TMPDIR"' EXIT
+            echo "Cloning latest version from GitHub..."
+            git clone --depth=1 "$REPO" "$TMPDIR/repo"
+            echo "Syncing files to $WEBROOT ..."
+            rsync -a --delete \
+              --exclude='.git/' \
+              --exclude='.github/' \
+              "$TMPDIR/repo/" "$WEBROOT/"
+            echo "Fixing permissions..."
+            chown -R www-data:www-data "$WEBROOT"
+            chmod -R 755 "$WEBROOT"
+            echo "Done. Site updated successfully."
+            EOF
+            chmod +x /usr/local/bin/update-sudkivu
+          SCRIPT_AFTER_REQUIRED: "true"

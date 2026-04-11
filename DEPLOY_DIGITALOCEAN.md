@@ -48,8 +48,9 @@ Accept the host fingerprint prompt when connecting for the first time.
 # Update package lists and upgrade installed packages
 apt update && apt upgrade -y
 
-# Install Nginx
-apt install -y nginx
+# Install Nginx, git, and rsync
+# git and rsync are required for the web-console update script (see Step 10, Option B)
+apt install -y nginx git rsync
 
 # Enable Nginx to start automatically on reboot
 systemctl enable nginx
@@ -224,6 +225,8 @@ After this step, your site will be accessible at `https://sudkivu.cd`.
 
 ## Step 10 — Update the Site (Manual)
 
+### Option A — From your local machine
+
 Run all commands below on your **local machine** (not on the Droplet).
 
 ```bash
@@ -265,6 +268,34 @@ No Nginx restart is needed — static files are served directly from disk.
 > If you see `Permission denied`, verify that the SSH public key on your local machine
 > (`~/.ssh/id_rsa.pub` or `~/.ssh/id_ed25519.pub`) is listed in
 > `/root/.ssh/authorized_keys` on the Droplet.
+
+---
+
+### Option B — From the DigitalOcean Web Console
+
+The DigitalOcean web console gives you browser-based terminal access to your Droplet without needing a local SSH client. After the first automated deployment (Step 11), a helper script `/usr/local/bin/update-sudkivu` is installed on the Droplet automatically.
+
+**Steps:**
+
+1. Log in to [cloud.digitalocean.com](https://cloud.digitalocean.com/).
+2. Click on your Droplet (`sudkivu-web`).
+3. Click **Console** in the top-right area of the Droplet page — this opens a browser terminal.
+4. In the terminal, run:
+
+   ```bash
+   update-sudkivu
+   ```
+
+   The script will:
+   - Clone the latest version of the site from GitHub
+   - Sync all files to `/var/www/sudkivu/`
+   - Fix file ownership and permissions
+   - Print `Done. Site updated successfully.` when finished
+
+> **Note:** `git` and `rsync` must be installed on the Droplet (they are included in Step 3 above). If you followed an earlier version of this guide that did not include them, install them now:
+> ```bash
+> apt install -y git rsync
+> ```
 
 ---
 
