@@ -740,7 +740,7 @@
     .view-all:hover { color: var(--blue-deep); }
     .news-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
     .news-card {
@@ -784,9 +784,9 @@
     .news-card-body { padding: 22px 20px; }
     .news-date { font-size: 12px; color: var(--gray-mid); margin-bottom: 8px; }
     .news-card-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Oswald', sans-serif;
       font-size: 17px;
-      font-weight: 700;
+      font-weight: 500;
       color: var(--text-dark);
       margin-bottom: 10px;
       line-height: 1.35;
@@ -800,8 +800,9 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-
-    /* ===== PRIORITIES (100 jours) ===== */
+    .news-card-more { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 700; color: var(--blue-mid); margin-top: 14px; }
+    .news-card-more::after { content: '→'; }
+    .news-card:hover .news-card-more { color: var(--blue-deep); }
     .priorities-section {
       padding: 80px 0;
       background: var(--white);
@@ -2019,15 +2020,19 @@
             <div class="news-date">18 avril 2026</div>
             <div class="news-card-title">Communiqu&eacute; N&deg;&nbsp;007 &mdash; D&eacute;nonciation de l&rsquo;occupation progressive d&rsquo;une partie du territoire congolais au Sud-Kivu par l&rsquo;arm&eacute;e rwandaise</div>
             <div class="news-card-excerpt">Des militaires rwandais &eacute;rigent un camp militaire &agrave; Mumosho (Chefferie de Kabare). Le Gouvernement Provincial condamne cette escalade et exige le retrait imm&eacute;diat de toutes les forces &eacute;trang&egrave;res du territoire congolais.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
           </div>
         </a>
         <a href="actualite-forum-kigoma-gouverneur-purusi-investisseurs-paix-lac-tanganyika.html" class="news-card">
+          <div class="news-card-img" style="background: linear-gradient(135deg, #003882, #0052B4); padding:0; overflow:hidden;">
+            <img src="https://sudkivu.cd/images/actualites/8c473c36-b16d-4317-9d90-8f59e161629d.png" alt="Le Gouverneur Jean-Jacques Purusi Sadiki au Forum des Affaires et de l&apos;Investissement du lac Tanganyika &agrave; Kigoma, Tanzanie" style="width:100%;height:100%;object-fit:cover;display:block;" />
             <span class="news-cat">&#x1F30A; Diplomatie &amp; Investissement</span>
           </div>
           <div class="news-card-body">
             <div class="news-date">16 avril 2026</div>
             <div class="news-card-title">Forum de Kigoma : le Gouverneur Purusi lance un appel fort aux investisseurs et plaide pour la paix dans les pays riverains du Lac Tanganyika</div>
             <div class="news-card-excerpt">Au Forum des Affaires et de l&rsquo;Investissement du lac Tanganyika, le Gouverneur Purusi Sadiki a plaid&eacute; pour la paix, annonc&eacute; une exon&eacute;ration de taxes de deux ans pour les nouveaux investisseurs et mis en avant le port de Kalundu comme levier du commerce r&eacute;gional.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
           </div>
         </a>
         <a href="actualite-facilitation-commerce-transfrontalier-avril-2026.html" class="news-card">
@@ -2039,6 +2044,7 @@
             <div class="news-date">7 avril 2026</div>
             <div class="news-card-title">Facilitation du Commerce Transfrontalier : le Gouverneur de Province re&ccedil;u par le Ministre national de Commerce Ext&eacute;rieur</div>
             <div class="news-card-excerpt">Le Ministre du Commerce Ext&eacute;rieur, Julien Paluku Kahongya, et le Gouverneur du Sud-Kivu, Jean-Jacques Purusi Sadiki, ont tenu une r&eacute;union technique de haut niveau &agrave; Kinshasa sur la facilitation du commerce transfrontalier et la modernisation des march&eacute;s frontaliers dans le cadre du PFCIGL.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
           </div>
         </a>
         <a href="actualite-briefing-presse-securite-rapatriement-developpement.html" class="news-card">
@@ -2050,6 +2056,7 @@
             <div class="news-date">3 avril 2026</div>
             <div class="news-card-title">Briefing Presse : S&eacute;curit&eacute;, Rapatriement et D&eacute;veloppement &mdash; le Gouverneur Purusi Sadiki fait le point depuis Kinshasa</div>
             <div class="news-card-excerpt">Le Gouverneur Purusi Sadiki pr&eacute;sente un bilan complet sur la situation s&eacute;curitaire, les fosses communes d&eacute;couvertes &agrave; Uvira, le rapatriement de 1,2 million de d&eacute;plac&eacute;s et les r&eacute;formes &eacute;conomiques dans le Sud-Kivu.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
           </div>
         </a>
         <a href="actualite-vice-gouverneur-leda-mining-misisi-nganja-mars-2026.html" class="news-card">
@@ -2061,6 +2068,7 @@
             <div class="news-date">31 mars 2026</div>
             <div class="news-card-title">Leda Mining annonce son retour en province et la reprise des travaux de prospection &agrave; Misisi dans le secteur de Nganja</div>
             <div class="news-card-excerpt">FRANCO BOKOLO, Charg&eacute; de relations communautaires de la Soci&eacute;t&eacute; LEDA MINING, a &eacute;t&eacute; re&ccedil;u en audience par le Vice-Gouverneur et Gouverneur int&eacute;rimaire Me Jean-Jacques ELAKANO M&rsquo;YEWA pour annoncer la relance des travaux de prospection &agrave; Misisi dans le secteur de Nganja, territoire de Fizi.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
           </div>
         </a>
         <a href="actualite-session-ordinaire-mars-assemblee-provinciale.html" class="news-card">
@@ -2072,6 +2080,7 @@
             <div class="news-date">30 mars 2026</div>
             <div class="news-card-title">Ouverture de la session ordinaire de mars 2026 de l&rsquo;Assembl&eacute;e Provinciale du Sud-Kivu &agrave; Uvira</div>
             <div class="news-card-excerpt">Le Vice-Gouverneur et Gouverneur de Province ad int&eacute;rim Me Jean-Jacques MYEWA ELAKANO a pris part &agrave; la c&eacute;r&eacute;monie d&rsquo;ouverture de la session ordinaire de mars, le lundi 30 mars 2026 &agrave; Uvira.</div>
+            <span class="news-card-more">Lire l&apos;article</span>
           </div>
         </a>
       </div>
