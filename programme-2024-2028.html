@@ -9,786 +9,134 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
   
   <style>
-    /* ===== CSS VARIABLES ===== */
-    :root {
-      --blue-deep: #003882;
-      --blue-mid: #0052B4;
-      --blue-light: #1A6FD4;
-      --gold: #CE8A00;
-      --gold-light: #F5B800;
-      --red-drc: #C8102E;
-      --white: #FFFFFF;
-      --off-white: #F4F6FA;
-      --gray-light: #E8ECF3;
-      --gray-mid: #8D9BB5;
-      --gray-dark: #3A4561;
-      --text-dark: #1C2340;
-      --text-body: #3A4561;
-      --border: rgba(0, 56, 130, 0.12);
-    }
-
-    /* ===== RESET ===== */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Source Sans 3', sans-serif;
-      color: var(--text-body);
-      background: var(--white);
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    p, li, h2, h3, h4, h5, h6 {
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      background: var(--white);
-      box-shadow: 0 2px 16px rgba(0, 56, 130, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .header-inner {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 80px;
-    }
-
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .logo-emblem {
-      width: 54px;
-      height: 54px;
-      background: var(--blue-deep);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      font-weight: 900;
-      color: var(--gold-light);
-      flex-shrink: 0;
-    }
-
-    .logo-emblem img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .logo-text {
-      line-height: 1.2;
-    }
-
-    .logo-text .province {
-      font-family: 'Oswald', sans-serif;
-      font-size: 17px;
-      font-weight: 500;
-      color: var(--blue-deep);
-      letter-spacing: -0.01em;
-      text-transform: uppercase;
-    }
-
-    .logo-text .country {
-      font-size: 11px;
-      color: var(--gray-mid);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 600;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .nav-link {
-      font-family: 'Oswald', sans-serif;
-      font-size: 13.5px;
-      font-weight: 500;
-      color: var(--text-dark);
-      padding: 8px 14px;
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
-      letter-spacing: 0.01em;
-      text-transform: uppercase;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .nav-link:hover, .nav-link.active {
-      background: var(--blue-deep);
-      color: var(--white);
-    }
-
-    .nav-cta {
-      background: var(--gold);
-      color: var(--white);
-      padding: 8px 18px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-left: 8px;
-      transition: background 0.2s;
-      display: inline-block;
-    }
-
-    .nav-cta:hover {
-      background: var(--gold-light);
-      color: var(--text-dark);
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    .nav-dropdown {
-      display: none;
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      box-shadow: 0 8px 24px rgba(0, 56, 130, 0.12);
-      min-width: 240px;
-      z-index: 1000;
-    }
-
-    .nav-item:hover .nav-dropdown {
-      display: block;
-    }
-
-    .nav-dropdown a {
-      display: block;
-      padding: 10px 18px;
-      font-size: 13.5px;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 500;
-      color: var(--text-dark);
-      transition: background 0.15s, color 0.15s;
-    }
-
-    .nav-dropdown a:hover {
-      background: var(--off-white);
-      color: var(--blue-deep);
-    }
-
-    .nav-dropdown-divider {
-      height: 1px;
-      background: var(--border);
-      margin: 6px 0;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      flex-direction: column;
-      gap: 5px;
-      padding: 6px;
-    }
-
-    .menu-toggle span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--blue-deep);
-      border-radius: 2px;
-      transition: transform 0.3s, opacity 0.3s;
-    }
-
-    /* ===== FLAG STRIP ===== */
-    .flag-strip {
-      height: 6.25px;
-      background: linear-gradient(90deg, rgb(0, 127, 255) 33%, rgb(206, 16, 33) 33%, rgb(206, 16, 33) 66%, rgb(247, 214, 24) 66%);
-    }
-
-    /* ===== PAGE HERO ===== */
-    .page-hero {
-      background: linear-gradient(135deg, #002255 0%, #001840 55%, #001030 100%);
-      color: var(--white);
-      padding: 72px 0 64px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(245, 184, 0, 0.12) 0%, transparent 60%);
-    }
-
-    .section-inner {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .page-hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(245, 184, 0, 0.18);
-      border: 1px solid rgba(245, 184, 0, 0.4);
-      color: var(--gold-light);
-      padding: 5px 14px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 24px;
-    }
-
-    .page-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 3.5vw, 44px);
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 18px;
-      letter-spacing: -0.02em;
-    }
-
-    .page-hero h1 span {
-      color: var(--gold-light);
-    }
-
-    .page-hero-desc {
-      font-size: 16px;
-      line-height: 1.7;
-      color: rgba(255, 255, 255, 0.82);
-      margin-bottom: 24px;
-    }
-
-    .page-breadcrumb {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.5);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .page-breadcrumb a {
-      color: rgba(255, 255, 255, 0.65);
-      transition: color 0.2s;
-    }
-
-    .page-breadcrumb a:hover {
-      color: var(--gold-light);
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: #050E1F;
-      color: rgba(255, 255, 255, 0.7);
-      padding: 64px 0 0;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-
-    .footer-brand .logo-emblem {
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--gold-light);
-      margin-bottom: 16px;
-    }
-
-    .footer-brand .logo-text .province {
-      color: var(--white);
-    }
-
-    .footer-brand .logo-text .country {
-      color: rgba(255, 255, 255, 0.45);
-    }
-
-    .footer-desc {
-      font-size: 14px;
-      line-height: 1.7;
-      margin-top: 16px;
-      color: rgba(255, 255, 255, 0.55);
-    }
-
-    .footer-col h4 {
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--white);
-      margin-bottom: 18px;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .footer-links li a {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.55);
-      transition: color 0.2s;
-    }
-
-    .footer-links li a:hover {
-      color: var(--gold-light);
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 20px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.35);
-    }
-
-    .footer-bottom-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-bottom-links a {
-      color: rgba(255, 255, 255, 0.35);
-      transition: color 0.2s;
-    }
-
-    .footer-bottom-links a:hover {
-      color: var(--gold-light);
-    }
-
-    /* ===== SECTION LABELS & TITLES ===== */
-    .section-label {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--blue-mid);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 10px;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(24px, 3vw, 36px);
-      font-weight: 700;
-      color: var(--text-dark);
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
-
-    .section-title span {
-      color: var(--blue-mid);
-    }
-
-    .section-sub {
-      font-size: 16px;
-      color: var(--gray-mid);
-      margin-bottom: 40px;
-    }
-
-    /* ===== PROGRAMME INTRO ===== */
-    .programme-intro {
-      padding: 72px 0;
-      background: var(--white);
-    }
-
-    .programme-intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: start;
-    }
-
-    .programme-quote {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--text-dark);
-      line-height: 1.4;
-      border-left: 4px solid var(--gold);
-      padding-left: 24px;
-      margin-bottom: 24px;
-      font-style: italic;
-    }
-
-    .programme-quote strong {
-      color: var(--gold-light);
-    }
-
-    .programme-intro-grid p {
-      font-size: 15px;
-      color: var(--text-body);
-      line-height: 1.75;
-      margin-bottom: 16px;
-    }
-
-    .programme-intro-grid p.author {
-      font-size: 14px;
-      color: var(--gray-mid);
-      font-style: italic;
-    }
-
-    /* ===== KEY FIGURES ===== */
-    .key-figures {
-      background: linear-gradient(135deg, var(--blue-deep), #001840);
-      border-radius: 16px;
-      padding: 40px 36px;
-      color: var(--white);
-    }
-
-    .key-figures h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--gold-light);
-      margin-bottom: 28px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .figure-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .figure-item:last-child {
-      border-bottom: none;
-    }
-
-    .figure-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      font-weight: 900;
-      color: var(--gold-light);
-      flex-shrink: 0;
-      min-width: 100px;
-      line-height: 1;
-    }
-
-    .figure-label {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.75);
-      line-height: 1.4;
-    }
-
-    .figure-label strong {
-      display: block;
-      color: var(--white);
-      font-weight: 700;
-      margin-bottom: 2px;
-    }
-
-    /* ===== AXES SECTION ===== */
-    .axes-section {
-      padding: 80px 0;
-      background: var(--off-white);
-    }
-
-    .axes-header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      margin-bottom: 56px;
-    }
-
-    .axes-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .axe-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 0;
-      border: 1px solid var(--border);
-      transition: all 0.3s;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .axe-card:nth-child(5) {
-      grid-column: span 2;
-    }
-
-    .axe-img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 14px 14px 0 0;
-      display: block;
-      background: linear-gradient(135deg, var(--blue-light), var(--blue-deep));
-    }
-
-    .axe-card-body {
-      padding: 24px 28px 28px;
-      position: relative;
-    }
-
-    .axe-card::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--axe-color, var(--blue-mid));
-    }
-
-    .axe-card:hover {
-      box-shadow: 0 16px 40px rgba(0, 56, 130, 0.12);
-      transform: translateY(-4px);
-    }
-
-    .axe-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      font-weight: 900;
-      color: var(--axe-color, var(--blue-mid));
-      opacity: 0.15;
-      position: absolute;
-      top: 12px;
-      right: 20px;
-      line-height: 1;
-    }
-
-    .axe-tag {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--axe-color, var(--blue-mid));
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 10px;
-    }
-
-    .axe-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 19px;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 14px;
-      line-height: 1.3;
-    }
-
-    .axe-desc {
-      font-size: 14px;
-      color: var(--text-body);
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .axe-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .axe-pill {
-      background: var(--off-white);
-      border: 1px solid var(--border);
-      color: var(--text-body);
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-weight: 500;
-    }
-
-    /* ===== MODAL ===== */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 10, 30, 0.7);
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .modal-overlay.open {
-      display: flex;
-    }
-
-    .modal-box {
-      background: var(--white);
-      border-radius: 16px;
-      max-width: 640px;
-      width: 100%;
-      max-height: 80vh;
-      overflow-y: auto;
-      padding: 40px;
-      position: relative;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 32px;
-      height: 32px;
-      background: var(--off-white);
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s;
-    }
-
-    .modal-close:hover {
-      background: var(--gray-light);
-    }
-
-    .modal-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 16px;
-    }
-
-    .modal-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .modal-list li {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      font-size: 14px;
-      color: var(--text-body);
-      line-height: 1.6;
-    }
-
-    .modal-list li::before {
-      content: '✓';
-      color: var(--blue-mid);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 1040px) {
-      nav {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .programme-intro-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .axes-header {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .axes-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .axe-card:nth-child(5) {
-        grid-column: span 1;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .axes-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .modal-box {
-        padding: 24px;
-      }
-
-      .page-hero {
-        padding: 48px 0 40px;
-      }
-
-      .programme-intro {
-        padding: 48px 0;
-      }
-
-      .axes-section {
-        padding: 48px 0;
-      }
-    }
+    :root { --blue-deep:#003882;--blue-mid:#0052B4;--blue-light:#1A6FD4;--gold:#CE8A00;--gold-light:#F5B800;--red-drc:#C8102E;--white:#FFFFFF;--off-white:#F4F6FA;--gray-light:#E8ECF3;--gray-mid:#8D9BB5;--gray-dark:#3A4561;--text-dark:#1C2340;--text-body:#3A4561;--border:rgba(0,56,130,0.12);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Source Sans 3',sans-serif;color:var(--text-body);background:var(--white);line-height:1.65;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    img{max-width:100%;display:block;}
+    p{font-family:'Open Sans',sans-serif;}li{font-family:'Open Sans',sans-serif;}h2,h3,h4,h5,h6{font-family:'Open Sans',sans-serif;}
+    header{background:var(--white);box-shadow:0 2px 16px rgba(0,56,130,0.10);position:sticky;top:0;z-index:100;}
+    .header-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;}
+    .logo-wrap{display:flex;align-items:center;gap:14px;}
+    .logo-emblem{width:54px;height:54px;background:var(--blue-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--gold-light);flex-shrink:0;overflow:hidden;}
+    .logo-emblem img{width:100%;height:100%;border-radius:50%;object-fit:cover;}
+    .logo-text{line-height:1.2;}
+    .logo-text .province{font-family:'Oswald',sans-serif;font-size:17px;font-weight:500;color:var(--blue-deep);letter-spacing:-0.01em;text-transform:uppercase;}
+    .logo-text .country{font-size:11px;color:var(--gray-mid);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;}
+    nav{display:flex;align-items:center;gap:4px;}
+    .nav-link{font-family:'Oswald',sans-serif;font-size:16px;font-weight:500;color:var(--text-dark);padding:8px 14px;border-radius:6px;transition:background 0.2s,color 0.2s;text-transform:uppercase;letter-spacing:0.01em;cursor:pointer;user-select:none;}
+    .nav-link:hover,.nav-link.active{background:var(--blue-deep);color:var(--white);}
+    .nav-cta{background:var(--gold);color:var(--white);padding:8px 18px;border-radius:6px;font-size:16px;font-weight:700;text-transform:uppercase;margin-left:8px;transition:background 0.2s;display:inline-block;}
+    .nav-cta:hover{background:var(--gold-light);color:var(--text-dark);}
+    .menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px;}
+    .menu-toggle span{display:block;width:24px;height:2px;background:var(--blue-deep);border-radius:2px;transition:transform 0.3s,opacity 0.3s;}
+    .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .menu-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+    .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .flag-strip{height:6.25px;background:linear-gradient(90deg,rgb(0,127,255) 33%,rgb(206,16,33) 33%,rgb(206,16,33) 66%,rgb(247,214,24) 66%);}
+    .section-inner{max-width:1240px;margin:0 auto;padding:0 24px;}
+    .page-hero{background:linear-gradient(135deg,#002255 0%,#001840 55%,#001030 100%);color:var(--white);padding:72px 0 64px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(245,184,0,0.12) 0%,transparent 60%);}
+    .page-hero-content{position:relative;z-index:1;max-width:700px;}
+    .page-hero .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,184,0,0.18);border:1px solid rgba(245,184,0,0.4);color:var(--gold-light);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:24px;}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.1;margin-bottom:18px;letter-spacing:-0.02em;}
+    .page-hero h1 span{color:var(--gold-light);}
+    .page-hero-desc{font-size:16px;line-height:1.7;color:rgba(255,255,255,0.82);margin-bottom:24px;}
+    .page-breadcrumb{font-size:13px;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:8px;}
+    .page-breadcrumb a{color:rgba(255,255,255,0.65);transition:color 0.2s;}
+    .page-breadcrumb a:hover{color:var(--gold-light);}
+    .nav-item{position:relative;}
+    .nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,56,130,0.12);min-width:240px;z-index:1000;}
+    .nav-item:hover .nav-dropdown{display:block;}
+    .nav-dropdown a{display:block;padding:10px 18px;font-size:16px;font-family:'Oswald',sans-serif;font-weight:500;color:var(--text-dark);transition:background 0.15s,color 0.15s;}
+    .nav-dropdown a:hover{background:var(--off-white);color:var(--blue-deep);}
+    .nav-dropdown-divider{height:1px;background:var(--border);margin:6px 0;}
+    footer{background:#050E1F;color:rgba(255,255,255,0.7);padding:64px 0 0;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+    .footer-brand .logo-emblem{background:rgba(255,255,255,0.08);color:var(--gold-light);margin-bottom:16px;}
+    .footer-brand .logo-text .province{color:var(--white);}
+    .footer-brand .logo-text .country{color:rgba(255,255,255,0.45);}
+    .footer-desc{font-size:14px;line-height:1.7;margin-top:16px;color:rgba(255,255,255,0.55);}
+    .footer-col h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--white);margin-bottom:18px;}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-links li a{font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;}
+    .footer-links li a:hover{color:var(--gold-light);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding:20px 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,0.35);}
+    .footer-bottom-links{display:flex;gap:20px;}
+    .footer-bottom-links a{color:rgba(255,255,255,0.35);transition:color 0.2s;}
+    .footer-bottom-links a:hover{color:var(--gold-light);}
+    .mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--white);z-index:999;flex-direction:column;overflow:hidden;}
+    .mobile-nav.open{display:flex;}
+    .mobile-nav-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--blue-deep);color:var(--white);flex-shrink:0;}
+    .mobile-nav-title{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;}
+    .mobile-nav-close{background:none;border:none;color:var(--white);font-size:22px;cursor:pointer;padding:4px 8px;line-height:1;border-radius:4px;transition:background 0.2s;}
+    .mobile-nav-close:hover{background:rgba(255,255,255,0.15);}
+    .mobile-nav-body{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+    .mnav-link{display:block;padding:14px 20px;font-size:13.5px;font-weight:700;color:var(--text-dark);text-transform:uppercase;letter-spacing:0.04em;border-bottom:1px solid var(--border);transition:background 0.15s,color 0.15s;}
+    .mnav-link:hover,.mnav-link.active{background:var(--blue-deep);color:var(--white);}
+    .mnav-cta{display:block;margin:16px 20px 8px;padding:12px 20px;background:var(--gold);color:var(--white);border-radius:6px;font-size:13.5px;font-weight:700;text-transform:uppercase;text-align:center;transition:background 0.2s;}
+    .mnav-cta:hover{background:var(--gold-light);color:var(--text-dark);}
+    .mnav-group{border-bottom:1px solid var(--border);}
+    .mnav-group-btn{display:flex;width:100%;align-items:center;justify-content:space-between;padding:14px 20px;background:none;border:none;font-size:13.5px;font-weight:700;color:var(--text-dark);text-transform:uppercase;letter-spacing:0.04em;cursor:pointer;transition:background 0.15s,color 0.15s;}
+    .mnav-group-btn:hover,.mnav-group-btn[aria-expanded="true"]{background:var(--off-white);color:var(--blue-deep);}
+    .mnav-arrow{transition:transform 0.25s;font-style:normal;}
+    .mnav-group-btn[aria-expanded="true"] .mnav-arrow{transform:rotate(180deg);}
+    .mnav-group-items{overflow:hidden;max-height:0;transition:max-height 0.35s ease;background:var(--off-white);}
+    .mnav-group-items.open{max-height:700px;}
+    .mnav-item{display:block;padding:11px 20px 11px 36px;font-size:13.5px;font-weight:500;color:var(--text-dark);border-top:1px solid var(--border);transition:background 0.15s,color 0.15s;}
+    .mnav-item:hover{background:var(--blue-deep);color:var(--white);}
+    .skip-link{position:absolute;top:-60px;left:20px;background:var(--blue-deep);color:var(--white);padding:10px 20px;border-radius:0 0 8px 8px;font-weight:700;font-size:14px;z-index:9999;transition:top 0.2s;}
+    .skip-link:focus{top:0;color:var(--white);}
+    .section-label{font-size:12px;font-weight:700;color:var(--blue-mid);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);font-weight:700;color:var(--text-dark);line-height:1.2;margin-bottom:8px;}
+    .section-title span{color:var(--blue-mid);}
+    .section-sub{font-size:16px;color:var(--gray-mid);margin-bottom:40px;}
+    .programme-intro{padding:72px 0;background:var(--white);}
+    .programme-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+    .programme-quote{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--text-dark);line-height:1.4;border-left:4px solid var(--gold);padding-left:24px;margin-bottom:24px;font-style:italic;}
+    .programme-quote strong{color:var(--gold-light);}
+    .programme-intro-grid p{font-size:15px;color:var(--text-body);line-height:1.75;margin-bottom:16px;}
+    .programme-intro-grid p.author{font-size:14px;color:var(--gray-mid);font-style:italic;}
+    .key-figures{background:linear-gradient(135deg,var(--blue-deep),#001840);border-radius:16px;padding:40px 36px;color:var(--white);}
+    .key-figures h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--gold-light);margin-bottom:28px;text-transform:uppercase;letter-spacing:0.08em;}
+    .figure-item{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+    .figure-item:last-child{border-bottom:none;}
+    .figure-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:var(--gold-light);flex-shrink:0;min-width:100px;line-height:1;}
+    .figure-label{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4;}
+    .figure-label strong{display:block;color:var(--white);font-weight:700;margin-bottom:2px;}
+    .axes-section{padding:80px 0;background:var(--off-white);}
+    .axes-header{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:56px;}
+    .axes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .axe-card{background:var(--white);border-radius:16px;padding:0;border:1px solid var(--border);transition:all 0.3s;cursor:pointer;position:relative;overflow:hidden;}
+    .axe-card:nth-child(5){grid-column:span 2;}
+    .axe-img{width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;background:linear-gradient(135deg,var(--blue-light),var(--blue-deep));}
+    .axe-card-body{padding:24px 28px 28px;position:relative;}
+    .axe-card::after{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--axe-color,var(--blue-mid));}
+    .axe-card:hover{box-shadow:0 16px 40px rgba(0,56,130,0.12);transform:translateY(-4px);}
+    .axe-num{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:var(--axe-color,var(--blue-mid));opacity:0.15;position:absolute;top:12px;right:20px;line-height:1;}
+    .axe-tag{font-size:11px;font-weight:700;color:var(--axe-color,var(--blue-mid));text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;}
+    .axe-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--text-dark);margin-bottom:14px;line-height:1.3;}
+    .axe-desc{font-size:14px;color:var(--text-body);line-height:1.6;margin-bottom:20px;}
+    .axe-actions{display:flex;flex-wrap:wrap;gap:6px;}
+    .axe-pill{background:var(--off-white);border:1px solid var(--border);color:var(--text-body);font-size:12px;padding:4px 10px;border-radius:20px;font-weight:500;}
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,10,30,0.7);z-index:200;align-items:center;justify-content:center;padding:20px;}
+    .modal-overlay.open{display:flex;}
+    .modal-box{background:var(--white);border-radius:16px;max-width:640px;width:100%;max-height:80vh;overflow-y:auto;padding:40px;position:relative;}
+    .modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;background:var(--off-white);border:none;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
+    .modal-close:hover{background:var(--gray-light);}
+    .modal-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--text-dark);margin-bottom:16px;}
+    .modal-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .modal-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text-body);line-height:1.6;}
+    .modal-list li::before{content:'✓';color:var(--blue-mid);font-weight:700;flex-shrink:0;margin-top:1px;}
+    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.programme-intro-grid{grid-template-columns:1fr;gap:40px;}.axes-header{grid-template-columns:1fr;gap:24px;}.axes-grid{grid-template-columns:1fr 1fr;}.axe-card:nth-child(5){grid-column:span 1;}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.axes-grid{grid-template-columns:1fr;}.modal-box{padding:24px;}.page-hero{padding:48px 0 40px;}.programme-intro{padding:48px 0;}.axes-section{padding:48px 0;}}
   </style>
 </head>
 
 <body>
-  <!-- HEADER -->
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+  
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo-wrap">
@@ -805,9 +153,9 @@
         <a href="index.html#accueil" class="nav-link">Accueil</a>
         
         <div class="nav-item">
-          <span class="nav-link">Gouvernement ▼</span>
+          <span class="nav-link" tabindex="0">Gouvernement ▾</span>
           <div class="nav-dropdown">
-            <a href="gouverneur.html">Le Gouverneur</a>
+            <a href="gouverneur.html" style="font-weight:700;color:var(--blue-deep);">Le Gouverneur</a>
             <a href="vice-gouverneur.html">Le Vice-Gouverneur</a>
             <a href="programme-2024-2028.html">Programme d'action du Gouvernement</a>
             <a href="cabinet.html">Cabinet du Gouverneur</a>
@@ -816,11 +164,13 @@
             <a href="secretariat-executif.html">Secrétariat Exécutif</a>
             <a href="secretariat-administratif.html">Secrétariat Administratif</a>
             <a href="service-courrier.html">Service Courrier</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="assemblee.html">Assemblée Provinciale</a>
           </div>
         </div>
 
         <div class="nav-item">
-          <span class="nav-link">Institutions ▼</span>
+          <span class="nav-link" tabindex="0">Institutions ▾</span>
           <div class="nav-dropdown">
             <a href="institutions.html">Institutions</a>
             <div class="nav-dropdown-divider"></div>
@@ -830,7 +180,7 @@
         </div>
 
         <div class="nav-item">
-          <span class="nav-link">Province ▼</span>
+          <span class="nav-link" tabindex="0">Province ▾</span>
           <div class="nav-dropdown">
             <a href="province.html">Profil de la Province</a>
             <a href="anciens-gouverneurs.html">Les Anciens Gouverneurs</a>
@@ -838,7 +188,7 @@
         </div>
 
         <div class="nav-item">
-          <span class="nav-link">Ministères ▼</span>
+          <span class="nav-link" tabindex="0">Ministères ▾</span>
           <div class="nav-dropdown">
             <a href="ministeres.html">Tous les Ministères</a>
             <div class="nav-dropdown-divider"></div>
@@ -856,7 +206,7 @@
         </div>
 
         <div class="nav-item">
-          <span class="nav-link">Villes ▼</span>
+          <span class="nav-link" tabindex="0">Villes ▾</span>
           <div class="nav-dropdown">
             <a href="villes.html">Vue d'ensemble</a>
             <div class="nav-dropdown-divider"></div>
@@ -868,7 +218,7 @@
         </div>
 
         <div class="nav-item">
-          <span class="nav-link">Territoires ▼</span>
+          <span class="nav-link" tabindex="0">Territoires ▾</span>
           <div class="nav-dropdown">
             <a href="territoires.html">Vue d'ensemble</a>
             <div class="nav-dropdown-divider"></div>
@@ -884,7 +234,7 @@
         </div>
 
         <div class="nav-item">
-          <span class="nav-link">Publications ▼</span>
+          <span class="nav-link" tabindex="0">Publications ▾</span>
           <div class="nav-dropdown">
             <a href="toutes-les-actualites.html">Actualités récentes</a>
             <a href="videotheque.html">Vidéothèque</a>
@@ -898,13 +248,106 @@
 
         <a href="contact.html" class="nav-cta">Contact</a>
       </nav>
+
+      <button class="menu-toggle" id="menu-toggle" onclick="var nav=document.getElementById('mobile-nav');nav.classList.toggle('open');this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Navigation mobile">
+      <div class="mobile-nav-header">
+        <span class="mobile-nav-title">Menu</span>
+        <button class="mobile-nav-close" onclick="var nav=document.getElementById('mobile-nav');nav.classList.remove('open');var t=document.getElementById('menu-toggle');t.classList.remove('open');t.setAttribute('aria-expanded','false')">×</button>
+      </div>
+      <div class="mobile-nav-body">
+        <a href="index.html#accueil" class="mnav-link">Accueil</a>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Gouvernement <span class="mnav-arrow">▾</span></button>
+          <div class="mnav-group-items">
+            <a href="gouverneur.html" class="mnav-item">Le Gouverneur</a>
+            <a href="vice-gouverneur.html" class="mnav-item">Le Vice-Gouverneur</a>
+            <a href="programme-2024-2028.html" class="mnav-item">Programme d'action du Gouvernement</a>
+            <a href="cabinet.html" class="mnav-item">Cabinet du Gouverneur</a>
+            <a href="membres-cabinet.html" class="mnav-item">Les Ministres Provinciaux</a>
+            <a href="secretariat-executif.html" class="mnav-item">Secrétariat Exécutif</a>
+            <a href="secretariat-administratif.html" class="mnav-item">Secrétariat Administratif</a>
+            <a href="service-courrier.html" class="mnav-item">Service Courrier</a>
+            <a href="assemblee.html" class="mnav-item">Assemblée Provinciale</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Institutions <span class="mnav-arrow">▾</span></button>
+          <div class="mnav-group-items">
+            <a href="institutions.html" class="mnav-item">Institutions</a>
+            <a href="gouvernement.html" class="mnav-item">Gouvernement Provincial</a>
+            <a href="assemblee.html" class="mnav-item">Assemblée Provinciale</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Province <span class="mnav-arrow">▾</span></button>
+          <div class="mnav-group-items">
+            <a href="province.html" class="mnav-item">Profil de la Province</a>
+            <a href="anciens-gouverneurs.html" class="mnav-item">Les Anciens Gouverneurs</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Ministères <span class="mnav-arrow">▾</span></button>
+          <div class="mnav-group-items">
+            <a href="ministeres.html" class="mnav-item">Tous les Ministères</a>
+            <a href="ministere-interieur.html" class="mnav-item">Intérieur &amp; Sécurité</a>
+            <a href="ministere-finances.html" class="mnav-item">Finances &amp; Économie</a>
+            <a href="ministere-plan.html" class="mnav-item">Plan &amp; Budget</a>
+            <a href="ministere-infrastructures.html" class="mnav-item">Infrastructures</a>
+            <a href="ministere-justice.html" class="mnav-item">Justice</a>
+            <a href="ministere-agriculture.html" class="mnav-item">Agriculture</a>
+            <a href="ministere-transports.html" class="mnav-item">Transports</a>
+            <a href="ministere-mines.html" class="mnav-item">Mines &amp; Énergie</a>
+            <a href="ministere-education.html" class="mnav-item">Éducation</a>
+            <a href="ministere-sante.html" class="mnav-item">Santé</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Villes <span class="mnav-arrow">▾</span></button>
+          <div class="mnav-group-items">
+            <a href="villes.html" class="mnav-item">Vue d'ensemble</a>
+            <a href="territoire-bukavu.html" class="mnav-item">Bukavu</a>
+            <a href="territoire-uvira-ville.html" class="mnav-item">Uvira</a>
+            <a href="territoire-baraka.html" class="mnav-item">Baraka</a>
+            <a href="territoire-kamituga.html" class="mnav-item">Kamituga</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Territoires <span class="mnav-arrow">▾</span></button>
+          <div class="mnav-group-items">
+            <a href="territoires.html" class="mnav-item">Vue d'ensemble</a>
+            <a href="territoire-fizi.html" class="mnav-item">Fizi</a>
+            <a href="territoire-idjwi.html" class="mnav-item">Idjwi</a>
+            <a href="territoire-kabare.html" class="mnav-item">Kabare</a>
+            <a href="territoire-kalehe.html" class="mnav-item">Kalehe</a>
+            <a href="territoire-mwenga.html" class="mnav-item">Mwenga</a>
+            <a href="territoire-shabunda.html" class="mnav-item">Shabunda</a>
+            <a href="territoire-uvira.html" class="mnav-item">Uvira</a>
+            <a href="territoire-walungu.html" class="mnav-item">Walungu</a>
+          </div>
+        </div>
+        <div class="mnav-group">
+          <button class="mnav-group-btn" aria-expanded="false">Publications <span class="mnav-arrow">▾</span></button>
+          <div class="mnav-group-items">
+            <a href="toutes-les-actualites.html" class="mnav-item">Actualités récentes</a>
+            <a href="videotheque.html" class="mnav-item">Vidéothèque</a>
+            <a href="arretes-provinciaux.html" class="mnav-item">Arrêtés provinciaux</a>
+            <a href="notes-de-service.html" class="mnav-item">Notes de service</a>
+            <a href="notes-circulaires.html" class="mnav-item">Notes circulaires</a>
+            <a href="communiques-de-presse.html" class="mnav-item">Communiqués de presse</a>
+          </div>
+        </div>
+        <a href="contact.html" class="mnav-cta">Contact</a>
+      </div>
     </div>
   </header>
 
-  <!-- FLAG STRIP -->
   <div class="flag-strip"></div>
 
-  <!-- PAGE HERO -->
   <section class="page-hero" id="main">
     <div class="section-inner">
       <div class="page-hero-content">
@@ -921,7 +364,6 @@
   </section>
 
   <main id="main-content">
-    <!-- INTRO SECTION -->
     <section class="programme-intro">
       <div class="section-inner">
         <div class="programme-intro-grid">
@@ -955,7 +397,6 @@
       </div>
     </section>
 
-    <!-- AXES STRATEGIQUES -->
     <section class="axes-section" id="secteurs">
       <div class="section-inner">
         <div class="axes-header">
@@ -969,84 +410,77 @@
         </div>
 
         <div class="axes-grid">
-          <!-- AXE 1 -->
           <div class="axe-card" style="--axe-color:#003882;" onclick="openModal('axe1')">
-            <div class="axe-img" style="background: linear-gradient(135deg, #1a3a6b, #003882);"></div>
+            <div class="axe-img" style="background:linear-gradient(135deg,#1a3a6b,#003882);"></div>
             <div class="axe-card-body">
               <span class="axe-num">01</span>
               <div class="axe-tag">Axe 1 — Gouvernance</div>
               <div class="axe-title">Instaurer une gouvernance transparente et un leadership efficace</div>
-              <div class="axe-desc">Refonder l'administration publique, assurer la sécurité des personnes et optimiser la mobilisation des ressources provinciales grâce à des mécanismes de contrôle transparent.</div>
+              <div class="axe-desc">Refonder l'administration publique, assurer la sécurité des personnes et optimiser la mobilisation des ressources provinciales.</div>
               <div class="axe-actions">
                 <span class="axe-pill">Leadership</span>
                 <span class="axe-pill">Sécurité</span>
-                <span class="axe-pill">Finances publiques</span>
-                <span class="axe-pill">Administration</span>
+                <span class="axe-pill">Finances</span>
               </div>
             </div>
           </div>
 
-          <!-- AXE 2 -->
           <div class="axe-card" style="--axe-color:#1a7a2e;" onclick="openModal('axe2')">
-            <div class="axe-img" style="background: linear-gradient(135deg, #2a8a40, #1a5c2a);"></div>
+            <div class="axe-img" style="background:linear-gradient(135deg,#2a8a40,#1a5c2a);"></div>
             <div class="axe-card-body">
               <span class="axe-num">02</span>
               <div class="axe-tag">Axe 2 — Économie</div>
               <div class="axe-title">Relancer le secteur productif et assurer l'emploi</div>
-              <div class="axe-desc">Redynamiser l'agriculture, rationaliser les activités minières, développer le tourisme et le commerce transfrontalier, et soutenir les PME.</div>
+              <div class="axe-desc">Redynamiser l'agriculture, les mines, développer le tourisme et le commerce transfrontalier.</div>
               <div class="axe-actions">
                 <span class="axe-pill">Agriculture</span>
                 <span class="axe-pill">Mines</span>
-                <span class="axe-pill">Tourisme</span>
                 <span class="axe-pill">Commerce</span>
               </div>
             </div>
           </div>
 
-          <!-- AXE 3 -->
           <div class="axe-card" style="--axe-color:#b83200;" onclick="openModal('axe3')">
-            <div class="axe-img" style="background: linear-gradient(135deg, #C8102E, #7a3800);"></div>
+            <div class="axe-img" style="background:linear-gradient(135deg,#C8102E,#7a3800);"></div>
             <div class="axe-card-body">
               <span class="axe-num">03</span>
               <div class="axe-tag">Axe 3 — Services de base</div>
               <div class="axe-title">Améliorer l'accès aux services sociaux et renforcer le capital humain</div>
-              <div class="axe-desc">Maintenir la compétitivité éducative, rendre les services de santé accessibles à tous les niveaux et améliorer les voies de communication.</div>
+              <div class="axe-desc">Éducation de qualité, santé accessible, infrastructure routière améliorée.</div>
               <div class="axe-actions">
                 <span class="axe-pill">Éducation</span>
                 <span class="axe-pill">Santé</span>
-                <span class="axe-pill">Infrastructure routière</span>
+                <span class="axe-pill">Routes</span>
               </div>
             </div>
           </div>
 
-          <!-- AXE 4 -->
           <div class="axe-card" style="--axe-color:#6a1a8a;" onclick="openModal('axe4')">
-            <div class="axe-img" style="background: linear-gradient(135deg, #8a3aa3, #6a1a8a);"></div>
+            <div class="axe-img" style="background:linear-gradient(135deg,#8a3aa3,#6a1a8a);"></div>
             <div class="axe-card-body">
               <span class="axe-num">04</span>
               <div class="axe-tag">Axe 4 — Infrastructures</div>
               <div class="axe-title">Revitaliser le réseau provincial d'infrastructures</div>
-              <div class="axe-desc">Désenclavement des territoires par la construction et la réhabilitation des routes, l'aménagement des ports et des aérodromes.</div>
+              <div class="axe-desc">Routes, ports, aérodromes et désenclavement des territoires.</div>
               <div class="axe-actions">
-                <span class="axe-pill">Routes nationales</span>
-                <span class="axe-pill">Routes provinciales</span>
+                <span class="axe-pill">Routes</span>
+                <span class="axe-pill">Ports</span>
                 <span class="axe-pill">Aérodromes</span>
               </div>
             </div>
           </div>
 
-          <!-- AXE 5 -->
           <div class="axe-card" style="--axe-color:#CE8A00;" onclick="openModal('axe5')">
-            <div class="axe-img" style="background: linear-gradient(135deg, #F5B800, #CE8A00);"></div>
+            <div class="axe-img" style="background:linear-gradient(135deg,#F5B800,#CE8A00);"></div>
             <div class="axe-card-body">
               <span class="axe-num">05</span>
               <div class="axe-tag">Axe 5 — Cadre de vie</div>
               <div class="axe-title">Améliorer le cadre de vie des populations du Sud-Kivu</div>
-              <div class="axe-desc">Accroître la desserte en eau potable et en électricité, lutter contre la pollution, moderniser l'habitat et développer la culture et le sport.</div>
+              <div class="axe-desc">Eau, électricité, habitat, environnement et culture.</div>
               <div class="axe-actions">
                 <span class="axe-pill">Eau &amp; Électricité</span>
-                <span class="axe-pill">Assainissement</span>
-                <span class="axe-pill">Habitat &amp; Urbanisme</span>
+                <span class="axe-pill">Habitat</span>
+                <span class="axe-pill">Environnement</span>
               </div>
             </div>
           </div>
@@ -1055,7 +489,6 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="section-inner">
       <div class="footer-grid">
@@ -1072,13 +505,17 @@
           <p class="footer-desc">Le Gouvernement Provincial du Sud-Kivu s'engage pour l'émergence de la province à travers un programme ambitieux de développement 2024-2028.</p>
         </div>
         <div class="footer-col">
-          <h4>Ministères</h4>
+          <h4>Programme</h4>
           <ul class="footer-links">
-            <li><a href="ministeres.html">Tous les ministères</a></li>
-            <li><a href="ministere-interieur.html">Intérieur &amp; Sécurité</a></li>
-            <li><a href="ministere-finances.html">Finances &amp; Économie</a></li>
-            <li><a href="ministere-plan.html">Plan &amp; Budget</a></li>
-            <li><a href="ministere-infrastructures.html">Infrastructures</a></li>
+            <li><a href="programme-2024-2028.html">Programme d'Action</a></li>
+            <li><a href="programme-2024-2028.html#secteurs">Axes Stratégiques</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Province</h4>
+          <ul class="footer-links">
+            <li><a href="province.html">Profil géographique</a></li>
+            <li><a href="territoires.html">8 Territoires</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1086,23 +523,14 @@
           <ul class="footer-links">
             <li><a href="gouverneur.html">Le Gouverneur</a></li>
             <li><a href="vice-gouverneur.html">Le Vice-Gouverneur</a></li>
-            <li><a href="cabinet.html">Cabinet du Gouverneur</a></li>
-            <li><a href="membres-cabinet.html">Les Ministres Provinciaux</a></li>
-            <li><a href="assemblee.html">Assemblée Provinciale</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Province</h4>
-          <ul class="footer-links">
-            <li><a href="territoires.html">Territoires</a></li>
-            <li><a href="province.html">Profil géographique</a></li>
-            <li><a href="programme-2024-2028.html">Programme d'Action</a></li>
-            <li><a href="programme-2024-2028.html#secteurs">Axes Stratégiques</a></li>
+            <li><a href="cabinet.html">Cabinet</a></li>
+            <li><a href="membres-cabinet.html">Les Ministres</a></li>
+            <li><a href="assemblee.html">Assemblée</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Gouvernement Provincial du Sud-Kivu — République Démocratique du Congo</span>
+        <span>&copy; 2025 Gouvernement Provincial du Sud-Kivu — RDC</span>
         <div class="footer-bottom-links">
           <a href="#">Mentions légales</a>
           <a href="#">Accessibilité</a>
@@ -1113,106 +541,100 @@
   </footer>
 
   <!-- MODALS -->
-  <!-- Modal AXE 1 -->
   <div class="modal-overlay" id="modal-axe1" onclick="closeModal('axe1')">
     <div class="modal-box" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal('axe1')">×</button>
       <div class="axe-tag" style="color:var(--blue-deep);">Axe 1 — Gouvernance &amp; Leadership</div>
-      <div class="modal-title">Instaurer une gouvernance transparente au service du développement</div>
+      <div class="modal-title">Instaurer une gouvernance transparente</div>
       <ul class="modal-list">
-        <li>Déléguer effectivement certaines prérogatives au vice-Gouverneur pour fluidifier les prises de décision</li>
-        <li>Imposer un contrôle citoyen dans la gestion de la chose publique par la transparence des recettes et dépenses</li>
-        <li>Rendre public annuellement les édits provinciaux, notamment l'édit sur la reddition des comptes</li>
-        <li>Restaurer la solvabilité et la crédibilité de la Province auprès des partenaires</li>
-        <li>Instaurer une gestion axée sur le résultat, contrats de performance pour tous les agents administratifs</li>
-        <li>Réorganiser et réformer les services en charge de la lutte anti-corruption</li>
-        <li>Numériser, bancariser et imposer un guichet unique pour toutes les transactions financières de la Province</li>
-        <li>Renforcer les capacités de la police de proximité et coordonner l'action des services de sécurité</li>
-        <li>Promouvoir le dialogue entre les communautés en vue de renforcer la cohésion sociale</li>
-        <li>Auditer l'administration publique provinciale et engager des contrôles physiques pour éliminer le personnel fictif</li>
+        <li>Déléguer effectivement certaines prérogatives au vice-Gouverneur</li>
+        <li>Imposer un contrôle citoyen par la transparence des recettes et dépenses</li>
+        <li>Rendre public annuellement les édits provinciaux</li>
+        <li>Restaurer la solvabilité et la crédibilité de la Province</li>
+        <li>Instaurer une gestion axée sur le résultat</li>
+        <li>Réorganiser et réformer les services anti-corruption</li>
+        <li>Numériser et bancariser les transactions financières</li>
+        <li>Renforcer les capacités de la police de proximité</li>
+        <li>Promouvoir le dialogue entre les communautés</li>
+        <li>Auditer l'administration publique provinciale</li>
       </ul>
     </div>
   </div>
 
-  <!-- Modal AXE 2 -->
   <div class="modal-overlay" id="modal-axe2" onclick="closeModal('axe2')">
     <div class="modal-box" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal('axe2')">×</button>
       <div class="axe-tag" style="color:#1a7a2e;">Axe 2 — Secteur Productif &amp; Emploi</div>
-      <div class="modal-title">Relancer le secteur productif et assurer l'emploi</div>
+      <div class="modal-title">Relancer le secteur productif</div>
       <ul class="modal-list">
         <li>Auditer le secteur foncier, immobilier et urbanistique</li>
-        <li>Organiser les communautés agricoles et les appuyer en ressources financières, kits et semences</li>
-        <li>Renforcer la collaboration avec l'IITA et réhabiliter l'INERA</li>
+        <li>Organiser les communautés agricoles avec ressources financières</li>
+        <li>Renforcer la collaboration avec l'IITA</li>
         <li>Relancer la sucrerie de Kiliba et la laiterie de Bushi</li>
-        <li>Auditer le secteur minier et créer une société minière provinciale pour protéger les intérêts locaux</li>
-        <li>Renforcer les brigades anti-fraude minières et organiser l'activité des coopératives artisanales</li>
-        <li>Développer les infrastructures touristiques dans les parcs nationaux</li>
-        <li>Créer une société de transports lacustres (Taxi-Bateau) sur les Lacs Kivu et Tanganyika</li>
-        <li>Réglementer et organiser le commerce transfrontalier</li>
+        <li>Auditer le secteur minier et créer une société minière provinciale</li>
+        <li>Renforcer les brigades anti-fraude minières</li>
+        <li>Développer les infrastructures touristiques</li>
+        <li>Créer une société de transports lacustres</li>
+        <li>Réglementer le commerce transfrontalier</li>
       </ul>
     </div>
   </div>
 
-  <!-- Modal AXE 3 -->
   <div class="modal-overlay" id="modal-axe3" onclick="closeModal('axe3')">
     <div class="modal-box" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal('axe3')">×</button>
       <div class="axe-tag" style="color:#b83200;">Axe 3 — Services Sociaux &amp; Capital Humain</div>
-      <div class="modal-title">Améliorer l'accès aux services sociaux de base</div>
+      <div class="modal-title">Améliorer l'accès aux services sociaux</div>
       <ul class="modal-list">
         <li>Organiser des inspections ponctuelles et régulières des écoles</li>
-        <li>Alléger la charge des frais liés aux épreuves des examens d'État</li>
-        <li>Mettre en place un programme de bourses du gouvernement provincial pour soutenir les élèves et étudiants les plus méritants</li>
-        <li>Protéger les bâtiments publics et scolaires contre la spoliation</li>
-        <li>Réhabiliter les écoles emblématiques : Lycée Nyakavogo, ITFM, etc.</li>
-        <li>Construire et réhabiliter les centres hospitaliers dans les zones les plus enclavées</li>
-        <li>Mettre en place des plans d'actions et de préventions des maladies épidémiques</li>
+        <li>Alléger la charge des frais aux examens d'État</li>
+        <li>Mettre en place un programme de bourses gouvernemental</li>
+        <li>Protéger les bâtiments publics et scolaires</li>
+        <li>Réhabiliter les écoles emblématiques</li>
+        <li>Construire et réhabiliter les centres hospitaliers</li>
+        <li>Mettre en place des plans de prévention des maladies</li>
         <li>Auditer le secteur des infrastructures routières</li>
-        <li>Construire et réhabiliter les infrastructures routières</li>
+        <li>Draguer les biefs navigables</li>
       </ul>
     </div>
   </div>
 
-  <!-- Modal AXE 4 -->
   <div class="modal-overlay" id="modal-axe4" onclick="closeModal('axe4')">
     <div class="modal-box" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal('axe4')">×</button>
-      <div class="axe-tag" style="color:#6a1a8a;">Axe 4 — Infrastructures &amp; Voies de Communication</div>
-      <div class="modal-title">Revitaliser le réseau provincial d'infrastructures</div>
+      <div class="axe-tag" style="color:#6a1a8a;">Axe 4 — Infrastructures &amp; Transport</div>
+      <div class="modal-title">Revitaliser le réseau d'infrastructures</div>
       <ul class="modal-list">
-        <li>Auditer le secteur des infrastructures pour connaître l'état des routes</li>
-        <li>Faire un suivi strict et régulier des chantiers en cours</li>
-        <li>Construire, réhabiliter et entretenir les infrastructures routières</li>
-        <li>Mettre en place des vrais partenariats publics-privés pour l'aménagement routier</li>
-        <li>Aménager et draguer les biefs navigables (Port Kalundu, Ruzizi, etc.)</li>
-        <li>Réhabiliter les aéroports, les aérodromes et les pistes secondaires</li>
-        <li>Créer 4 parkings, des gares centrales dans nos villes principales</li>
-        <li>Placement des caméras de surveillance et construction de passerelles</li>
-        <li>Améliorer le dispositif de signalisation routière et d'éclairage public</li>
+        <li>Auditer le secteur des infrastructures routières</li>
+        <li>Faire un suivi strict des chantiers en cours</li>
+        <li>Construire, réhabiliter et entretenir les routes</li>
+        <li>Mettre en place des partenariats publics-privés</li>
+        <li>Aménager et draguer les biefs navigables</li>
+        <li>Réhabiliter les aéroports et aérodromes</li>
+        <li>Créer des parkings et gares centrales</li>
+        <li>Placement des caméras de surveillance</li>
+        <li>Améliorer la signalisation routière</li>
       </ul>
     </div>
   </div>
 
-  <!-- Modal AXE 5 -->
   <div class="modal-overlay" id="modal-axe5" onclick="closeModal('axe5')">
     <div class="modal-box" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal('axe5')">×</button>
       <div class="axe-tag" style="color:#CE8A00;">Axe 5 — Cadre de Vie &amp; Environnement</div>
-      <div class="modal-title">Améliorer le cadre de vie des populations du Sud-Kivu</div>
+      <div class="modal-title">Améliorer le cadre de vie</div>
       <ul class="modal-list">
-        <li>Mettre en valeur le potentiel des centrales provinciales (Chute de Tshibati, Kabare, Malicha)</li>
-        <li>Électrifier la ville de Baraka, l'unique ville non électrifiée du Sud-Kivu</li>
-        <li>Accroître les capacités de production d'eau par les forages à haute intensité</li>
-        <li>Assurer le contrôle de la conformité des fabricants d'eau minérale en bouteille</li>
-        <li>Plaidoyer pour la relance des centrales hydroélectriques de Ruzizi 3 et 4</li>
+        <li>Mettre en valeur le potentiel des centrales provinciales</li>
+        <li>Électrifier la ville de Baraka</li>
+        <li>Accroître la production d'eau par les forages</li>
+        <li>Assurer le contrôle des fabricants d'eau minérale</li>
+        <li>Relancer les centrales hydroélectriques de Ruzizi</li>
         <li>Mettre en place un service d'hygiène et assainissement</li>
-        <li>Auditer le secteur de l'urbanisme et réhabiliter l'État dans ses droits sur l'habitat</li>
-        <li>Rendre conforme les opérations de lotissement dans les règles de l'urbanisme</li>
-        <li>Appuyer les initiatives de lutte contre les catastrophes naturelles</li>
-        <li>Assurer la récupération et la protection des espaces verts dans les villes</li>
-        <li>Organiser des campagnes de reboisement et plantée un million d'arbres</li>
-        <li>Reconstruire et réhabiliter les infrastructures sportives</li>
+        <li>Auditer le secteur de l'urbanisme</li>
+        <li>Rendre conforme les lotissements</li>
+        <li>Appuyer la lutte contre les catastrophes naturelles</li>
+        <li>Organiser des campagnes de reboisement</li>
+        <li>Réhabiliter les infrastructures sportives</li>
       </ul>
     </div>
   </div>
@@ -1229,7 +651,6 @@
       document.body.style.overflow = '';
     }
 
-    // Close modal with Escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         document.querySelectorAll('.modal-overlay.open').forEach(function(m) {
@@ -1237,6 +658,22 @@
         });
         document.body.style.overflow = '';
       }
+    });
+
+    document.querySelectorAll('.mnav-group-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.mnav-group-btn').forEach(function(b) {
+          b.setAttribute('aria-expanded', 'false');
+          var items = b.parentElement.querySelector('.mnav-group-items');
+          if (items) items.classList.remove('open');
+        });
+        if (!expanded) {
+          this.setAttribute('aria-expanded', 'true');
+          var items = this.parentElement.querySelector('.mnav-group-items');
+          if (items) items.classList.add('open');
+        }
+      });
     });
   </script>
 </body>
