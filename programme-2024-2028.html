@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Programme d'Actions 2024–2028 — Province du Sud-Kivu</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  
-  <style>
-    :root { --blue-deep:#003882;--blue-mid:#0052B4;--blue-light:#1A6FD4;--gold:#CE8A00;--gold-light:#F5B800;--red-drc:#C8102E;--white:#FFFFFF;--off-white:#F4F6FA;--gray-light:#E8ECF3;--gray-mid:#8D9BB5;--gray-dark:#3A4561;--text-dark:#1C2340;--text-body:#3A4561;--border:rgba(0,56,130,0.12);}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Programme d&#x2019;Actions 2024&ndash;2028 &mdash; Province du Sud-Kivu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<style>
+
+
+    :root { --blue-deep:#003882;--blue-mid:#0052B4;--blue-light:#1A6FD4;--gold:#CE8A00;--gold-light:#F5B800;--red-drc:#C8102E;--white:#FFFFFF;--off-white:#F4F6FA;--gray-light:#E8ECF3;--gray-mid:#8D9BB5;--gray-dark:#3A4561;--text-dark:#1C2340;--text-body:#3A4561;--border:rgba(0,56,130,0.12); }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{font-family:'Source Sans 3',sans-serif;color:var(--text-body);background:var(--white);line-height:1.65;overflow-x:hidden;}
     a{text-decoration:none;color:inherit;}
     img{max-width:100%;display:block;}
     p{font-family:'Open Sans',sans-serif;}li{font-family:'Open Sans',sans-serif;}h2,h3,h4,h5,h6{font-family:'Open Sans',sans-serif;}
+    .topbar{background:var(--blue-deep);color:rgba(255,255,255,0.75);font-size:12px;font-weight:600;letter-spacing:0.04em;padding:7px 0;text-transform:uppercase;}
+    .topbar-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+    .topbar-left{display:flex;align-items:center;gap:16px;}
+    .topbar-sep{opacity:0.3;}
+    .topbar-right{display:flex;gap:20px;}
+    .topbar-right a:hover{color:var(--gold-light);}
     header{background:var(--white);box-shadow:0 2px 16px rgba(0,56,130,0.10);position:sticky;top:0;z-index:100;}
     .header-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;}
     .logo-wrap{display:flex;align-items:center;gap:14px;}
-    .logo-emblem{width:54px;height:54px;background:var(--blue-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--gold-light);flex-shrink:0;overflow:hidden;}
-    .logo-emblem img{width:100%;height:100%;border-radius:50%;object-fit:cover;}
+    .logo-emblem{width:54px;height:54px;background:var(--blue-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--gold-light);flex-shrink:0;}
     .logo-text{line-height:1.2;}
     .logo-text .province{font-family:'Oswald',sans-serif;font-size:17px;font-weight:500;color:var(--blue-deep);letter-spacing:-0.01em;text-transform:uppercase;}
     .logo-text .country{font-size:11px;color:var(--gray-mid);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;}
     nav{display:flex;align-items:center;gap:4px;}
-    .nav-link{font-family:'Oswald',sans-serif;font-size:16px;font-weight:500;color:var(--text-dark);padding:8px 14px;border-radius:6px;transition:background 0.2s,color 0.2s;text-transform:uppercase;letter-spacing:0.01em;cursor:pointer;user-select:none;}
+    .nav-link{font-family:'Oswald',sans-serif;font-size:13.5px;font-weight:500;color:var(--text-dark);padding:8px 14px;border-radius:6px;transition:background 0.2s,color 0.2s;text-transform:uppercase;letter-spacing:0.01em;}
     .nav-link:hover,.nav-link.active{background:var(--blue-deep);color:var(--white);}
-    .nav-cta{background:var(--gold);color:var(--white);padding:8px 18px;border-radius:6px;font-size:16px;font-weight:700;text-transform:uppercase;margin-left:8px;transition:background 0.2s;display:inline-block;}
+    .nav-cta{background:var(--gold);color:var(--white);padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-transform:uppercase;margin-left:8px;transition:background 0.2s;}
     .nav-cta:hover{background:var(--gold-light);color:var(--text-dark);}
     .menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px;}
     .menu-toggle span{display:block;width:24px;height:2px;background:var(--blue-deep);border-radius:2px;transition:transform 0.3s,opacity 0.3s;}
     .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
     .menu-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0);}
     .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-    .flag-strip{height:6.25px;background:linear-gradient(90deg,rgb(0,127,255) 33%,rgb(206,16,33) 33%,rgb(206,16,33) 66%,rgb(247,214,24) 66%);}
+    .flag-strip{height:5px;background:linear-gradient(90deg,var(--blue-mid) 33%,var(--red-drc) 33%,var(--red-drc) 66%,var(--gold) 66%);}
     .section-inner{max-width:1240px;margin:0 auto;padding:0 24px;}
+    .section-label{font-size:12px;font-weight:700;color:var(--blue-mid);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);font-weight:700;color:var(--text-dark);line-height:1.2;margin-bottom:8px;}
+    .section-title span{color:var(--blue-mid);}
+    .section-sub{font-size:16px;color:var(--gray-mid);margin-bottom:40px;}
     .page-hero{background:linear-gradient(135deg,#002255 0%,#001840 55%,#001030 100%);color:var(--white);padding:72px 0 64px;position:relative;overflow:hidden;}
     .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(245,184,0,0.12) 0%,transparent 60%);}
     .page-hero-content{position:relative;z-index:1;max-width:700px;}
-    .page-hero .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,184,0,0.18);border:1px solid rgba(245,184,0,0.4);color:var(--gold-light);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:24px;}
+    .page-hero .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,184,0,0.18);border:1px solid rgba(245,184,0,0.4);color:var(--gold-light);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px;}
     .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.1;margin-bottom:18px;letter-spacing:-0.02em;}
     .page-hero h1 span{color:var(--gold-light);}
     .page-hero-desc{font-size:16px;line-height:1.7;color:rgba(255,255,255,0.82);margin-bottom:24px;}
     .page-breadcrumb{font-size:13px;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:8px;}
-    .page-breadcrumb a{color:rgba(255,255,255,0.65);transition:color 0.2s;}
+    .page-breadcrumb a{color:rgba(255,255,255,0.65);}
     .page-breadcrumb a:hover{color:var(--gold-light);}
     .nav-item{position:relative;}
-    .nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,56,130,0.12);min-width:240px;z-index:1000;}
-    .nav-item:hover .nav-dropdown{display:block;}
-    .nav-dropdown a{display:block;padding:10px 18px;font-size:16px;font-family:'Oswald',sans-serif;font-weight:500;color:var(--text-dark);transition:background 0.15s,color 0.15s;}
+    .nav-item>.nav-link{cursor:pointer;user-select:none;}
+    .nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 32px rgba(0,56,130,0.14);min-width:230px;padding:8px 0;z-index:200;}
+    .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{display:block;}
+    .nav-dropdown a{display:block;padding:10px 18px;font-size:13.5px;font-family:'Oswald',sans-serif;font-weight:500;color:var(--text-dark);transition:background 0.15s,color 0.15s;}
     .nav-dropdown a:hover{background:var(--off-white);color:var(--blue-deep);}
     .nav-dropdown-divider{height:1px;background:var(--border);margin:6px 0;}
     footer{background:#050E1F;color:rgba(255,255,255,0.7);padding:64px 0 0;}
@@ -64,7 +74,7 @@
     .footer-links li a:hover{color:var(--gold-light);}
     .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding:20px 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,0.35);}
     .footer-bottom-links{display:flex;gap:20px;}
-    .footer-bottom-links a{color:rgba(255,255,255,0.35);transition:color 0.2s;}
+    .footer-bottom-links a{color:rgba(255,255,255,0.35);}
     .footer-bottom-links a:hover{color:var(--gold-light);}
     .mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--white);z-index:999;flex-direction:column;overflow:hidden;}
     .mobile-nav.open{display:flex;}
@@ -78,7 +88,7 @@
     .mnav-cta{display:block;margin:16px 20px 8px;padding:12px 20px;background:var(--gold);color:var(--white);border-radius:6px;font-size:13.5px;font-weight:700;text-transform:uppercase;text-align:center;transition:background 0.2s;}
     .mnav-cta:hover{background:var(--gold-light);color:var(--text-dark);}
     .mnav-group{border-bottom:1px solid var(--border);}
-    .mnav-group-btn{display:flex;width:100%;align-items:center;justify-content:space-between;padding:14px 20px;background:none;border:none;font-size:13.5px;font-weight:700;color:var(--text-dark);text-transform:uppercase;letter-spacing:0.04em;cursor:pointer;transition:background 0.15s,color 0.15s;}
+    .mnav-group-btn{display:flex;width:100%;align-items:center;justify-content:space-between;padding:14px 20px;background:none;border:none;font-size:13.5px;font-weight:700;color:var(--text-dark);text-transform:uppercase;letter-spacing:0.04em;cursor:pointer;transition:background 0.15s,color 0.15s;font-family:inherit;}
     .mnav-group-btn:hover,.mnav-group-btn[aria-expanded="true"]{background:var(--off-white);color:var(--blue-deep);}
     .mnav-arrow{transition:transform 0.25s;font-style:normal;}
     .mnav-group-btn[aria-expanded="true"] .mnav-arrow{transform:rotate(180deg);}
@@ -88,257 +98,426 @@
     .mnav-item:hover{background:var(--blue-deep);color:var(--white);}
     .skip-link{position:absolute;top:-60px;left:20px;background:var(--blue-deep);color:var(--white);padding:10px 20px;border-radius:0 0 8px 8px;font-weight:700;font-size:14px;z-index:9999;transition:top 0.2s;}
     .skip-link:focus{top:0;color:var(--white);}
-    .section-label{font-size:12px;font-weight:700;color:var(--blue-mid);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;}
-    .section-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);font-weight:700;color:var(--text-dark);line-height:1.2;margin-bottom:8px;}
-    .section-title span{color:var(--blue-mid);}
-    .section-sub{font-size:16px;color:var(--gray-mid);margin-bottom:40px;}
-    .programme-intro{padding:72px 0;background:var(--white);}
-    .programme-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
-    .programme-quote{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--text-dark);line-height:1.4;border-left:4px solid var(--gold);padding-left:24px;margin-bottom:24px;font-style:italic;}
-    .programme-quote strong{color:var(--gold-light);}
-    .programme-intro-grid p{font-size:15px;color:var(--text-body);line-height:1.75;margin-bottom:16px;}
-    .programme-intro-grid p.author{font-size:14px;color:var(--gray-mid);font-style:italic;}
-    .key-figures{background:linear-gradient(135deg,var(--blue-deep),#001840);border-radius:16px;padding:40px 36px;color:var(--white);}
-    .key-figures h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--gold-light);margin-bottom:28px;text-transform:uppercase;letter-spacing:0.08em;}
-    .figure-item{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1);}
-    .figure-item:last-child{border-bottom:none;}
-    .figure-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:var(--gold-light);flex-shrink:0;min-width:100px;line-height:1;}
-    .figure-label{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4;}
-    .figure-label strong{display:block;color:var(--white);font-weight:700;margin-bottom:2px;}
-    .axes-section{padding:80px 0;background:var(--off-white);}
-    .axes-header{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:56px;}
-    .axes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-    .axe-card{background:var(--white);border-radius:16px;padding:0;border:1px solid var(--border);transition:all 0.3s;cursor:pointer;position:relative;overflow:hidden;}
-    .axe-card:nth-child(5){grid-column:span 2;}
-    .axe-img{width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;background:linear-gradient(135deg,var(--blue-light),var(--blue-deep));}
-    .axe-card-body{padding:24px 28px 28px;position:relative;}
-    .axe-card::after{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--axe-color,var(--blue-mid));}
-    .axe-card:hover{box-shadow:0 16px 40px rgba(0,56,130,0.12);transform:translateY(-4px);}
-    .axe-num{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:var(--axe-color,var(--blue-mid));opacity:0.15;position:absolute;top:12px;right:20px;line-height:1;}
-    .axe-tag{font-size:11px;font-weight:700;color:var(--axe-color,var(--blue-mid));text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;}
-    .axe-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--text-dark);margin-bottom:14px;line-height:1.3;}
-    .axe-desc{font-size:14px;color:var(--text-body);line-height:1.6;margin-bottom:20px;}
-    .axe-actions{display:flex;flex-wrap:wrap;gap:6px;}
-    .axe-pill{background:var(--off-white);border:1px solid var(--border);color:var(--text-body);font-size:12px;padding:4px 10px;border-radius:20px;font-weight:500;}
-    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,10,30,0.7);z-index:200;align-items:center;justify-content:center;padding:20px;}
-    .modal-overlay.open{display:flex;}
-    .modal-box{background:var(--white);border-radius:16px;max-width:640px;width:100%;max-height:80vh;overflow-y:auto;padding:40px;position:relative;}
-    .modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;background:var(--off-white);border:none;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
-    .modal-close:hover{background:var(--gray-light);}
-    .modal-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--text-dark);margin-bottom:16px;}
-    .modal-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-    .modal-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text-body);line-height:1.6;}
-    .modal-list li::before{content:'✓';color:var(--blue-mid);font-weight:700;flex-shrink:0;margin-top:1px;}
-    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.programme-intro-grid{grid-template-columns:1fr;gap:40px;}.axes-header{grid-template-columns:1fr;gap:24px;}.axes-grid{grid-template-columns:1fr 1fr;}.axe-card:nth-child(5){grid-column:span 1;}}
-    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.axes-grid{grid-template-columns:1fr;}.modal-box{padding:24px;}.page-hero{padding:48px 0 40px;}.programme-intro{padding:48px 0;}.axes-section{padding:48px 0;}}
-  </style>
-</head>
+    .content-section{padding:72px 0;background:var(--white);}
+    .content-section.alt{background:var(--off-white);}
+    .content-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px;}
+    .content-text p{font-size:15px;color:var(--text-body);line-height:1.75;margin-bottom:16px;}
+    .info-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:8px;}
+    .info-list li{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--text-body);line-height:1.55;}
+    .info-list li::before{content:'\2713';color:var(--blue-mid);font-weight:700;flex-shrink:0;margin-top:1px;}
+    .info-box{background:linear-gradient(135deg,var(--blue-deep),#001840);border-radius:16px;padding:36px 32px;color:var(--white);}
+    .info-box h3{font-family:'Open Sans',sans-serif;font-size:20px;font-weight:700;margin-bottom:20px;}
+    .info-box h3 span{color:var(--gold-light);}
+    .info-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+    .info-item:last-child{border-bottom:none;}
+    .info-item-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+    .info-item-text{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.5;font-family:'Open Sans',sans-serif;}
+    .info-item-text strong{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;}
+    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}.topbar-right{display:none;}}
 
-<body>
-  <a href="#main" class="skip-link">Aller au contenu principal</a>
   
+/* ===== PROGRAMME AXES ===== */
+    .axes-section {
+      padding: 80px 0;
+      background: var(--off-white);
+    }
+    .axes-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+    .axes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .axe-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 0;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .axe-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 14px 14px 0 0;
+      display: block;
+    }
+    .axe-card-body {
+      padding: 24px 28px 28px;
+      position: relative;
+    }
+    .axe-card:first-child { grid-column: span 1; }
+    .axe-card:nth-child(5) { grid-column: span 2; }
+    .axe-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--axe-color, var(--blue-mid));
+      border-radius: 0 0 0 0;
+    }
+    .axe-card:hover { box-shadow: 0 16px 40px rgba(0,56,130,0.12); transform: translateY(-4px); }
+    .axe-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--axe-color, var(--blue-mid));
+      opacity: 0.15;
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      line-height: 1;
+    }
+    .axe-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--axe-color, var(--blue-mid));
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .axe-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .axe-desc {
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .axe-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+    .axe-pill {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      color: var(--text-body);
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+/* ===== MODAL (Axes detail) ===== */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,10,30,0.7);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--white);
+      border-radius: 16px;
+      max-width: 640px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 40px;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px; right: 16px;
+      width: 32px; height: 32px;
+      background: var(--off-white);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+    .modal-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .modal-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+    .modal-list li::before {
+      content: '✓';
+      color: var(--blue-mid);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    @media(max-width:960px) {
+      .axes-grid { grid-template-columns: 1fr 1fr; }
+      .axe-card:nth-child(5) { grid-column: span 1; }
+      .axes-header { grid-template-columns: 1fr; gap: 24px; }
+    }
+    @media(max-width:640px) {
+      .axes-grid { grid-template-columns: 1fr; }
+    }
+
+  /* Programme-specific styles */
+  .programme-intro {
+    padding: 72px 0;
+    background: var(--white);
+  }
+  .programme-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .programme-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.4;
+    border-left: 4px solid var(--gold);
+    padding-left: 24px;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  .key-figures {
+    background: linear-gradient(135deg,var(--blue-deep),#001840);
+    border-radius: 16px;
+    padding: 40px 36px;
+    color: var(--white);
+  }
+  .key-figures h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .figure-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .figure-item:last-child { border-bottom: none; }
+  .figure-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--gold-light);
+    flex-shrink: 0;
+    min-width: 100px;
+    line-height: 1;
+  }
+  .figure-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.4;
+  }
+  @media(max-width:1040px) {
+    .programme-intro-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <span>&#x1F1E8;&#x1F1E9; R&eacute;publique D&eacute;mocratique du Congo</span>
+        <span class="topbar-sep">|</span>
+        <span>Province du Sud-Kivu &mdash; Gouvernement Provincial</span>
+      </div>
+      <div class="topbar-right">
+        <a href="province.html">La Province</a>
+        <a href="programme-2024-2028.html">Programme 2024&ndash;2028</a>
+        <a href="index.html#governor">Le Gouverneur</a>
+        <a href="contact.html">Contacts</a>
+      </div>
+    </div>
+  </div>
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo-wrap">
-        <div class="logo-emblem">
-          <img src="https://sudkivu.cd/images/actualites/48f7a607-d3a6-4818-acfc-2a27e112e554.png" alt="Logo Sud-Kivu" />
-        </div>
+        <div class="logo-emblem" style="background:none; padding:0; overflow:hidden;"><img src="https://github.com/user-attachments/assets/47a9213d-48b5-46e7-a4b8-d572d2c6e33c" alt="Logo Sud-Kivu" style="width:54px; height:54px; object-fit:contain; border-radius:50%;"></div>
         <div class="logo-text">
           <div class="province">Province du Sud-Kivu</div>
           <div class="country">Gouvernement Provincial</div>
         </div>
       </a>
-
-      <nav>
+            <nav>
         <a href="index.html#accueil" class="nav-link">Accueil</a>
+        <a href="https://sudkivu.cd/toutes-les-actualites.html" class="nav-link">Actu</a>
+        <a href="province.html" class="nav-link">Province</a>
+        <a href="programme-2024-2028.html" class="nav-link active">Programme</a>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Institutions &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="institutions.html">&#x1F3DB;&#xFE0F; Institutions</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="gouvernement.html">&#x1F3DB;&#xFE0F; Gouvernement Provincial</a>
+            <a href="assemblee.html">&#x1F4DC; Assembl&eacute;e Provinciale</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Villes &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="villes.html">&#x1F3D9;&#xFE0F; Vue d&apos;ensemble</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="territoire-bukavu.html">&#x1F3D9;&#xFE0F; Bukavu</a>
+            <a href="territoire-uvira-ville.html">&#x1F3D9;&#xFE0F; Uvira</a>
+            <a href="territoire-baraka.html">&#x1F3D9;&#xFE0F; Baraka</a>
+            <a href="territoire-kamituga.html">&#x26CF;&#xFE0F; Kamituga</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Territoires &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="territoires.html">&#x1F5FA;&#xFE0F; Vue d&apos;ensemble</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="territoire-fizi.html">&#x1F30A; Fizi</a>
+            <a href="territoire-idjwi.html">&#x1F3DD;&#xFE0F; Idjwi</a>
+            <a href="territoire-kabare.html">&#x26F0;&#xFE0F; Kabare</a>
+            <a href="territoire-kalehe.html">&#x1F333; Kalehe</a>
+            <a href="territoire-mwenga.html">&#x1F332; Mwenga</a>
+            <a href="territoire-shabunda.html">&#x1F6B6; Shabunda</a>
+            <a href="territoire-uvira.html">&#x1F30A; Uvira</a>
+            <a href="territoire-walungu.html">&#x1F3D4;&#xFE0F; Walungu</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link" tabindex="0">Minist&#xe8;res &#x25BE;</span>
+          <div class="nav-dropdown">
+            <a href="ministeres.html">&#x1F3DB;&#xFE0F; Tous les Minist&#xe8;res</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="ministere-interieur.html">&#x1F6E1;&#xFE0F; Int&#xe9;rieur &amp; S&#xe9;curit&#xe9;</a>
+            <a href="ministere-finances.html">&#x1F4B0; Finances &amp; &#xC9;conomie</a>
+            <a href="ministere-plan.html">&#x1F4CA; Plan &amp; Budget</a>
+            <a href="ministere-infrastructures.html">&#x1F3D7;&#xFE0F; Infrastructures</a>
+            <a href="ministere-justice.html">&#x2696;&#xFE0F; Justice</a>
+            <a href="ministere-agriculture.html">&#x1F33E; Agriculture</a>
+            <a href="ministere-transports.html">&#x1F69A; Transports</a>
+            <a href="ministere-mines.html">&#x26CF;&#xFE0F; Mines &amp; &#xC9;nergie</a>
+            <a href="ministere-education.html">&#x1F4DA; &#xC9;ducation</a>
+            <a href="ministere-sante.html">&#x1F3E5; Sant&#xe9;</a>
+          </div>
+        </div>
         
         <div class="nav-item">
-          <span class="nav-link" tabindex="0">Gouvernement ▾</span>
+          <span class="nav-link" tabindex="0">Cabinet &#x25BE;</span>
           <div class="nav-dropdown">
-            <a href="gouverneur.html" style="font-weight:700;color:var(--blue-deep);">Le Gouverneur</a>
-            <a href="vice-gouverneur.html">Le Vice-Gouverneur</a>
-            <a href="programme-2024-2028.html">Programme d'action du Gouvernement</a>
-            <a href="cabinet.html">Cabinet du Gouverneur</a>
+            <a href="gouverneur.html">&#x1F464; Le Gouverneur</a>
+            <a href="vice-gouverneur.html">&#x1F464; Le Vice-Gouverneur</a>
+            <a href="cabinet.html">&#x1F3C5; Cabinet du Gouverneur</a>
             <div class="nav-dropdown-divider"></div>
-            <a href="membres-cabinet.html">Les Ministres Provinciaux</a>
-            <a href="secretariat-executif.html">Secrétariat Exécutif</a>
-            <a href="secretariat-administratif.html">Secrétariat Administratif</a>
-            <a href="service-courrier.html">Service Courrier</a>
+            <a href="membres-cabinet.html">&#x1F465; Membres du Cabinet</a>
+            <a href="secretariat-executif.html">&#x1F4CB; Secr&eacute;tariat Ex&eacute;cutif</a>
+            <a href="secretariat-administratif.html">&#x1F4C2; Secr&eacute;tariat Administratif</a>
+            <a href="service-courrier.html">&#x2709;&#xFE0F; Service Courrier</a>
             <div class="nav-dropdown-divider"></div>
-            <a href="assemblee.html">Assemblée Provinciale</a>
+            <a href="assemblee.html">&#x1F4DC; Assembl&eacute;e Provinciale</a>
           </div>
         </div>
-
-        <div class="nav-item">
-          <span class="nav-link" tabindex="0">Institutions ▾</span>
-          <div class="nav-dropdown">
-            <a href="institutions.html">Institutions</a>
-            <div class="nav-dropdown-divider"></div>
-            <a href="gouvernement.html">Gouvernement Provincial</a>
-            <a href="assemblee.html">Assemblée Provinciale</a>
-          </div>
-        </div>
-
-        <div class="nav-item">
-          <span class="nav-link" tabindex="0">Province ▾</span>
-          <div class="nav-dropdown">
-            <a href="province.html">Profil de la Province</a>
-            <a href="anciens-gouverneurs.html">Les Anciens Gouverneurs</a>
-          </div>
-        </div>
-
-        <div class="nav-item">
-          <span class="nav-link" tabindex="0">Ministères ▾</span>
-          <div class="nav-dropdown">
-            <a href="ministeres.html">Tous les Ministères</a>
-            <div class="nav-dropdown-divider"></div>
-            <a href="ministere-interieur.html">Intérieur &amp; Sécurité</a>
-            <a href="ministere-finances.html">Finances &amp; Économie</a>
-            <a href="ministere-plan.html">Plan &amp; Budget</a>
-            <a href="ministere-infrastructures.html">Infrastructures</a>
-            <a href="ministere-justice.html">Justice</a>
-            <a href="ministere-agriculture.html">Agriculture</a>
-            <a href="ministere-transports.html">Transports</a>
-            <a href="ministere-mines.html">Mines &amp; Énergie</a>
-            <a href="ministere-education.html">Éducation</a>
-            <a href="ministere-sante.html">Santé</a>
-          </div>
-        </div>
-
-        <div class="nav-item">
-          <span class="nav-link" tabindex="0">Villes ▾</span>
-          <div class="nav-dropdown">
-            <a href="villes.html">Vue d'ensemble</a>
-            <div class="nav-dropdown-divider"></div>
-            <a href="territoire-bukavu.html">Bukavu</a>
-            <a href="territoire-uvira-ville.html">Uvira</a>
-            <a href="territoire-baraka.html">Baraka</a>
-            <a href="territoire-kamituga.html">Kamituga</a>
-          </div>
-        </div>
-
-        <div class="nav-item">
-          <span class="nav-link" tabindex="0">Territoires ▾</span>
-          <div class="nav-dropdown">
-            <a href="territoires.html">Vue d'ensemble</a>
-            <div class="nav-dropdown-divider"></div>
-            <a href="territoire-fizi.html">Fizi</a>
-            <a href="territoire-idjwi.html">Idjwi</a>
-            <a href="territoire-kabare.html">Kabare</a>
-            <a href="territoire-kalehe.html">Kalehe</a>
-            <a href="territoire-mwenga.html">Mwenga</a>
-            <a href="territoire-shabunda.html">Shabunda</a>
-            <a href="territoire-uvira.html">Uvira</a>
-            <a href="territoire-walungu.html">Walungu</a>
-          </div>
-        </div>
-
-        <div class="nav-item">
-          <span class="nav-link" tabindex="0">Publications ▾</span>
-          <div class="nav-dropdown">
-            <a href="toutes-les-actualites.html">Actualités récentes</a>
-            <a href="videotheque.html">Vidéothèque</a>
-            <div class="nav-dropdown-divider"></div>
-            <a href="arretes-provinciaux.html">Arrêtés provinciaux</a>
-            <a href="notes-de-service.html">Notes de service</a>
-            <a href="notes-circulaires.html">Notes circulaires</a>
-            <a href="communiques-de-presse.html">Communiqués de presse</a>
-          </div>
-        </div>
-
         <a href="contact.html" class="nav-cta">Contact</a>
       </nav>
-
-      <button class="menu-toggle" id="menu-toggle" onclick="var nav=document.getElementById('mobile-nav');nav.classList.toggle('open');this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+      <button class="menu-toggle" id="menu-toggle" onclick="var nav=document.getElementById('mobile-nav');nav.classList.toggle('open');this.classList.toggle('open');this.setAttribute('aria-expanded',nav.classList.contains('open'));" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
-
-    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Navigation mobile">
+        <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Navigation mobile">
       <div class="mobile-nav-header">
         <span class="mobile-nav-title">Menu</span>
-        <button class="mobile-nav-close" onclick="var nav=document.getElementById('mobile-nav');nav.classList.remove('open');var t=document.getElementById('menu-toggle');t.classList.remove('open');t.setAttribute('aria-expanded','false')">×</button>
+        <button class="mobile-nav-close" onclick="var nav=document.getElementById('mobile-nav');nav.classList.remove('open');var t=document.getElementById('menu-toggle');t.classList.remove('open');t.setAttribute('aria-expanded','false');" aria-label="Fermer le menu">&#x2715;</button>
       </div>
       <div class="mobile-nav-body">
         <a href="index.html#accueil" class="mnav-link">Accueil</a>
+        <a href="https://sudkivu.cd/toutes-les-actualites.html" class="mnav-link">Actu</a>
+        <a href="province.html" class="mnav-link">Province</a>
+        <a href="programme-2024-2028.html" class="mnav-link active">Programme 2024&ndash;2028</a>
         <div class="mnav-group">
-          <button class="mnav-group-btn" aria-expanded="false">Gouvernement <span class="mnav-arrow">▾</span></button>
+          <button class="mnav-group-btn" aria-expanded="false">Institutions <span class="mnav-arrow">&#x25BE;</span></button>
           <div class="mnav-group-items">
-            <a href="gouverneur.html" class="mnav-item">Le Gouverneur</a>
-            <a href="vice-gouverneur.html" class="mnav-item">Le Vice-Gouverneur</a>
-            <a href="programme-2024-2028.html" class="mnav-item">Programme d'action du Gouvernement</a>
-            <a href="cabinet.html" class="mnav-item">Cabinet du Gouverneur</a>
-            <a href="membres-cabinet.html" class="mnav-item">Les Ministres Provinciaux</a>
-            <a href="secretariat-executif.html" class="mnav-item">Secrétariat Exécutif</a>
-            <a href="secretariat-administratif.html" class="mnav-item">Secrétariat Administratif</a>
-            <a href="service-courrier.html" class="mnav-item">Service Courrier</a>
-            <a href="assemblee.html" class="mnav-item">Assemblée Provinciale</a>
+            <a href="institutions.html" class="mnav-item">&#x1F3DB;&#xFE0F; Institutions</a>
+            <a href="gouvernement.html" class="mnav-item">&#x1F3DB;&#xFE0F; Gouvernement Provincial</a>
+            <a href="assemblee.html" class="mnav-item">&#x1F4DC; Assembl&eacute;e Provinciale</a>
           </div>
         </div>
         <div class="mnav-group">
-          <button class="mnav-group-btn" aria-expanded="false">Institutions <span class="mnav-arrow">▾</span></button>
+          <button class="mnav-group-btn" aria-expanded="false">Villes <span class="mnav-arrow">&#x25BE;</span></button>
           <div class="mnav-group-items">
-            <a href="institutions.html" class="mnav-item">Institutions</a>
-            <a href="gouvernement.html" class="mnav-item">Gouvernement Provincial</a>
-            <a href="assemblee.html" class="mnav-item">Assemblée Provinciale</a>
+            <a href="villes.html" class="mnav-item">&#x1F3D9;&#xFE0F; Vue d&apos;ensemble</a>
+            <a href="territoire-bukavu.html" class="mnav-item">&#x1F3D9;&#xFE0F; Bukavu</a>
+            <a href="territoire-uvira-ville.html" class="mnav-item">&#x1F3D9;&#xFE0F; Uvira</a>
+            <a href="territoire-baraka.html" class="mnav-item">&#x1F3D9;&#xFE0F; Baraka</a>
+            <a href="territoire-kamituga.html" class="mnav-item">&#x26CF;&#xFE0F; Kamituga</a>
           </div>
         </div>
         <div class="mnav-group">
-          <button class="mnav-group-btn" aria-expanded="false">Province <span class="mnav-arrow">▾</span></button>
+          <button class="mnav-group-btn" aria-expanded="false">Territoires <span class="mnav-arrow">&#x25BE;</span></button>
           <div class="mnav-group-items">
-            <a href="province.html" class="mnav-item">Profil de la Province</a>
-            <a href="anciens-gouverneurs.html" class="mnav-item">Les Anciens Gouverneurs</a>
+            <a href="territoires.html" class="mnav-item">&#x1F5FA;&#xFE0F; Vue d&apos;ensemble</a>
+            <a href="territoire-fizi.html" class="mnav-item">&#x1F30A; Fizi</a>
+            <a href="territoire-idjwi.html" class="mnav-item">&#x1F3DD;&#xFE0F; Idjwi</a>
+            <a href="territoire-kabare.html" class="mnav-item">&#x26F0;&#xFE0F; Kabare</a>
+            <a href="territoire-kalehe.html" class="mnav-item">&#x1F333; Kalehe</a>
+            <a href="territoire-mwenga.html" class="mnav-item">&#x1F332; Mwenga</a>
+            <a href="territoire-shabunda.html" class="mnav-item">&#x1F6B6; Shabunda</a>
+            <a href="territoire-uvira.html" class="mnav-item">&#x1F30A; Uvira</a>
+            <a href="territoire-walungu.html" class="mnav-item">&#x1F3D4;&#xFE0F; Walungu</a>
           </div>
         </div>
         <div class="mnav-group">
-          <button class="mnav-group-btn" aria-expanded="false">Ministères <span class="mnav-arrow">▾</span></button>
+          <button class="mnav-group-btn" aria-expanded="false">Minist&egrave;res <span class="mnav-arrow">&#x25BE;</span></button>
           <div class="mnav-group-items">
-            <a href="ministeres.html" class="mnav-item">Tous les Ministères</a>
-            <a href="ministere-interieur.html" class="mnav-item">Intérieur &amp; Sécurité</a>
-            <a href="ministere-finances.html" class="mnav-item">Finances &amp; Économie</a>
-            <a href="ministere-plan.html" class="mnav-item">Plan &amp; Budget</a>
-            <a href="ministere-infrastructures.html" class="mnav-item">Infrastructures</a>
-            <a href="ministere-justice.html" class="mnav-item">Justice</a>
-            <a href="ministere-agriculture.html" class="mnav-item">Agriculture</a>
-            <a href="ministere-transports.html" class="mnav-item">Transports</a>
-            <a href="ministere-mines.html" class="mnav-item">Mines &amp; Énergie</a>
-            <a href="ministere-education.html" class="mnav-item">Éducation</a>
-            <a href="ministere-sante.html" class="mnav-item">Santé</a>
+            <a href="ministeres.html" class="mnav-item">&#x1F3DB;&#xFE0F; Tous les Minist&egrave;res</a>
+            <a href="ministere-interieur.html" class="mnav-item">&#x1F6E1;&#xFE0F; Int&eacute;rieur &amp; S&eacute;curit&eacute;</a>
+            <a href="ministere-finances.html" class="mnav-item">&#x1F4B0; Finances &amp; &Eacute;conomie</a>
+            <a href="ministere-plan.html" class="mnav-item">&#x1F4CA; Plan &amp; Budget</a>
+            <a href="ministere-infrastructures.html" class="mnav-item">&#x1F3D7;&#xFE0F; Infrastructures</a>
+            <a href="ministere-justice.html" class="mnav-item">&#x2696;&#xFE0F; Justice</a>
+            <a href="ministere-agriculture.html" class="mnav-item">&#x1F33E; Agriculture</a>
+            <a href="ministere-transports.html" class="mnav-item">&#x1F69A; Transports</a>
+            <a href="ministere-mines.html" class="mnav-item">&#x26CF;&#xFE0F; Mines &amp; &Eacute;nergie</a>
+            <a href="ministere-education.html" class="mnav-item">&#x1F4DA; &Eacute;ducation</a>
+            <a href="ministere-sante.html" class="mnav-item">&#x1F3E5; Sant&eacute;</a>
           </div>
         </div>
         <div class="mnav-group">
-          <button class="mnav-group-btn" aria-expanded="false">Villes <span class="mnav-arrow">▾</span></button>
+          <button class="mnav-group-btn" aria-expanded="false">Cabinet <span class="mnav-arrow">&#x25BE;</span></button>
           <div class="mnav-group-items">
-            <a href="villes.html" class="mnav-item">Vue d'ensemble</a>
-            <a href="territoire-bukavu.html" class="mnav-item">Bukavu</a>
-            <a href="territoire-uvira-ville.html" class="mnav-item">Uvira</a>
-            <a href="territoire-baraka.html" class="mnav-item">Baraka</a>
-            <a href="territoire-kamituga.html" class="mnav-item">Kamituga</a>
-          </div>
-        </div>
-        <div class="mnav-group">
-          <button class="mnav-group-btn" aria-expanded="false">Territoires <span class="mnav-arrow">▾</span></button>
-          <div class="mnav-group-items">
-            <a href="territoires.html" class="mnav-item">Vue d'ensemble</a>
-            <a href="territoire-fizi.html" class="mnav-item">Fizi</a>
-            <a href="territoire-idjwi.html" class="mnav-item">Idjwi</a>
-            <a href="territoire-kabare.html" class="mnav-item">Kabare</a>
-            <a href="territoire-kalehe.html" class="mnav-item">Kalehe</a>
-            <a href="territoire-mwenga.html" class="mnav-item">Mwenga</a>
-            <a href="territoire-shabunda.html" class="mnav-item">Shabunda</a>
-            <a href="territoire-uvira.html" class="mnav-item">Uvira</a>
-            <a href="territoire-walungu.html" class="mnav-item">Walungu</a>
-          </div>
-        </div>
-        <div class="mnav-group">
-          <button class="mnav-group-btn" aria-expanded="false">Publications <span class="mnav-arrow">▾</span></button>
-          <div class="mnav-group-items">
-            <a href="toutes-les-actualites.html" class="mnav-item">Actualités récentes</a>
-            <a href="videotheque.html" class="mnav-item">Vidéothèque</a>
-            <a href="arretes-provinciaux.html" class="mnav-item">Arrêtés provinciaux</a>
-            <a href="notes-de-service.html" class="mnav-item">Notes de service</a>
-            <a href="notes-circulaires.html" class="mnav-item">Notes circulaires</a>
-            <a href="communiques-de-presse.html" class="mnav-item">Communiqués de presse</a>
+            <a href="gouverneur.html" class="mnav-item">&#x1F464; Le Gouverneur</a>
+            <a href="vice-gouverneur.html" class="mnav-item">&#x1F464; Le Vice-Gouverneur</a>
+            <a href="cabinet.html" class="mnav-item">&#x1F3C5; Cabinet du Gouverneur</a>
+            <a href="membres-cabinet.html" class="mnav-item">&#x1F465; Membres du Cabinet</a>
+            <a href="secretariat-executif.html" class="mnav-item">&#x1F4CB; Secr&eacute;tariat Ex&eacute;cutif</a>
+            <a href="secretariat-administratif.html" class="mnav-item">&#x1F4C2; Secr&eacute;tariat Administratif</a>
+            <a href="service-courrier.html" class="mnav-item">&#x2709;&#xFE0F; Service Courrier</a>
+            <a href="assemblee.html" class="mnav-item">&#x1F4DC; Assembl&eacute;e Provinciale</a>
           </div>
         </div>
         <a href="contact.html" class="mnav-cta">Contact</a>
@@ -346,176 +525,183 @@
     </div>
   </header>
 
-  <div class="flag-strip"></div>
+<div class="flag-strip"></div>
 
-  <section class="page-hero" id="main">
-    <div class="section-inner">
-      <div class="page-hero-content">
-        <div class="hero-badge">📋 Plan Quinquennal</div>
-        <h1>Programme d'Actions<br><span>2024–2028</span></h1>
-        <p class="page-hero-desc">Un programme ambitieux et intégré pour transformer structurellement la Province du Sud-Kivu sur 5 ans, articulé autour de 5 axes stratégiques couvrant la gouvernance, l'économie, les services sociaux, les infrastructures et le cadre de vie.</p>
-        <div class="page-breadcrumb">
-          <a href="index.html">Accueil</a>
-          <span>›</span>
-          <span>Programme 2024–2028</span>
+<!-- PAGE HERO -->
+<section class="page-hero" id="main">
+  <div class="section-inner">
+    <div class="page-hero-content">
+      <div class="hero-badge">&#x1F4CB; Plan Quinquennal</div>
+      <h1>Programme d&rsquo;Actions<br><span>2024&ndash;2028</span></h1>
+      <p class="page-hero-desc">Un programme ambitieux et int&eacute;gr&eacute; pour transformer structurellement la Province du Sud-Kivu sur 5 ans, articul&eacute; autour de 5 axes strat&eacute;giques et dot&eacute; d&rsquo;un budget de 112 milliards de francs congolais.</p>
+      <div class="page-breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>&rsaquo;</span>
+        <span>Programme 2024&ndash;2028</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main-content">
+
+<!-- INTRO SECTION -->
+<section class="programme-intro">
+  <div class="section-inner">
+    <div class="programme-intro-grid">
+      <div>
+        <div class="section-label">Mot du Gouverneur</div>
+        <div class="section-title" style="margin-bottom:20px;">Un engagement pour l&rsquo;<span>&eacute;mergence</span></div>
+        <blockquote class="programme-quote">&laquo;&nbsp;Il est temps que la sant&eacute; cesse d&rsquo;&ecirc;tre consid&eacute;r&eacute;e comme un privil&egrave;ge r&eacute;serv&eacute; &agrave; quelques-uns. Elle doit &ecirc;tre un droit inali&eacute;nable, r&eacute;serv&eacute; &agrave; chaque Congolais, quel que soit son rang social&nbsp;&raquo;</blockquote>
+        <p style="font-size:15px;color:var(--text-body);line-height:1.75;margin-bottom:16px;">a d&eacute;clar&eacute; le Chef de l&rsquo;Etat, soulignant l&rsquo;importance cruciale d&rsquo;un syst&egrave;me de sant&eacute; accessible et de qualit&eacute; pour le d&eacute;veloppement du pays.</p>
+        <p style="font-size:14px;color:var(--gray-mid);font-style:italic;">Prof. Jean-Jacques Purusi Sadiki &mdash; Gouverneur de Province</p>
+      </div>
+      <div class="key-figures">
+        <h3>Chiffres cl&eacute;s du Programme</h3>
+        <div class="figure-item">
+          <div class="figure-num">112</div>
+          <div class="figure-label"><strong>Milliards de FC</strong><br>Budget global du quinquennat</div>
+        </div>
+        <div class="figure-item">
+          <div class="figure-num">5</div>
+          <div class="figure-label"><strong>Axes strat&eacute;giques</strong><br>Gouvernance, &Eacute;conomie, Services sociaux, Infrastructures, Cadre de vie</div>
+        </div>
+        <div class="figure-item">
+          <div class="figure-num">5</div>
+          <div class="figure-label"><strong>Ans d&rsquo;ex&eacute;cution</strong><br>2024 &agrave; 2028 pour transformer la province</div>
+        </div>
+        <div class="figure-item">
+          <div class="figure-num">8</div>
+          <div class="figure-label"><strong>Territoires concern&eacute;s</strong><br>Fizi, Idjwi, Kabare, Kalehe, Mwenga, Shabunda, Uvira, Walungu</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <main id="main-content">
-    <section class="programme-intro">
-      <div class="section-inner">
-        <div class="programme-intro-grid">
-          <div>
-            <div class="section-label">Mot du Gouverneur</div>
-            <div class="section-title" style="margin-bottom:20px;">Un engagement pour l'<span>émergence</span></div>
-            <blockquote class="programme-quote">« Il est temps que la santé cesse d'être considérée comme un privilège réservé à quelques uns. Elle doit être une réalité pour tous les Sud-Kivutiens. »</blockquote>
-            <p>a déclaré le Chef de l'État, soulignant l'importance cruciale d'un système de santé performant, accessible et équitable pour tous les citoyens du Sud-Kivu.</p>
-            <p class="author">Prof. Jean-Jacques Purusi Sadiki — Gouverneur de Province</p>
-          </div>
-          <div class="key-figures">
-            <h3>Chiffres clés du Programme</h3>
-            <div class="figure-item">
-              <div class="figure-num">112</div>
-              <div class="figure-label"><strong>Milliards de FC</strong><br>Budget global du quinquennat</div>
-            </div>
-            <div class="figure-item">
-              <div class="figure-num">5</div>
-              <div class="figure-label"><strong>Axes stratégiques</strong><br>Gouvernance, Économie, Services sociaux, Infrastructures, Cadre de vie</div>
-            </div>
-            <div class="figure-item">
-              <div class="figure-num">5</div>
-              <div class="figure-label"><strong>Ans d'exécution</strong><br>2024 à 2028 pour transformer la province</div>
-            </div>
-            <div class="figure-item">
-              <div class="figure-num">8</div>
-              <div class="figure-label"><strong>Territoires concernés</strong><br>Fizi, Idjwi, Kabare, Kalehe, Mwenga, Shabunda, Uvira, Walungu</div>
-            </div>
+<!-- AXES STRATEGIQUES -->
+<section class="axes-section" id="secteurs" style="background:var(--off-white);">
+  <div class="section-inner">
+    <div class="axes-header">
+      <div>
+        <div class="section-label">Programme d&rsquo;Actions 2024&ndash;2028</div>
+        <div class="section-title">Cinq axes <span>strat&eacute;giques</span><br>pour l&rsquo;&eacute;mergence</div>
+      </div>
+      <div class="section-sub" style="max-width:400px;">
+        Un programme coh&eacute;rent et int&eacute;gr&eacute; dot&eacute; d&rsquo;un budget de 112 milliards de francs congolais pour transformer structurellement la Province du Sud-Kivu sur 5 ans.
+      </div>
+    </div>
+    <div class="axes-grid">
+      <div class="axe-card" style="--axe-color:#003882;" onclick="openModal('axe1')">
+        <img class="axe-img" src="images/axes/gouvernance.svg" alt="Gouvernance &mdash; B&acirc;timent administratif et symboles de transparence">
+        <div class="axe-card-body">
+          <span class="axe-num">01</span>
+          <div class="axe-tag">Axe 1 &mdash; Gouvernance</div>
+          <div class="axe-title">Instaurer une gouvernance transparente et un leadership efficace</div>
+          <div class="axe-desc">Refonder l&rsquo;administration publique, assurer la s&eacute;curit&eacute; des personnes et optimiser la mobilisation des ressources provinciales gr&acirc;ce &agrave; la num&eacute;risation et &agrave; l&rsquo;anti-corruption.</div>
+          <div class="axe-actions">
+            <span class="axe-pill">Leadership</span>
+            <span class="axe-pill">S&eacute;curit&eacute;</span>
+            <span class="axe-pill">Finances publiques</span>
+            <span class="axe-pill">Administration</span>
+            <span class="axe-pill">Partenariats</span>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="axes-section" id="secteurs">
-      <div class="section-inner">
-        <div class="axes-header">
-          <div>
-            <div class="section-label">Programme d'Actions 2024–2028</div>
-            <div class="section-title">Cinq axes <span>stratégiques</span><br>pour l'émergence</div>
-          </div>
-          <div class="section-sub" style="max-width:400px;">
-            Un programme cohérent et intégré doté d'un budget de 112 milliards de francs congolais pour transformer structurellement la Province du Sud-Kivu sur 5 ans.
-          </div>
-        </div>
-
-        <div class="axes-grid">
-          <div class="axe-card" style="--axe-color:#003882;" onclick="openModal('axe1')">
-            <div class="axe-img" style="background:linear-gradient(135deg,#1a3a6b,#003882);"></div>
-            <div class="axe-card-body">
-              <span class="axe-num">01</span>
-              <div class="axe-tag">Axe 1 — Gouvernance</div>
-              <div class="axe-title">Instaurer une gouvernance transparente et un leadership efficace</div>
-              <div class="axe-desc">Refonder l'administration publique, assurer la sécurité des personnes et optimiser la mobilisation des ressources provinciales.</div>
-              <div class="axe-actions">
-                <span class="axe-pill">Leadership</span>
-                <span class="axe-pill">Sécurité</span>
-                <span class="axe-pill">Finances</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="axe-card" style="--axe-color:#1a7a2e;" onclick="openModal('axe2')">
-            <div class="axe-img" style="background:linear-gradient(135deg,#2a8a40,#1a5c2a);"></div>
-            <div class="axe-card-body">
-              <span class="axe-num">02</span>
-              <div class="axe-tag">Axe 2 — Économie</div>
-              <div class="axe-title">Relancer le secteur productif et assurer l'emploi</div>
-              <div class="axe-desc">Redynamiser l'agriculture, les mines, développer le tourisme et le commerce transfrontalier.</div>
-              <div class="axe-actions">
-                <span class="axe-pill">Agriculture</span>
-                <span class="axe-pill">Mines</span>
-                <span class="axe-pill">Commerce</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="axe-card" style="--axe-color:#b83200;" onclick="openModal('axe3')">
-            <div class="axe-img" style="background:linear-gradient(135deg,#C8102E,#7a3800);"></div>
-            <div class="axe-card-body">
-              <span class="axe-num">03</span>
-              <div class="axe-tag">Axe 3 — Services de base</div>
-              <div class="axe-title">Améliorer l'accès aux services sociaux et renforcer le capital humain</div>
-              <div class="axe-desc">Éducation de qualité, santé accessible, infrastructure routière améliorée.</div>
-              <div class="axe-actions">
-                <span class="axe-pill">Éducation</span>
-                <span class="axe-pill">Santé</span>
-                <span class="axe-pill">Routes</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="axe-card" style="--axe-color:#6a1a8a;" onclick="openModal('axe4')">
-            <div class="axe-img" style="background:linear-gradient(135deg,#8a3aa3,#6a1a8a);"></div>
-            <div class="axe-card-body">
-              <span class="axe-num">04</span>
-              <div class="axe-tag">Axe 4 — Infrastructures</div>
-              <div class="axe-title">Revitaliser le réseau provincial d'infrastructures</div>
-              <div class="axe-desc">Routes, ports, aérodromes et désenclavement des territoires.</div>
-              <div class="axe-actions">
-                <span class="axe-pill">Routes</span>
-                <span class="axe-pill">Ports</span>
-                <span class="axe-pill">Aérodromes</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="axe-card" style="--axe-color:#CE8A00;" onclick="openModal('axe5')">
-            <div class="axe-img" style="background:linear-gradient(135deg,#F5B800,#CE8A00);"></div>
-            <div class="axe-card-body">
-              <span class="axe-num">05</span>
-              <div class="axe-tag">Axe 5 — Cadre de vie</div>
-              <div class="axe-title">Améliorer le cadre de vie des populations du Sud-Kivu</div>
-              <div class="axe-desc">Eau, électricité, habitat, environnement et culture.</div>
-              <div class="axe-actions">
-                <span class="axe-pill">Eau &amp; Électricité</span>
-                <span class="axe-pill">Habitat</span>
-                <span class="axe-pill">Environnement</span>
-              </div>
-            </div>
+      <div class="axe-card" style="--axe-color:#1a7a2e;" onclick="openModal('axe2')">
+        <img class="axe-img" src="images/axes/economie.svg" alt="&Eacute;conomie &mdash; Agriculture, mines et commerce au Sud-Kivu">
+        <div class="axe-card-body">
+          <span class="axe-num">02</span>
+          <div class="axe-tag">Axe 2 &mdash; &Eacute;conomie</div>
+          <div class="axe-title">Relancer le secteur productif et assurer l&rsquo;emploi</div>
+          <div class="axe-desc">Redynamiser l&rsquo;agriculture, rationaliser les activit&eacute;s mini&egrave;res, d&eacute;velopper le tourisme et le commerce transfrontalier, et soutenir les PME pour cr&eacute;er des emplois durables.</div>
+          <div class="axe-actions">
+            <span class="axe-pill">Agriculture</span>
+            <span class="axe-pill">Mines</span>
+            <span class="axe-pill">Tourisme</span>
+            <span class="axe-pill">Commerce</span>
+            <span class="axe-pill">PME / Emploi</span>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="axe-card" style="--axe-color:#b83200;" onclick="openModal('axe3')">
+        <img class="axe-img" src="images/axes/services-base.svg" alt="Services de base &mdash; &Eacute;ducation et sant&eacute; pour tous">
+        <div class="axe-card-body">
+          <span class="axe-num">03</span>
+          <div class="axe-tag">Axe 3 &mdash; Services de base</div>
+          <div class="axe-title">Am&eacute;liorer l&rsquo;acc&egrave;s aux services sociaux et renforcer le capital humain</div>
+          <div class="axe-desc">Maintenir la comp&eacute;titivit&eacute; &eacute;ducative, rendre les services de sant&eacute; accessibles &agrave; tous les niveaux et am&eacute;liorer les voies de communication pour d&eacute;sencla&shy;ver les territoires.</div>
+          <div class="axe-actions">
+            <span class="axe-pill">&Eacute;ducation</span>
+            <span class="axe-pill">Sant&eacute;</span>
+            <span class="axe-pill">Voies de communication</span>
+          </div>
+        </div>
+      </div>
+      <div class="axe-card" style="--axe-color:#6a1a8a;" onclick="openModal('axe4')">
+        <img class="axe-img" src="images/axes/infrastructures.svg" alt="Infrastructures &mdash; Routes, ponts, a&eacute;rodromes et voies lacustres">
+        <div class="axe-card-body">
+          <span class="axe-num">04</span>
+          <div class="axe-tag">Axe 4 &mdash; Infrastructures</div>
+          <div class="axe-title">Revitaliser le r&eacute;seau provincial d&rsquo;infrastructures</div>
+          <div class="axe-desc">D&eacute;senclavement des territoires par la construction et la r&eacute;habilitation des routes, l&rsquo;am&eacute;nagement des ports et des a&eacute;rodromes, et la mise en place de services de transport public.</div>
+          <div class="axe-actions">
+            <span class="axe-pill">Routes nationales</span>
+            <span class="axe-pill">Routes provinciales</span>
+            <span class="axe-pill">A&eacute;rodromes</span>
+            <span class="axe-pill">Voies lacustres</span>
+          </div>
+        </div>
+      </div>
+      <div class="axe-card" style="--axe-color:#CE8A00;" onclick="openModal('axe5')">
+        <img class="axe-img" src="images/axes/cadre-vie.svg" alt="Cadre de vie &mdash; Eau, &eacute;lectricit&eacute;, habitat et environnement">
+        <div class="axe-card-body">
+          <span class="axe-num">05</span>
+          <div class="axe-tag">Axe 5 &mdash; Cadre de vie</div>
+          <div class="axe-title">Am&eacute;liorer le cadre de vie des populations du Sud-Kivu</div>
+          <div class="axe-desc">Accro&icirc;tre la desserte en eau potable et en &eacute;lectricit&eacute;, lutter contre la pollution, moderniser l&rsquo;habitat et l&rsquo;urbanisme, d&eacute;velopper les villes harmonieusement et promouvoir l&rsquo;environnement et la culture.</div>
+          <div class="axe-actions">
+            <span class="axe-pill">Eau &amp; &Eacute;lectricit&eacute;</span>
+            <span class="axe-pill">Assainissement</span>
+            <span class="axe-pill">Habitat &amp; Urbanisme</span>
+            <span class="axe-pill">Environnement</span>
+            <span class="axe-pill">Culture &amp; Sport</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <footer>
+</main>
+
+<footer>
     <div class="section-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo-wrap">
-            <div class="logo-emblem">
-              <img src="https://sudkivu.cd/images/actualites/48f7a607-d3a6-4818-acfc-2a27e112e554.png" alt="Logo Sud-Kivu" />
-            </div>
+          <div class="logo-wrap">
+            <div class="logo-emblem" style="background:none; padding:0; overflow:hidden;"><img src="https://github.com/user-attachments/assets/47a9213d-48b5-46e7-a4b8-d572d2c6e33c" alt="Logo Sud-Kivu" style="width:54px; height:54px; object-fit:contain; border-radius:50%;"></div>
             <div class="logo-text">
               <div class="province">Province du Sud-Kivu</div>
               <div class="country">Gouvernement Provincial</div>
             </div>
-          </a>
-          <p class="footer-desc">Le Gouvernement Provincial du Sud-Kivu s'engage pour l'émergence de la province à travers un programme ambitieux de développement 2024-2028.</p>
+          </div>
+          <p class="footer-desc">Le Gouvernement Provincial du Sud-Kivu s&apos;engage pour l&apos;&eacute;mergence de la province &agrave; travers un programme ambitieux de d&eacute;veloppement 2024&ndash;2028.</p>
         </div>
         <div class="footer-col">
-          <h4>Programme</h4>
+          <h4>Minist&egrave;res</h4>
           <ul class="footer-links">
-            <li><a href="programme-2024-2028.html">Programme d'Action</a></li>
-            <li><a href="programme-2024-2028.html#secteurs">Axes Stratégiques</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Province</h4>
-          <ul class="footer-links">
-            <li><a href="province.html">Profil géographique</a></li>
-            <li><a href="territoires.html">8 Territoires</a></li>
+            <li><a href="ministeres.html">Tous les minist&egrave;res</a></li>
+            <li><a href="ministere-interieur.html">Int&eacute;rieur &amp; S&eacute;curit&eacute;</a></li>
+            <li><a href="ministere-finances.html">Finances &amp; &Eacute;conomie</a></li>
+            <li><a href="ministere-plan.html">Plan &amp; Budget</a></li>
+            <li><a href="ministere-infrastructures.html">Infrastructures</a></li>
+            <li><a href="ministere-justice.html">Justice</a></li>
+            <li><a href="ministere-agriculture.html">Agriculture</a></li>
+            <li><a href="ministere-transports.html">Transports</a></li>
+            <li><a href="ministere-mines.html">Mines &amp; &Eacute;nergie</a></li>
+            <li><a href="ministere-education.html">&Eacute;ducation</a></li>
+            <li><a href="ministere-sante.html">Sant&eacute;</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -523,143 +709,162 @@
           <ul class="footer-links">
             <li><a href="gouverneur.html">Le Gouverneur</a></li>
             <li><a href="vice-gouverneur.html">Le Vice-Gouverneur</a></li>
-            <li><a href="cabinet.html">Cabinet</a></li>
-            <li><a href="membres-cabinet.html">Les Ministres</a></li>
-            <li><a href="assemblee.html">Assemblée</a></li>
+            <li><a href="cabinet.html">Cabinet du Gouverneur</a></li>
+            <li><a href="membres-cabinet.html">Membres du Cabinet</a></li>
+            <li><a href="secretariat-executif.html">Secr&eacute;tariat Ex&eacute;cutif</a></li>
+            <li><a href="assemblee.html">Assembl&eacute;e Provinciale</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Province</h4>
+          <ul class="footer-links">
+            <li><a href="territoires.html">Territoires</a></li>
+            <li><a href="province.html">Profil g&eacute;ographique</a></li>
+            <li><a href="programme-2024-2028.html">Plan Quinquennal 2024&ndash;2028</a></li>
+            <li><a href="programme-2024-2028.html#secteurs">Axes Strat&eacute;giques</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Gouvernement Provincial du Sud-Kivu — RDC</span>
+        <span>&copy; 2025 Gouvernement Provincial du Sud-Kivu &mdash; R&eacute;publique D&eacute;mocratique du Congo</span>
         <div class="footer-bottom-links">
-          <a href="#">Mentions légales</a>
-          <a href="#">Accessibilité</a>
+          <a href="#">Mentions l&eacute;gales</a>
+          <a href="#">Accessibilit&eacute;</a>
           <a href="#">Plan du site</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- MODALS -->
-  <div class="modal-overlay" id="modal-axe1" onclick="closeModal('axe1')">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal('axe1')">×</button>
-      <div class="axe-tag" style="color:var(--blue-deep);">Axe 1 — Gouvernance &amp; Leadership</div>
-      <div class="modal-title">Instaurer une gouvernance transparente</div>
-      <ul class="modal-list">
-        <li>Déléguer effectivement certaines prérogatives au vice-Gouverneur</li>
-        <li>Imposer un contrôle citoyen par la transparence des recettes et dépenses</li>
-        <li>Rendre public annuellement les édits provinciaux</li>
-        <li>Restaurer la solvabilité et la crédibilité de la Province</li>
-        <li>Instaurer une gestion axée sur le résultat</li>
-        <li>Réorganiser et réformer les services anti-corruption</li>
-        <li>Numériser et bancariser les transactions financières</li>
-        <li>Renforcer les capacités de la police de proximité</li>
-        <li>Promouvoir le dialogue entre les communautés</li>
-        <li>Auditer l'administration publique provinciale</li>
-      </ul>
-    </div>
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-axe1" onclick="closeModal('axe1')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('axe1')">&#x2715;</button>
+    <div class="axe-tag" style="color:var(--blue-deep);">Axe 1 &mdash; Gouvernance &amp; Leadership</div>
+    <div class="modal-title">Instaurer une gouvernance transparente au service du d&eacute;veloppement</div>
+    <ul class="modal-list">
+      <li>D&eacute;l&eacute;guer effectivement certaines pr&eacute;rogatives au vice-Gouverneur pour fluidifier les prises de d&eacute;cision</li>
+      <li>Imposer un contr&ocirc;le citoyen dans la gestion de la chose publique par la transparence des recettes et d&eacute;penses</li>
+      <li>Rendre public annuellement les &eacute;dits provinciaux, notamment l&rsquo;&eacute;dit sur la reddition des comptes</li>
+      <li>Restaurer la solvabilit&eacute; et la cr&eacute;dibilit&eacute; de la Province aupr&egrave;s des partenaires</li>
+      <li>Instaurer une gestion ax&eacute;e sur le r&eacute;sultat, contrats de performance pour tous les agents administratifs</li>
+      <li>R&eacute;organiser et r&eacute;former les services en charge de la lutte anti-corruption</li>
+      <li>Num&eacute;riser, bancariser et imposer un guichet unique pour toutes les transactions financi&egrave;res de la Province</li>
+      <li>Accompagner le Gouvernement central pour l&rsquo;am&eacute;lioration des conditions de vie des Forces de D&eacute;fense et de S&eacute;curit&eacute; (FDS)</li>
+      <li>Renforcer les capacit&eacute;s de la police de proximit&eacute; et coordonner l&rsquo;action des services de s&eacute;curit&eacute;</li>
+      <li>Promouvoir le dialogue entre les communaut&eacute;s en vue de renforcer la coh&eacute;sion sociale</li>
+      <li>Auditer l&rsquo;administration publique provinciale et engager des contr&ocirc;les physiques pour &eacute;liminer le personnel fictif</li>
+      <li>Finaliser la digitalisation de la liquidation de l&rsquo;imp&ocirc;t foncier, l&rsquo;imp&ocirc;t locatif et l&rsquo;imp&ocirc;t sur les v&eacute;hicules</li>
+    </ul>
   </div>
-
-  <div class="modal-overlay" id="modal-axe2" onclick="closeModal('axe2')">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal('axe2')">×</button>
-      <div class="axe-tag" style="color:#1a7a2e;">Axe 2 — Secteur Productif &amp; Emploi</div>
-      <div class="modal-title">Relancer le secteur productif</div>
-      <ul class="modal-list">
-        <li>Auditer le secteur foncier, immobilier et urbanistique</li>
-        <li>Organiser les communautés agricoles avec ressources financières</li>
-        <li>Renforcer la collaboration avec l'IITA</li>
-        <li>Relancer la sucrerie de Kiliba et la laiterie de Bushi</li>
-        <li>Auditer le secteur minier et créer une société minière provinciale</li>
-        <li>Renforcer les brigades anti-fraude minières</li>
-        <li>Développer les infrastructures touristiques</li>
-        <li>Créer une société de transports lacustres</li>
-        <li>Réglementer le commerce transfrontalier</li>
-      </ul>
-    </div>
+</div>
+<div class="modal-overlay" id="modal-axe2" onclick="closeModal('axe2')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('axe2')">&#x2715;</button>
+    <div class="axe-tag" style="color:#1a7a2e;">Axe 2 &mdash; Secteur Productif &amp; Emploi</div>
+    <div class="modal-title">Relancer le secteur productif et assurer l&rsquo;emploi</div>
+    <ul class="modal-list">
+      <li>Auditer le secteur foncier, immobilier et urbanistique</li>
+      <li>Organiser les communaut&eacute;s agricoles et les appuyer en ressources financi&egrave;res, kits, semences et g&eacute;niteurs</li>
+      <li>Renforcer la collaboration avec l&rsquo;IITA, r&eacute;habiliter l&rsquo;INERA et le CRSN Lwiro, et la laiterie du Bushi</li>
+      <li>Rajeunir et former le corps d&rsquo;agents techniques agricoles provinciaux (gap de 399 &agrave; combler)</li>
+      <li>Redynamiser le r&eacute;seau des routes de desserte agricole pour l&rsquo;&eacute;vacuation des produits</li>
+      <li>Relancer la sucrerie de Kiliba et la laiterie de Bushi</li>
+      <li>Auditer le secteur minier et cr&eacute;er une soci&eacute;t&eacute; mini&egrave;re provinciale pour prot&eacute;ger les int&eacute;r&ecirc;ts locaux</li>
+      <li>Renforcer les brigades anti-fraude mini&egrave;res et organiser l&rsquo;activit&eacute; des coop&eacute;ratives artisanales</li>
+      <li>D&eacute;velopper les infrastructures touristiques dans les parcs nationaux et r&eacute;serves naturelles</li>
+      <li>Cr&eacute;er une soci&eacute;t&eacute; de transports lacustres (Taxi-Bateau) sur les Lacs Kivu et Tanganyika</li>
+      <li>Cr&eacute;er une Commission Provinciale des Emplois Internationaux (CPEI)</li>
+      <li>R&eacute;glementer et organiser le commerce transfrontalier et r&eacute;former les syst&egrave;mes de perception des taxes</li>
+      <li>Envisager la cr&eacute;ation d&rsquo;une Banque provinciale focalis&eacute;e sur les pr&ecirc;ts &agrave; taux pr&eacute;f&eacute;rentiels aux jeunes d&eacute;butants</li>
+    </ul>
   </div>
-
-  <div class="modal-overlay" id="modal-axe3" onclick="closeModal('axe3')">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal('axe3')">×</button>
-      <div class="axe-tag" style="color:#b83200;">Axe 3 — Services Sociaux &amp; Capital Humain</div>
-      <div class="modal-title">Améliorer l'accès aux services sociaux</div>
-      <ul class="modal-list">
-        <li>Organiser des inspections ponctuelles et régulières des écoles</li>
-        <li>Alléger la charge des frais aux examens d'État</li>
-        <li>Mettre en place un programme de bourses gouvernemental</li>
-        <li>Protéger les bâtiments publics et scolaires</li>
-        <li>Réhabiliter les écoles emblématiques</li>
-        <li>Construire et réhabiliter les centres hospitaliers</li>
-        <li>Mettre en place des plans de prévention des maladies</li>
-        <li>Auditer le secteur des infrastructures routières</li>
-        <li>Draguer les biefs navigables</li>
-      </ul>
-    </div>
+</div>
+<div class="modal-overlay" id="modal-axe3" onclick="closeModal('axe3')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('axe3')">&#x2715;</button>
+    <div class="axe-tag" style="color:#b83200;">Axe 3 &mdash; Services Sociaux &amp; Capital Humain</div>
+    <div class="modal-title">Am&eacute;liorer l&rsquo;acc&egrave;s aux services sociaux de base</div>
+    <ul class="modal-list">
+      <li>Organiser des inspections ponctuelles et r&eacute;guli&egrave;res des &eacute;coles</li>
+      <li>All&eacute;ger la charge des frais li&eacute;s aux &eacute;preuves des examens d&rsquo;&Eacute;tat de 45 &agrave; 20 USD pour la premi&egrave;re ann&eacute;e</li>
+      <li>Mettre en place un programme de bourses du gouvernement provincial pour soutenir les &eacute;l&egrave;ves et &eacute;tudiants les plus m&eacute;ritants</li>
+      <li>Activer les services du Fond pour la Promotion de l&rsquo;&Eacute;ducation (FPE) en province</li>
+      <li>Prot&eacute;ger les b&acirc;timents publics et scolaires contre la spoliation</li>
+      <li>R&eacute;habiliter les &eacute;coles embl&eacute;matiques : Lyc&eacute;e Nyakavogo, ITFM, etc.</li>
+      <li>Construire, r&eacute;habiliter et &eacute;quiper les centres hospitaliers essentiellement dans les zones les plus enclav&eacute;es</li>
+      <li>Mettre en place des plans d&rsquo;actions, de ripostes et de pr&eacute;ventions des maladies &eacute;pid&eacute;miques (Malaria, VIH, Chol&eacute;ra)</li>
+      <li>Favoriser des partenariats avec les organisations locales, nationales et internationales en vue de la r&eacute;alisation des programmes communs de prise en charge des soins m&eacute;dicaux</li>
+      <li>Auditer le secteur des infrastructures routi&egrave;res et d&eacute;senclavement des territoires</li>
+      <li>Construire et r&eacute;habiliter les infrastructures routi&egrave;res</li>
+      <li>Am&eacute;nager et draguer les biefs navigables (Port Kalundu, Ruzizi, etc.)</li>
+    </ul>
   </div>
-
-  <div class="modal-overlay" id="modal-axe4" onclick="closeModal('axe4')">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal('axe4')">×</button>
-      <div class="axe-tag" style="color:#6a1a8a;">Axe 4 — Infrastructures &amp; Transport</div>
-      <div class="modal-title">Revitaliser le réseau d'infrastructures</div>
-      <ul class="modal-list">
-        <li>Auditer le secteur des infrastructures routières</li>
-        <li>Faire un suivi strict des chantiers en cours</li>
-        <li>Construire, réhabiliter et entretenir les routes</li>
-        <li>Mettre en place des partenariats publics-privés</li>
-        <li>Aménager et draguer les biefs navigables</li>
-        <li>Réhabiliter les aéroports et aérodromes</li>
-        <li>Créer des parkings et gares centrales</li>
-        <li>Placement des caméras de surveillance</li>
-        <li>Améliorer la signalisation routière</li>
-      </ul>
-    </div>
+</div>
+<div class="modal-overlay" id="modal-axe4" onclick="closeModal('axe4')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('axe4')">&#x2715;</button>
+    <div class="axe-tag" style="color:#6a1a8a;">Axe 4 &mdash; Infrastructures &amp; Voies de Communication</div>
+    <div class="modal-title">Revitaliser le r&eacute;seau provincial d&rsquo;infrastructures</div>
+    <ul class="modal-list">
+      <li>Auditer le secteur des infrastructures pour conna&icirc;tre l&rsquo;&eacute;tat des routes jamais construites ni convenablement entretenues</li>
+      <li>Faire un suivi strict et r&eacute;gulier des chantiers en cours</li>
+      <li>Construire, r&eacute;habiliter et entretenir les infrastructures routi&egrave;res</li>
+      <li>Mettre en place des vrais partenariats publics-priv&eacute;s pour l&rsquo;am&eacute;nagement routier des grands centres urbains</li>
+      <li>Am&eacute;nager, baliser et draguer les biefs navigables (Port Kalundu, Ruzizi, etc.)</li>
+      <li>R&eacute;habiliter les a&eacute;roports, les a&eacute;rodromes et les pistes secondaires</li>
+      <li>Cr&eacute;er 4 parkings, des gares centrales, des toilettes publiques dans nos villes de Baraka, Bukavu, Uvira et Kamituga</li>
+      <li>Cr&eacute;ation d&rsquo;une Soci&eacute;t&eacute; de Transports publics</li>
+      <li>Placement des Cam&eacute;ras de surveillance</li>
+      <li>Construction des passerelles et tra&ccedil;age des marquages routiers pour &eacute;viter des accidents</li>
+      <li>Am&eacute;liorer le dispositif de signalisation routi&egrave;re et d&rsquo;&eacute;clairage public</li>
+    </ul>
   </div>
-
-  <div class="modal-overlay" id="modal-axe5" onclick="closeModal('axe5')">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal('axe5')">×</button>
-      <div class="axe-tag" style="color:#CE8A00;">Axe 5 — Cadre de Vie &amp; Environnement</div>
-      <div class="modal-title">Améliorer le cadre de vie</div>
-      <ul class="modal-list">
-        <li>Mettre en valeur le potentiel des centrales provinciales</li>
-        <li>Électrifier la ville de Baraka</li>
-        <li>Accroître la production d'eau par les forages</li>
-        <li>Assurer le contrôle des fabricants d'eau minérale</li>
-        <li>Relancer les centrales hydroélectriques de Ruzizi</li>
-        <li>Mettre en place un service d'hygiène et assainissement</li>
-        <li>Auditer le secteur de l'urbanisme</li>
-        <li>Rendre conforme les lotissements</li>
-        <li>Appuyer la lutte contre les catastrophes naturelles</li>
-        <li>Organiser des campagnes de reboisement</li>
-        <li>Réhabiliter les infrastructures sportives</li>
-      </ul>
-    </div>
+</div>
+<div class="modal-overlay" id="modal-axe5" onclick="closeModal('axe5')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('axe5')">&#x2715;</button>
+    <div class="axe-tag" style="color:#CE8A00;">Axe 5 &mdash; Cadre de Vie &amp; Environnement</div>
+    <div class="modal-title">Am&eacute;liorer le cadre de vie des populations du Sud-Kivu</div>
+    <ul class="modal-list">
+      <li>Mettre en valeur le potentiel des centrales provinciales (Chute de Tshibati, Kabare, Malicha) et groupement de Mutambala</li>
+      <li>Afin d&rsquo;&eacute;lectrifier la ville de Baraka, l&rsquo;unique ville non &eacute;lectrifi&eacute;e parmi les quatre villes du Sud-Kivu</li>
+      <li>Accro&icirc;tre les capacit&eacute;s de production d&rsquo;eau par les forages &agrave; haute intensit&eacute;</li>
+      <li>Assurer le contr&ocirc;le de la conformit&eacute; des fabricants d&rsquo;eau min&eacute;rale en bouteille</li>
+      <li>Plaidoyer pour la relance des centrales hydro&eacute;lectriques de Ruzizi 3 et 4</li>
+      <li>Mettre en place un service d&rsquo;hygi&egrave;ne et assainissement</li>
+      <li>Organiser une l&eacute;gislation en mati&egrave;re d&rsquo;hygi&egrave;ne et assainissement&nbsp;; obtenir des bourses d&rsquo;&eacute;tude et de formation au profit des jeunes</li>
+      <li>Auditer le secteur de l&rsquo;urbanisme et r&eacute;habiliter l&rsquo;&Eacute;tat dans ses droits sur l&rsquo;habitat</li>
+      <li>Rendre conforme les op&eacute;rations de lotissement dans les r&egrave;gles de l&rsquo;urbanisme</li>
+      <li>Mettre en place une politique d&rsquo;habitat et des plans d&rsquo;am&eacute;nagement des milieux ruraux</li>
+      <li>Appuyer les initiatives de lutte contre les catastrophes naturelles li&eacute;es au r&eacute;chauffement climatique</li>
+      <li>Assurer la r&eacute;cup&eacute;ration et la protection des espaces verts dans les villes, la sensibilisation et l&rsquo;entretien de la faune et la flore</li>
+      <li>Organiser des campagnes de reboisement et journ&eacute;e de l&rsquo;arbre en plantant un million d&rsquo;arbres</li>
+      <li>Reconstruire et r&eacute;habiliter les infrastructures sportives</li>
+      <li>R&eacute;habiliter les monuments et autres sites m&eacute;moriaux de la province</li>
+    </ul>
   </div>
+</div>
 
-  <script>
-    function openModal(id) {
-      document.getElementById('modal-' + id).classList.add('open');
-      document.body.style.overflow = 'hidden';
-      event.preventDefault();
-    }
-
-    function closeModal(id) {
-      document.getElementById('modal-' + id).classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.modal-overlay.open').forEach(function(m) {
-          m.classList.remove('open');
-        });
-        document.body.style.overflow = '';
-      }
+<script>
+function openModal(id) {
+  document.getElementById('modal-' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+  event.preventDefault();
+}
+function closeModal(id) {
+  document.getElementById('modal-' + id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(function(m) {
+      m.classList.remove('open');
     });
-
+    document.body.style.overflow = '';
+  }
+});
+// Mobile nav accordion
     document.querySelectorAll('.mnav-group-btn').forEach(function(btn) {
       btn.addEventListener('click', function() {
         var expanded = this.getAttribute('aria-expanded') === 'true';
@@ -675,6 +880,7 @@
         }
       });
     });
-  </script>
+</script>
+
 </body>
 </html>
