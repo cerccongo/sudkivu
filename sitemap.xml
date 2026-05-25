@@ -1,758 +1,762 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main Pages -->
-  <url>
-    <loc>https://www.sudkivu.cd/</loc>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-  <!-- News/Actualités -->
-  <url>
-    <loc>https://www.sudkivu.cd/toutes-les-actualites.html</loc>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/toutes-les-actualites-page-2.html</loc>
-    <priority>0.8</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/toutes-les-actualites-page-3.html</loc>
-    <priority>0.8</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/toutes-les-actualites-page-4.html</loc>
-    <priority>0.8</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/toutes-les-actualites-page-5.html</loc>
-    <priority>0.8</priority>
-    <changefreq>daily</changefreq>
-  </url>
 
-  <!-- Individual News Articles -->
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-13e-conference-gouverneurs-bandundu.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-assemblee-motion-defiance.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-assemblee-uvira.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-briefing-presse-securite-rapatriement-developpement.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-diplomatie-economique-purusi-dar-es-salaam.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-facilitation-commerce-transfrontalier-avril-2026.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-foresterie-communautaire-uvira.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-forum-kigoma-gouverneur-purusi-investisseurs-paix-lac-tanganyika.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-gouverneur-commerce-exterieur.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-gouverneur-president-republique.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-gouverneur-purusi-retour-kinshasa.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-gouverneur-purusi-retour-uvira-avril-2026.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-gouverneur-purusi-sanginga-banyamulenge.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-gouverneur-rn30-uvira.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-guy-kabombo-uvira.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-kolwezi-paix.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-lettre-information-population-propagande-afc-m23.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-ministre-agriculture-campagne-agricole-saison-b-2026.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-purusi-porte-parole-gouverneurs-bandundu.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-session-ordinaire-mars-assemblee-provinciale.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-stabilite-institutions-sud-kivu.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-accueil-premiere-dame-burundi-avril-2025.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-atelier-eveil-patriotique-uvira.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-audience-chef-etat-major-fardc-mai-2025.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-audience-vice-premier-ministre-defense-uvira-2025.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-comite-provincial-securite-ruzizi-mai-2026.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-conference-debat-jeunesse-resilience-uvira-2025.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-conseil-ministres-25-mars-2025.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-elakano-chefferie-bavira.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-elakano-examen-etat-2026.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-elakano-kalimabenge-uvira-mai-2026.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-elakano-message-paix-reconfort-sange-mai-2026.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-elakano-revision-constitution-uvira-avril-2026.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-installation-administration-uvira.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-journee-droits-femmes-mars-2025.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-leda-mining-misisi-nganja-mars-2026.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-mission-humanitaire-kasaba-fizi-mai-2025.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-operateurs-economiques-uvira.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-premiere-reunion-pfcigl-2025.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-rapatriement-policiers-burundi.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/actualite-vice-gouverneur-reunion-comite-securite-uvira.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
+<url>
+  <loc>https://sudkivu.cd/</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/gouverneur.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/vice-gouverneur.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/programme-2024-2028.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/membres-cabinet.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/secretariat-executif.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/secretariat-administratif.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/service-courrier.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/institutions.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/gouvernement.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/assemblee.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/province.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/anciens-gouverneurs.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ministeres.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ministere-interieur.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ministere-finances.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ministere-plan.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ministere-infrastructures.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ministere-justice.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ministere-agriculture.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ministere-transports.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ministere-mines.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ministere-education.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ministere-sante.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/villes.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-bukavu.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-uvira-ville.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-baraka.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-kamituga.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoires.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-fizi.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-idjwi.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-kabare.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-kalehe.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-mwenga.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-shabunda.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-uvira.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/territoire-walungu.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/toutes-les-actualites.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/videotheque.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/arretes-provinciaux.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/notes-de-service.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/notes-circulaires.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/communiques-de-presse.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/contact.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-elakano-message-paix-reconfort-sange-mai-2026.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-comite-provincial-securite-ruzizi-mai-2026.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-elakano-examen-etat-2026.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-elakano-kalimabenge-uvira-mai-2026.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-diplomatie-economique-purusi-dar-es-salaam.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-elakano-revision-constitution-uvira-avril-2026.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/communique-occupation-mumosho-rwanda-avril-2026.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-forum-kigoma-gouverneur-purusi-investisseurs-paix-lac-tanganyika.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-13e-conference-gouverneurs-bandundu.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-elakano-chefferie-bavira.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-ministre-agriculture-campagne-agricole-saison-b-2026.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-gouverneur-purusi-sanginga-banyamulenge.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-gouverneur-rn30-uvira.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-audience-vice-premier-ministre-defense-uvira-2025.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-premiere-reunion-pfcigl-2025.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-conference-debat-jeunesse-resilience-uvira-2025.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-accueil-premiere-dame-burundi-avril-2025.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-audience-chef-etat-major-fardc-mai-2025.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-mission-humanitaire-kasaba-fizi-mai-2025.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/marches-publics.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/investissement.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/paiement-taxes.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/denoncer-fraude.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-guy-kabombo-uvira.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-stabilite-institutions-sud-kivu.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-gouverneur-purusi-retour-uvira-avril-2026.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/parc-kahuzi-biega.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/lac-kivu-tanganyika.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/ressources-minieres.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/index.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-purusi-porte-parole-gouverneurs-bandundu.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-gouverneur-purusi-retour-kinshasa.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-assemblee-uvira.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-gouverneur-commerce-exterieur.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-gouverneur-president-republique.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-leda-mining-misisi-nganja-mars-2026.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-session-ordinaire-mars-assemblee-provinciale.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-operateurs-economiques-uvira.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-directeur.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-directeur-adjoint.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-conseiller-politique.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-conseiller-juridique.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-conseiller-financier.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-conseillere-securite.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-conseillere-relations.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-conseiller-sante.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-conseiller-agriculture.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-conseillere-education.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-conseiller-infrastructures.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-conseiller-mines.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-bureau-etudes.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-dpmer.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-cellule-investigation.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-cellule-fraude.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-cellule-communication.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-protocole.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-service-infrastructures.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-spm.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/cabinet-spha.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-assemblee-motion-defiance.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-foresterie-communautaire-uvira.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/commune-kalundu.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/commune-mulongwe.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/commune-kavimvira.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/secteur-mutambala.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/secteur-tanganyika.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/secteur-lulenge.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/secteur-ngandja.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-kabare.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-nindja.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-buhavu.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-nshanga.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-luindi.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-basile.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-wamuzimu.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/secteur-itombwe.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-wakabango-i.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-wakabango-ii.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-watsiragoma.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-bakisi.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-bamuguba-sud.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-bamuguba-nord.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-bafuliiru.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-bavira.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/chefferie-barundi.html</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-facilitation-commerce-transfrontalier-avril-2026.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-lettre-information-population-propagande-afc-m23.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-briefing-presse-securite-rapatriement-developpement.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/toutes-les-actualites-page-2.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/arrete_sud_kivu_cropped.pdf</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/docs/ARRETE%20PROVINCIAL%20N%C2%B024%3A239%3AGP%3ASK%3A2024%20DU%2018%3A07%3A2024%20MODIFIANT%20ET%20COMPLETANT%20L%27ARRETE%20N%C2%B024%3A236%3AGP%3ASK%20DU%2027%3A06%3A2024%20PORTANT%20NOMINATION%20DES%20MINISTRES%20ET%20DES%20SECRETAIRES%20EXECUTIFS%20DU%20GOUVERNEMENT%20PROVINCIAL%20DU%20SUD-KIVU.pdf</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/docs/ARRETE%20DIRECTEUR%20%20PROVINCIAL%20%20DE%20CABINET%20%2024%3A240%3AGP%3ASK%20%20%20DU%2018%3A07%3A2024%20PORTANT%20NOMINATION%20DU%20ET%20DU%20DIRECTEUR%20DE%20CABINET%20ADJOINT%20DU%20GOUVER-%20NEUR%20DE%20PROVINCE.pdf</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/docs/ARRETE%20PROVINCIAL%20N%C2%B024%3A241%3AGP%3ASK%20DU%2018%3A07%3A2024%20PORTANT%20INTERDICTION%20DE%20MORCELLEMENT%2C%20VENTE%2C%20CESSION%20DES%20PARCELLES%20DU%20DOMAINE%20PUBLIC%20ET%20PRIVE%20DE%20L%27ETAT%20ET%20CELLES%20AFFECTEES%20A%20L%27USAGE%20PUBLIC%2C%20Y%20COMPRIS%20LA%20DEMOLITION%20ET%20MODIFICATION%20DES%20IMMEUBLES%20.pdf</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/docs/ARRETE%20PROVINCIAL%20N%C2%B024%3A246%3AGP%3ASK%20DU%2018%3A07%3A2024%20PORTANT%20MESURE%20DE%20SUSPENSION%20DES%20ACTIVITES%20MINIERES%20DANS%20LES%20SITES%20MINIERS%20DE%20TOUTE%20LA%20PROVINCE%20DU%20SUD-KIVU.pdf</loc>
+  <lastmod>2026-05-24T22:03:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-conseil-ministres-25-mars-2025.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-atelier-eveil-patriotique-uvira.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-rapatriement-policiers-burundi.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-reunion-comite-securite-uvira.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-kolwezi-paix.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/toutes-les-actualites-page-3.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/toutes-les-actualites-page-4.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-journee-droits-femmes-mars-2025.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/actualite-vice-gouverneur-installation-administration-uvira.html</loc>
+  <lastmod>2026-05-24T22:03:55+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sudkivu.cd/toutes-les-actualites-page-5.html</loc>
+  <lastmod>2026-05-24T22:03:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
 
-  <!-- Government & Institutions -->
-  <url>
-    <loc>https://www.sudkivu.cd/gouverneur.html</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/vice-gouverneur.html</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/gouvernement.html</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/assemblee.html</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/institutions.html</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
 
-  <!-- Cabinet Members -->
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/membres-cabinet.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-directeur.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-directeur-adjoint.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-cellule-communication.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-cellule-fraude.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-cellule-investigation.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-protocole.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Counselors -->
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-conseiller-agriculture.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-conseiller-financier.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-conseiller-infrastructures.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-conseiller-juridique.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-conseiller-mines.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-conseiller-politique.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-conseiller-sante.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-conseillere-education.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-conseillere-relations.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-conseillere-securite.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Services -->
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-dpmer.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-spha.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-spm.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-service-infrastructures.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/secretariat-administratif.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/secretariat-executif.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/service-courrier.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/cabinet-bureau-etudes.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Ministries -->
-  <url>
-    <loc>https://www.sudkivu.cd/ministeres.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/ministere-agriculture.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/ministere-education.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/ministere-finances.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/ministere-infrastructures.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/ministere-interieur.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/ministere-justice.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/ministere-mines.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/ministere-plan.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/ministere-sante.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/ministere-transports.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Territories -->
-  <url>
-    <loc>https://www.sudkivu.cd/territoires.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-baraka.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-bukavu.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-fizi.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-idjwi.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-kabare.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-kalehe.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-kamituga.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-mwenga.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-shabunda.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-uvira-ville.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-uvira.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/territoire-walungu.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Chiefdoms -->
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-bafuliiru.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-bakisi.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-bamuguba-nord.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-bamuguba-sud.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-barundi.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-basile.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-bavira.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-buhavu.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-kabare.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-luindi.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-nindja.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-nshanga.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-wakabango-i.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-wakabango-ii.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-wamuzimu.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/chefferie-watsiragoma.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Sectors -->
-  <url>
-    <loc>https://www.sudkivu.cd/secteur-itombwe.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/secteur-lulenge.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/secteur-mutambala.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/secteur-ngandja.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/secteur-tanganyika.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Communes -->
-  <url>
-    <loc>https://www.sudkivu.cd/commune-kalundu.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/commune-kavimvira.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/commune-mulongwe.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/villes.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Provincial Information -->
-  <url>
-    <loc>https://www.sudkivu.cd/province.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/anciens-gouverneurs.html</loc>
-    <priority>0.7</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-
-  <!-- Natural Resources & Tourism -->
-  <url>
-    <loc>https://www.sudkivu.cd/ressources-minieres.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/lac-kivu-tanganyika.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/parc-kahuzi-biega.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Investment & Development -->
-  <url>
-    <loc>https://www.sudkivu.cd/investissement.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/programme-2024-2028.html</loc>
-    <priority>0.8</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-
-  <!-- Official Documents & Announcements -->
-  <url>
-    <loc>https://www.sudkivu.cd/arretes-provinciaux.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/communiques-de-presse.html</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/communique-occupation-mumosho-rwanda-avril-2026.html</loc>
-    <priority>0.7</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/marches-publics.html</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/notes-circulaires.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/notes-de-service.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Services & Public Info -->
-  <url>
-    <loc>https://www.sudkivu.cd/paiement-taxes.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/denoncer-fraude.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.sudkivu.cd/contact.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Media -->
-  <url>
-    <loc>https://www.sudkivu.cd/videotheque.html</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
 </urlset>
