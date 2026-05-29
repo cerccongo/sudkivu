@@ -139,8 +139,40 @@
     .minister-ministry{font-size:16px;color:var(--white);line-height:1.55;flex:1;}
     .minister-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12px;font-weight:700;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:0.05em;transition:color 0.2s;}
     .minister-link:hover{color:var(--gold-light);}
-    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr 1fr;}.contact-dark-grid{grid-template-columns:1fr;}.ministers-grid{grid-template-columns:repeat(3,1fr);}}
-    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}  </style>
+    @media(max-width:1040px){nav{display:none;}.menu-toggle{display:flex;}.footer-grid{grid-template-columns:1fr 1fr;}.content-grid{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr 1fr;}.contact-dark-grid{grid-template-columns:1fr;}.ministers-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr;}  
+/* Tablets */
+@media (max-width: 1024px) {
+    .ministers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .minister-name { font-size: 18px; }
+    .minister-ministry { font-size: 15px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .content-section { padding: 50px 0; }
+    .section-inner { padding: 0 16px; }
+    .ministers-grid { grid-template-columns: 1fr; gap: 20px; }
+    .minister-card { border-radius: 12px; }
+    .minister-photo { aspect-ratio: 4 / 3; }
+    .minister-card-body { padding: 14px; }
+    .minister-name { font-size: 18px; line-height: 1.3; }
+    .minister-ministry { font-size: 14px; line-height: 1.5; }
+    .minister-link { margin-top: 10px; font-size: 11px; }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .minister-photo { aspect-ratio: 1 / 1; }
+    .minister-name { font-size: 17px; }
+    .minister-ministry { font-size: 13px; }
+    .badge-role { font-size: 12px; }
+}
+
+</style>
 </head>
 <body>
 
