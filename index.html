@@ -7,6 +7,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700;900&family=Roboto:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <style>
     /* ===== CSS VARIABLES ===== */
@@ -1409,6 +1410,7 @@
     }
     .social-links {
       display: flex;
+      flex-wrap: wrap;
       gap: 12px;
       margin-top: 28px;
     }
@@ -1421,11 +1423,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
+      font-size: 20px;
+      font-weight: 800;
       transition: all 0.2s;
       cursor: pointer;
     }
-    .social-link:hover { background: var(--gold); border-color: var(--gold); }
+    .social-link:hover { background: var(--gold); border-color: var(--gold); color: var(--white); transform: translateY(-2px); }
+    .social-link:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+    .social-link.facebook { color: #7DB2FF; }
+    .social-link.x-twitter { color: var(--white); }
+    .social-link.youtube { color: #FF6B6B; }
+    .social-link.instagram { color: #F6A6FF; }
+    .social-link.tiktok { color: #A7FFF4; }
     .contact-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .contact-links li a {
       font-size: 14px;
@@ -2356,9 +2365,11 @@
             </div>
           </div>
           <div class="social-links">
-            <div class="social-link" role="button" aria-label="Facebook" tabindex="0">📘</div>
-            <div class="social-link" role="button" aria-label="Twitter / X" tabindex="0">🐦</div>
-            <div class="social-link" role="button" aria-label="YouTube" tabindex="0">▶️</div>
+            <a class="social-link facebook" href="https://facebook.com/ProvinceSudKivu" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a class="social-link x-twitter" href="https://x.com/ProvinceSudKivu" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a class="social-link youtube" href="https://youtube.com/ProvinceSudKivu" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            <a class="social-link instagram" href="https://instagram.com/ProvinceSudKivu" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a class="social-link tiktok" href="https://www.tiktok.com/@ProvinceSudKivu" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="contact-block">
