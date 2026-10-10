@@ -117,9 +117,17 @@ server {
     root /var/www/sudkivu;
     index index.html;
 
-    # Serve files; return 404 for anything not found
+    # Clean URLs: redirect /page.html -> /page and /index.html -> /
+    if ($request_uri ~ ^/index\.html(\?.*)?$) {
+        return 301 /$1;
+    }
+    if ($request_uri ~ ^/(.+)\.html(\?.*)?$) {
+        return 301 /$1$2;
+    }
+
+    # Serve /page from page.html; return 404 for anything not found
     location / {
-        try_files $uri $uri/ =404;
+        try_files $uri $uri.html $uri/ =404;
     }
 
     # Long-term caching for static assets
